@@ -1,0 +1,21 @@
+{
+  "name": "dbd-api",
+  "version": "1.0.0",
+  "description": "This is a dead by daylight API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "end": "npx kill-port 3000"
+  },
+  "author": "JoeCalvi",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^5.7.0",
+    "mongoose": "^7.3.2"
+  }
+}
