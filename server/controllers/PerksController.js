@@ -32,7 +32,7 @@ exports.getPerkById = function (req, res) {
     });
 };
 
-exports.updatePerk = function (res, res) {
+exports.updatePerk = function (req, res) {
     Perk.findByIdAndUpdate(req.params.perkId, req.body, { new: true }, function (err, perk) {
         if (err) {
             return res.send(err);
@@ -42,3 +42,12 @@ exports.updatePerk = function (res, res) {
     });
 };
 
+exports.deletePerk = function (req, res) {
+    Perk.findByIdAndDelete(req.params.perkId, function (err, perk) {
+        if (err) {
+            return res.send(err);
+        } else {
+            return res.json({ message: 'Perk deleted.' });
+        };
+    });
+};
