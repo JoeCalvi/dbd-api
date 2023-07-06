@@ -16,3 +16,5 @@ PerkSchema.virtual('character', {
     justOne: true,
     ref: 'Survivor' || 'Killer'
 })
+
+module.exports = mongoose.model('Perks', PerkSchema);
