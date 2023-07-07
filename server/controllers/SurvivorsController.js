@@ -3,7 +3,10 @@ const Survivor = mongoose.model('Survivors');
 
 exports.getAllSurvivors = async function (req, res) {
     try {
-        const survivors = await Survivor.find({});
+        const survivors = await Survivor.find({})
+            .populate('perk_one', 'name icon')
+            .populate('perk_two', 'name icon')
+            .populate('perk_three', 'name icon');
         res.json(survivors);
     } catch (err) {
         res.send(err);
