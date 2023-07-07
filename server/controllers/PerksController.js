@@ -14,7 +14,7 @@ exports.getAllPerks = async function (req, res) {
 exports.addPerk = async function (req, res) {
     try {
         const perk = new Perk(req.body);
-        perk.belongs_to_id = req.params.characterId;
+        perk.characterId = req.params.characterId;
         const savedPerk = await perk.save();
         res.json(savedPerk);
     } catch (err) {
