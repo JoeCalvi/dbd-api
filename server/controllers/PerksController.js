@@ -3,7 +3,8 @@ const Perk = mongoose.model('Perks');
 
 exports.getAllPerks = async function (req, res) {
     try {
-        const perks = await Perk.find({});
+        const perks = await Perk.find({})
+            .populate('character');
         res.json(perks);
     } catch (err) {
         res.send(err);

@@ -5,7 +5,7 @@ const PerkSchema = new Schema({
     role: { type: String, required: true },
     name: { type: String, required: true },
     belongs_to: { type: String, required: true, default: "N/A" },
-    belongs_to_id: { type: Schema.Types.ObjectId, ref: "Character" },
+    belongs_to_id: { type: Schema.Types.ObjectId, ref: 'Survivor' || 'Killer' },
     icon: { type: String, required: true },
     description: { type: String, required: true }
 }, { timestamps: true, toJSON: { virtuals: true } })
