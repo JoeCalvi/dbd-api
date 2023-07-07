@@ -3,7 +3,7 @@ const Perk = mongoose.model('Perks');
 
 exports.getAllPerks = async function (req, res) {
     try {
-        const perks = await Perk.find({})
+        const perks = await Perk.find()
             .populate('character');
         res.json(perks);
     } catch (err) {
@@ -12,6 +12,17 @@ exports.getAllPerks = async function (req, res) {
 };
 
 exports.addPerk = async function (req, res) {
+    try {
+        const perk = new Perk(req.body);
+        perk.belongs_to_id = req.params.characterId;
+        const savedPerk = await perk.save();
+        res.json(savedPerk);
+    } catch (err) {
+        res.send(err);
+    }
+};
+
+exports.addGenericPerk = async function (req, res) {
     try {
         const perk = new Perk(req.body);
         const savedPerk = await perk.save();

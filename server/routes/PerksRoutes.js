@@ -3,6 +3,9 @@ module.exports = function (app) {
 
     app.route('/api/perks')
         .get(perksController.getAllPerks)
+        .post(perksController.addGenericPerk);
+
+    app.route('/api/:characterId/perks')
         .post(perksController.addPerk);
 
     app.route('/api/perks/:perkId')
