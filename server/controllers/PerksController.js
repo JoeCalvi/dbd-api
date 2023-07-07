@@ -1,53 +1,48 @@
-const mongoose = require('mongoose'),
-    Perk = mongoose.model('Perks');
+const mongoose = require('mongoose');
+const Perk = mongoose.model('Perks');
 
-exports.getAllPerks = function (req, res) {
-    Perk.find({}, function (err, perk) {
-        if (err) {
-            return res.send(err);
-        } else {
-            return res.json(perk);
-        };
-    });
+exports.getAllPerks = async function (req, res) {
+    try {
+        const perks = await Perk.find({});
+        res.json(perks);
+    } catch (err) {
+        res.send(err);
+    }
 };
 
-exports.addPerk = function (req, res) {
-    const perk = new Perk(req.body);
-    perk.save(function (err, perk) {
-        if (err) {
-            return res.send(err);
-        } else {
-            return res.json(perk);
-        };
-    });
+exports.addPerk = async function (req, res) {
+    try {
+        const perk = new Perk(req.body);
+        const savedPerk = await perk.save();
+        res.json(savedPerk);
+    } catch (err) {
+        res.send(err);
+    }
 };
 
-exports.getPerkById = function (req, res) {
-    Perk.findById(req.params.perkId, function (err, perk) {
-        if (err) {
-            return res.send(err);
-        } else {
-            return res.json(perk);
-        };
-    });
+exports.getPerkById = async function (req, res) {
+    try {
+        const perk = await Perk.findById(req.params.perkId);
+        res.json(perk);
+    } catch (err) {
+        res.send(err);
+    }
 };
 
-exports.updatePerk = function (req, res) {
-    Perk.findByIdAndUpdate(req.params.perkId, req.body, { new: true }, function (err, perk) {
-        if (err) {
-            return res.send(err);
-        } else {
-            return res.json(perk);
-        };
-    });
+exports.updatePerk = async function (req, res) {
+    try {
+        const perk = await Perk.findByIdAndUpdate(req.params.perkId, req.body, { new: true });
+        res.json(perk);
+    } catch (err) {
+        res.send(err);
+    }
 };
 
-exports.deletePerk = function (req, res) {
-    Perk.findByIdAndDelete(req.params.perkId, function (err, perk) {
-        if (err) {
-            return res.send(err);
-        } else {
-            return res.json({ message: 'Perk deleted.' });
-        };
-    });
+exports.deletePerk = async function (req, res) {
+    try {
+        const perk = await Perk.findByIdAndDelete(req.params.perkId);
+        res.json({ message: 'Perk deleted.' });
+    } catch (err) {
+        res.send(err);
+    }
 };
