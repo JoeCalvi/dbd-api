@@ -6,6 +6,7 @@ app = express();
 port = process.env.PORT || 3000;
 mongoose = require('mongoose');
 Perk = require('./models/Perk');
+Survivor = require('./models/Survivor');
 bodyParser = require('body-parser');
 
 const httpServer = createServer(app);
@@ -17,7 +18,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 const perkRoutes = require('./routes/PerksRoutes');
+const survivorRoutes = require('./routes/SurvivorsRoutes')
 perkRoutes(app);
+survivorRoutes(app);
 
 app.use(function (req, res) {
     res.status(404).send({ url: req.originalUrl + ' not found' })
