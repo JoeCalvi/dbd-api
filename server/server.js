@@ -1,13 +1,13 @@
 const DbConnection = require('./dbConfig');
 const { createServer } = require('http')
 
-const express = require('express');
-app = express();
-port = process.env.PORT || 3000;
-mongoose = require('mongoose');
-Perk = require('./models/Perk');
-Survivor = require('./models/Survivor');
-bodyParser = require('body-parser');
+const express = require('express'),
+    app = express(),
+    port = process.env.PORT || 3000,
+    mongoose = require('mongoose'),
+    Perk = require('./models/Perk'),
+    Survivor = require('./models/Survivor'),
+    bodyParser = require('body-parser');
 
 const httpServer = createServer(app);
 

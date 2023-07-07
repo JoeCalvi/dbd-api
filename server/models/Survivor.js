@@ -9,30 +9,30 @@ const SurvivorSchema = new Schema({
     gender: { type: String, required: true },
     voice_actor: { type: String, required: true },
     portrait: { type: String, required: true },
-    perk_one_id: { type: Schema.Types.ObjectId, ref: 'Perk' },
-    perk_two_id: { type: Schema.Types.ObjectId, ref: 'Perk' },
-    perk_three_id: { type: Schema.Types.ObjectId, ref: 'Perk' }
+    perk_one_id: { type: Schema.Types.ObjectId, ref: 'Perks' },
+    perk_two_id: { type: Schema.Types.ObjectId, ref: 'Perks' },
+    perk_three_id: { type: Schema.Types.ObjectId, ref: 'Perks' }
 }, { timestamps: true, toJSON: { virtuals: true } })
 
 SurvivorSchema.virtual('perk_one', {
     localField: 'perk_one_id',
     foreignField: '_id',
     justOne: true,
-    ref: 'Perk'
+    ref: 'Perks'
 })
 
 SurvivorSchema.virtual('perk_two', {
     localField: 'perk_two_id',
     foreignField: '_id',
     justOne: true,
-    ref: 'Perk'
+    ref: 'Perks'
 })
 
 SurvivorSchema.virtual('perk_three', {
     localField: 'perk_three_id',
     foreignField: '_id',
     justOne: true,
-    ref: 'Perk'
+    ref: 'Perks'
 })
 
 module.exports = mongoose.model('Survivors', SurvivorSchema);
