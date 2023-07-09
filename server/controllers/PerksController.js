@@ -5,11 +5,20 @@ exports.getAllPerks = async function (req, res) {
     try {
         const perks = await Perk.find()
             .populate('character', 'name portrait');
-        res.json(perks);
+        return res.json(perks);
     } catch (err) {
         res.send(err);
     }
 };
+
+exports.getPerksByCharacterId = async function (req, res) {
+    try {
+        const perks = await Perk.find({ characterId: req.params.characterId });
+        return res.json(perks);
+    } catch (err) {
+        res.send(err);
+    }
+}
 
 exports.addPerk = async function (req, res) {
     try {
