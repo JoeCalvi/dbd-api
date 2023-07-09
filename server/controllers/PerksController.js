@@ -26,6 +26,9 @@ exports.getCharacterByName = async function (req, res) {
         const query = req.query;
         const name = query.name.replace('-', ' ').toLowerCase();
         const survivors = await Survivor.find()
+            .populate('perk_one')
+            .populate('perk_two')
+            .populate('perk_three');
         survivors.forEach(s => {
             if (s.name.toLowerCase() == name) {
                 return res.json(s);
