@@ -9,6 +9,9 @@ module.exports = function (app) {
         .post(perksController.addPerk)
         .get(perksController.getPerksByCharacterId);
 
+    app.route('/api/')
+        .get(perksController.getCharacterByName);
+
     app.route('/api/perks/:perkId')
         .get(perksController.getPerkById)
         .put(perksController.updatePerk)

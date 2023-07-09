@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Perk = mongoose.model('Perks');
+const Survivor = mongoose.model('Survivors');
 
 exports.getAllPerks = async function (req, res) {
     try {
@@ -17,6 +18,23 @@ exports.getPerksByCharacterId = async function (req, res) {
         return res.json(perks);
     } catch (err) {
         res.send(err);
+    }
+};
+
+exports.getCharacterByName = async function (req, res) {
+    try {
+        const query = req.query;
+        const name = query.name.replace('-', ' ').toLowerCase();
+        const survivors = await Survivor.find()
+        survivors.forEach(s => {
+            if (s.name.toLowerCase() == name) {
+                return res.json(s);
+            } else {
+                return 'Survivor not found.'
+            };
+        });
+    } catch (err) {
+        res.send(err)
     }
 }
 
