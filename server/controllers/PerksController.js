@@ -100,6 +100,19 @@ exports.getPerkById = async function (req, res) {
     }
 };
 
+exports.getPerkByName = async function (req, res) {
+    try {
+        const query = req.query.value;
+        const name = query.perk_name;
+        const perks = await Perk.find();
+        const perk = perks.find(p => p.name.toLowerCase() == name);
+
+        return res.json(query);
+    } catch (err) {
+        res.send(err)
+    }
+}
+
 exports.updatePerk = async function (req, res) {
     try {
         const perk = await Perk.findByIdAndUpdate(req.params.perkId, req.body, { new: true });
