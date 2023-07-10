@@ -62,6 +62,23 @@ exports.addGenericPerk = async function (req, res) {
     }
 };
 
+exports.getAllGenericPerks = async function (req, res) {
+    try {
+        const perks = await Perk.find();
+        const genericPerks = [];
+        perks.forEach(p => {
+            if (!p.characterId) {
+                genericPerks.push(p);
+            }
+        });
+
+        res.send(genericPerks);
+
+    } catch (err) {
+        res.send(err);
+    }
+}
+
 exports.getPerkById = async function (req, res) {
     try {
         const perk = await Perk.findById(req.params.perkId);
