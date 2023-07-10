@@ -8,6 +8,9 @@ module.exports = function (app) {
     app.route('/api/perks/generic')
         .get(perksController.getAllGenericPerks);
 
+    app.route('/api/perks/survivor')
+        .get(perksController.getAllSurvivorPerks);
+
     app.route('/api/:characterId/perks')
         .post(perksController.addPerk)
         .get(perksController.getPerksByCharacterId);
