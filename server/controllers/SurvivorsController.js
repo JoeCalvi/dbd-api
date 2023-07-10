@@ -40,13 +40,8 @@ exports.getSurvivorByName = async function (req, res) {
             .populate('perk_one')
             .populate('perk_two')
             .populate('perk_three');
-        survivors.forEach(s => {
-            if (s.name.toLowerCase() == name) {
-                return res.json(s);
-            } else {
-                return 'Survivor not found.'
-            };
-        });
+        const survivor = survivors.find(s => s.name.toLowerCase() == name);
+        return res.json(survivor);
     } catch (err) {
         res.send(err)
     }

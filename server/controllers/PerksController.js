@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Perk = mongoose.model('Perks');
-const Survivor = mongoose.model('Survivors');
 
 exports.getAllPerks = async function (req, res) {
     try {
