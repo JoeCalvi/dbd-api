@@ -25,7 +25,10 @@ exports.addSurvivor = async function (req, res) {
 
 exports.getSurvivorById = async function (req, res) {
     try {
-        const survivor = await Survivor.findById(req.params.survivorId);
+        const survivor = await Survivor.findById(req.params.survivorId)
+            .populate('perk_one')
+            .populate('perk_two')
+            .populate('perk_three');
         res.json(survivor);
     } catch (err) {
         res.send(err);
