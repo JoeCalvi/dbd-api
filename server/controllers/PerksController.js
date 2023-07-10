@@ -96,6 +96,22 @@ exports.getAllSurvivorPerks = async function (req, res) {
     }
 }
 
+exports.getAllKillerPerks = async function (req, res) {
+    try {
+        const perks = await Perk.find();
+        const killerPerks = [];
+        perks.forEach(p => {
+            if (p.role == "Killer") {
+                killerPerks.push(p);
+            }
+        });
+
+        return res.send(killerPerks);
+    } catch (err) {
+        res.send(err)
+    }
+}
+
 exports.getPerkById = async function (req, res) {
     try {
         const perk = await Perk.findById(req.params.perkId);
