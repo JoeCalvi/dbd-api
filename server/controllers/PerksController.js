@@ -102,6 +102,7 @@ exports.getPerkById = async function (req, res) {
 
 exports.getPerkByName = async function (req, res) {
     try {
+        // TODO make this work
         const query = req.query.value;
         const name = query.perk_name;
         const perks = await Perk.find();
