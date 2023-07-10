@@ -3,5 +3,6 @@ module.exports = function (app) {
     const survivorsController = require('../controllers/SurvivorsController');
 
     app.route('/api/')
-        .get(survivorsController.getSurvivorByName);
+        .get(survivorsController.getSurvivorByName)
+        .get(perksController.getPerkByName);
 };
