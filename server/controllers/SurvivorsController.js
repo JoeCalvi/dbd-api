@@ -38,7 +38,7 @@ exports.getSurvivorById = async function (req, res) {
 exports.getSurvivorByName = async function (req, res) {
     try {
         const query = req.query;
-        const name = query.name.replace('-', ' ').toLowerCase();
+        const name = query.survivor_name.replace('-', ' ').toLowerCase();
         const survivors = await Survivor.find()
             .populate('perk_one')
             .populate('perk_two')
