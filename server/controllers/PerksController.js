@@ -72,10 +72,27 @@ exports.getAllGenericPerks = async function (req, res) {
             }
         });
 
-        res.send(genericPerks);
+        return res.send(genericPerks);
 
     } catch (err) {
         res.send(err);
+    }
+};
+
+exports.getAllSurvivorPerks = async function (req, res) {
+    try {
+        const perks = await Perk.find();
+        const survivorPerks = [];
+        perks.forEach(p => {
+            if (p.role == "Survivor") {
+                survivorPerks.push(p);
+            }
+        });
+
+        return res.send(survivorPerks);
+
+    } catch (err) {
+        res.send(err)
     }
 }
 
