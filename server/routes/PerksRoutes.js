@@ -1,9 +1,6 @@
 module.exports = function (app) {
     const perksController = require('../controllers/PerksController');
 
-    app.route('/api/')
-        .get(perksController.getCharacterByName);
-
     app.route('/api/perks')
         .get(perksController.getAllPerks)
         .post(perksController.addGenericPerk);

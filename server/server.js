@@ -19,8 +19,10 @@ app.use(bodyParser.json());
 
 const perkRoutes = require('./routes/PerksRoutes');
 const survivorRoutes = require('./routes/SurvivorsRoutes')
+const queryRoutes = require('./routes/QueryRoutes')
 perkRoutes(app);
 survivorRoutes(app);
+queryRoutes(app);
 
 app.use(function (req, res) {
     res.status(404).send({ url: req.originalUrl + ' not found' })
