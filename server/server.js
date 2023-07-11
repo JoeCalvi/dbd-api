@@ -7,6 +7,7 @@ const express = require('express'),
     mongoose = require('mongoose'),
     Perk = require('./models/Perk'),
     Survivor = require('./models/Survivor'),
+    Killer = require('./models/Killer'),
     bodyParser = require('body-parser');
 
 const httpServer = createServer(app);
@@ -18,10 +19,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 const perkRoutes = require('./routes/PerksRoutes');
-const survivorRoutes = require('./routes/SurvivorsRoutes')
-const queryRoutes = require('./routes/QueryRoutes')
+const survivorRoutes = require('./routes/SurvivorsRoutes');
+const killerRoutes = require('./routes/KillerRoutes');
+const queryRoutes = require('./routes/QueryRoutes');
 perkRoutes(app);
 survivorRoutes(app);
+killerRoutes(app);
 queryRoutes(app);
 
 app.use(function (req, res) {
