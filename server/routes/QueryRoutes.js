@@ -3,6 +3,12 @@ module.exports = function (app) {
     const survivorsController = require('../controllers/SurvivorsController');
 
     app.route('/api/')
-        .get(survivorsController.getSurvivorByName)
-        .get(perksController.getPerkByName);
+        .get((req, res) => {
+            if (req.query.survivor_name) {
+                return survivorsController.getSurvivorByName(req, res);
+            }
+            if (req.query.perk_name) {
+                return perksController.getPerkByName(req, res);
+            }
+        })
 };

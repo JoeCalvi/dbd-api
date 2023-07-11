@@ -102,13 +102,16 @@ exports.getPerkById = async function (req, res) {
 
 exports.getPerkByName = async function (req, res) {
     try {
-        // TODO make this work
-        const query = req.query.value;
-        const name = query.perk_name;
-        const perks = await Perk.find();
-        const perk = perks.find(p => p.name.toLowerCase() == name);
+        const query = req.query;
+        const name = query.perk_name.replace("-", " ").toLowerCase();
+        console.log("name: ", name)
+        const perk = await Perk.findOne(
+            // specifies that we want to match the name field in the Perk collection using a regular expression
+            { name: { $regex: new RegExp(`${name}`, 'i') } }
+        );
+        console.log("perk: ", perk)
 
-        return res.json(query);
+        return res.json(perk);
     } catch (err) {
         res.send(err)
     }
