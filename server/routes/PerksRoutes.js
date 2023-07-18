@@ -5,6 +5,13 @@ module.exports = function (app) {
         .get(perksController.getAllPerks)
         .post(perksController.addGenericPerk);
 
+    app.route('/perks/query')
+        .get((req, res) => {
+            if (req.query.perk_name) {
+                return perksController.getPerkByName(req, res);
+            }
+        })
+
     app.route('/perks/generic')
         .get(perksController.getAllGenericPerks);
 

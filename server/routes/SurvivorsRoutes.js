@@ -5,6 +5,15 @@ module.exports = function (app) {
         .get(survivorsController.getAllSurvivors)
         .post(survivorsController.addSurvivor);
 
+    app.route('/survivors/query')
+        .get((req, res) => {
+            // ?survivor_name=firstName-lastName
+            // will return specific survivor
+            if (req.query.survivor_name) {
+                return survivorsController.getSurvivorByName(req, res);
+            }
+        })
+
     app.route('/survivors/:survivorId')
         .get(survivorsController.getSurvivorById)
         .put(survivorsController.updateSurvivor)
