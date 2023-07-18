@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dead By Daylight API</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+  <header></header>
+  <main>
+    <div class="container-fluid h-100 w-100">
+      <div class="row h-100 m-auto justify-content-center">
+        <div class="col-10 h-100 d-flex flex-column justify-content-evenly align-items-center">
+          <h1>Welcome to the Dead By Daylight API!</h1>
+          <div class="w-100">
+            <h4>Survivor Routes:</h4>
+            <div class="route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light">
+              <h5>/api/survivors</h5>
+              <p>returns all survivors</p>
+            </div>
+          </div>
+          <div class="route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light">
+            <h5>/api/survivors/:survivorId</h5>
+            <p>returns a specific survivor based on their unique id</p>
+          </div>
+          <div class="route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light">
+            <h5>/api/perks</h5>
+            <p>returns all perks</p>
+          </div>
+          <div class="route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light">
+            <h5>/api/perks/generic</h5>
+            <p>returns all generic perks</p>
+          </div>
+          <div class="route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light">
+            <h5>/api/perks/survivor</h5>
+            <p>returns all survivor perks</p>
+          </div>
+          <div class="route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light">
+            <h5>/api/perks/killer</h5>
+            <p>returns all killers</p>
+          </div>
+          <div class="route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light">
+            <h5>/api/:characterId/perks</h5>
+            <p>returns a specific character's perks based on the characters unique id</p>
+          </div>
+          <div class="route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light">
+            <h5>/api/perks/:perkId</h5>
+            <p>returns a specific perk based on its unique id</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<style scoped>
+
+  header {
+    height: 80px;
+    background-color: #860000;
+  }
+
+  main {
+    background-color: #010202;
+    color: #c1b9a2;
+    height: calc(100vh - 145px);
+    overflow-y: auto;
+  }
+
+  footer {
+    height: 65px;
+    background-color: #860000;
+  }
+
+  .route-block {
+    height: 65px;
+  }
+</style>

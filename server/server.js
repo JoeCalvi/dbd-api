@@ -18,6 +18,10 @@ DbConnection.connect();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+    res.sendFile(process.cwd() + "/index.html");
+});
+
 const perkRoutes = require('./routes/PerksRoutes');
 const survivorRoutes = require('./routes/SurvivorsRoutes');
 const killerRoutes = require('./routes/KillerRoutes');
