@@ -1,24 +1,24 @@
 module.exports = function (app) {
     const perksController = require('../controllers/PerksController');
 
-    app.route('/api/perks')
+    app.route('/perks')
         .get(perksController.getAllPerks)
         .post(perksController.addGenericPerk);
 
-    app.route('/api/perks/generic')
+    app.route('/perks/generic')
         .get(perksController.getAllGenericPerks);
 
-    app.route('/api/perks/survivor')
+    app.route('/perks/survivor')
         .get(perksController.getAllSurvivorPerks);
 
-    app.route('/api/perks/killer')
+    app.route('/perks/killer')
         .get(perksController.getAllKillerPerks);
 
-    app.route('/api/:characterId/perks')
+    app.route('/:characterId/perks')
         .post(perksController.addPerk)
         .get(perksController.getPerksByCharacterId);
 
-    app.route('/api/perks/:perkId')
+    app.route('/perks/:perkId')
         .get(perksController.getPerkById)
         .put(perksController.updatePerk)
         .delete(perksController.deletePerk);
