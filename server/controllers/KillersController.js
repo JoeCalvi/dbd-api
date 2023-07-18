@@ -1,39 +1,39 @@
 const mongoose = require('mongoose');
 const Killer = mongoose.model('Killers');
 
-// exports.getAllSurvivors = async function (req, res) {
-//     try {
-//         const survivors = await Survivor.find({})
-//             .populate('perk_one', 'name icon')
-//             .populate('perk_two', 'name icon')
-//             .populate('perk_three', 'name icon');
-//         res.json(survivors);
-//     } catch (err) {
-//         res.send(err);
-//     }
-// };
+exports.getAllKillers = async function (req, res) {
+    try {
+        const killers = await Killer.find({})
+            .populate('perk_one', 'name icon')
+            .populate('perk_two', 'name icon')
+            .populate('perk_three', 'name icon');
+        res.json(killers);
+    } catch (err) {
+        res.send(err);
+    }
+};
 
-// exports.addSurvivor = async function (req, res) {
-//     try {
-//         const survivor = new Survivor(req.body);
-//         const savedSurvivor = await survivor.save();
-//         res.json(savedSurvivor);
-//     } catch (err) {
-//         res.send(err);
-//     }
-// };
+exports.addKiller = async function (req, res) {
+    try {
+        const killer = new Killer(req.body);
+        const savedKiller = await killer.save();
+        res.json(savedKiller);
+    } catch (err) {
+        res.send(err);
+    }
+};
 
-// exports.getSurvivorById = async function (req, res) {
-//     try {
-//         const survivor = await Survivor.findById(req.params.survivorId)
-//             .populate('perk_one')
-//             .populate('perk_two')
-//             .populate('perk_three');
-//         res.json(survivor);
-//     } catch (err) {
-//         res.send(err);
-//     }
-// };
+exports.getKillerById = async function (req, res) {
+    try {
+        const killer = await Killer.findById(req.params.killerId)
+            .populate('perk_one')
+            .populate('perk_two')
+            .populate('perk_three');
+        res.json(killer);
+    } catch (err) {
+        res.send(err);
+    }
+};
 
 // exports.getSurvivorByName = async function (req, res) {
 //     try {
@@ -50,20 +50,20 @@ const Killer = mongoose.model('Killers');
 //     }
 // }
 
-// exports.updateSurvivor = async function (req, res) {
-//     try {
-//         const survivor = await Survivor.findByIdAndUpdate(req.params.survivorId, req.body, { new: true });
-//         res.json(survivor);
-//     } catch (err) {
-//         res.send(err);
-//     }
-// };
+exports.updateKiller = async function (req, res) {
+    try {
+        const killer = await Killer.findByIdAndUpdate(req.params.killerId, req.body, { new: true });
+        res.json(killer);
+    } catch (err) {
+        res.send(err);
+    }
+};
 
-// exports.deleteSurvivor = async function (req, res) {
-//     try {
-//         const survivor = await Survivor.findByIdAndDelete(req.params.survivorId);
-//         res.json({ message: 'Perk deleted.' });
-//     } catch (err) {
-//         res.send(err);
-//     }
-// };
+exports.deleteKiller = async function (req, res) {
+    try {
+        const killer = await Killer.findByIdAndDelete(req.params.killerId);
+        res.json({ message: 'Killer deleted.' });
+    } catch (err) {
+        res.send(err);
+    }
+};

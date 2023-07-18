@@ -2,11 +2,11 @@ module.exports = function (app) {
     const killersController = require('../controllers/KillersController');
 
     app.route('/killers')
-    // .get(survivorsController.getAllSurvivors)
-    // .post(survivorsController.addSurvivor);
+        .get(killersController.getAllKillers)
+        .post(killersController.addKiller);
 
     app.route('/killers/:killerId')
-    // .get(survivorsController.getSurvivorById)
-    // .put(survivorsController.updateSurvivor)
-    // .delete(survivorsController.deleteSurvivor);
+        .get(killersController.getKillerById)
+        .put(killersController.updateKiller)
+        .delete(killersController.deleteKiller);
 };

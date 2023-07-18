@@ -7,6 +7,9 @@ module.exports = function (app) {
 
     app.route('/perks/query')
         .get((req, res) => {
+            // ?perk_name=perkName
+            // if perk name is more than one word, separate with hyphens
+            // will return specific perk
             if (req.query.perk_name) {
                 return perksController.getPerkByName(req, res);
             }
