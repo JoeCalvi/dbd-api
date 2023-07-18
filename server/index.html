@@ -13,17 +13,17 @@
   <header></header>
   <main>
     <div class="container-fluid h-100 w-100">
-      <div class="row m-auto justify-content-center mb-3">
+      <div class="row m-auto justify-content-center my-5">
         <div class="col-10 h-100 d-flex flex-column justify-content-evenly align-items-center">
           <h1>Welcome to the Dead By Daylight API!</h1>
         </div>
       </div>
-      <div class="row m-auto justify-content-between mb-3">
-        <div class="col-md-6">
+      <div class="row m-auto justify-content-center mb-3">
+        <div class="col-8 mb-3">
           <div class="w-100">
-            <h4 class="text-center">Survivor Routes:</h4>
+            <h4 class="text-center text-decoration-underline">Survivor Routes:</h4>
             <div
-              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light">
+              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
               <div class="col-md-6 p-0">
                 <h5 class="mb-0">/api/survivors</h5>
               </div>
@@ -32,7 +32,7 @@
               </div>
             </div>
             <div
-              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light">
+              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
               <div class="col-md-6 p-0">
                 <h5 class="mb-0">/api/survivors/:survivorId</h5>
               </div>
@@ -42,11 +42,11 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-8 mb-3">
           <div class="row w-100">
-            <h4 class="text-center">Killer Routes</h4>
+            <h4 class="text-center text-decoration-underline">Killer Routes:</h4>
             <div
-              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light">
+              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
               <div class="col-md-6 p-0">
                 <h5 class="mb-0">/api/killers</h5>
               </div>
@@ -55,7 +55,7 @@
               </div>
             </div>
             <div
-              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light">
+              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
               <div class="col-md-6 p-0">
                 <h5 class="mb-0">/api/killers/:killerId</h5>
               </div>
@@ -66,34 +66,54 @@
           </div>
         </div>
       </div>
-      <div class="row m-auto mb-3">
-        <div class="col-12">
+      <div class="row m-auto mb-3 justify-content-center">
+        <div class="col-8 mb-3">
           <div class="row w-100">
-            <h4>Perk Routes:</h4>
+            <h4 class="text-center text-decoration-underline">Perk Routes:</h4>
             <div
-              class="route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light">
-              <h5>/api/perks</h5>
-              <p>returns all perks</p>
+              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+              <div class="col-md-6 p-0">
+                <h5 class="mb-0">/api/perks</h5>
+              </div>
+              <div class="col-md-6 p-0">
+                <p class="text-end mb-0">returns all perks</p>
+              </div>
             </div>
             <div
-              class="route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light">
-              <h5>/api/perks/generic</h5>
-              <p>returns all generic perks</p>
+              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+              <div class="col-md-6 p-0">
+                <h5 class="mb-0">/api/perks/generic</h5>
+              </div>
+              <div class="col-md-6">
+                <p class="text-end mb-0">returns all generic perks</p>
+              </div>
             </div>
             <div
-              class="route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light">
-              <h5>/api/perks/survivor</h5>
-              <p>returns all survivor perks</p>
+              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+              <div class="col-md-6 p-0">
+                <h5 class="mb-0">/api/perks/survivor</h5>
+              </div>
+              <div class="col-md-6 p-0">
+                <p class="text-end mb-0">returns all survivor perks</p>
+              </div>
             </div>
             <div
-              class="route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light">
-              <h5>/api/:characterId/perks</h5>
-              <p>returns a specific character's perks based on the characters unique id</p>
+              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+              <div class="col-md-6 p-0">
+                <h5 class="mb-0">/api/:characterId/perks</h5>
+              </div>
+              <div class="col-md-6 p-0">
+                <p class="text-end mb-0">returns a specific character's perks based on the characters unique id</p>
+              </div>
             </div>
             <div
-              class="route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light">
-              <h5>/api/perks/:perkId</h5>
-              <p>returns a specific perk based on its unique id</p>
+              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+              <div class="col-md-6 p-0">
+                <h5 class="mb-0">/api/perks/:perkId</h5>
+              </div>
+              <div class="col-md-6 p-0">
+                <p class="text-end mb-0">returns a specific perk based on its unique id</p>
+              </div>
             </div>
           </div>
         </div>
