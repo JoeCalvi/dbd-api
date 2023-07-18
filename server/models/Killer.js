@@ -7,6 +7,7 @@ const KillerSchema = new Schema({
     realm: { type: String, required: true },
     // realm_id: { type: Schema.Types.ObjectId, ref: 'Realms'},
     power: { type: String, required: true },
+    // power_id: { type: Schema.Types.ObjectId, ref: 'Powers' },
     power_attack_type: { type: String, required: true },
     weapon: { type: String, required: true },
     // weapon_id: { type: Schema.Types.ObjectId, ref: 'Weapons' },
@@ -57,6 +58,13 @@ KillerSchema.virtual('perk_three', {
 //     foreignField: '_id',
 //     justOne: true,
 //     ref: 'Realms'
+// })
+
+// KillerSchema.virtual('power', {
+//     localField: 'power_id',
+//     foreignField: '_id',
+//     justOne: true,
+//     ref: 'Powers'
 // })
 
 module.exports = mongoose.model('Killers', KillerSchema);
