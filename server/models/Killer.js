@@ -12,6 +12,7 @@ const KillerSchema = new Schema({
     terror_radius: { type: String, required: true },
     height: { type: String, required: true },
     overview: { type: String, required: true },
+    difficulty_rating: { type: String, required: true },
     dlc: { type: String, required: true, default: "Base Game" },
     gender: { type: String, required: true },
     voice_actor: { type: String, required: true },
