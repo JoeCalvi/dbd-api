@@ -6,7 +6,8 @@ exports.getAllKillers = async function (req, res) {
         const killers = await Killer.find({})
             .populate('perk_one', 'name icon')
             .populate('perk_two', 'name icon')
-            .populate('perk_three', 'name icon');
+            .populate('perk_three', 'name icon')
+            .populate('Weapon');
         res.json(killers);
     } catch (err) {
         res.send(err);
