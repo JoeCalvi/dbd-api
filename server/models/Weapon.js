@@ -14,3 +14,5 @@ WeaponSchema.virtual('killer', {
     justOne: true,
     ref: 'Killers'
 })
+
+module.exports = mongoose.model('Weapons', WeaponSchema);
