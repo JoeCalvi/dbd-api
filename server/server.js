@@ -8,6 +8,7 @@ const express = require('express'),
     Perk = require('./models/Perk'),
     Survivor = require('./models/Survivor'),
     Killer = require('./models/Killer'),
+    Weapon = require('./models/Weapon'),
     bodyParser = require('body-parser');
 
 const httpServer = createServer(app);
