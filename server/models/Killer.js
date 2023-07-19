@@ -9,7 +9,7 @@ const KillerSchema = new Schema({
     power: { type: String, required: true },
     // power_id: { type: Schema.Types.ObjectId, ref: 'Powers' },
     power_attack_type: { type: String, required: true },
-    weapon: { type: String, required: true },
+    weapon: { type: String },
     weapon_id: { type: Schema.Types.ObjectId, ref: 'Weapons' },
     movement_speed: { type: String, required: true },
     terror_radius: { type: String, required: true },

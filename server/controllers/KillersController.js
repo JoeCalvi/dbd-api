@@ -28,7 +28,8 @@ exports.getKillerById = async function (req, res) {
         const killer = await Killer.findById(req.params.killerId)
             .populate('perk_one')
             .populate('perk_two')
-            .populate('perk_three');
+            .populate('perk_three')
+            .populate('Weapon');
         res.json(killer);
     } catch (err) {
         res.send(err);
@@ -42,7 +43,8 @@ exports.getKillerByName = async function (req, res) {
         const killers = await Killer.find()
             .populate('perk_one')
             .populate('perk_two')
-            .populate('perk_three');
+            .populate('perk_three')
+            .populate('Weapon');
         const killer = killers.find(k => k.killer_name.toLowerCase() == name);
         return res.json(killer);
     } catch (err) {
