@@ -10,7 +10,7 @@ const KillerSchema = new Schema({
     // power_id: { type: Schema.Types.ObjectId, ref: 'Powers' },
     power_attack_type: { type: String, required: true },
     weapon: { type: String, required: true },
-    // weapon_id: { type: Schema.Types.ObjectId, ref: 'Weapons' },
+    weapon_id: { type: Schema.Types.ObjectId, ref: 'Weapons' },
     movement_speed: { type: String, required: true },
     terror_radius: { type: String, required: true },
     height: { type: String, required: true },
@@ -46,12 +46,12 @@ KillerSchema.virtual('perk_three', {
     ref: 'Perks'
 })
 
-// KillerSchema.virtual('weapon', {
-//     localField: 'weapon_id',
-//     foreignField: '_id',
-//     justOne: true,
-//     ref: 'Weapons'
-// })
+KillerSchema.virtual('Weapon', {
+    localField: 'weapon_id',
+    foreignField: '_id',
+    justOne: true,
+    ref: 'Weapons'
+})
 
 // KillerSchema.virtual('realm', {
 //     localField: 'realm_id',

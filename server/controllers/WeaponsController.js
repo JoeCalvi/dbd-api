@@ -5,7 +5,7 @@ const Killer = mongoose.model('Killers');
 exports.getAllWeapons = async function (req, res) {
     try {
         const weapons = await Weapon.find({})
-            .populate('killer', 'name portrait');
+            .populate('killer', 'killer_name portrait');
         res.json(weapons);
     } catch (err) {
         res.send(err);
@@ -37,9 +37,9 @@ exports.getWeaponByKillerName = async function (req, res) {
         const query = req.query;
         const name = query.killer_name.replace('-', ' ').toLowerCase();
         const killers = await Killer.find()
-        const killer = killers.find(k => k.name.toLowerCase() == name);
+        const killer = killers.find(k => k.killer_name.toLowerCase() == name);
         const weapon_id = killer.weapon_id
-        const weapon = Weapon.findById(weapon_id)
+        const weapon = await Weapon.findById(weapon_id)
         return res.json(weapon);
     } catch (err) {
         res.send(err)
