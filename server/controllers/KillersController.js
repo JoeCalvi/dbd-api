@@ -35,20 +35,20 @@ exports.getKillerById = async function (req, res) {
     }
 };
 
-// exports.getSurvivorByName = async function (req, res) {
-//     try {
-//         const query = req.query;
-//         const name = query.survivor_name.replace('-', ' ').toLowerCase();
-//         const survivors = await Survivor.find()
-//             .populate('perk_one')
-//             .populate('perk_two')
-//             .populate('perk_three');
-//         const survivor = survivors.find(s => s.name.toLowerCase() == name);
-//         return res.json(survivor);
-//     } catch (err) {
-//         res.send(err)
-//     }
-// }
+exports.getKillerByName = async function (req, res) {
+    try {
+        const query = req.query;
+        const name = query.killer_name.replace('-', ' ').toLowerCase();
+        const killers = await Killer.find()
+            .populate('perk_one')
+            .populate('perk_two')
+            .populate('perk_three');
+        const killer = killers.find(k => k.killer_name.toLowerCase() == name);
+        return res.json(killer);
+    } catch (err) {
+        res.send(err)
+    }
+}
 
 exports.updateKiller = async function (req, res) {
     try {
