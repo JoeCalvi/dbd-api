@@ -26,9 +26,11 @@ app.get('/', (req, res) => {
 const perkRoutes = require('./routes/PerksRoutes');
 const survivorRoutes = require('./routes/SurvivorsRoutes');
 const killerRoutes = require('./routes/KillerRoutes');
+const weaponRoutes = require('./routes/WeaponRoutes');
 perkRoutes(app);
 survivorRoutes(app);
 killerRoutes(app);
+weaponRoutes(app);
 
 app.use(function (req, res) {
     res.status(404).send({ url: req.originalUrl + ' not found' })
