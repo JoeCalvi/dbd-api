@@ -4,7 +4,8 @@ const Map = mongoose.model('Maps');
 
 exports.getAllMapsInARealm = async function (req, res) {
     try {
-        const realm = await Realm.findById(req.params.realmId);
+        const realm = await Realm.findById(req.params.realmId)
+            .populate('maps')
         const maps = realm.maps;
         return res.send(maps);
     } catch (err) {
@@ -27,6 +28,9 @@ exports.addMap = async function (req, res) {
         const map = new Map(req.body);
         map.realm_id = req.params.realmId
         const savedMap = await map.save();
+        const realm = await Realm.findById(req.params.realmId);
+        realm.maps.push(savedMap._id)
+        await realm.save();
         return res.json(savedMap);
     } catch (err) {
         res.send(err);
@@ -43,11 +47,13 @@ exports.getMapById = async function (req, res) {
     }
 };
 
+// TODO this returns an empty object
 exports.getMapsByRealmName = async function (req, res) {
     try {
         const query = req.query;
         const name = query.realm_name.replace('-', ' ').toLowerCase();
         const realms = await Realm.find()
+            .populate('maps');
         const realm = realms.find(r => r.name.toLowerCase() == name);
         const maps = realm.maps
         return res.send(maps);
