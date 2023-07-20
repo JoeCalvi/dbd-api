@@ -5,6 +5,7 @@ const MapSchema = new Schema({
     name: { type: String, required: true },
     description: { type: String, required: true },
     image: { type: String, required: true },
+    layout: { type: String, required: true },
     realm_id: { type: Schema.Types.ObjectId, ref: 'Realms' }
 }, { timestamps: true, toJSON: { virtuals: true } });
 
