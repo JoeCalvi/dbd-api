@@ -33,19 +33,18 @@ exports.getMapById = async function (req, res) {
     }
 };
 
-// exports.getRealmByKillerName = async function (req, res) {
-//     try {
-//         const query = req.query;
-//         const name = query.killer_name.replace('-', ' ').toLowerCase();
-//         const killers = await Killer.find()
-//         const killer = killers.find(k => k.killer_name.toLowerCase() == name);
-//         const realm_id = killer.realm_id
-//         const realm = await Realm.findById(realm_id)
-//         return res.json(realm);
-//     } catch (err) {
-//         res.send(err)
-//     }
-// }
+exports.getMapsByRealmName = async function (req, res) {
+    try {
+        const query = req.query;
+        const name = query.realm_name.replace('-', ' ').toLowerCase();
+        const realms = await Realm.find()
+        const realm = realms.find(r => r.name.toLowerCase() == name);
+        const maps = realm.maps
+        return res.send(maps);
+    } catch (err) {
+        res.send(err)
+    }
+}
 
 // exports.updateRealm = async function (req, res) {
 //     try {
