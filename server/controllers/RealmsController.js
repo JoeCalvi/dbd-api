@@ -48,14 +48,14 @@ exports.getRealmByKillerName = async function (req, res) {
     }
 }
 
-// exports.updateWeapon = async function (req, res) {
-//     try {
-//         const weapon = await Weapon.findByIdAndUpdate(req.params.weaponId, req.body, { new: true });
-//         res.json(weapon);
-//     } catch (err) {
-//         res.send(err);
-//     }
-// };
+exports.updateRealm = async function (req, res) {
+    try {
+        const realm = await Realm.findByIdAndUpdate(req.params.realmId, req.body, { new: true });
+        return res.json(realm);
+    } catch (err) {
+        res.send(err);
+    }
+};
 
 // exports.deleteWeapon = async function (req, res) {
 //     try {
