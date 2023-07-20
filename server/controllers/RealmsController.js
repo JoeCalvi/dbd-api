@@ -13,15 +13,15 @@ exports.getAllRealms = async function (req, res) {
     }
 };
 
-// exports.addWeapon = async function (req, res) {
-//     try {
-//         const weapon = new Weapon(req.body);
-//         const savedWeapon = await weapon.save();
-//         res.json(savedWeapon);
-//     } catch (err) {
-//         res.send(err);
-//     }
-// };
+exports.addRealm = async function (req, res) {
+    try {
+        const realm = new Realm(req.body);
+        const savedRealm = await realm.save();
+        return res.json(savedRealm);
+    } catch (err) {
+        res.send(err);
+    }
+};
 
 // exports.getWeaponById = async function (req, res) {
 //     try {
