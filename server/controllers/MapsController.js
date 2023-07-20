@@ -12,26 +12,26 @@ exports.getAllMaps = async function (req, res) {
     }
 };
 
-// exports.addRealm = async function (req, res) {
-//     try {
-//         const realm = new Realm(req.body);
-//         const savedRealm = await realm.save();
-//         return res.json(savedRealm);
-//     } catch (err) {
-//         res.send(err);
-//     }
-// };
+exports.addMap = async function (req, res) {
+    try {
+        const map = new Map(req.body);
+        map.realm_id = req.params.realmId
+        const savedMap = await map.save();
+        return res.json(savedMap);
+    } catch (err) {
+        res.send(err);
+    }
+};
 
-// exports.getRealmById = async function (req, res) {
-//     try {
-//         const realm = await Realm.findById(req.params.realmId)
-//             .populate('associated_killers', 'killer_name portrait')
-//             .populate('maps');
-//         return res.json(realm);
-//     } catch (err) {
-//         res.send(err);
-//     }
-// };
+exports.getMapById = async function (req, res) {
+    try {
+        const map = await Map.findById(req.params.mapId)
+            .populate('realm');
+        return res.json(map);
+    } catch (err) {
+        res.send(err);
+    }
+};
 
 // exports.getRealmByKillerName = async function (req, res) {
 //     try {
