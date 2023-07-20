@@ -23,15 +23,16 @@ exports.addRealm = async function (req, res) {
     }
 };
 
-// exports.getWeaponById = async function (req, res) {
-//     try {
-//         const weapon = await Weapon.findById(req.params.weaponId)
-//             .populate('killer');
-//         res.json(weapon);
-//     } catch (err) {
-//         res.send(err);
-//     }
-// };
+exports.getRealmById = async function (req, res) {
+    try {
+        const realm = await Realm.findById(req.params.realmId)
+            .populate('associated_killers', 'killer_name portrait')
+            .populate('maps');
+        return res.json(realm);
+    } catch (err) {
+        res.send(err);
+    }
+};
 
 // exports.getWeaponByKillerName = async function (req, res) {
 //     try {
