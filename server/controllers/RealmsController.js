@@ -34,19 +34,19 @@ exports.getRealmById = async function (req, res) {
     }
 };
 
-// exports.getWeaponByKillerName = async function (req, res) {
-//     try {
-//         const query = req.query;
-//         const name = query.killer_name.replace('-', ' ').toLowerCase();
-//         const killers = await Killer.find()
-//         const killer = killers.find(k => k.killer_name.toLowerCase() == name);
-//         const weapon_id = killer.weapon_id
-//         const weapon = await Weapon.findById(weapon_id)
-//         return res.json(weapon);
-//     } catch (err) {
-//         res.send(err)
-//     }
-// }
+exports.getRealmByKillerName = async function (req, res) {
+    try {
+        const query = req.query;
+        const name = query.killer_name.replace('-', ' ').toLowerCase();
+        const killers = await Killer.find()
+        const killer = killers.find(k => k.killer_name.toLowerCase() == name);
+        const realm_id = killer.realm_id
+        const realm = await Realm.findById(realm_id)
+        return res.json(realm);
+    } catch (err) {
+        res.send(err)
+    }
+}
 
 // exports.updateWeapon = async function (req, res) {
 //     try {
