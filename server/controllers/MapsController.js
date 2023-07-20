@@ -46,14 +46,14 @@ exports.getMapsByRealmName = async function (req, res) {
     }
 }
 
-// exports.updateRealm = async function (req, res) {
-//     try {
-//         const realm = await Realm.findByIdAndUpdate(req.params.realmId, req.body, { new: true });
-//         return res.json(realm);
-//     } catch (err) {
-//         res.send(err);
-//     }
-// };
+exports.updateMap = async function (req, res) {
+    try {
+        const map = await Map.findByIdAndUpdate(req.params.mapId, req.body, { new: true });
+        return res.json(map);
+    } catch (err) {
+        res.send(err);
+    }
+};
 
 // exports.deleteRealm = async function (req, res) {
 //     try {
