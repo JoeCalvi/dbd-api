@@ -29,10 +29,12 @@ const perkRoutes = require('./routes/PerksRoutes');
 const survivorRoutes = require('./routes/SurvivorsRoutes');
 const killerRoutes = require('./routes/KillerRoutes');
 const weaponRoutes = require('./routes/WeaponRoutes');
+const realmRoutes = require('./routes/RealmRoutes');
 perkRoutes(app);
 survivorRoutes(app);
 killerRoutes(app);
 weaponRoutes(app);
+realmRoutes(app);
 
 app.use(function (req, res) {
     res.status(404).send({ url: req.originalUrl + ' not found' })
