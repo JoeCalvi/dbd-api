@@ -9,4 +9,11 @@ const MapSchema = new Schema({
     realm_id: { type: Schema.Types.ObjectId, ref: 'Realms' }
 }, { timestamps: true, toJSON: { virtuals: true } });
 
+MapSchema.virtual('realm', {
+    localField: 'realm_id',
+    foreignField: '_id',
+    justOne: true,
+    ref: 'Realms'
+});
+
 module.exports = mongoose.model('Maps', MapSchema);
