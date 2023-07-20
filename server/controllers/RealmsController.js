@@ -57,11 +57,11 @@ exports.updateRealm = async function (req, res) {
     }
 };
 
-// exports.deleteWeapon = async function (req, res) {
-//     try {
-//         const weapon = await Weapon.findByIdAndDelete(req.params.weaponId);
-//         res.json({ message: 'Weapon deleted.' });
-//     } catch (err) {
-//         res.send(err);
-//     }
-// };
+exports.deleteRealm = async function (req, res) {
+    try {
+        const realm = await Realm.findByIdAndDelete(req.params.realmId);
+        return res.json({ message: 'Realm deleted.' });
+    } catch (err) {
+        res.send(err);
+    }
+};
