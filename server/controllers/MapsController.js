@@ -2,6 +2,16 @@ const mongoose = require('mongoose');
 const Realm = mongoose.model('Realms');
 const Map = mongoose.model('Maps');
 
+exports.getAllMapsInARealm = async function (req, res) {
+    try {
+        const realm = await Realm.findById(req.params.realmId);
+        const maps = realm.maps;
+        return res.send(maps);
+    } catch (err) {
+        res.send(err);
+    }
+};
+
 exports.getAllMaps = async function (req, res) {
     try {
         const maps = await Map.find({})
