@@ -55,11 +55,11 @@ exports.updateMap = async function (req, res) {
     }
 };
 
-// exports.deleteRealm = async function (req, res) {
-//     try {
-//         const realm = await Realm.findByIdAndDelete(req.params.realmId);
-//         return res.json({ message: 'Realm deleted.' });
-//     } catch (err) {
-//         res.send(err);
-//     }
-// };
+exports.deleteMap = async function (req, res) {
+    try {
+        const map = await Map.findByIdAndDelete(req.params.mapId);
+        return res.json({ message: 'Map deleted.' });
+    } catch (err) {
+        res.send(err);
+    }
+};
