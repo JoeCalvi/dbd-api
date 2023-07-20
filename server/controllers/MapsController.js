@@ -2,16 +2,15 @@ const mongoose = require('mongoose');
 const Realm = mongoose.model('Realms');
 const Map = mongoose.model('Maps');
 
-// exports.getAllMaps = async function (req, res) {
-//     try {
-//         const maps = await Map.find({})
-//             .populate('associated_killers', 'killer_name portrait')
-//             .populate('maps');
-//         return res.json(realms);
-//     } catch (err) {
-//         res.send(err);
-//     }
-// };
+exports.getAllMaps = async function (req, res) {
+    try {
+        const maps = await Map.find({})
+            .populate('realm', 'name location');
+        return res.json(maps);
+    } catch (err) {
+        res.send(err);
+    }
+};
 
 // exports.addRealm = async function (req, res) {
 //     try {
