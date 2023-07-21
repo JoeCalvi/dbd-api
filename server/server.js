@@ -11,6 +11,7 @@ const express = require('express'),
     Weapon = require('./models/Weapon'),
     Realm = require('./models/Realm'),
     Map = require('./models/Map'),
+    Power = require('./models/Power'),
     bodyParser = require('body-parser');
 
 const httpServer = createServer(app);
@@ -30,13 +31,15 @@ const survivorRoutes = require('./routes/SurvivorsRoutes');
 const killerRoutes = require('./routes/KillerRoutes');
 const weaponRoutes = require('./routes/WeaponRoutes');
 const realmRoutes = require('./routes/RealmRoutes');
-const mapRoutes = require('./routes/MapRoutes')
+const mapRoutes = require('./routes/MapRoutes');
+const powerRoutes = require('./routes/PowerRoutes');
 perkRoutes(app);
 survivorRoutes(app);
 killerRoutes(app);
 weaponRoutes(app);
 realmRoutes(app);
 mapRoutes(app);
+powerRoutes(app);
 
 app.use(function (req, res) {
     res.status(404).send({ url: req.originalUrl + ' not found' })

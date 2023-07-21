@@ -12,6 +12,16 @@ exports.getAllPowers = async function (req, res) {
     }
 };
 
+exports.getPowerByKillerId = async function (req, res) {
+    try {
+        const killer = await Killer.findById(req.params.killerId);
+        const power = await Power.findById(killer.power_id);
+        return res.json(power);
+    } catch (error) {
+        res.send(error)
+    }
+};
+
 exports.addPower = async function (req, res) {
     try {
         const power = new Power(req.body);
