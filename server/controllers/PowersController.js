@@ -55,11 +55,11 @@ exports.updatePower = async function (req, res) {
     }
 };
 
-// exports.deleteMap = async function (req, res) {
-//     try {
-//         const map = await Map.findByIdAndDelete(req.params.mapId);
-//         return res.json({ message: 'Map deleted.' });
-//     } catch (err) {
-//         res.send(err);
-//     }
-// };
+exports.deletePower = async function (req, res) {
+    try {
+        const power = await Power.findByIdAndDelete(req.params.powerId);
+        return res.json({ message: 'Power deleted.' });
+    } catch (err) {
+        res.send(err);
+    }
+};
