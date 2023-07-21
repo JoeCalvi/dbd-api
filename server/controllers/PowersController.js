@@ -12,19 +12,16 @@ exports.getAllPowers = async function (req, res) {
     }
 };
 
-// exports.addMap = async function (req, res) {
-//     try {
-//         const map = new Map(req.body);
-//         map.realm_id = req.params.realmId
-//         const savedMap = await map.save();
-//         const realm = await Realm.findById(req.params.realmId);
-//         realm.maps.push(savedMap._id)
-//         await realm.save();
-//         return res.json(savedMap);
-//     } catch (err) {
-//         res.send(err);
-//     }
-// };
+exports.addPower = async function (req, res) {
+    try {
+        const power = new Power(req.body);
+        power.killer_id = req.params.killerId
+        const savedPower = await power.save();
+        return res.json(savedPower);
+    } catch (err) {
+        res.send(err);
+    }
+};
 
 // exports.getMapById = async function (req, res) {
 //     try {
