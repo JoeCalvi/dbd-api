@@ -12,6 +12,7 @@ const express = require('express'),
     Realm = require('./models/Realm'),
     Map = require('./models/Map'),
     Power = require('./models/Power'),
+    StatusEffect = require('./models/StatusEffect'),
     bodyParser = require('body-parser');
 
 const httpServer = createServer(app);
