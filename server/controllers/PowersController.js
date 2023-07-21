@@ -46,14 +46,14 @@ exports.getPowerById = async function (req, res) {
 //     }
 // }
 
-// exports.updateMap = async function (req, res) {
-//     try {
-//         const map = await Map.findByIdAndUpdate(req.params.mapId, req.body, { new: true });
-//         return res.json(map);
-//     } catch (err) {
-//         res.send(err);
-//     }
-// };
+exports.updatePower = async function (req, res) {
+    try {
+        const power = await Power.findByIdAndUpdate(req.params.powerId, req.body, { new: true });
+        return res.json(power);
+    } catch (err) {
+        res.send(err);
+    }
+};
 
 // exports.deleteMap = async function (req, res) {
 //     try {
