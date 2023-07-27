@@ -36,19 +36,19 @@ exports.getChapterById = async function (req, res) {
     }
 };
 
-// exports.getRealmByKillerName = async function (req, res) {
-//     try {
-//         const query = req.query;
-//         const name = query.killer_name.replace('-', ' ').toLowerCase();
-//         const killers = await Killer.find()
-//         const killer = killers.find(k => k.killer_name.toLowerCase() == name);
-//         const realm_id = killer.realm_id
-//         const realm = await Realm.findById(realm_id)
-//         return res.json(realm);
-//     } catch (err) {
-//         res.send(err)
-//     }
-// }
+exports.getChapterByKillerName = async function (req, res) {
+    try {
+        const query = req.query;
+        const name = query.killer_name.replace('-', ' ').toLowerCase();
+        const killers = await Killer.find()
+        const killer = killers.find(k => k.killer_name.toLowerCase() == name);
+        const chapter_id = killer.chapter_id
+        const chapter = await Chapter.findById(chapter_id)
+        return res.json(chapter);
+    } catch (err) {
+        res.send(err)
+    }
+}
 
 // exports.updateRealm = async function (req, res) {
 //     try {
