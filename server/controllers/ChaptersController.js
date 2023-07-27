@@ -50,14 +50,14 @@ exports.getChapterByKillerName = async function (req, res) {
     }
 }
 
-// exports.updateRealm = async function (req, res) {
-//     try {
-//         const realm = await Realm.findByIdAndUpdate(req.params.realmId, req.body, { new: true });
-//         return res.json(realm);
-//     } catch (err) {
-//         res.send(err);
-//     }
-// };
+exports.updateChapter = async function (req, res) {
+    try {
+        const chapter = await Chapter.findByIdAndUpdate(req.params.chapterId, req.body, { new: true });
+        return res.json(chapter);
+    } catch (err) {
+        res.send(err);
+    }
+};
 
 // exports.deleteRealm = async function (req, res) {
 //     try {
