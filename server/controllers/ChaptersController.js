@@ -29,7 +29,10 @@ exports.getChapterById = async function (req, res) {
     try {
         const chapter = await Chapter.findById(req.params.chapterId)
             .populate('associated_characters')
-            .populate('realm');
+            .populate(
+                { path: 'realm', select: 'name description location image maps', populate: 
+                { path: 'maps', select: 'name description image layout' }}
+            );
         return res.json(chapter);
     } catch (err) {
         res.send(err);
