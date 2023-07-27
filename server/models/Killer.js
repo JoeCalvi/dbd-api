@@ -17,7 +17,7 @@ const KillerSchema = new Schema({
     overview: { type: String, required: true },
     difficulty_rating: { type: String, required: true },
     dlc: { type: String, required: true, default: "Base Game" },
-    // chapter_id: { type: Schema.Types.ObjectId, ref: 'Chapters' },
+    // chapter_id: { type: Schema.Types.ObjectId, ref: 'Chapters', default: null },
     gender: { type: String, required: true },
     voice_actor: { type: String, required: true },
     portrait: { type: String, required: true },
