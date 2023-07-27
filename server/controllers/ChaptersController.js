@@ -50,6 +50,20 @@ exports.getChapterByKillerName = async function (req, res) {
     }
 }
 
+exports.getChapterBySurvivorName = async function (req, res) {
+  try {
+      const query = req.query;
+      const name = query.survivor_name.replace('-', ' ').toLowerCase();
+      const survivors = await Survivor.find()
+      const survivor = survivors.find(s => s.name.toLowerCase() == name);
+      const chapter_id = survivor.chapter_id
+      const chapter = await Chapter.findById(chapter_id)
+      return res.json(chapter);
+  } catch (err) {
+      res.send(err)
+  }
+}
+
 exports.updateChapter = async function (req, res) {
     try {
         const chapter = await Chapter.findByIdAndUpdate(req.params.chapterId, req.body, { new: true });
