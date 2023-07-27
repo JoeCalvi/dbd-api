@@ -25,16 +25,16 @@ exports.addChapter = async function (req, res) {
     }
 };
 
-// exports.getRealmById = async function (req, res) {
-//     try {
-//         const realm = await Realm.findById(req.params.realmId)
-//             .populate('associated_killers', 'killer_name portrait')
-//             .populate('maps');
-//         return res.json(realm);
-//     } catch (err) {
-//         res.send(err);
-//     }
-// };
+exports.getChapterById = async function (req, res) {
+    try {
+        const chapter = await Chapter.findById(req.params.chapterId)
+            .populate('associated_characters')
+            .populate('realm');
+        return res.json(chapter);
+    } catch (err) {
+        res.send(err);
+    }
+};
 
 // exports.getRealmByKillerName = async function (req, res) {
 //     try {
