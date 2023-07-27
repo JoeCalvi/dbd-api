@@ -59,11 +59,11 @@ exports.updateChapter = async function (req, res) {
     }
 };
 
-// exports.deleteRealm = async function (req, res) {
-//     try {
-//         const realm = await Realm.findByIdAndDelete(req.params.realmId);
-//         return res.json({ message: 'Realm deleted.' });
-//     } catch (err) {
-//         res.send(err);
-//     }
-// };
+exports.deleteChapter = async function (req, res) {
+    try {
+        const chapter = await Chapter.findByIdAndDelete(req.params.chapterId);
+        return res.json({ message: 'Chapter deleted.' });
+    } catch (err) {
+        res.send(err);
+    }
+};
