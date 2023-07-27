@@ -22,8 +22,6 @@ const PowerSchema = new Schema({
     enemy_description: { type: String, default: null },
     special_effect: { type: String, default: null },
     effect_description: { type: String, default: null },
-    special_state: { type: String, default: null },
-    state_description: { type: String, default: null },
     killer_id: { type: Schema.Types.ObjectId, ref: 'Killers', required: true }
 }, { timestamps: true, toJSON: { virtuals: true } });
 
