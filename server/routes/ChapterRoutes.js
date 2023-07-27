@@ -1,21 +1,25 @@
-// module.exports = function (app) {
-//   const realmsController = require('../controllers/RealmsController');
+module.exports = function (app) {
+  const chaptersController = require('../controllers/ChaptersController')
 
-//   app.route('/realms')
-//       .get(realmsController.getAllRealms)
-//       .post(realmsController.addRealm);
+  app.route('/chapters')
+      .get(chaptersController.getAllChapters)
+      .post(chaptersController.addChapter);
 
-//   app.route('/realms/query')
-//       .get((req, res) => {
-//           // ?killer_name=the-killerName
-//           // will return that specific killer's weapon
-//           if (req.query.killer_name) {
-//               return realmsController.getRealmByKillerName(req, res);
-//           }
-//       })
+  app.route('/chapters/query')
+      .get((req, res) => {
+          // ?killer_name=the-killerName
+          // will return that specific killer's chapter
+          if (req.query.killer_name) {
+              return chaptersController.getChapterByKillerName(req, res);
+          // ?survivor_name=firstName-lastName
+          // will return that specific killer's chapter
+          } else if (req.query.survivor_name) {
+              return chaptersController.getChapterBySurvivorName(req, res);
+          }
+      })
 
-//   app.route('/realms/:realmId')
-//       .get(realmsController.getRealmById)
-//       .put(realmsController.updateRealm)
-//       .delete(realmsController.deleteRealm);
-// };
+  app.route('/chapters/:chapterId')
+      .get(chaptersController.getChapterById)
+      .put(chaptersController.updateChapter)
+      .delete(chaptersController.deleteChapter);
+};
