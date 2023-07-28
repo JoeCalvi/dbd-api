@@ -7,7 +7,10 @@ exports.getAllKillers = async function (req, res) {
             .populate('perk_one', 'name icon')
             .populate('perk_two', 'name icon')
             .populate('perk_three', 'name icon')
-            .populate('Weapon');
+            .populate('weapon', 'name description image')
+        // .populate('realm')
+        // .populate('power')
+        // .populate('chapter');
         res.json(killers);
     } catch (err) {
         res.send(err);
@@ -30,7 +33,12 @@ exports.getKillerById = async function (req, res) {
             .populate('perk_one')
             .populate('perk_two')
             .populate('perk_three')
-            .populate('Weapon');
+            .populate('weapon')
+            .populate('realm')
+            .populate('power')
+        if (killer.chapter_id != null) {
+            killer.populate('chapter');
+        }
         res.json(killer);
     } catch (err) {
         res.send(err);
