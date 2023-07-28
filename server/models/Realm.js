@@ -8,7 +8,7 @@ const RealmSchema = new Schema({
     image: { type: String, required: true },
     associated_killers: { type: [Schema.Types.ObjectId], ref: 'Killers' },
     maps: { type: [Schema.Types.ObjectId], ref: 'Maps' },
-    // chapter_id: { type: Schema.Types.ObjectId, ref: 'Chapters'}
+    // chapter_id: { type: Schema.Types.ObjectId, ref: 'Chapters', default: null }
 }, { timestamps: true, toJSON: { virtuals: true } });
 
 RealmSchema.virtual('killer', {
