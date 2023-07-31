@@ -23,12 +23,14 @@ exports.addKiller = async function (req, res) {
     try {
         const killer = new Killer(req.body);
         const savedKiller = await killer.save();
-        const realm = await Realm.findById(savedKiller.realm_id)
-        realm.associated_killers.push(savedKiller._id)
-        realm.save()
+        if(savedKiller.realm_id != null) {
+            const realm = await Realm.findById(savedKiller.realm_id)
+            await realm.associated_killers.push(savedKiller._id)
+            await realm.save()
+        }
         const chapter = await Chapter.findById(savedKiller.chapter_id)
-        chapter.associated_characters.push(savedKiller._id)
-        chapter.save()
+        await chapter.associated_characters.push(savedKiller._id)
+        await chapter.save()
         res.json(savedKiller);
     } catch (err) {
         res.send(err);
