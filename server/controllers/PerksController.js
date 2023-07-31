@@ -23,7 +23,7 @@ exports.getPerksByCharacterId = async function (req, res) {
 exports.addPerk = async function (req, res) {
     try {
         const perk = new Perk(req.body);
-        perk.characterId = req.params.characterId;
+        perk.character_id = req.params.characterId;
         const savedPerk = await perk.save();
         res.json(savedPerk);
     } catch (err) {
