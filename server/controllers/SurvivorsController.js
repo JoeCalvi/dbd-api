@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Survivor = mongoose.model('Survivors');
+const Chapter = mongoose.model('Chapters');
 
 exports.getAllSurvivors = async function (req, res) {
     try {
@@ -17,6 +18,9 @@ exports.addSurvivor = async function (req, res) {
     try {
         const survivor = new Survivor(req.body);
         const savedSurvivor = await survivor.save();
+        const chapter = await Chapter.findById(savedSurvivor.chapter_id);
+        await chapter.associated_characters.push(savedSurvivor._id);
+        await chapter.save();
         res.json(savedSurvivor);
     } catch (err) {
         res.send(err);

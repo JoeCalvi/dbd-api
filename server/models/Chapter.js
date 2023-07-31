@@ -7,7 +7,7 @@ const ChapterSchema = new Schema({
   release_date: { type: String, required: true },
   image: { type: String, required: true },
   realm_id: { type: Schema.Types.ObjectId, ref: 'Realms', default: null },
-  associated_characters: { type: [Schema.Types.ObjectId], ref: 'Killers' || 'Survivors'}
+  associated_characters: { type: [Schema.Types.ObjectId], ref: 'Killers' &&'Survivors' }
 }, { timestamps: true, toJSON: { virtuals: true } });
 
 ChapterSchema.virtual('realm', {
@@ -20,7 +20,7 @@ ChapterSchema.virtual('realm', {
 ChapterSchema.virtual('character', {
   localField: 'associated_characters',
   foreignField: '_id',
-  ref: 'Killers' || 'Survivors',
+  ref: 'Killers' && 'Survivors',
   justOne: true
 });
 

@@ -7,7 +7,7 @@ const Survivor = mongoose.model('Survivors');
 exports.getAllChapters = async function (req, res) {
     try {
         const chapters = await Chapter.find({})
-            .populate('associated_characters', 'name killer_name portrait')
+            .populate('associated_characters', 'killer_name portrait')
             .populate('realm', 'name image');
         return res.json(chapters);
     } catch (err) {
@@ -28,11 +28,11 @@ exports.addChapter = async function (req, res) {
 exports.getChapterById = async function (req, res) {
     try {
         const chapter = await Chapter.findById(req.params.chapterId)
-            .populate('associated_characters')
-            .populate(
-                { path: 'realm', select: 'name description location image maps', populate: 
-                { path: 'maps', select: 'name description image layout' }}
-            );
+        .populate(
+            { path: 'realm', select: 'name description location image maps', populate: 
+            { path: 'maps', select: 'name description image layout' }}
+        );
+
         return res.json(chapter);
     } catch (err) {
         res.send(err);
