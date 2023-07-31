@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const PerkSchema = new Schema({
     role: { type: String, required: true },
     name: { type: String, required: true },
-    characterId: { type: Schema.Types.ObjectId, ref: 'Survivors' || 'Killers' },
+    character_id: { type: Schema.Types.ObjectId, ref: 'Survivors' || 'Killers' },
     icon: { type: String, required: true },
     description: { type: String, required: true }
 }, { timestamps: true, toJSON: { virtuals: true } })
