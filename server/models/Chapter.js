@@ -7,7 +7,6 @@ const ChapterSchema = new Schema({
   release_date: { type: String, required: true },
   image: { type: String, required: true },
   realm_id: { type: Schema.Types.ObjectId, ref: 'Realms', default: null },
-  // associated_characters: [{ type: Schema.Types.ObjectId }],
   associated_killers: { type: [Schema.Types.ObjectId], ref: 'Killers' },
   associated_survivors: { type: [Schema.Types.ObjectId], ref: 'Survivors' },
 }, { timestamps: true, toJSON: { virtuals: true } });
