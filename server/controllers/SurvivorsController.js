@@ -5,9 +5,9 @@ const Chapter = mongoose.model('Chapters');
 exports.getAllSurvivors = async function (req, res) {
     try {
         const survivors = await Survivor.find({})
-            .populate('perk_one', 'name icon')
-            .populate('perk_two', 'name icon')
-            .populate('perk_three', 'name icon');
+        // .populate('perk_one', 'name icon')
+        // .populate('perk_two', 'name icon')
+        // .populate('perk_three', 'name icon');
         res.json(survivors);
     } catch (err) {
         res.send(err);
@@ -19,7 +19,7 @@ exports.addSurvivor = async function (req, res) {
         const survivor = new Survivor(req.body);
         const savedSurvivor = await survivor.save();
         const chapter = await Chapter.findById(savedSurvivor.chapter_id);
-        await chapter.associated_characters.push(savedSurvivor._id);
+        await chapter.associated_survivors.push(savedSurvivor._id);
         await chapter.save();
         res.json(savedSurvivor);
     } catch (err) {
@@ -65,8 +65,8 @@ exports.updateSurvivor = async function (req, res) {
 
 exports.deleteSurvivor = async function (req, res) {
     try {
-        const survivor = await Survivor.findByIdAndDelete(req.params.survivorId);
-        res.json({ message: 'Perk deleted.' });
+        await Survivor.findByIdAndDelete(req.params.survivorId);
+        res.json({ message: 'Survivor deleted.' });
     } catch (err) {
         res.send(err);
     }
