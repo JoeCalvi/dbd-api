@@ -5,6 +5,7 @@ const Chapter = mongoose.model('Chapters');
 exports.getAllSurvivors = async function (req, res) {
     try {
         const survivors = await Survivor.find({})
+            .populate('chapter', 'name release_date')
         // .populate('perk_one', 'name icon')
         // .populate('perk_two', 'name icon')
         // .populate('perk_three', 'name icon');

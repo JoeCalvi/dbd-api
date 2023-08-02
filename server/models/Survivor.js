@@ -5,7 +5,6 @@ const SurvivorSchema = new Schema({
     role: { type: String, required: true },
     name: { type: String, required: true },
     overview: { type: String, required: true },
-    dlc: { type: String, required: true, default: "Base Game" },
     chapter_id: { type: Schema.Types.ObjectId, ref: 'Chapters', default: null },
     gender: { type: String, required: true },
     voice_actor: { type: String, required: true },
