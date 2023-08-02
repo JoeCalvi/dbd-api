@@ -7,7 +7,9 @@ const ChapterSchema = new Schema({
   release_date: { type: String, required: true },
   image: { type: String, required: true },
   realm_id: { type: Schema.Types.ObjectId, ref: 'Realms', default: null },
-  associated_characters: { type: [Schema.Types.ObjectId], ref: 'Killers' &&'Survivors' }
+  // associated_characters: [{ type: Schema.Types.ObjectId }],
+  associated_killers: { type: [Schema.Types.ObjectId], ref: 'Killers' },
+  associated_survivors: { type: [Schema.Types.ObjectId], ref: 'Survivors' },
 }, { timestamps: true, toJSON: { virtuals: true } });
 
 ChapterSchema.virtual('realm', {
@@ -17,11 +19,18 @@ ChapterSchema.virtual('realm', {
   justOne: true
 });
 
-ChapterSchema.virtual('character', {
-  localField: 'associated_characters',
+ChapterSchema.virtual('killer', {
+  localField: 'associated_killers',
   foreignField: '_id',
-  ref: 'Killers' && 'Survivors',
+  ref: 'Killers',
   justOne: true
 });
+
+ChapterSchema.virtual('survivor', {
+  localField: 'associated_survivors',
+  foreignField: '_id',
+  ref: 'Survivors',
+  justOne: true
+})
 
 module.exports = mongoose.model('Chapters', ChapterSchema);
