@@ -37,7 +37,16 @@ exports.getAllBuffs = async function (req, res) {
     } catch (error) {
         res.send(error)
     }
-}
+};
+
+exports.getAllDebuffs = async function (req, res) {
+    try {
+        const debuffs = await StatusEffect.find({ type: 'Debuff' })
+        return res.json(debuffs)
+    } catch (error) {
+        res.send(error)
+    }
+};
 
 exports.getPerksByStatusEffect = async function (req, res) {
     try {

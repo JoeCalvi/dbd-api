@@ -1,7 +1,7 @@
 module.exports = function (app) {
     const statusEffectsController = require('../controllers/StatusEffectsController');
 
-    app.route('/statusEffects')
+    app.route('/status_effects')
         .get(statusEffectsController.getAllStatusEffects)
         .post(statusEffectsController.addStatusEffect);
 
@@ -9,8 +9,9 @@ module.exports = function (app) {
         .get(statusEffectsController.getAllBuffs);
 
     app.route('/status_effects/debuffs')
+        .get(statusEffectsController.getAllDebuffs);
 
-    app.route('/statusEffects/query')
+    app.route('/status_effects/query')
         .get((req, res) => {
             // ?status_effect=status_effect_name
             // will return perks associated with this status effect
@@ -19,7 +20,7 @@ module.exports = function (app) {
             }
         })
 
-    app.route('/statusEffects/:statusEffectId')
+    app.route('/status_effects/:statusEffectId')
         .get(statusEffectsController.getStatusEffectById)
         .put(statusEffectsController.updateStatusEffect)
         .delete(statusEffectsController.deleteStatusEffect);
