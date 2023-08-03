@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const PerkSchema = new Schema({
     role: { type: String, required: true },
     name: { type: String, required: true },
+    generic: { type: Boolean, default: false },
     killer_id: { type: Schema.Types.ObjectId, ref: 'Killers', default: null },
     survivor_id: { type: Schema.Types.ObjectId, ref: 'Survivors', default: null },
     chapter_id: { type: Schema.Types.ObjectId, ref: 'Chapters' },
@@ -33,7 +34,7 @@ PerkSchema.virtual('chapter', {
     ref: 'Chapters'
 });
 
-PerkSchema.virtual('status effects', {
+PerkSchema.virtual('status_effects', {
     localField: 'associated_status_effects',
     foreignField: '_id',
     ref: 'Status Effects'

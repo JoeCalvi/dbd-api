@@ -43,10 +43,10 @@ exports.addGenericPerk = async function (req, res) {
 
 exports.getAllGenericPerks = async function (req, res) {
     try {
-        const perks = await Perk.find();
+        const perks = await Perk.find({});
         const genericPerks = [];
         perks.forEach(p => {
-            if (p.characterId == null) {
+            if (!p.characterId) {
                 genericPerks.push(p);
             }
         });
@@ -95,8 +95,12 @@ exports.getAllKillerPerks = async function (req, res) {
 
 exports.getPerkById = async function (req, res) {
     try {
-        const perk = await Perk.findById(req.params.perkId);
-        res.json(perk);
+        const perk = await Perk.findById(req.params.perkId)
+            .populate('killer')
+            .populate('survivor')
+            .populate('chapter', 'name release_date')
+            .populate('associated_status_effects', 'name type description icon');
+        return res.json(perk);
     } catch (err) {
         res.send(err);
     }
