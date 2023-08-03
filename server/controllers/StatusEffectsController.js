@@ -21,12 +21,10 @@ exports.addStatusEffect = async function (req, res) {
     }
 };
 
-exports.getRealmById = async function (req, res) {
+exports.getStatusEffectById = async function (req, res) {
     try {
-        const realm = await Realm.findById(req.params.realmId)
-            .populate('associated_killers', 'killer_name portrait')
-            .populate('maps');
-        return res.json(realm);
+        const statusEffect = await StatusEffect.findById(req.params.statusEffectId)
+        return res.json(statusEffect);
     } catch (err) {
         res.send(err);
     }
