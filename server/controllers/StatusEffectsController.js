@@ -11,11 +11,11 @@ exports.getAllStatusEffects = async function (req, res) {
     }
 };
 
-exports.addRealm = async function (req, res) {
+exports.addStatusEffect = async function (req, res) {
     try {
-        const realm = new Realm(req.body);
-        const savedRealm = await realm.save();
-        return res.json(savedRealm);
+        const statusEffect = new StatusEffect(req.body);
+        const savedStatusEffect = await statusEffect.save();
+        return res.json(savedStatusEffect);
     } catch (err) {
         res.send(err);
     }
