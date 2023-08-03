@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const StatusEffectSchema = new Schema({
     name: { type: String, required: true },
-    type: { type: String, required: true },
+    type: { type: String, enum: ['Buff', 'Debuff'], required: true },
     description: { type: String, required: true },
     icon: { type: String, required: true }
 });
