@@ -54,7 +54,13 @@ exports.getAllSurvivorStatusEffects = async function (req, res) {
         const survivor_only_effects = await StatusEffect.find({ applies_to: 'Survivor' });
         const both_effects = await StatusEffect.find({ applies_to: 'Both' });
 
-        survivor_effects.push(survivor_only_effects, both_effects)
+        survivor_only_effects.forEach(e => {
+            survivor_effects.push(e)
+        })
+
+        both_effects.forEach(e => {
+            survivor_effects.push(e)
+        })
 
         return res.send(survivor_effects);
     } catch (error) {
