@@ -41,7 +41,7 @@ exports.getPerksByStatusEffect = async function (req, res) {
         const perks = await Perk.find({})
 
         perks.forEach(p => {
-            if (p.associated_status_effects.find(e => e == statusEffect._id)) {
+            if (p.associated_status_effects.includes(statusEffect._id)) {
                 associatedPerks.push(p)
             }
         });

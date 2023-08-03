@@ -4,7 +4,7 @@ const Perk = mongoose.model('Perks');
 exports.getAllPerks = async function (req, res) {
     try {
         const perks = await Perk.find()
-            .populate('character', 'name portrait');
+        // .populate('character', 'name portrait');
         return res.json(perks);
     } catch (err) {
         res.send(err);
@@ -61,7 +61,7 @@ exports.getAllGenericPerks = async function (req, res) {
 exports.getAllSurvivorPerks = async function (req, res) {
     try {
         const perks = await Perk.find()
-            .populate('character', 'name portrait');
+        // .populate('character', 'name portrait');
         const survivorPerks = [];
         perks.forEach(p => {
             if (p.role == "Survivor") {
@@ -79,7 +79,7 @@ exports.getAllSurvivorPerks = async function (req, res) {
 exports.getAllKillerPerks = async function (req, res) {
     try {
         const perks = await Perk.find()
-            .populate('character', 'name portrait');
+        // .populate('character', 'name portrait');
         const killerPerks = [];
         perks.forEach(p => {
             if (p.role == "Killer") {
