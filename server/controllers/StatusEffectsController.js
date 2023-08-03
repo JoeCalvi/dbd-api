@@ -48,6 +48,15 @@ exports.getAllDebuffs = async function (req, res) {
     }
 };
 
+exports.getAllSurvivorStatusEffects = async function (req, res) {
+    try {
+        const status_effects = await StatusEffect.find({ applies_to: 'Survivor' });
+        return res.json(status_effects);
+    } catch (error) {
+        res.send(error)
+    }
+}
+
 exports.getPerksByStatusEffect = async function (req, res) {
     try {
         const query = req.query;

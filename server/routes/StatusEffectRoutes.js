@@ -11,6 +11,9 @@ module.exports = function (app) {
     app.route('/status_effects/debuffs')
         .get(statusEffectsController.getAllDebuffs);
 
+    app.route('/survivor/status_effects')
+        .get(statusEffectsController.getAllSurvivorStatusEffects);
+
     app.route('/status_effects/query')
         .get((req, res) => {
             // ?status_effect=status_effect_name
