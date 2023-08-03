@@ -46,7 +46,7 @@ exports.getAllGenericPerks = async function (req, res) {
         const perks = await Perk.find();
         const genericPerks = [];
         perks.forEach(p => {
-            if (!p.characterId) {
+            if (p.characterId == null) {
                 genericPerks.push(p);
             }
         });
@@ -60,7 +60,8 @@ exports.getAllGenericPerks = async function (req, res) {
 
 exports.getAllSurvivorPerks = async function (req, res) {
     try {
-        const perks = await Perk.find();
+        const perks = await Perk.find()
+            .populate('character', 'name portrait');
         const survivorPerks = [];
         perks.forEach(p => {
             if (p.role == "Survivor") {
@@ -77,7 +78,8 @@ exports.getAllSurvivorPerks = async function (req, res) {
 
 exports.getAllKillerPerks = async function (req, res) {
     try {
-        const perks = await Perk.find();
+        const perks = await Perk.find()
+            .populate('character', 'name portrait');
         const killerPerks = [];
         perks.forEach(p => {
             if (p.role == "Killer") {
