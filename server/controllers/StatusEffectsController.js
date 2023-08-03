@@ -30,27 +30,27 @@ exports.getStatusEffectById = async function (req, res) {
     }
 };
 
-// exports.getPerksByStatusEffect = async function (req, res) {
-//     try {
-//         const query = req.query;
-//         const statusEffectName = query.status_effect.replaceAll('-', ' ').toLowerCase();
-//         const statusEffects = await StatusEffect.find({})
-//         const statusEffect = statusEffects.find(e => e.name.toLowerCase() == statusEffectName)
+exports.getPerksByStatusEffect = async function (req, res) {
+    try {
+        const query = req.query;
+        const statusEffectName = query.status_effect.replaceAll('-', ' ').toLowerCase();
+        const statusEffects = await StatusEffect.find({})
+        const statusEffect = statusEffects.find(e => e.name.toLowerCase() == statusEffectName)
 
-//         const associatedPerks = []
-//         const perks = await Perk.find({})
+        const associatedPerks = []
+        const perks = await Perk.find({})
 
-//         perks.forEach(p => {
-//             if (p.associated_status_effects.find(e => e == statusEffect._id)) {
-//                 associatedPerks.push(p)
-//             }
-//         });
+        perks.forEach(p => {
+            if (p.associated_status_effects.find(e => e == statusEffect._id)) {
+                associatedPerks.push(p)
+            }
+        });
 
-//         return res.send(associatedPerks);
-//     } catch (err) {
-//         res.send(err)
-//     }
-// }
+        return res.send(associatedPerks);
+    } catch (err) {
+        res.send(err)
+    }
+}
 
 exports.updateStatusEffect = async function (req, res) {
     try {

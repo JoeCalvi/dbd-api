@@ -35,7 +35,8 @@ const weaponRoutes = require('./routes/WeaponRoutes');
 const realmRoutes = require('./routes/RealmRoutes');
 const mapRoutes = require('./routes/MapRoutes');
 const powerRoutes = require('./routes/PowerRoutes');
-const chapterRoutes = require('./routes/ChapterRoutes')
+const chapterRoutes = require('./routes/ChapterRoutes');
+const statusEffectRoutes = require('./routes/StatusEffectRoutes');
 perkRoutes(app);
 survivorRoutes(app);
 killerRoutes(app);
@@ -44,6 +45,7 @@ realmRoutes(app);
 mapRoutes(app);
 powerRoutes(app);
 chapterRoutes(app);
+statusEffectRoutes(app);
 
 app.use(function (req, res) {
     res.status(404).send({ url: req.originalUrl + ' not found' })

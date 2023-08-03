@@ -1,21 +1,21 @@
 module.exports = function (app) {
-    // const survivorsController = require('../controllers/SurvivorsController');
+    const statusEffectsController = require('../controllers/StatusEffectsController');
 
     app.route('/statusEffects')
-        .get()
-        .post();
+        .get(statusEffectsController.getAllStatusEffects)
+        .post(statusEffectsController.addStatusEffect);
 
     app.route('/statusEffects/query')
         .get((req, res) => {
             // ?status_effect=status_effect_name
             // will return perks associated with this status effect
             if (req.query.status_effect) {
-                // return survivorsController.getSurvivorByName(req, res);
+                return statusEffectsController.getPerksByStatusEffect(req, res);
             }
         })
 
     app.route('/statusEffects/:statusEffectId')
-        .get()
-        .put()
-        .delete();
+        .get(statusEffectsController.getStatusEffectById)
+        .put(statusEffectsController.updateStatusEffect)
+        .delete(statusEffectsController.deleteStatusEffect);
 };

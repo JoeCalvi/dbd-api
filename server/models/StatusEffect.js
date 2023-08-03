@@ -8,4 +8,4 @@ const StatusEffectSchema = new Schema({
     icon: { type: String, required: true }
 });
 
-module.exports = mongoose.model('Status Effect', StatusEffectSchema);
+module.exports = mongoose.model('Status Effects', StatusEffectSchema);
