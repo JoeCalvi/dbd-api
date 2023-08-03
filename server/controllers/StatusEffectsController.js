@@ -70,12 +70,18 @@ exports.getAllSurvivorStatusEffects = async function (req, res) {
 
 exports.getAllSurvivorBuffs = async function (req, res) {
     try {
+        const buffs = [];
         const survivor_effects = await StatusEffect.find({ applies_to: 'Survivor' });
         const both_effects = await StatusEffect.find({ applies_to: 'Both' })
-        const buffs = [];
 
-        status_effects.forEach(e => {
+        survivor_effects.forEach(e => {
             if (e.type == 'Buff') {
+                buffs.push(e)
+            }
+        })
+
+        both_effects.forEach(e => {
+            if(e.type == 'Buff') {
                 buffs.push(e)
             }
         })
