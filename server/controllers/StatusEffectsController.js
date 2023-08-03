@@ -30,6 +30,15 @@ exports.getStatusEffectById = async function (req, res) {
     }
 };
 
+exports.getAllBuffs = async function (req, res) {
+    try {
+        const buffs = await StatusEffect.find({ type: 'Buff' })
+        return res.json(buffs)
+    } catch (error) {
+        res.send(error)
+    }
+}
+
 exports.getPerksByStatusEffect = async function (req, res) {
     try {
         const query = req.query;
