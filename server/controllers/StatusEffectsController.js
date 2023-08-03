@@ -30,41 +30,41 @@ exports.getStatusEffectById = async function (req, res) {
     }
 };
 
-exports.getPerksByStatusEffect = async function (req, res) {
+// exports.getPerksByStatusEffect = async function (req, res) {
+//     try {
+//         const query = req.query;
+//         const statusEffectName = query.status_effect.replaceAll('-', ' ').toLowerCase();
+//         const statusEffects = await StatusEffect.find({})
+//         const statusEffect = statusEffects.find(e => e.name.toLowerCase() == statusEffectName)
+
+//         const associatedPerks = []
+//         const perks = await Perk.find({})
+
+//         perks.forEach(p => {
+//             if (p.associated_status_effects.find(e => e == statusEffect._id)) {
+//                 associatedPerks.push(p)
+//             }
+//         });
+
+//         return res.send(associatedPerks);
+//     } catch (err) {
+//         res.send(err)
+//     }
+// }
+
+exports.updateStatusEffect = async function (req, res) {
     try {
-        const query = req.query;
-        const statusEffectName = query.status_effect.replaceAll('-', ' ').toLowerCase();
-        const statusEffects = await StatusEffect.find({})
-        const statusEffect = statusEffects.find(e => e.name.toLowerCase() == statusEffectName)
-
-        const associatedPerks = []
-        const perks = await Perk.find({})
-
-        perks.forEach(p => {
-            if (p.associated_status_effects.find(e => e == statusEffect._id)) {
-                associatedPerks.push(p)
-            }
-        });
-
-        return res.send(associatedPerks);
-    } catch (err) {
-        res.send(err)
-    }
-}
-
-exports.updateRealm = async function (req, res) {
-    try {
-        const realm = await Realm.findByIdAndUpdate(req.params.realmId, req.body, { new: true });
-        return res.json(realm);
+        const statusEffect = await StatusEffect.findByIdAndUpdate(req.params.statusEffectId, req.body, { new: true });
+        return res.json(statusEffect);
     } catch (err) {
         res.send(err);
     }
 };
 
-exports.deleteRealm = async function (req, res) {
+exports.deleteStatusEffect = async function (req, res) {
     try {
-        const realm = await Realm.findByIdAndDelete(req.params.realmId);
-        return res.json({ message: 'Realm deleted.' });
+        const statusEffect = await StatusEffect.findByIdAndDelete(req.params.statusEffectId);
+        return res.json({ message: `${statusEffect.name} Status Effect at Id ${statusEffect._id} deleted.` });
     } catch (err) {
         res.send(err);
     }
