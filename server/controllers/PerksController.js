@@ -4,7 +4,10 @@ const Perk = mongoose.model('Perks');
 exports.getAllPerks = async function (req, res) {
     try {
         const perks = await Perk.find()
-        // .populate('character', 'name portrait');
+        .populate('killer')
+        .populate('survivor', 'name portrait')
+        .populate('chapter', 'name release_date image')
+        .populate('associated_status_effects', 'name type icon');
         return res.json(perks);
     } catch (err) {
         res.send(err);
@@ -97,7 +100,7 @@ exports.getPerkById = async function (req, res) {
     try {
         const perk = await Perk.findById(req.params.perkId)
             .populate('killer')
-            .populate('survivor')
+            .populate('survivor', 'name portrait')
             .populate('chapter', 'name release_date')
             .populate('associated_status_effects', 'name type description icon');
         return res.json(perk);
