@@ -5,6 +5,11 @@ module.exports = function (app) {
         .get(statusEffectsController.getAllStatusEffects)
         .post(statusEffectsController.addStatusEffect);
 
+    app.route('/status_effects/buffs')
+        .get(statusEffectsController.getAllBuffs);
+
+    app.route('/status_effects/debuffs')
+
     app.route('/statusEffects/query')
         .get((req, res) => {
             // ?status_effect=status_effect_name
