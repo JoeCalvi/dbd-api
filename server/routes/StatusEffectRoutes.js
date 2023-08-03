@@ -28,6 +28,10 @@ module.exports = function (app) {
     app.route('/survivor/status_effects')
         .get(statusEffectsController.getAllSurvivorStatusEffects);
 
+
+    app.route('/survivor/status_effects/buffs')
+        .get(statusEffectsController.getAllSurvivorBuffs);
+
     app.route('/killer/status_effects')
         .get(statusEffectsController.getAllKillerStatusEffects);
 

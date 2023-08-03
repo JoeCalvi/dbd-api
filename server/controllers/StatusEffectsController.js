@@ -50,8 +50,30 @@ exports.getAllDebuffs = async function (req, res) {
 
 exports.getAllSurvivorStatusEffects = async function (req, res) {
     try {
-        const status_effects = await StatusEffect.find({ applies_to: 'Survivor' });
-        return res.json(status_effects);
+        const survivor_effects = [];
+        const survivor_only_effects = await StatusEffect.find({ applies_to: 'Survivor' });
+        const both_effects = await StatusEffect.find({ applies_to: 'Both' });
+
+        survivor_effects.push(survivor_only_effects, both_effects)
+
+        return res.send(survivor_effects);
+    } catch (error) {
+        res.send(error)
+    }
+};
+
+exports.getAllSurvivorBuffs = async function (req, res) {
+    try {
+        const survivor_effects = await StatusEffect.find({ applies_to: 'Survivor' });
+        const both_effects = await StatusEffect.find({ applies_to: 'Both' })
+        const buffs = [];
+
+        status_effects.forEach(e => {
+            if (e.type == 'Buff') {
+                buffs.push(e)
+            }
+        })
+        return res.send(buffs);
     } catch (error) {
         res.send(error)
     }
@@ -59,7 +81,7 @@ exports.getAllSurvivorStatusEffects = async function (req, res) {
 
 exports.getAllKillerStatusEffects = async function (req, res) {
     try {
-        const status_effects = await StatusEffect.find({ applies_to: 'Killer' });
+        const status_effects = await StatusEffect.find({ applies_to: 'Killer' || 'Both' });
         return res.json(status_effects);
     } catch (error) {
         res.send(error)
