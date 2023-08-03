@@ -32,7 +32,16 @@ module.exports = function (app) {
     app.route('/survivor/status_effects/buffs')
         .get(statusEffectsController.getAllSurvivorBuffs);
 
+    app.route('/survivor/status_effects/debuffs')
+        .get(statusEffectsController.getAllSurvivorDebuffs);
+
     app.route('/killer/status_effects')
         .get(statusEffectsController.getAllKillerStatusEffects);
+
+    app.route('/killer/status_effects/buffs')
+        .get(statusEffectsController.getAllKillerBuffs);
+
+    app.route('/killer/status_effects/debuffs')
+        .get(statusEffectsController.getAllKillerDebuffs);
 
 };

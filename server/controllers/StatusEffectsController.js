@@ -91,6 +91,29 @@ exports.getAllSurvivorBuffs = async function (req, res) {
     }
 };
 
+exports.getAllSurvivorDebuffs = async function (req, res) {
+    try {
+        const debuffs = [];
+        const survivor_effects = await StatusEffect.find({ applies_to: 'Survivor' });
+        const both_effects = await StatusEffect.find({ applies_to: 'Both' })
+
+        survivor_effects.forEach(e => {
+            if (e.type == 'Debuff') {
+                debuffs.push(e)
+            }
+        })
+
+        both_effects.forEach(e => {
+            if(e.type == 'Debuff') {
+                debuffs.push(e)
+            }
+        })
+        return res.send(debuffs);
+    } catch (error) {
+        res.send(error)
+    }
+};
+
 exports.getAllKillerStatusEffects = async function (req, res) {
     try {
         const killer_effects = [];
@@ -105,6 +128,52 @@ exports.getAllKillerStatusEffects = async function (req, res) {
             killer_effects.push(e)
         })
         return res.send(killer_effects);
+    } catch (error) {
+        res.send(error)
+    }
+};
+
+exports.getAllKillerBuffs = async function (req, res) {
+    try {
+        const buffs = [];
+        const killer_effects = await StatusEffect.find({ applies_to: 'Killer' });
+        const both_effects = await StatusEffect.find({ applies_to: 'Both' })
+
+        killer_effects.forEach(e => {
+            if (e.type == 'Buff') {
+                buffs.push(e)
+            }
+        })
+
+        both_effects.forEach(e => {
+            if(e.type == 'Buff') {
+                buffs.push(e)
+            }
+        })
+        return res.send(buffs);
+    } catch (error) {
+        res.send(error)
+    }
+};
+
+exports.getAllKillerDebuffs = async function (req, res) {
+    try {
+        const debuffs = [];
+        const killer_effects = await StatusEffect.find({ applies_to: 'Killer' });
+        const both_effects = await StatusEffect.find({ applies_to: 'Both' })
+
+        killer_effects.forEach(e => {
+            if (e.type == 'Debuff') {
+                debuffs.push(e)
+            }
+        })
+
+        both_effects.forEach(e => {
+            if(e.type == 'Debuff') {
+                debuffs.push(e)
+            }
+        })
+        return res.send(debuffs);
     } catch (error) {
         res.send(error)
     }
