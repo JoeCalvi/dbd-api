@@ -30,15 +30,23 @@ exports.getStatusEffectById = async function (req, res) {
     }
 };
 
-exports.getRealmByKillerName = async function (req, res) {
+exports.getPerksByStatusEffect = async function (req, res) {
     try {
         const query = req.query;
-        const name = query.killer_name.replace('-', ' ').toLowerCase();
-        const killers = await Killer.find()
-        const killer = killers.find(k => k.killer_name.toLowerCase() == name);
-        const realm_id = killer.realm_id
-        const realm = await Realm.findById(realm_id)
-        return res.json(realm);
+        const statusEffectName = query.status_effect.replaceAll('-', ' ').toLowerCase();
+        const statusEffects = await StatusEffect.find({})
+        const statusEffect = statusEffects.find(e => e.name.toLowerCase() == statusEffectName)
+
+        const associatedPerks = []
+        const perks = await Perk.find({})
+
+        perks.forEach(p => {
+            if (p.associated_status_effects.find(e => e == statusEffect._id)) {
+                associatedPerks.push(p)
+            }
+        });
+
+        return res.send(associatedPerks);
     } catch (err) {
         res.send(err)
     }
