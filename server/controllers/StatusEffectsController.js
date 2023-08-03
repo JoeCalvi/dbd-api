@@ -93,8 +93,18 @@ exports.getAllSurvivorBuffs = async function (req, res) {
 
 exports.getAllKillerStatusEffects = async function (req, res) {
     try {
-        const status_effects = await StatusEffect.find({ applies_to: 'Killer' || 'Both' });
-        return res.json(status_effects);
+        const killer_effects = [];
+        const killer_only_effects = await StatusEffect.find({ applies_to: 'Killer' });
+        const both_effects = await StatusEffect.find({ applies_to: 'Both' });
+
+        killer_only_effects.forEach(e => {
+            killer_effects.push(e)
+        })
+
+        both_effects.forEach(e => {
+            killer_effects.push(e)
+        })
+        return res.send(killer_effects);
     } catch (error) {
         res.send(error)
     }
