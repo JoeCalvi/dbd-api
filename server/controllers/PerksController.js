@@ -47,10 +47,12 @@ exports.addGenericPerk = async function (req, res) {
 
 exports.getAllGenericPerks = async function (req, res) {
     try {
-        const perks = await Perk.find({});
+        const perks = await Perk.find({})
+            .populate('associated_status_effects', 'name type icon')
+            .populate('chapter', 'name release_date image')
         const genericPerks = [];
         perks.forEach(p => {
-            if (!p.characterId) {
+            if (p.generic == true) {
                 genericPerks.push(p);
             }
         });
