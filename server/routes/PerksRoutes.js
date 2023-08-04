@@ -12,6 +12,11 @@ module.exports = function (app) {
             // will return specific perk
             if (req.query.perk_name) {
                 return perksController.getPerkByName(req, res);
+            } else if (req.query.type) {
+                // ?type=perk_type
+                // supports 'hex', 'boon', 'scourge', and 'teamwork'
+                // returns all perks of that type
+                return perksController.getPerksByType(req, res);
             }
         })
 

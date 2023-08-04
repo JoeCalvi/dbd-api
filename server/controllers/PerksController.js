@@ -215,6 +215,37 @@ exports.getPerkByName = async function (req, res) {
     }
 }
 
+exports.getPerksByType = async function (req, res) {
+    try {
+        const query = req.query;
+        const type = query.type.toLowerCase();
+        const query_options = [
+            { type: "hex" },
+            { type: "boon" },
+            { type: "scourge" },
+            { type: "teamwork"}
+        ]
+        const query_perks = [];
+        const perks = await Perk.find({})
+
+        const supported_type = query_options.find(option => option.type == type)
+        
+        if (supported_type) {
+            perks.forEach(p => {
+                if (p.name.toLowerCase().includes(type)) {
+                    query_perks.push(p)
+                } 
+            })
+        } else {
+            return res.json({ message: "Query type not supported." })
+        }
+
+        return res.send(query_perks);
+    } catch (error) {
+        res.send(error)
+    }
+}
+
 exports.updatePerk = async function (req, res) {
     try {
         const perk = await Perk.findByIdAndUpdate(req.params.perkId, req.body, { new: true });
