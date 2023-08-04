@@ -215,6 +215,40 @@ exports.getPerkByName = async function (req, res) {
     }
 }
 
+exports.getPerksByCharacterName = async function (req, res) {
+    try {
+        const query = req.query
+        const character_name = query.character_name.replaceAll("-", " ").toLowerCase();
+        const character_perks = [];
+        const killers = await Killer.find({})
+        const survivors = await Survivor.find({})
+
+        const killer = await killers.find(k => k.killer_name.toLowerCase() == character_name)
+        if (killer) {
+            const perks = await Perk.find({ killer_id: killer._id})
+                .populate('killer', 'killer_name portrait')
+                .populate('associated_status_effects', 'name type icon')
+            perks.forEach(p => {
+                character_perks.push(p)
+            })
+        }
+
+        const survivor = await survivors.find(s => s.name.toLowerCase() == character_name) 
+        if (survivor) {
+            const perks = await Perk.find({ survivor_id: survivor._id })
+                .populate('survivor', 'name portrait')
+                .populate('associated_status_effects', 'name type icon')
+            perks.forEach(p => {
+                character_perks.push(p)
+            })
+        }
+
+        return res.send(character_perks)
+    } catch (error) {
+        res.send(error)
+    }
+}
+
 exports.getPerksByType = async function (req, res) {
     try {
         const query = req.query;
@@ -229,7 +263,7 @@ exports.getPerksByType = async function (req, res) {
         const perks = await Perk.find({})
 
         const supported_type = query_options.find(option => option.type == type)
-        
+
         if (supported_type) {
             perks.forEach(p => {
                 if (p.name.toLowerCase().includes(type)) {
