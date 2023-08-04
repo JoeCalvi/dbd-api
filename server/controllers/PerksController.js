@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Perk = mongoose.model('Perks');
 const Killer = mongoose.model('Killers');
+const Survivor = mongoose.model('Survivors');
 
 exports.getAllPerks = async function (req, res) {
     try {
@@ -17,8 +18,24 @@ exports.getAllPerks = async function (req, res) {
 
 exports.getPerksByCharacterId = async function (req, res) {
     try {
-        const perks = await Perk.find({ characterId: req.params.characterId });
-        return res.json(perks);
+        const character_id = req.params.characterId
+
+        const survivor = await Survivor.findById(character_id)
+        if (survivor) {
+            const perks = await Perk.find({ survivor_id: character_id })
+                .populate('associated_status_effects', 'name type icon')
+                .populate('survivor', 'name portrait');
+            return res.json(perks)
+        }
+
+        const killer = await Killer.findById(character_id)
+        if (killer) {
+            const perks = await Perk.find({ killer_id: character_id })
+                .populate('associated_status_effects', 'name type icon')
+                .populate('killer', 'killer_name portrait');
+            return res.json(perks)
+        }
+
     } catch (err) {
         res.send(err);
     }
