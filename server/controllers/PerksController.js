@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Perk = mongoose.model('Perks');
+const Killer = mongoose.model('Killers');
 
 exports.getAllPerks = async function (req, res) {
     try {
@@ -98,11 +99,31 @@ exports.getAllKillerPerks = async function (req, res) {
 
 exports.getPerkById = async function (req, res) {
     try {
-        const perk = await Perk.findById(req.params.perkId)
-            .populate('killer')
+        const perk_id = req.params.perkId
+        const perk = await Perk.findById(perk_id)
             .populate('survivor', 'name portrait')
             .populate('chapter', 'name release_date')
             .populate('associated_status_effects', 'name type description icon');
+
+        if(perk.killer_id != null) {
+            const killer = await Killer.findById(perk.killer_id)
+            if (killer.perk_one_id == perk_id) {
+                await perk.populate({
+                    path: 'killer', select: 'killer_name portrait perk_two_id perk_three_id', 
+                    populate: { path: 'perk_two perk_three', select: 'name icon' }
+                })
+            } else if (killer.perk_two_id == perk_id) {
+                await perk.populate({
+                    path: 'killer', select: 'killer_name portrait perk_one_id perk_three_id', 
+                    populate: { path: 'perk_one perk_three', select: 'name icon'}
+                })
+            } else if (killer.perk_three_id == perk_id) {
+                await perk.populate({
+                    path: 'killer', select: 'killer_name portrait perk_one_id perk_two_id', 
+                    populate: { path: 'perk_one perk_two', select: 'name icon'}
+                })
+            }
+        }
         return res.json(perk);
     } catch (err) {
         res.send(err);
