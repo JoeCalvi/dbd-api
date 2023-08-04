@@ -27,6 +27,9 @@ module.exports = function (app) {
     app.route('/perks/killer')
         .get(perksController.getAllKillerPerks);
 
+    app.route('/perks/killer/generic')
+        .get(perksController.getAllGenericKillerPerks);
+
     app.route('/:characterId/perks')
         .post(perksController.addPerk)
         .get(perksController.getPerksByCharacterId);

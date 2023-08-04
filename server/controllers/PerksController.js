@@ -140,6 +140,30 @@ exports.getAllKillerPerks = async function (req, res) {
     }
 }
 
+exports.getAllGenericKillerPerks = async function (req, res) {
+    try {
+        const perks = await Perk.find({});
+        const killer_perks = [];
+        const generic_killer_perks = [];
+
+        perks.forEach(p => {
+            if (p.role == 'Killer') {
+                killer_perks.push(p)
+            }
+        })
+
+        killer_perks.forEach(p => {
+            if (p.generic == true) {
+                generic_killer_perks.push(p)
+            }
+        })
+
+        return res.send(generic_killer_perks);
+    } catch (error) {
+        res.send(error)
+    }
+}
+
 exports.getPerkById = async function (req, res) {
     try {
         const perk_id = req.params.perkId
