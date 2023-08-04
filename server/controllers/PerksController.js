@@ -5,7 +5,7 @@ const Killer = mongoose.model('Killers');
 exports.getAllPerks = async function (req, res) {
     try {
         const perks = await Perk.find()
-        .populate('killer')
+        .populate('killer', 'killer_name portrait')
         .populate('survivor', 'name portrait')
         .populate('chapter', 'name release_date image')
         .populate('associated_status_effects', 'name type icon');
@@ -137,7 +137,10 @@ exports.getPerkByName = async function (req, res) {
         const perk = await Perk.findOne(
             // specifies that we want to match the name field in the Perk collection using a regular expression
             { name: { $regex: new RegExp(`${name}`, 'i') } }
-        );
+        )
+            .populate('survivor', 'name portrait')
+            .populate('killer', 'killer_name portrait')
+            .populate('associated_status_effects', 'name type icon');
 
         return res.json(perk);
     } catch (err) {
