@@ -7,7 +7,7 @@ module.exports = function (app) {
 
     app.route('/survivors/query')
         .get((req, res) => {
-            // ?survivor_name=firstName-lastName
+            // ?survivor_name=first_name-last_name
             // will return specific survivor
             if (req.query.survivor_name) {
                 return survivorsController.getSurvivorByName(req, res);
