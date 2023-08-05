@@ -21,7 +21,7 @@ class DbConnection {
         try {
             const status = await mongoose.connect(connectionstring, {
                 maxPoolSize: 10,
-                maxIdleTimeMS: 3600000
+                maxIdleTimeMS: 1800000
              })
             console.log('[CONNECTION TO DB SUCCESSFUL]')
             return status
