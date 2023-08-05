@@ -3,7 +3,7 @@ module.exports = function (app) {
 
     app.route('/perks')
         .get(perksController.getAllPerks)
-        .post(perksController.addGenericPerk);
+        .post(perksController.addPerk);
 
     app.route('/perks/query')
         .get((req, res) => {
@@ -31,9 +31,6 @@ module.exports = function (app) {
 
             }
         })
-
-    app.route('/perks/generic')
-        .get(perksController.getAllGenericPerks);
 
     app.route('/perks/survivor')
         .get(perksController.getAllSurvivorPerks);
