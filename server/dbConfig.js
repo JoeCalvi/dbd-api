@@ -2,6 +2,7 @@ require('dotenv').config()
 
 const mongoose = require('mongoose');
 
+
 mongoose.connection.on('error', err => {
     console.error('[DATABASE ERROR]:', err) // Logs any database connection errors
 })
@@ -18,7 +19,10 @@ class DbConnection {
     static async connect(connectionstring = process.env.CONNECTION_STRING || '') {
         const status = 0 // Initial status value
         try {
-            const status = await mongoose.connect(connectionstring)
+            const status = await mongoose.connect(connectionstring, {
+                maxPoolSize: 10,
+                maxIdleTimeMS: 3600000
+             })
             console.log('[CONNECTION TO DB SUCCESSFUL]')
             return status
         } catch (e) {

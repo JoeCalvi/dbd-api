@@ -10,6 +10,7 @@ exports.getAllChapters = async function (req, res) {
             .populate('associated_killers', 'killer_name portrait')
             .populate('associated_survivors', 'name portrait')
             .populate('realm', 'name image');
+            
         return res.json(chapters);
     } catch (err) {
         res.send(err);
