@@ -8,14 +8,14 @@ module.exports = function (app) {
     app.route('/powers')
         .get(powersController.getAllPowers);
 
-    // app.route('/powers/query')
-    //     .get((req, res) => {
-    //         ?killer_name=killer_name
-    //         will return that specific killer's power
-    //         if (req.query.killer_name) {
-    //             return powersController.getPowerByKillerName(req, res);
-    //         }
-    //     })
+    app.route('/powers/query')
+        .get((req, res) => {
+            // ?killer_name=killer_name
+            // will return that specific killer's power
+            if (req.query.killer_name) {
+                return powersController.getPowerByKillerName(req, res);
+            }
+        })
 
     app.route('/powers/:powerId')
         .get(powersController.getPowerById)

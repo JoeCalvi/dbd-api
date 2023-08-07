@@ -36,25 +36,36 @@ exports.addPower = async function (req, res) {
 exports.getPowerById = async function (req, res) {
     try {
         const power = await Power.findById(req.params.powerId)
-            .populate('killer');
+            .populate({ path: 'killer', select: 'killer_name portrait weapon_id chapter_id perk_one_id perk_two_id perk_three_id',
+            populate: { path: 'weapon', select: 'name description image' }})
+            .populate({ path: 'killer', select: 'killer_name portrait weapon_id chapter_id perk_one_id perk_two_id perk_three_id',
+            populate: { path: 'chapter', select: 'name number release_date image' }})
+            .populate({ path: 'killer', select: 'killer_name portrait weapon_id chapter_id perk_one_id perk_two_id perk_three_id',
+            populate: { path: 'perk_one', select: 'name icon' }})
+            .populate({ path: 'killer', select: 'killer_name portrait weapon_id chapter_id perk_one_id perk_two_id perk_three_id',
+            populate: { path: 'perk_two', select: 'name icon' }})
+            .populate({ path: 'killer', select: 'killer_name portrait weapon_id chapter_id perk_one_id perk_two_id perk_three_id',
+            populate: { path: 'perk_three', select: 'name icon' }})
+
         return res.json(power);
     } catch (err) {
         res.send(err);
     }
 };
 
-// exports.getPowerByKillerName = async function (req, res) {
-//     try {
-//         const query = req.query;
-//         const name = query.killer_name.replace('-', ' ').toLowerCase();
-//         const killers = await Killer.find()
-//         const killer = killers.find(k => k.killer_name.toLowerCase() == name);
-//         const power = await Power.findById(killer.power_id)
-//         return res.send(power);
-//     } catch (err) {
-//         res.send(err)
-//     }
-// }
+exports.getPowerByKillerName = async function (req, res) {
+    try {
+        const query = req.query;
+        const name = query.killer_name.replaceAll('-', ' ').toLowerCase();
+        const killers = await Killer.find();
+        const killer = killers.find(k => k.killer_name.toLowerCase() == name);
+        const power = await Power.findById(killer.power_id);
+
+        return res.send(power);
+    } catch (error) {
+        res.send(error);
+    }
+};
 
 exports.updatePower = async function (req, res) {
     try {
