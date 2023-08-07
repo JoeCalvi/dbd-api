@@ -6,16 +6,18 @@ const Chapter = mongoose.model('Chapters');
 exports.getAllKillers = async function (req, res) {
     try {
         const killers = await Killer.find({})
-            .populate('perk_one', 'name icon description')
-            .populate('perk_two', 'name icon description')
-            .populate('perk_three', 'name icon description')
+            .populate('perk_one', 'name icon')
+            .populate('perk_two', 'name icon')
+            .populate('perk_three', 'name icon')
             .populate('weapon', 'name description image')
-            .populate('realm', 'name description location image')
+            .populate('realm', 'name location image')
             .populate('power', 'name description')
-            .populate('chapter', 'name number release_date image associated_characters');
-        res.json(killers);
-    } catch (err) {
-        res.send(err);
+            .populate({ path: 'chapter', select: 'name number release_date image associated_survivors', 
+            populate: { path: 'associated_survivors', select: 'name portrait' }});
+
+        return res.json(killers);
+    } catch (error) {
+        res.send(error);
     }
 };
 
@@ -24,73 +26,84 @@ exports.addKiller = async function (req, res) {
         const killer = new Killer(req.body);
         const savedKiller = await killer.save();
         if(savedKiller.realm_id != null) {
-            const realm = await Realm.findById(savedKiller.realm_id)
-            await realm.associated_killers.push(savedKiller._id)
-            await realm.save()
+            const realm = await Realm.findById(savedKiller.realm_id);
+            await realm.associated_killers.push(savedKiller._id);
+            await realm.save();
         }
-        const chapter = await Chapter.findById(savedKiller.chapter_id)
-        await chapter.associated_characters.push(savedKiller._id)
-        await chapter.save()
-        res.json(savedKiller);
-    } catch (err) {
-        res.send(err);
+
+        const chapter = await Chapter.findById(savedKiller.chapter_id);
+        await chapter.associated_characters.push(savedKiller._id);
+        await chapter.save();
+
+        return res.json(savedKiller);
+    } catch (error) {
+        res.send(error);
     }
 };
 
 exports.getKillerById = async function (req, res) {
     try {
         const killer = await Killer.findById(req.params.killerId)
-            .populate('perk_one', 'name icon description')
-            .populate('perk_two', 'name icon description')
-            .populate('perk_three', 'name icon description')
+            .populate({ path: 'perk_one', select: 'name associated_status_effects icon description', 
+            populate: { path: 'associated_status_effects', select: 'name type icon' }})
+            .populate({ path: 'perk_two', select: 'name associated_status_effects icon description', 
+            populate: { path: 'associated_status_effects', select: 'name type icon' }})
+            .populate({ path: 'perk_three', select: 'name associated_status_effects icon description', 
+            populate: { path: 'associated_status_effects', select: 'name type icon' }})
             .populate('weapon', 'name description image')
-            .populate(
-                {
-                    path: 'realm', select: 'name description location image maps',
-                    populate: {
-                        path: 'maps', select: 'name description image layout'
-                    }
-                }
-            )
-            .populate('power')
-            .populate('chapter', 'name number release_date image associated_characters');
+            .populate({ path: 'realm', select: 'name location image maps',
+            populate: { path: 'maps', select: 'name image' }})
+            .populate('power', 'name description special_interaction interaction_description special_ability ability_description special_object object_description special_affliction affliction_description special_mobilitiy mobility_description special_attack attack_description special_state state_description special_enemy enemy_description special_effect effect_description')
+            .populate({ path: 'chapter', select: 'name number release_date image associated_survivors',
+            populate: { path: 'associated_survivors', select: 'name portrait' }});
 
-        res.json(killer);
-    } catch (err) {
-        res.send(err);
+        return res.json(killer);
+    } catch (error) {
+        res.send(error);
     }
 };
 
 exports.getKillerByName = async function (req, res) {
     try {
         const query = req.query;
-        const name = query.killer_name.replace('-', ' ').toLowerCase();
+        const name = query.killer_name.replaceAll('-', ' ').toLowerCase();
         const killers = await Killer.find()
-            .populate('perk_one')
-            .populate('perk_two')
-            .populate('perk_three')
-            .populate('Weapon');
+            .populate({ path: 'perk_one', select: 'name associated_status_effects icon description', 
+            populate: { path: 'associated_status_effects', select: 'name type icon' }})
+            .populate({ path: 'perk_two', select: 'name associated_status_effects icon description', 
+            populate: { path: 'associated_status_effects', select: 'name type icon' }})
+            .populate({ path: 'perk_three', select: 'name associated_status_effects icon description', 
+            populate: { path: 'associated_status_effects', select: 'name type icon' }})
+            .populate('weapon', 'name description image')
+            .populate({ path: 'realm', select: 'name location image maps',
+            populate: { path: 'maps', select: 'name image' }})
+            .populate('power', 'name description special_interaction interaction_description special_ability ability_description special_object object_description special_affliction affliction_description special_mobilitiy mobility_description special_attack attack_description special_state state_description special_enemy enemy_description special_effect effect_description')
+            .populate({ path: 'chapter', select: 'name number release_date image associated_survivors',
+            populate: { path: 'associated_survivors', select: 'name portrait' }});
+
         const killer = killers.find(k => k.killer_name.toLowerCase() == name);
         return res.json(killer);
-    } catch (err) {
-        res.send(err)
+    } catch (error) {
+        res.send(error)
     }
-}
+};
 
 exports.updateKiller = async function (req, res) {
     try {
         const killer = await Killer.findByIdAndUpdate(req.params.killerId, req.body, { new: true });
-        res.json(killer);
-    } catch (err) {
-        res.send(err);
+
+        return res.json(killer);
+    } catch (error) {
+        res.send(error);
     }
 };
 
 exports.deleteKiller = async function (req, res) {
     try {
         const killer = await Killer.findByIdAndDelete(req.params.killerId);
-        res.json({ message: 'Killer deleted.' });
-    } catch (err) {
-        res.send(err);
+
+        return res.json({ message: 'Killer deleted.' });
+    } catch (error) {
+        res.send(error);
     }
 };
