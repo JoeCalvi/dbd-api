@@ -6,6 +6,7 @@ exports.getAllRealms = async function (req, res) {
     try {
         const realms = await Realm.find({})
             .populate('associated_killers', 'killer_name portrait')
+            .populate('associated_chapters', 'name number release_date image')
             .populate('maps', 'name image layout');
         return res.json(realms);
     } catch (err) {
