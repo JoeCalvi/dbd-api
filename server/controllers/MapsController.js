@@ -5,7 +5,12 @@ const Map = mongoose.model('Maps');
 exports.getAllMapsInARealm = async function (req, res) {
     try {
         const realm = await Realm.findById(req.params.realmId)
-            .populate('maps', 'name description image layout');
+            .populate({ path: 'maps', select: 'name description image layout chapter_id',
+            populate: { path: 'chapter', select: 'name number release_date associated_killers associated_survivors',
+            populate: { path: 'associated_killers', select: 'killer_name portrait' } }})
+            .populate({ path: 'maps', select: 'name description image layout chapter_id',
+            populate: { path: 'chapter', select: 'name number release_date associated_killers associated_survivors',
+            populate: { path: 'associated_survivors', select: 'name portrait' } }});
         const maps = realm.maps;
 
         return res.send(maps);
@@ -17,7 +22,11 @@ exports.getAllMapsInARealm = async function (req, res) {
 exports.getAllMaps = async function (req, res) {
     try {
         const maps = await Map.find({})
-            .populate('realm', 'name location image');
+            .populate('realm', 'name location image')
+            .populate({ path: 'chapter', select: 'name number release_date associated_killers associated_survivors',
+            populate: { path: 'associated_killers', select: 'killer_name portrait' }})
+            .populate({ path: 'chapter', select: 'name number release_date associated_killers associated_survivors',
+            populate: { path: 'associated_survivors', select: 'name portrait' }});
 
         return res.json(maps);
     } catch (error) {
@@ -43,7 +52,11 @@ exports.addMap = async function (req, res) {
 exports.getMapById = async function (req, res) {
     try {
         const map = await Map.findById(req.params.mapId)
-            .populate('realm', 'name location image');
+            .populate('realm', 'name location image')
+            .populate({ path: 'chapter', select: 'name number release_date associated_killers associated_survivors',
+            populate: { path: 'associated_killers', select: 'killer_name portrait' }})
+            .populate({ path: 'chapter', select: 'name number release_date associated_killers associated_survivors',
+            populate: { path: 'associated_survivors', select: 'name portrait' }});
 
         return res.json(map);
     } catch (error) {
@@ -56,7 +69,12 @@ exports.getMapsByRealmName = async function (req, res) {
         const query = req.query;
         const name = query.realm_name.replaceAll('-', ' ').toLowerCase();
         const realms = await Realm.find()
-            .populate('maps', 'name description image layout');
+            .populate({ path: 'maps',
+            populate: { path: 'chapter', select: 'name number release_date associated_killers associated_survivors',
+            populate: { path: 'associated_killers', select: 'killer_name portrait' }}})
+            .populate({ path: 'maps',
+            populate: { path: 'chapter', select: 'name number release_date associated_killers associated_survivors',
+            populate: { path: 'associated_survivors', select: 'name portrait' }}});
         const realm = realms.find(r => r.name.toLowerCase() == name);
         const maps = realm.maps
 
@@ -64,7 +82,7 @@ exports.getMapsByRealmName = async function (req, res) {
     } catch (error) {
         res.send(error)
     }
-}
+};
 
 exports.updateMap = async function (req, res) {
     try {
