@@ -28,8 +28,8 @@ exports.addPower = async function (req, res) {
         power.killer_id = req.params.killerId
         const savedPower = await power.save();
         return res.json(savedPower);
-    } catch (err) {
-        res.send(err);
+    } catch (error) {
+        res.send(error);
     }
 };
 
@@ -48,8 +48,8 @@ exports.getPowerById = async function (req, res) {
             populate: { path: 'perk_three', select: 'name icon' }})
 
         return res.json(power);
-    } catch (err) {
-        res.send(err);
+    } catch (error) {
+        res.send(error);
     }
 };
 
@@ -70,17 +70,19 @@ exports.getPowerByKillerName = async function (req, res) {
 exports.updatePower = async function (req, res) {
     try {
         const power = await Power.findByIdAndUpdate(req.params.powerId, req.body, { new: true });
+
         return res.json(power);
-    } catch (err) {
-        res.send(err);
+    } catch (error) {
+        res.send(error);
     }
 };
 
 exports.deletePower = async function (req, res) {
     try {
         const power = await Power.findByIdAndDelete(req.params.powerId);
+        
         return res.json({ message: 'Power deleted.' });
-    } catch (err) {
-        res.send(err);
+    } catch (error) {
+        res.send(error);
     }
 };
