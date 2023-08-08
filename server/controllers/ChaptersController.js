@@ -11,8 +11,7 @@ exports.getAllChapters = async function (req, res) {
         const chapters = await Chapter.find({})
             .populate({ path: 'realm', select: 'maps', 
             populate: { path: 'maps' }});
-        const populatedChapters = [];
-
+        
         
             return res.send(chapters);
         } catch (err) {
