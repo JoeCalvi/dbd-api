@@ -3,19 +3,23 @@ const Chapter = mongoose.model('Chapters');
 const Realm = mongoose.model('Realms');
 const Killer = mongoose.model('Killers');
 const Survivor = mongoose.model('Survivors');
+const Map = mongoose.model('Maps');
 
+// TODO make it so when getting all chapters, only the correct associated maps are shown
 exports.getAllChapters = async function (req, res) {
     try {
         const chapters = await Chapter.find({})
-            .populate('associated_killers', 'killer_name portrait')
-            .populate('associated_survivors', 'name portrait')
-            .populate('realm', 'name image');
-            
-        return res.json(chapters);
-    } catch (err) {
-        res.send(err);
-    }
-};
+            .populate({ path: 'realm', select: 'maps', 
+            populate: { path: 'maps' }});
+        const populatedChapters = [];
+
+        
+            return res.send(chapters);
+        } catch (err) {
+            res.send(err);
+        }
+    };
+    
 
 exports.addChapter = async function (req, res) {
     try {
