@@ -11,9 +11,22 @@ exports.getAllChapters = async function (req, res) {
         const chapters = await Chapter.find({})
             .populate({ path: 'realm', select: 'maps', 
             populate: { path: 'maps' }});
+        const mapped_chapters = chapters.map((c) => c)
+
+        for await (const chapter of mapped_chapters) {
+            if (chapter.realm_id != null) {
+                const realm_maps = chapter.realm.maps;
+                const wrong_map = realm_maps.find(m => m.chapter_id.toString() != chapter._id.toString())
+
+                if(wrong_map) {
+                    console.log(wrong_map.name)
+                }
+                // chapter.realm.maps = chapter_maps;
+                // console.log(chapter.realm.maps)
+            }
+        }
         
-        
-            return res.send(chapters);
+            return res.send(mapped_chapters);
         } catch (err) {
             res.send(err);
         }
