@@ -34,17 +34,15 @@ exports.addChapter = async function (req, res) {
 exports.getChapterById = async function (req, res) {
     try {
         const chapter = await Chapter.findById(req.params.chapterId)
-            .populate(
-                {
-                    path: 'realm', select: 'name description location image maps', populate:
-                        { path: 'maps', select: 'name description image layout' }
-                }
-            )
-            .populate('associated_killers', 'killer_name portrait')
-            .populate('associated_survivors', 'name portrait')
+            .populate({ path: 'associated_maps', select: 'name image layout realm_id', populate: { path: 'realm', select: 'name location image' }})
+            .populate({ path: 'associated_killers', select: 'killer_name portrait perk_one_id perk_two_id perk_three_id',
+            populate: { path: 'perk_one perk_two perk_three', select: 'name icon' }})
+            .populate({ path: 'associated_survivors', select: 'name portrait perk_one_id perk_two_id perk_three_id',
+            populate: { path: 'perk_one perk_two perk_three', select: 'name icon'  }});
+
         return res.json(chapter);
-    } catch (err) {
-        res.send(err);
+    } catch (error) {
+        res.send(error);
     }
 };
 
