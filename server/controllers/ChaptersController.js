@@ -89,17 +89,19 @@ exports.getChapterBySurvivorName = async function (req, res) {
 exports.updateChapter = async function (req, res) {
     try {
         const chapter = await Chapter.findByIdAndUpdate(req.params.chapterId, req.body, { new: true });
+
         return res.json(chapter);
-    } catch (err) {
-        res.send(err);
+    } catch (error) {
+        res.send(error);
     }
 };
 
 exports.deleteChapter = async function (req, res) {
     try {
         const chapter = await Chapter.findByIdAndDelete(req.params.chapterId);
+        
         return res.json({ message: 'Chapter deleted.' });
-    } catch (err) {
-        res.send(err);
+    } catch (error) {
+        res.send(error);
     }
 };
