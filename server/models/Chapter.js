@@ -9,6 +9,7 @@ const ChapterSchema = new Schema({
   realm_id: { type: Schema.Types.ObjectId, ref: 'Realms', default: null },
   associated_killers: { type: [Schema.Types.ObjectId], ref: 'Killers' },
   associated_survivors: { type: [Schema.Types.ObjectId], ref: 'Survivors' },
+  associated_maps: { type: [Schema.Types.ObjectId], ref: 'Maps', default: [] }
 }, { timestamps: true, toJSON: { virtuals: true } });
 
 ChapterSchema.virtual('realm', {

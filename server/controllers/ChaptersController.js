@@ -9,26 +9,14 @@ const Map = mongoose.model('Maps');
 exports.getAllChapters = async function (req, res) {
     try {
         const chapters = await Chapter.find({})
-            .populate({ path: 'realm', select: 'maps', 
-            populate: { path: 'maps' }});
-        const mapped_chapters = chapters.map((c) => c)
-
-        for await (const chapter of mapped_chapters) {
-            if (chapter.realm_id != null) {
-                const realm_maps = chapter.realm.maps;
-                const wrong_map = realm_maps.find(m => m.chapter_id.toString() != chapter._id.toString())
-
-                if(wrong_map) {
-                    console.log(wrong_map.name)
-                }
-                // chapter.realm.maps = chapter_maps;
-                // console.log(chapter.realm.maps)
-            }
-        }
+            .populate('associated_killers', 'killer_name portrait')
+            .populate('associated_survivors', 'name portrait')
+            .populate({ path: 'associated_maps', select: 'name image layout realm_id',
+            populate: { path: 'realm', select: 'name location'}});
         
-            return res.send(mapped_chapters);
-        } catch (err) {
-            res.send(err);
+            return res.send(chapters);
+        } catch (error) {
+            res.send(error);
         }
     };
     
@@ -38,8 +26,8 @@ exports.addChapter = async function (req, res) {
         const chapter = new Chapter(req.body);
         const savedChapter = await chapter.save();
         return res.json(savedChapter);
-    } catch (err) {
-        res.send(err);
+    } catch (error) {
+        res.send(error);
     }
 };
 
