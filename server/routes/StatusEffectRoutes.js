@@ -13,9 +13,13 @@ module.exports = function (app) {
 
     app.route('/status_effects/query')
         .get((req, res) => {
-            // ?status_effect=status_effect_name
-            // will return perks associated with this status effect
-            if (req.query.status_effect) {
+            if (req.query.status_effect && req.query.role) {
+                // ?status_effect=status_effect_name&role=role ('killer' or 'survivor')
+                // will return role specific perks associated with this status effect
+                return statusEffectsController.getRoleSpecificPerksByStatusEffect(req, res);
+            } else if (req.query.status_effect) {
+                // ?status_effect=status_effect_name
+                // will return perks associated with this status effect
                 return statusEffectsController.getPerksByStatusEffect(req, res);
             }
         })

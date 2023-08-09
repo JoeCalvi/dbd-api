@@ -187,19 +187,19 @@ exports.getAllKillerDebuffs = async function (req, res) {
 exports.getPerksByStatusEffect = async function (req, res) {
     try {
         const query = req.query;
-        const statusEffectName = query.status_effect.replaceAll('-', ' ').toLowerCase();
-        const statusEffects = await StatusEffect.find({})
-        const statusEffect = statusEffects.find(e => e.name.toLowerCase() == statusEffectName)
+        const status_effect_name = query.status_effect.replaceAll('-', ' ').toLowerCase();
+        const status_effects = await StatusEffect.find({})
+        const status_effect = status_effects.find(e => e.name.toLowerCase() == status_effect_name)
 
-        const associatedPerks = [];
+        const associated_perks = [];
         const perks = await Perk.find({})
             .populate('killer', 'killer_name portrait')
             .populate('survivor', 'name portrait')
             .populate('chapter', 'name number release_date');
 
         perks.forEach(p => {
-            if (p.associated_status_effects.includes(statusEffect._id)) {
-                associatedPerks.push(p);
+            if (p.associated_status_effects.includes(status_effect._id)) {
+                associated_perks.push(p);
             }
         });
 
@@ -208,6 +208,50 @@ exports.getPerksByStatusEffect = async function (req, res) {
         res.send(err)
     }
 }
+
+exports.getRoleSpecificPerksByStatusEffect = async function (req, res) {
+    try {
+        const query_one = req.query.status_effect;
+        const status_effect_name = query_one.replaceAll('-', ' ').toLowerCase();
+        const status_effects = await StatusEffect.find({});
+        const status_effect = status_effects.find(e => e.name.toLowerCase() == status_effect_name);
+        const query_two = req.query.role
+        const role = query_two.replaceAll('-', ' ').toLowerCase();
+    
+        const killer_perks = [];
+        const survivor_perks = [];
+    
+        if (role == 'killer') {
+            const perks = await Perk.find({ role: 'Killer' })
+                .populate('killer', 'killer_name portrait')
+                .populate('chapter', 'name number release_date');
+            
+            for await (const perk of perks) {
+                if (perk.associated_status_effects.includes(status_effect._id)) {
+                    killer_perks.push(perk);
+                }
+            }
+    
+            return res.send(killer_perks);
+        }
+    
+        if (role == 'survivor') {
+            const perks = await Perk.find({ role: 'Survivor' })
+                .populate('survivor', 'name portrait')
+                .populate('chapter', 'name number release_date');
+            
+            for await (const perk of perks) {
+                if (perk.associated_status_effects.includes(status_effect._id)) {
+                    survivor_perks.push(perk);
+                }
+            }
+    
+            return res.send(survivor_perks);
+        }
+    } catch (error) {
+        res.send(error)
+    }
+};
 
 exports.updateStatusEffect = async function (req, res) {
     try {
