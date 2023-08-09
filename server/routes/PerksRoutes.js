@@ -1,5 +1,6 @@
 module.exports = function (app) {
     const perksController = require('../controllers/PerksController');
+    const statusEffectsController = require('../controllers/StatusEffectsController');
 
     app.route('/perks')
         .get(perksController.getAllPerks)
@@ -7,7 +8,17 @@ module.exports = function (app) {
 
     app.route('/perks/query')
         .get((req, res) => {
-            if (req.query.perk_name) {
+            if (req.query.status_effect && req.query.role) {
+                // ?status_effect=status_effect_name&role=role ('killer' or 'survivor')
+                // will return role specific perks associated with this status effect
+                return statusEffectsController.getRoleSpecificPerksByStatusEffect(req, res);
+
+            } else if (req.query.status_effect) {
+                // ?status_effect=status_effect_name
+                // will return perks associated with this status effect
+                return statusEffectsController.getPerksByStatusEffect(req, res);
+                
+            } else if (req.query.perk_name) {
 
                 // ?perk_name=perkName 
                 // if perk name is more than one word, separate with hyphens

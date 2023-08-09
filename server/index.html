@@ -19,109 +19,510 @@
         </div>
       </div>
       <div class="row m-auto justify-content-center mb-3">
-        <div class="col-8 mb-3">
+        <div class="col-10 mb-3">
           <div class="w-100">
-            <h4 class="text-center text-decoration-underline">Survivor Routes:</h4>
-            <div
-              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
-              <div class="col-md-6 p-0">
-                <h5 class="mb-0">/survivors</h5>
+            <a class="text-decoration-underline text-dbd" data-bs-toggle="collapse" href="#survivor_routes" role="button" aria-expanded="false" aria-controls="survivor_routes">
+              <h4>Survivor Routes</h4>              
+            </a>
+            <div class="collapse" id="survivor_routes">
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/survivors</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all survivors</p>
+                </div>
               </div>
-              <div class="col-md-6 p-0">
-                <p class="text-end mb-0">returns all survivors</p>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/survivors/survivor_id</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns a specific survivor based on their unique id</p>
+                </div>
               </div>
-            </div>
-            <div
-              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
-              <div class="col-md-6 p-0">
-                <h5 class="mb-0">/survivors/:survivorId</h5>
-              </div>
-              <div class="col-md-6 p-0">
-                <p class="text-end mb-0">returns a specific survivor based on their unique id</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-8 mb-3">
-          <div class="row w-100">
-            <h4 class="text-center text-decoration-underline">Killer Routes:</h4>
-            <div
-              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
-              <div class="col-md-6 p-0">
-                <h5 class="mb-0">/killers</h5>
-              </div>
-              <div class="col-md-6 p-0">
-                <p class="text-end mb-0">returns all killers</p>
-              </div>
-            </div>
-            <div
-              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
-              <div class="col-md-6 p-0">
-                <h5 class="mb-0">/killers/:killerId</h5>
-              </div>
-              <div class="col-md-6 p-0">
-                <p class="text-end mb-0">returns a specific killer based on their unique id</p>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/survivors/query?survivor_name=name</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns a specific survivor based on name query</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row m-auto mb-3 justify-content-center">
-        <div class="col-8 mb-3">
+        <div class="col-10 mb-3">
           <div class="row w-100">
-            <h4 class="text-center text-decoration-underline">Perk Routes:</h4>
-            <div
-              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
-              <div class="col-md-6 p-0">
-                <h5 class="mb-0">/perks</h5>
+            <a class="text-decoration-underline text-dbd" data-bs-toggle="collapse" href="#killer_routes" role="button" aria-expanded="false" aria-controls="killer_routes">
+              <h4>Killer Routes</h4>
+            </a>
+            <div class="collapse" id="killer_routes">
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/killers</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all killers</p>
+                </div>
               </div>
-              <div class="col-md-6 p-0">
-                <p class="text-end mb-0">returns all perks</p>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/killers/killer_id</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns a specific killer based on their unique id</p>
+                </div>
               </div>
-            </div>
-            <div
-              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
-              <div class="col-md-6 p-0">
-                <h5 class="mb-0">/perks/:perkId</h5>
-              </div>
-              <div class="col-md-6 p-0">
-                <p class="text-end mb-0">returns a specific perk based on its unique id</p>
-              </div>
-            </div>
-            <div
-              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
-              <div class="col-md-6 p-0">
-                <h5 class="mb-0">/perks/generic</h5>
-              </div>
-              <div class="col-md-6">
-                <p class="text-end mb-0">returns all generic perks</p>
-              </div>
-            </div>
-            <div
-              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
-              <div class="col-md-6 p-0">
-                <h5 class="mb-0">/perks/survivor</h5>
-              </div>
-              <div class="col-md-6 p-0">
-                <p class="text-end mb-0">returns all survivor perks</p>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/killers/query?killer_name=killer_name</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns a specific killer based on name query</p>
+                </div>
               </div>
             </div>
-            <div
-              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
-              <div class="col-md-6 p-0">
-                <h5 class="mb-0">/perks/killer</h5>
+          </div>
+        </div>
+        <div class="col-10 mb-3">
+          <div class="row w-100">
+            <a class="text-decoration-underline text-dbd" data-bs-toggle="collapse" href="#perk_routes" role="button" aria-expanded="false" aria-controls="perk_routes">
+              <h4>Perk Routes</h4>
+            </a>
+            <div class="collapse" id="perk_routes">
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/perks</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all perks</p>
+                </div>
               </div>
-              <div class="col-md-6 p-0">
-                <p class="text-end mb-0">returns all killer perks</p>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/perks/perk_id</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns a specific perk based on its unique id</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/perks/generic</h5>
+                </div>
+                <div class="col-md-6">
+                  <p class="text-end mb-0">returns all generic perks</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/perks/survivor</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all survivor perks</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/perks/survivor/generic</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all generic survivor perks</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/perks/killer</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all killer perks</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/perks/killer/generic</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all generic killer perks</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/character_id/perks</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns a specific character's perks based on the character's unique id
+                  <br>(survivor or killer)</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/perks/query?perk_name=perk_name</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns a specific perk based on perk name query</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/perks/query?type=perk_type</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all perks of that type
+                  <br> 
+                  (supports queries: 'hex', 'boon', 'scourge', & 'teamwork')</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/perks/query?character_name=character_name</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all perks that belong to character of that name 
+                  <br>(survivor or killer)</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/perks/query?status_effect=name</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all perks associated with specific status effect based on its name</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/perks/query?status_effect=name&role=role</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all perks associated with specific status effect based on its name, also specific to either 'killer' or 'survivor' role</p>
+                </div>
               </div>
             </div>
-            <div
-              class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
-              <div class="col-md-6 p-0">
-                <h5 class="mb-0">/:characterId/perks</h5>
+          </div>
+        </div>
+        <div class="col-10 mb-3">
+          <div class="row w-100">
+            <a class="text-decoration-underline text-dbd" data-bs-toggle="collapse" href="#chapter_routes" role="button" aria-expanded="false" aria-controls="chapter_routes">
+              <h4>Chapter Routes</h4>
+            </a>
+            <div class="collapse" id="chapter_routes">
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/chapters</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all chapters</p>
+                </div>
               </div>
-              <div class="col-md-6 p-0">
-                <p class="text-end mb-0">returns a specific character's perks based on the characters unique id</p>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/chapters/chapter_id</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns a specific chapter based on its unique id</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/chapters/query?killer_name=killer_name</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns a specific chapter based on its associated killer's name</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/chapters/query?survivor_name=name</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns a specific chapter based on an associated survivor's name</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 mb-3">
+          <div class="row w-100">
+            <a class="text-decoration-underline text-dbd" data-bs-toggle="collapse" href="#realm_routes" role="button" aria-expanded="false" aria-controls="realm_routes">
+              <h4>Realm Routes</h4>
+            </a>
+            <div class="collapse" id="realm_routes">
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/realms</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all realms</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/realms/realm_id</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns a specific realm based on its unique id</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/realms/query?killer_name=killer_name</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns a specific realm based on its associated killer's name</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 mb-3">
+          <div class="row w-100">
+            <a class="text-decoration-underline text-dbd" data-bs-toggle="collapse" href="#map_routes" role="button" aria-expanded="false" aria-controls="map_routes">
+              <h4>Map Routes</h4>
+            </a>
+            <div class="collapse" id="map_routes">
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/maps</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all maps</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/maps/map_id</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns a specific map based on its unique id</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/realm_id/maps</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns maps in a specific realm based on unique realm id</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/maps/query?realm_name=name</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns maps in specific realm based on realm's name</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 mb-3">
+          <div class="row w-100">
+            <a class="text-decoration-underline text-dbd" data-bs-toggle="collapse" href="#power_routes" role="button" aria-expanded="false" aria-controls="power_routes">
+              <h4>Power Routes</h4>
+            </a>
+            <div class="collapse" id="power_routes">
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/powers</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all killer powers</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/powers/power_id</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns a specific power based on its unique id</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/killer_id/power</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns a specific killer's power based on their unique id</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/powers/query?killer_name=name</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns a specific killer's power based on their name</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 mb-3">
+          <div class="row w-100">
+            <a class="text-decoration-underline text-dbd" data-bs-toggle="collapse" href="#weapon_routes" role="button" aria-expanded="false" aria-controls="weapon_routes">
+              <h4>Weapon Routes</h4>
+            </a>
+            <div class="collapse" id="weapon_routes">
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/weapons</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all killers' weapons</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/weapons/weapon_id</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns a specific weapon based on its unique id</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/weapons/query?killer_name=killer_name</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns a specific weapon based on its associated killer's name</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 mb-3">
+          <div class="row w-100">
+            <a class="text-decoration-underline text-dbd" data-bs-toggle="collapse" href="#status_effect_routes" role="button" aria-expanded="false" aria-controls="status_effect_routes">
+              <h4>Status Effect Routes</h4>
+            </a>
+            <div class="collapse" id="status_effect_routes">
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/status_effects</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all status effects</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/status_effects/status_effect_id</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns a specific status effect based on its unique id</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/status_effects/buffs</h5>
+                </div>
+                <div class="col-md-6">
+                  <p class="text-end mb-0">returns all status effects that are buffs</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/status_effects/debuffs</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all status effects that are debuffs</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/survivor/status_effects</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all status effects that can apply to survivors</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/survivor/status_effects/buffs</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all status effect buffs that can apply to survivors</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/survivor/status_effects/debuffs</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all status effect debuffs that can apply to survivors</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/killer/status_effects</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all status effects that can apply to killers</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/killer/status_effects/buffs</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all status effect buffs that can apply to killers</p>
+                </div>
+              </div>
+              <div
+                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                <div class="col-md-6 p-0">
+                  <h5 class="mb-0">/killer/status_effects/debuffs</h5>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-end mb-0">returns all status effect debuffs that can apply to killers</p>
+                </div>
               </div>
             </div>
           </div>
@@ -153,6 +554,10 @@
   footer {
     height: 65px;
     background-color: #860000;
+  }
+
+  .text-dbd {
+    color: #c1b9a2;
   }
 
   .route-block {

@@ -203,7 +203,7 @@ exports.getPerksByStatusEffect = async function (req, res) {
             }
         });
 
-        return res.send(associatedPerks);
+        return res.send(associated_perks);
     } catch (err) {
         res.send(err)
     }
