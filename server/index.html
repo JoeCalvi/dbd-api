@@ -52,6 +52,77 @@
                   <p class="text-end mb-0">returns a specific survivor based on name query</p>
                 </div>
               </div>
+              <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
+                <h5 class="text-center">Example Survivor:</h5>
+                <pre class="w-100">
+                  <code>
+                    {
+                      "_id": "64caf026da2e1eb56296d9a7",
+                      "role": "Founding Member of S.T.A.R.S.",
+                      "name": "Jill Valentine",
+                      "overview": "Jill Valentine is a founding member of S.T.A.R.S who has triumphed over countless bio-organic weapons. Her personal Perks - Counterforce, Resurgence, and Blast Mine - allow her to indirectly fight back, while offering strong support to her teammates.",
+                      "chapter_id": "64cae34c0faca2101c26d747",
+                      "gender": "Female",
+                      "voice_actor": "Chaney Crabb (The Monster Factory)",
+                      "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/99/S26_charSelect_portrait.png/revision/latest?cb=20230705184445",
+                      "perk_one_id": "64cc24d2875261f22dea2425",
+                      "perk_two_id": "64cc24f2875261f22dea242b",
+                      "perk_three_id": "64cc254d875261f22dea242e",
+                      "createdAt": "2023-08-03T00:09:10.949Z",
+                      "updatedAt": "2023-08-04T19:45:42.389Z",
+                      "__v": 0,
+                      "chapter": {
+                          "_id": "64cae34c0faca2101c26d747",
+                          "name": "Resident Evil™",
+                          "number": 20,
+                          "release_date": "15 June 2021 (Tuesday)",
+                          "realm_id": "64d12fd90d0691dad2bd673f",
+                          "associated_killers": [
+                              {
+                                  "_id": "64c80a2306b9522e7355842c",
+                                  "killer_name": "The Nemesis",
+                                  "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/84/K24_charSelect_portrait.png/revision/latest?cb=20230705184123",
+                                  "id": "64c80a2306b9522e7355842c"
+                              }
+                          ],
+                          "realm": {
+                              "_id": "64d12fd90d0691dad2bd673f",
+                              "name": "Raccoon City",
+                              "location": "Arklay County, United States",
+                              "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ad/RealmKeyArt_16.png/revision/latest?cb=20210920233023",
+                              "id": "64d12fd90d0691dad2bd673f"
+                          },
+                          "id": "64cae34c0faca2101c26d747"
+                      },
+                      "perk_one": {
+                          "_id": "64cc24d2875261f22dea2425",
+                          "name": "Counterforce",
+                          "associated_status_effects": [],
+                          "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/91/Counterforce.gif/revision/latest?cb=20210525223916",
+                          "description": "You know how to withstand an enemy stronger than you, and it starts with hunting down and knocking out their support. You cleanse Totems 20% faster. Gain another, stackable 20% Cleansing Speed bonus per cleansed Totem. After cleansing a Totem, the Aura of the Totem farthest from you is revealed to you for 2/3/4 seconds.",
+                          "id": "64cc24d2875261f22dea2425"
+                      },
+                      "perk_two": {
+                          "_id": "64cc24f2875261f22dea242b",
+                          "name": "Resurgence",
+                          "associated_status_effects": [],
+                          "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/ce/Resurgence.gif/revision/latest?cb=20210525223948",
+                          "description": "You have come back from near impossible odds...and you will do it again. After being unhooked or unhooking yourself, instantly gain 40/45/50% to your Healing progress.",
+                          "id": "64cc24f2875261f22dea242b"
+                      },
+                      "perk_three": {
+                          "_id": "64cc254d875261f22dea242e",
+                          "name": "Blast Mine",
+                          "associated_status_effects": [],
+                          "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c5/BlastMine.gif/revision/latest?cb=20210525224022",
+                          "description": "When direct combat is not an option, you still find ways to strike back. After repairing Generators for a total of 50%, Blast Mine activates: After continuing to repair any Generator for another 3 seconds, you can press the Active Ability button to install a Trap, which stays active for 100/110/120 seconds. When the Killer damages the Trapped Generator, its Trap explodes, stunning them and blinding anyone nearby. Blast Mine deactivates after triggering successfully or once the timer runs out. The Auras of Trapped Generators are revealed to all Survivors in yellow.",
+                          "id": "64cc254d875261f22dea242e"
+                      },
+                      "id": "64caf026da2e1eb56296d9a7"
+                  }
+                  </code>
+                </pre>
+              </div>
             </div>
           </div>
         </div>
@@ -87,6 +158,144 @@
                 <div class="col-md-6 p-0">
                   <p class="text-end mb-0">returns a specific killer based on name query</p>
                 </div>
+              </div>
+              <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
+                <h5 class="text-center">Example Killer:</h5>
+                <pre class="w-100">
+                  <code>
+                    {
+                      "_id": "64c80a2306b9522e7355842c",
+                      "killer_name": "The Nemesis",
+                      "original_name": "Nemesis T-Type",
+                      "realm_id": "64d12fd90d0691dad2bd673f",
+                      "power_id": "64c2c85c29009060f7108d11",
+                      "power_attack_type": "Special Attack (Tentacle)",
+                      "weapon_id": "64b8696d5a1f577cae34311b",
+                      "movement_speed": "115% | 4.6 m/s; 150% | 95% | 3.8 m/s (MR1/MR2 Tentacle Strike); 100% | 4 m/s (MR3 Tentacle Strike)",
+                      "terror_radius": "32 metres",
+                      "height": "Tall",
+                      "overview": "The Nemesis is an unrelenting Killer, capable of attacking at mid-range with his tentacle, while receiving support from Zombies roaming the area. His personal Perks - Lethal Pursuer, Hysteria, and Eruption - allow him to quickly ambush Survivors, while sowing confusion and fear when injuring and hooking them.",
+                      "difficulty_rating": "Hard (These Killers use mechanics that are specific to them and require more practice to be effective)",
+                      "chapter_id": "64cae34c0faca2101c26d747",
+                      "gender": "Male",
+                      "voice_actor": "Sébastien Croteau (Nemesis); Roxana B.L. (Female Zombie); David A.B. (Male Zombie) (The Monster Factory)",
+                      "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/84/K24_charSelect_portrait.png/revision/latest?cb=20230705184123",
+                      "perk_one_id": "64cd4a05f0c0af436a33ddd2",
+                      "perk_two_id": "64cd4a31f0c0af436a33ddd5",
+                      "perk_three_id": "64cd4aa5f0c0af436a33ddd8",
+                      "createdAt": "2023-07-31T19:23:15.358Z",
+                      "updatedAt": "2023-08-07T18:19:18.906Z",
+                      "__v": 0,
+                      "perk_one": {
+                          "_id": "64cd4a05f0c0af436a33ddd2",
+                          "name": "Lethal Pursuer",
+                          "associated_status_effects": [],
+                          "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/03/LethalPursuer.gif/revision/latest?cb=20210526185500",
+                          "description": "You have been designed to track down and eliminate targets. At the start of the Trial, the Auras of all Survivors are revealed to you for 7/8/9 seconds. Extends the duration of a Survivor's Aura being revealed to you by +2 seconds. Lethal Pursuer benefits from its own effect.",
+                          "id": "64cd4a05f0c0af436a33ddd2"
+                      },
+                      "perk_two": {
+                          "_id": "64cd4a31f0c0af436a33ddd5",
+                          "name": "Hysteria",
+                          "associated_status_effects": [
+                              {
+                                  "_id": "64cbe2de14056587889cc45e",
+                                  "name": "Oblivious",
+                                  "type": "Debuff",
+                                  "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/cf/FulliconStatusEffects_oblivious.png/revision/latest?cb=20210212000636"
+                              }
+                          ],
+                          "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/20/Hysteria.gif/revision/latest?cb=20210526185454",
+                          "description": "You know how to brutalise one member of a team to cause a panic. Whenever you put a healthy Survivor into the Injured State, all injured Survivors suffer from the Oblivious Status Effect for 20/25/30 seconds. Hysteria has a cool-down of 30 seconds.",
+                          "id": "64cd4a31f0c0af436a33ddd5"
+                      },
+                      "perk_three": {
+                          "_id": "64cd4aa5f0c0af436a33ddd8",
+                          "name": "Eruption",
+                          "associated_status_effects": [],
+                          "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e1/Eruption.gif/revision/latest?cb=20210526185449",
+                          "description": "The NE-a parasite provides you with the intelligence and awareness needed to set a trap. Performing the Damage Generator Action on a Generator applies Eruption: All affected Generators are highlighted to you in yellow. The next time any Survivor enters the Dying State by any means, all affected Generators explode and immediately start regressing, which removes the highlighted Aura. Instantly regresses the Generator by 10% of its maximum possible Progression. Causes all Survivors repairing the afflicted Generators to scream and reveal their Aura to you for 8/10/12 seconds. Eruption has a cooldown of 30 seconds.",
+                          "id": "64cd4aa5f0c0af436a33ddd8"
+                      },
+                      "weapon": {
+                          "_id": "64b8696d5a1f577cae34311b",
+                          "name": "Raw Fists",
+                          "description": "Powerful arms to overpower targets swiftly. Upon hitting a Survivor, The Nemesis will randomly either examine his fist, letting the Survivor's blood run down it, and clench it afterwards or he will roar instead of examining his fist.",
+                          "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/ea/K24_W01.png/revision/latest?cb=20210526123840",
+                          "id": "64b8696d5a1f577cae34311b"
+                      },
+                      "realm": {
+                          "_id": "64d12fd90d0691dad2bd673f",
+                          "name": "Raccoon City",
+                          "location": "Arklay County, United States",
+                          "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ad/RealmKeyArt_16.png/revision/latest?cb=20210920233023",
+                          "id": "64d12fd90d0691dad2bd673f"
+                      },
+                      "power": {
+                          "_id": "64c2c85c29009060f7108d11",
+                          "name": "T-Virus",
+                          "description": "Your Power expands as your Mutation Rate grows. Filling the Power gauge with Contamination points from attacking Survivors or Zombies with his Power increases The Nemesis' Mutation Rate. Mutation Rate 1: No special benefits. Mutation Rate 2: Tentacle Strike can destroy Breakable Walls and Pallets. Mutation Rate 3: Increases the reach of the Tentacle Strike from 5 metres to 6 metres. Increases the Movement speed of The Nemesis while charging a Tentacle Strike from 3.8 m/s to 4.0 m/s.",
+                          "special_interaction": "Vaccine",
+                          "interaction_description": "Survivors can be cured from Contamination by using a Vaccine on either themselves or on other Survivors. A limited number of Vaccines can be found inside Supply Cases, 4 of which are placed randomly in the environment. Each Vaccine may only be used 1 time. All Supply Cases still containing their Vaccine are highlighted to Contaminated Survivors in white. Using the Vaccine briefly reveals the Survivor's location through Killer Instinct.",
+                          "special_ability": null,
+                          "ability_description": null,
+                          "special_object": null,
+                          "object_description": null,
+                          "special_affliction": "Contamination",
+                          "affliction_description": "Survivors afflicted with Contamination are susceptible to damage from both The Nemesis' Tentacle Strike, as well as attacks from his Zombies. Contaminated Survivors will also occasionally cough.",
+                          "mobility_description": null,
+                          "special_attack": "Tentacle Strike",
+                          "attack_description": "Press and hold the Power button to charge an attack, then tap the Attack button to unleash a Tentacle Strike. Hitting a Survivor with a Tentacle Strike afflicts them with Contamination and adds 3 Contamination points to the Power gauge. Hitting a Survivor already afflicted with Contamination with a Tentacle Strike will damage them, but add just 1 Contamination point to the Power gauge. Hitting a Survivor with a Tentacle Strike, regardless of their Contamination status, suffer very briefly from the Hindered Status Effect.",
+                          "special_state": null,
+                          "state_description": null,
+                          "special_enemy": "Zombies",
+                          "enemy_description": "T-Virus causes 2 Zombies to spawn in and roam about the Trial Grounds. The Zombies can attack Survivors when they come too close, but abide by the same conditions as a Tentacle Strike. The Nemesis can wilfully destroy a Zombie to add 1 Contamination point to his Power gauge. Destroying them using a Basic Attack yields no such reward. This can be used to manually cause the Zombies to respawn in a different location in the Trial Grounds. Survivors have limited options to interact with Zombies: Blinding them to lose line-of-sight using Flashlights, Firecrackers, or Flash Grenades. Destroying them to force a respawn using Pallets or Head On. The Zombies respawn after 12 seconds if they were destroyed by The Nemesis and after 45 seconds if they were destroyed by Survivors.",
+                          "special_effect": null,
+                          "effect_description": null,
+                          "id": "64c2c85c29009060f7108d11"
+                      },
+                      "chapter": {
+                          "_id": "64cae34c0faca2101c26d747",
+                          "name": "Resident Evil™",
+                          "number": 20,
+                          "release_date": "15 June 2021 (Tuesday)",
+                          "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/20/ResidentEvil_main_header.png/revision/latest?cb=20210527171803",
+                          "associated_survivors": [
+                              {
+                                  "_id": "64caf026da2e1eb56296d9a7",
+                                  "name": "Jill Valentine",
+                                  "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/99/S26_charSelect_portrait.png/revision/latest?cb=20230705184445",
+                                  "id": "64caf026da2e1eb56296d9a7"
+                              },
+                              {
+                                  "_id": "64caf046da2e1eb56296d9ae",
+                                  "name": "Leon Scott Kennedy",
+                                  "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/5d/S27_charSelect_portrait.png/revision/latest?cb=20230705184450",
+                                  "id": "64caf046da2e1eb56296d9ae"
+                              }
+                          ],
+                          "associated_maps": [
+                              {
+                                  "_id": "64b98bd7b777f1835e65d48e",
+                                  "name": "Raccoon City Police Station East Wing",
+                                  "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/68/IconMap_Ecl_Eclipselevel01.png/revision/latest?cb=20210525214446",
+                                  "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/cd/RaccoonCityPoliceStationEastWingOutline_LowerFloor.png/revision/latest?cb=20220811122134 (Lower Floor); https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e9/RaccoonCityPoliceStationEastWingOutline_UpperFloor.png/revision/latest?cb=20220811122147 (Upper Floor)",
+                                  "id": "64b98bd7b777f1835e65d48e"
+                              },
+                              {
+                                  "_id": "64b98c22b777f1835e65d492",
+                                  "name": "Raccoon City Police Station West Wing",
+                                  "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/fa/IconMap_Ecl_Orionlevel01.png/revision/latest?cb=20220810155724",
+                                  "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/2f/RaccoonCityPoliceStationWestWingOutline_LowerFloor.png/revision/latest?cb=20220811122205 (Lower Floor); https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/97/RaccoonCityPoliceStationWestWingOutline_UpperFloor.png/revision/latest?cb=20220811122217 (Upper Floor)",
+                                  "id": "64b98c22b777f1835e65d492"
+                              }
+                          ],
+                          "id": "64cae34c0faca2101c26d747"
+                      },
+                      "id": "64c80a2306b9522e7355842c"
+                  }
+                  </code>
+                </pre>
               </div>
             </div>
           </div>
@@ -218,6 +427,64 @@
                   <p class="text-end mb-0">returns all perks associated with specific status effect based on its name, also specific to either 'killer' or 'survivor' role</p>
                 </div>
               </div>
+              <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
+                <h5 class="text-center">Example Perk:</h5>
+                <pre class="w-100">
+                  <code>
+                    {
+                      "_id": "64cc228b875261f22dea23e8",
+                      "role": "Survivor",
+                      "name": "For the People",
+                      "generic": false,
+                      "killer_id": null,
+                      "survivor_id": "64caef25da2e1eb56296d984",
+                      "chapter_id": "64cae2650faca2101c26d724",
+                      "associated_status_effects": [
+                          {
+                              "_id": "64cbde5e14056587889cc444",
+                              "name": "Broken",
+                              "type": "Debuff",
+                              "description": "Survivors suffering from Broken are unable to be healed or heal themselves past the Injured State.",
+                              "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/91/FulliconStatusEffects_broken.png/revision/latest?cb=20210212000622"
+                          }
+                      ],
+                      "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/27/ForThePeople.gif/revision/latest?cb=20200501133846",
+                      "description": "You risk life and injury for others. While healthy and healing another Survivor without using a Med-Kit, press the Active Ability button to activate For the People: Trades 1 Health State with the other Survivor. Heals a Survivor from the Dying State to the Injured State or heals a Survivor from the Injured State to Healthy State. You become injured and suffer from the Broken Status Effect for the next 80/70/60 seconds. You become the Killer's Obsession, if not already. Reduces the Odds of becoming the initial Obsession of the Killer by 100%. The Killer can only be obsessed with one Survivor at a time.",
+                      "createdAt": "2023-08-03T21:56:27.411Z",
+                      "updatedAt": "2023-08-03T21:56:27.411Z",
+                      "__v": 0,
+                      "survivor": {
+                          "_id": "64caef25da2e1eb56296d984",
+                          "name": "Zarina Kassir",
+                          "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/3d/S21_charSelect_portrait.png/revision/latest?cb=20230705194316",
+                          "perk_one_id": "64cc2240875261f22dea23de",
+                          "perk_two_id": "64cc2263875261f22dea23e5",
+                          "perk_one": {
+                              "_id": "64cc2240875261f22dea23de",
+                              "name": "Off the Record",
+                              "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/4/4f/OffTheRecord.gif/revision/latest?cb=20200926195843",
+                              "id": "64cc2240875261f22dea23de"
+                          },
+                          "perk_two": {
+                              "_id": "64cc2263875261f22dea23e5",
+                              "name": "Red Herring",
+                              "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/d5/RedHerring.gif/revision/latest?cb=20200926200003",
+                              "id": "64cc2263875261f22dea23e5"
+                          },
+                          "id": "64caef25da2e1eb56296d984"
+                      },
+                      "chapter": {
+                          "_id": "64cae2650faca2101c26d724",
+                          "name": "Chains of Hate",
+                          "number": 15,
+                          "release_date": "10 March 2020 (Tuesday)",
+                          "id": "64cae2650faca2101c26d724"
+                      },
+                      "id": "64cc228b875261f22dea23e8"
+                  }
+                  </code>
+                </pre>
+              </div>
             </div>
           </div>
         </div>
@@ -263,6 +530,127 @@
                   <p class="text-end mb-0">returns a specific chapter based on an associated survivor's name</p>
                 </div>
               </div>
+              <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
+                <h5 class="text-center">Example Chapter:</h5>
+                <pre class="w-100">
+                  <code>
+                    {
+                      "_id": "64cae2140faca2101c26d716",
+                      "name": "Stranger Things",
+                      "number": 13,
+                      "release_date": "17 September 2019 (Tuesday)",
+                      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/fe/StrangerThings_main_header.png/revision/latest?cb=20190919161921",
+                      "realm_id": "64d12f650d0691dad2bd6733",
+                      "associated_killers": [
+                          {
+                              "_id": "64c80624aeb02ae955f8032a",
+                              "killer_name": "The Demogorgon",
+                              "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/6d/K17_charSelect_portrait.png/revision/latest?cb=20230705183602",
+                              "perk_one_id": "64cd440a8290cb86311d6841",
+                              "perk_two_id": "64cd44238290cb86311d6844",
+                              "perk_three_id": "64cd44548290cb86311d6847",
+                              "perk_one": {
+                                  "_id": "64cd440a8290cb86311d6841",
+                                  "name": "Surge",
+                                  "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/83/Surge.gif/revision/latest?cb=20200926200238",
+                                  "id": "64cd440a8290cb86311d6841"
+                              },
+                              "perk_two": {
+                                  "_id": "64cd44238290cb86311d6844",
+                                  "name": "Cruel Limits",
+                                  "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c4/CruelLimits.gif/revision/latest?cb=20200926195220",
+                                  "id": "64cd44238290cb86311d6844"
+                              },
+                              "perk_three": {
+                                  "_id": "64cd44548290cb86311d6847",
+                                  "name": "Mindbreaker",
+                                  "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/21/Mindbreaker.gif/revision/latest?cb=20200506084520",
+                                  "id": "64cd44548290cb86311d6847"
+                              },
+                              "id": "64c80624aeb02ae955f8032a"
+                          }
+                      ],
+                      "associated_survivors": [
+                          {
+                              "_id": "64caee9cda2e1eb56296d96d",
+                              "name": "Nancy Wheeler",
+                              "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/0e/S18_charSelect_portrait.png/revision/latest?cb=20230705184019",
+                              "perk_one_id": "64cc1f45875261f22dea23b7",
+                              "perk_two_id": "64cc1f83875261f22dea23bd",
+                              "perk_three_id": "64cc1fa9875261f22dea23c0",
+                              "perk_one": {
+                                  "_id": "64cc1f45875261f22dea23b7",
+                                  "name": "Better Together",
+                                  "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/78/BetterTogether.gif/revision/latest?cb=20200926195119",
+                                  "id": "64cc1f45875261f22dea23b7"
+                              },
+                              "perk_two": {
+                                  "_id": "64cc1f83875261f22dea23bd",
+                                  "name": "Fixated",
+                                  "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/de/Fixated.gif/revision/latest?cb=20200501133939",
+                                  "id": "64cc1f83875261f22dea23bd"
+                              },
+                              "perk_three": {
+                                  "_id": "64cc1fa9875261f22dea23c0",
+                                  "name": "Inner Strength",
+                                  "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/30/InnerStrength.gif/revision/latest?cb=20200926195639",
+                                  "id": "64cc1fa9875261f22dea23c0"
+                              },
+                              "id": "64caee9cda2e1eb56296d96d"
+                          },
+                          {
+                              "_id": "64caeec0da2e1eb56296d972",
+                              "name": "Steve Harrington",
+                              "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/75/S19_charSelect_portrait.png/revision/latest?cb=20230705183809",
+                              "perk_one_id": "64cc1fd2875261f22dea23c4",
+                              "perk_two_id": "64cc1ff0875261f22dea23ca",
+                              "perk_three_id": "64cc2012875261f22dea23cd",
+                              "perk_one": {
+                                  "_id": "64cc1fd2875261f22dea23c4",
+                                  "name": "Babysitter",
+                                  "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/7b/Babysitter.gif/revision/latest?cb=20200926195041",
+                                  "id": "64cc1fd2875261f22dea23c4"
+                              },
+                              "perk_two": {
+                                  "_id": "64cc1ff0875261f22dea23ca",
+                                  "name": "Camaraderie",
+                                  "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/16/Camaraderie.gif/revision/latest?cb=20200501133925",
+                                  "id": "64cc1ff0875261f22dea23ca"
+                              },
+                              "perk_three": {
+                                  "_id": "64cc2012875261f22dea23cd",
+                                  "name": "Second Wind",
+                                  "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/4/41/SecondWind.gif/revision/latest?cb=20200926200032",
+                                  "id": "64cc2012875261f22dea23cd"
+                              },
+                              "id": "64caeec0da2e1eb56296d972"
+                          }
+                      ],
+                      "createdAt": "2023-08-02T23:09:08.891Z",
+                      "updatedAt": "2023-08-09T18:37:38.829Z",
+                      "__v": 2,
+                      "associated_maps": [
+                          {
+                              "_id": "64b98a70b777f1835e65d473",
+                              "name": "The Underground Complex",
+                              "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ab/IconMap_Qat_Laboratory.png/revision/latest?cb=20190903165752",
+                              "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/7f/TheUndergroundComplexOutline.png/revision/latest?cb=20210422193216",
+                              "realm_id": "64d12f650d0691dad2bd6733",
+                              "realm": {
+                                  "_id": "64d12f650d0691dad2bd6733",
+                                  "name": "Hawkins National Laboratory",
+                                  "location": "Indiana, United States",
+                                  "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/b/be/RealmKeyArt_13.png/revision/latest?cb=20210920232949",
+                                  "id": "64d12f650d0691dad2bd6733"
+                              },
+                              "id": "64b98a70b777f1835e65d473"
+                          }
+                      ],
+                      "id": "64cae2140faca2101c26d716"
+                  }
+                  </code>
+                </pre>
+              </div>
             </div>
           </div>
         </div>
@@ -298,6 +686,98 @@
                 <div class="col-md-6 p-0">
                   <p class="text-end mb-0">returns a specific realm based on its associated killer's name</p>
                 </div>
+              </div>
+              <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
+                <h5 class="text-center">Example Realm:</h5>
+                <pre class="w-100">
+                  <code>
+                    {
+                      "_id": "64d12d1a0d0691dad2bd6705",
+                      "name": "The MacMillan Estate",
+                      "description": "The MacMillan Estate in all its former glory. Now an ominous lot with nothing more than horrid memories of brutality in its purest form. The Foundry and Mine were the heart and centre of the estate. Those unlucky enough to be employed by Archie MacMillan slowly started to slip away from all kinds of normal life. Wives asking for their husbands to come home. Archie MacMillan began to obsess. His life was built around and on top of the Mine and Foundry. One day the former workers, now slaves, were not allowed to leave the premises without permission. Fences and goons made sure of it. Objections were rewarded with a visit to the furnace. Questions and rumours arose in town. But no answers. One fewer worker, missed by maybe a poor widow was not enough for real actions. Finally Archie MacMillan snapped and sealed his workers in the Mine. Suffocating them. Archie MacMillan's remains were later found. A silent skeleton with a taunting grin upon his meat less skull. What is left of the Estate are now but mere ruins and myths. Teens enter the area from time to time in a game of dare, bringing back new information about what is happening at the Estate. Because somehow, it seems like something is happening there. Even though not really understandable to the simple, human eye and mind.",
+                      "location": "Washington State, United States",
+                      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/3e/RealmKeyArt_01.png/revision/latest?cb=20210920195157",
+                      "associated_killers": [
+                          {
+                              "_id": "64c45407c4cd9ff0150eaec0",
+                              "killer_name": "The Trapper",
+                              "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/9f/K01_charSelect_portrait.png/revision/latest?cb=20230705190250",
+                              "id": "64c45407c4cd9ff0150eaec0"
+                          },
+                          {
+                              "_id": "64c80c2b06b9522e7355849d",
+                              "killer_name": "The Skull Merchant",
+                              "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/58/K31_charSelect_portrait.png/revision/latest?cb=20230705193235",
+                              "id": "64c80c2b06b9522e7355849d"
+                          }
+                      ],
+                      "maps": [
+                          {
+                              "_id": "64b97b097c36ef27c2fc75a2",
+                              "name": "Coal Tower",
+                              "description": "Once used for storing the coal that fuelled the Foundry, it now lies abandoned. The roof is split wide open, suggesting some titanic explosion, but the angles don't seem to make sense. So to fathom its destiny is not done easily — even if one would want to.",
+                              "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/f6/IconMap_Ind_CoalTower.png/revision/latest?cb=20201028175840",
+                              "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/6f/CoalTowerOutline.png/revision/latest?cb=20220520211007",
+                              "id": "64b97b097c36ef27c2fc75a2"
+                          },
+                          {
+                              "_id": "64b97d67b777f1835e65d3a8",
+                              "name": "Groaning Storehouse",
+                              "description": "On the eastern edge of the estate, near the woods, lie the remains of the MacMillan warehouse. Dwarfing the surround buildings, the massive storehouse can often be heard creaking and groaning as if it were crying out with the anguish of the incinerated labourers.",
+                              "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c9/IconMap_Ind_Storehouse.png/revision/latest?cb=20201028180005",
+                              "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e6/GroaningStorehouseOutline.png/revision/latest?cb=20180129152144",
+                              "id": "64b97d67b777f1835e65d3a8"
+                          },
+                          {
+                              "_id": "64b97dbbb777f1835e65d3b0",
+                              "name": "Ironworks of Misery",
+                              "description": "The beating heart of the Mine, the Foundry was where the iron ore was directly smelted into vast ingots. The huge vats still bear evidence of the bodies that were incinerated within them — preserved in the metal residue. The MacMillan foundry was consigned to the scrap heap and its horrors were forgotten as time passed and the buildings fell into ruin.",
+                              "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/de/IconMap_Ind_Foundry.png/revision/latest?cb=20201028180851",
+                              "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/4/4b/IronworksOfMiseryOutline.png/revision/latest?cb=20180129152150",
+                              "id": "64b97dbbb777f1835e65d3b0"
+                          },
+                          {
+                              "_id": "64b97df4b777f1835e65d3b4",
+                              "name": "Shelter Woods",
+                              "description": "The woods surrounding the estate might be the only witnesses to what really happened here. Its trees have a certain deformed character, as if what they saw made them want to run away. There are very few visitors to the woods — even animals seem to avoid it if possible.",
+                              "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/d8/IconMap_Ind_Forest.png/revision/latest?cb=20230218204611",
+                              "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/73/ShelterWoodsOutline.png/revision/latest?cb=20180129152155",
+                              "id": "64b97df4b777f1835e65d3b4"
+                          },
+                          {
+                              "_id": "64b97e35b777f1835e65d3b8",
+                              "name": "Suffocation Pit",
+                              "description": "You can still see the tiny entrance that miners used to haul the ore to the surface. Now it is nothing more than a pile of rubble. No one bothered to clear it as they feared whatever might be found inside. Instead it fell into oblivion.",
+                              "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/5a/IconMap_Ind_Mine.png/revision/latest?cb=20201028180937",
+                              "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/15/SuffocationPitOutline.png/revision/latest?cb=20180129152200",
+                              "id": "64b97e35b777f1835e65d3b8"
+                          }
+                      ],
+                      "associated_chapters": [
+                          {
+                              "_id": "64cadd872400b1dd8d1a1fb0",
+                              "name": "Base Game",
+                              "number": 0,
+                              "release_date": "14 June 2016 (Tuesday)",
+                              "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/b/b7/Logo_dbd.svg/revision/latest?cb=20211216202129",
+                              "id": "64cadd872400b1dd8d1a1fb0"
+                          },
+                          {
+                              "_id": "64cae4db0faca2101c26d787",
+                              "name": "Tools of Torment",
+                              "number": 27,
+                              "release_date": "07 March 2023 (Tuesday)",
+                              "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/6c/ToolsOfTorment_main_header.gif/revision/latest?cb=20230307225028",
+                              "id": "64cae4db0faca2101c26d787"
+                          }
+                      ],
+                      "createdAt": "2023-08-07T17:42:50.471Z",
+                      "updatedAt": "2023-08-07T17:58:33.132Z",
+                      "__v": 0,
+                      "id": "64d12d1a0d0691dad2bd6705"
+                  }
+                  </code>
+                </pre>
               </div>
             </div>
           </div>
@@ -344,6 +824,56 @@
                   <p class="text-end mb-0">returns maps in specific realm based on realm's name</p>
                 </div>
               </div>
+              <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
+                <h5 class="text-center">Example Map:</h5>
+                <pre class="w-100">
+                  <code>
+                    {
+                      "_id": "64b98d89b777f1835e65d4b6",
+                      "name": "Toba Landing",
+                      "description": "After years hurtling through the inky blackness of deep space, a solitary colony ship descended to the surface of Dvarka. Selected for its breathable air, its valuable minerals, and its beautiful lakes and forests, Dvarka looked to be the perfect planet for a new start for humanity. But exploration of the surface revealed a dark secret: an advanced civilization, completely wiped out by some unknown event. The ship lies surrounded by strange rock formations on the alien soil of Dvarka, the light of its sun choked out by giant, twisting trees. And in the darkness, a new threat emerges: an Earth invention, twisted by alien technology, unflagging in its mission to end human life on Dvarka and beyond.",
+                      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/4/40/IconMap_Uba_Umbralevel01.png/revision/latest?cb=20230523155439",
+                      "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/b/b9/TobaLandingOutline.png/revision/latest?cb=20230526213710",
+                      "realm_id": "64d1307f0d0691dad2bd674f",
+                      "createdAt": "2023-07-20T19:39:53.637Z",
+                      "updatedAt": "2023-08-07T19:33:43.613Z",
+                      "__v": 0,
+                      "chapter_id": "64cae5000faca2101c26d78e",
+                      "realm": {
+                          "_id": "64d1307f0d0691dad2bd674f",
+                          "name": "Dvarka Deepwood",
+                          "location": "Dvarka Planet",
+                          "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c2/RealmKeyArt_20.png/revision/latest?cb=20230620134819",
+                          "id": "64d1307f0d0691dad2bd674f"
+                      },
+                      "chapter": {
+                          "_id": "64cae5000faca2101c26d78e",
+                          "name": "End Transmission",
+                          "number": 28,
+                          "release_date": "13 June 2023 (Tuesday)",
+                          "associated_killers": [
+                              {
+                                  "_id": "64c80c6906b9522e735584af",
+                                  "killer_name": "The Singularity",
+                                  "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/5d/K32_charSelect_portrait.png/revision/latest?cb=20230705193241",
+                                  "id": "64c80c6906b9522e735584af"
+                              }
+                          ],
+                          "associated_survivors": [
+                              {
+                                  "_id": "64caf249da2e1eb56296da04",
+                                  "name": "Gabriel Soma",
+                                  "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/b/b3/S37_charSelect_portrait.png/revision/latest?cb=20230705194559",
+                                  "id": "64caf249da2e1eb56296da04"
+                              }
+                          ],
+                          "id": "64cae5000faca2101c26d78e"
+                      },
+                      "id": "64b98d89b777f1835e65d4b6"
+                  }
+                  </code>
+                </pre>
+              </div>
             </div>
           </div>
         </div>
@@ -389,6 +919,85 @@
                   <p class="text-end mb-0">returns a specific killer's power based on their name</p>
                 </div>
               </div>
+              <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
+                <h5 class="text-center">Example Power:</h5>
+                <pre class="w-100">
+                  <code>
+                    {
+                      "_id": "64c2bfa929009060f7108cf9",
+                      "name": "Yamaoka's Wrath",
+                      "description": "Absorption Mode: Absorb Blood Orbs left by your injured foes. Press and hold the Power button to absorb Blood Orbs in the environment and fill your Power gauge. When your Power gauge is full, press and hold the Active Ability button to initiate Blood Fury. Blood Fury: While Blood Fury is active, The Oni becomes lethal and gains access to additional abilities: Demon Dash and Demon Strike.",
+                      "special_interaction": null,
+                      "interaction_description": null,
+                      "special_ability": "Demon Dash",
+                      "ability_description": "Press and hold the Power button while Blood Fury is active, to perform a Demon Dash. This ability allows The Oni to cover large distances rapidly.",
+                      "special_object": null,
+                      "object_description": null,
+                      "special_affliction": null,
+                      "affliction_description": null,
+                      "special_mobility": null,
+                      "mobility_description": null,
+                      "special_attack": "Demon Strike",
+                      "attack_description": "Press and hold the Attack button while Blood Fury is active, to perform a Demon Strike in the direction you are facing. Demon Strike has an extended Lunge range and successful hits immediately put healthy Survivors into the Dying State.",
+                      "special_state": null,
+                      "state_description": null,
+                      "special_enemy": null,
+                      "enemy_description": null,
+                      "special_effect": null,
+                      "effect_description": null,
+                      "killer_id": "64c8085006b9522e735583c9",
+                      "createdAt": "2023-07-27T19:04:09.622Z",
+                      "updatedAt": "2023-07-31T19:43:24.413Z",
+                      "__v": 0,
+                      "killer": {
+                          "_id": "64c8085006b9522e735583c9",
+                          "killer_name": "The Oni",
+                          "weapon_id": "64b8673a5a1f577cae3430fd",
+                          "chapter_id": "64cae23b0faca2101c26d71d",
+                          "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c5/K18_charSelect_portrait.png/revision/latest?cb=20230705192610",
+                          "perk_one_id": "64cd44c58290cb86311d6857",
+                          "perk_two_id": "64cd44fd8290cb86311d685a",
+                          "perk_three_id": "64cd45298290cb86311d685d",
+                          "perk_one": {
+                              "_id": "64cd44c58290cb86311d6857",
+                              "name": "Zanshin Tactics",
+                              "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/dc/ZanshinTactics.gif/revision/latest?cb=20200926200432",
+                              "id": "64cd44c58290cb86311d6857"
+                          },
+                          "perk_two": {
+                              "_id": "64cd44fd8290cb86311d685a",
+                              "name": "Blood Echo",
+                              "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/ec/BloodEcho.gif/revision/latest?cb=20200501134539",
+                              "id": "64cd44fd8290cb86311d685a"
+                          },
+                          "perk_three": {
+                              "_id": "64cd45298290cb86311d685d",
+                              "name": "Nemesis",
+                              "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/1b/Nemesis.gif/revision/latest?cb=20200926195833",
+                              "id": "64cd45298290cb86311d685d"
+                          },
+                          "weapon": {
+                              "_id": "64b8673a5a1f577cae3430fd",
+                              "name": "The Yamaoka Blade",
+                              "description": "A long blade that was passed down from one generation to the next. Upon hitting a healthy Survivor, The Oni will hold out his left hand to absorb their blood. Upon hitting an injured Survivor or hitting when the Power gauge is fully charged, The Oni will flip his katana to remove blood from the blade.",
+                              "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/a7/SK_W01.png/revision/latest?cb=20191125143147",
+                              "id": "64b8673a5a1f577cae3430fd"
+                          },
+                          "chapter": {
+                              "_id": "64cae23b0faca2101c26d71d",
+                              "name": "Cursed Legacy",
+                              "number": 14,
+                              "release_date": "03 December 2019 (Tuesday)",
+                              "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ae/CursedLegacy_main_header.png/revision/latest?cb=20191129231200",
+                              "id": "64cae23b0faca2101c26d71d"
+                          },
+                          "id": "64c8085006b9522e735583c9"
+                      },
+                      "id": "64c2bfa929009060f7108cf9"
+                  }
+                  </code>
+                </pre>
+              </div>
             </div>
           </div>
         </div>
@@ -424,6 +1033,40 @@
                 <div class="col-md-6 p-0">
                   <p class="text-end mb-0">returns a specific weapon based on its associated killer's name</p>
                 </div>
+              </div>
+              <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
+                <h5 class="text-center">Example Weapon:</h5>
+                <pre class="w-100">
+                  <code>
+                    {
+                      "_id": "64b861b35a1f577cae3430bd",
+                      "name": "The Stick",
+                      "description": "An instrument of punishment when all other treatments failed. Upon hitting a Survivor, The Doctor will pat The Stick into his palm twice.",
+                      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/fc/DO_Stick01.png/revision/latest?cb=20170511153703",
+                      "killer_id": "64c460a03b6c0963934100d3",
+                      "createdAt": "2023-07-19T22:20:35.526Z",
+                      "updatedAt": "2023-08-07T17:16:25.506Z",
+                      "__v": 0,
+                      "killer": {
+                          "_id": "64c460a03b6c0963934100d3",
+                          "killer_name": "The Doctor",
+                          "overview": "The Doctor is a madness-inducing Killer, able to use his Power, Carter's Spark, to incapacitate Survivors and cause them to hallucinate and scream in terror, revealing their position. His personal Perks - Overwhelming Presence, Monitor & Abuse, and Overcharge - encourage chases, impact Survivors' ability to repair effectively and make him harder to detect when not in a Chase. His Perks are about hindering and creating problems for the Survivors. The sheer stature of The Doctor infuses fear and terror in those around him.",
+                          "chapter_id": "64cadfc20faca2101c26d6c8",
+                          "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ad/K07_charSelect_portrait.png/revision/latest?cb=20230705190852",
+                          "chapter": {
+                              "_id": "64cadfc20faca2101c26d6c8",
+                              "name": "Spark of Madness",
+                              "number": 4,
+                              "release_date": "11 May 2017 (Thursday)",
+                              "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/39/SparkOfMadness_main_header.jpg/revision/latest?cb=20170512175200",
+                              "id": "64cadfc20faca2101c26d6c8"
+                          },
+                          "id": "64c460a03b6c0963934100d3"
+                      },
+                      "id": "64b861b35a1f577cae3430bd"
+                  }
+                  </code>
+                </pre>
               </div>
             </div>
           </div>
@@ -524,6 +1167,22 @@
                   <p class="text-end mb-0">returns all status effect debuffs that can apply to killers</p>
                 </div>
               </div>
+              <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
+                <h5 class="text-center">Example Status Effect:</h5>
+                <pre class="w-100">
+                  <code>
+                    {
+                      "_id": "64cbde2d14056587889cc442",
+                      "name": "Bloodlust",
+                      "type": "Buff",
+                      "applies_to": "Killer",
+                      "description": "Killers benefitting from Bloodlust increasingly gain more Movement speed in prolonged Chases. Bloodlust is a tiered Status Effect.",
+                      "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/b/ba/FulliconStatusEffects_bloodlust.png/revision/latest?cb=20210212000621",
+                      "__v": 0
+                  }
+                  </code>
+                </pre>
+              </div>
             </div>
           </div>
         </div>
@@ -563,4 +1222,22 @@
   .route-block {
     height: 65px;
   }
+
+  pre {
+    white-space: pre-wrap;
+    overflow-x: auto;
+  }
+  
+  code {
+    text-align: left;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-spacing: normal;
+    line-height: 1.5;
+    tab-size: 2;
+    hyphens: none;
+  }
+
 </style>

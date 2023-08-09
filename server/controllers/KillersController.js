@@ -51,11 +51,12 @@ exports.getKillerById = async function (req, res) {
             .populate({ path: 'perk_three', select: 'name associated_status_effects icon description', 
             populate: { path: 'associated_status_effects', select: 'name type icon' }})
             .populate('weapon', 'name description image')
-            .populate({ path: 'realm', select: 'name location image maps',
-            populate: { path: 'maps', select: 'name image' }})
+            .populate({ path: 'realm', select: 'name location image'})
             .populate('power', 'name description special_interaction interaction_description special_ability ability_description special_object object_description special_affliction affliction_description special_mobilitiy mobility_description special_attack attack_description special_state state_description special_enemy enemy_description special_effect effect_description')
-            .populate({ path: 'chapter', select: 'name number release_date image associated_survivors',
-            populate: { path: 'associated_survivors', select: 'name portrait' }});
+            .populate({ path: 'chapter', select: 'name number release_date image associated_survivors associated_maps',
+            populate: { path: 'associated_survivors', select: 'name portrait' }})
+            .populate({ path: 'chapter', select: 'name number release_date image associated_survivors associated_maps',
+            populate: { path: 'associated_maps', select: 'name image layout' }});
 
         return res.json(killer);
     } catch (error) {
@@ -75,11 +76,12 @@ exports.getKillerByName = async function (req, res) {
             .populate({ path: 'perk_three', select: 'name associated_status_effects icon description', 
             populate: { path: 'associated_status_effects', select: 'name type icon' }})
             .populate('weapon', 'name description image')
-            .populate({ path: 'realm', select: 'name location image maps',
-            populate: { path: 'maps', select: 'name image' }})
+            .populate({ path: 'realm', select: 'name location image'})
             .populate('power', 'name description special_interaction interaction_description special_ability ability_description special_object object_description special_affliction affliction_description special_mobilitiy mobility_description special_attack attack_description special_state state_description special_enemy enemy_description special_effect effect_description')
-            .populate({ path: 'chapter', select: 'name number release_date image associated_survivors',
-            populate: { path: 'associated_survivors', select: 'name portrait' }});
+            .populate({ path: 'chapter', select: 'name number release_date image associated_survivors associated_maps',
+            populate: { path: 'associated_survivors', select: 'name portrait' }})
+            .populate({ path: 'chapter', select: 'name number release_date image associated_survivors associated_maps',
+            populate: { path: 'associated_maps', select: 'name image layout' }});
 
         const killer = killers.find(k => k.killer_name.toLowerCase() == name);
         return res.json(killer);

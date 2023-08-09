@@ -39,9 +39,9 @@ exports.getSurvivorById = async function (req, res) {
             populate: {path: 'associated_status_effects', select: 'name type icon' }})
             .populate({ path: 'perk_three', select: 'name associated_status_effects icon description',
             populate: {path: 'associated_status_effects', select: 'name type icon' }})
-            .populate({ path: 'chapter', select: 'name number release_date associated_killers',
+            .populate({ path: 'chapter', select: 'name number release_date associated_killers realm_id',
             populate: {path: 'associated_killers', select: 'killer_name portrait', model: 'Killers'}})
-            .populate({ path: 'chapter', select: 'realm_id', populate: { path: 'realm', select: 'name location image' }});
+            .populate({ path: 'chapter', select: 'name number release_date associated_killers realm_id', populate: { path: 'realm', select: 'name location image' }});
 
         res.json(survivor);
     } catch (error) {
