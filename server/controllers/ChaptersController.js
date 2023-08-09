@@ -49,16 +49,22 @@ exports.getChapterById = async function (req, res) {
 exports.getChapterByKillerName = async function (req, res) {
     try {
         const query = req.query;
-        const name = query.killer_name.replace('-', ' ').toLowerCase();
-        const killers = await Killer.find()
+        const name = query.killer_name.replaceAll('-', ' ').toLowerCase();
+        const killers = await Killer.find();
         const killer = killers.find(k => k.killer_name.toLowerCase() == name);
-        const chapter_id = killer.chapter_id
+        const chapter_id = killer.chapter_id;
         const chapter = await Chapter.findById(chapter_id)
+            .populate({ path: 'associated_maps', select: 'name image layout realm_id', populate: { path: 'realm', select: 'name location image' }})
+            .populate({ path: 'associated_killers', select: 'killer_name portrait perk_one_id perk_two_id perk_three_id',
+            populate: { path: 'perk_one perk_two perk_three', select: 'name icon' }})
+            .populate({ path: 'associated_survivors', select: 'name portrait perk_one_id perk_two_id perk_three_id',
+            populate: { path: 'perk_one perk_two perk_three', select: 'name icon'  }});
+
         return res.json(chapter);
-    } catch (err) {
-        res.send(err)
+    } catch (error) {
+        res.send(error);
     }
-}
+};
 
 exports.getChapterBySurvivorName = async function (req, res) {
     try {
