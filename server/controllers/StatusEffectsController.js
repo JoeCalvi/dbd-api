@@ -255,18 +255,20 @@ exports.getRoleSpecificPerksByStatusEffect = async function (req, res) {
 
 exports.updateStatusEffect = async function (req, res) {
     try {
-        const statusEffect = await StatusEffect.findByIdAndUpdate(req.params.statusEffectId, req.body, { new: true });
-        return res.json(statusEffect);
-    } catch (err) {
-        res.send(err);
+        const status_effect = await StatusEffect.findByIdAndUpdate(req.params.statusEffectId, req.body, { new: true });
+
+        return res.json(status_effect);
+    } catch (error) {
+        res.send(error);
     }
 };
 
 exports.deleteStatusEffect = async function (req, res) {
     try {
-        const statusEffect = await StatusEffect.findByIdAndDelete(req.params.statusEffectId);
-        return res.json({ message: `${statusEffect.name} Status Effect at Id ${statusEffect._id} deleted.` });
-    } catch (err) {
-        res.send(err);
+        const status_effect = await StatusEffect.findByIdAndDelete(req.params.statusEffectId);
+
+        return res.json({ message: `${status_effect.name} Status Effect at Id ${status_effect._id} deleted.` });
+    } catch (error) {
+        res.send(error);
     }
 };
