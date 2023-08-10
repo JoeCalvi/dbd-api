@@ -1,5 +1,6 @@
 const DbConnection = require('./dbConfig');
-const { createServer } = require('http')
+const { createServer } = require('http');
+const cors = require('cors');
 
 const express = require('express'),
     app = express(),
@@ -24,8 +25,17 @@ DbConnection.connect();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+const allowedOrigins = [
+    'http://localhost:3000',
+    'https://onrender.dbd-api.com'
+]
+
+app.use(cors({
+    origin: allowedOrigins
+}));
+
 app.get('/', (req, res) => {
-    res.sendFile(process.cwd() + "/index.html");
+    res.sendFile(process.cwd() + "/dist/index.html");
 });
 
 const perkRoutes = require('./routes/PerksRoutes');
