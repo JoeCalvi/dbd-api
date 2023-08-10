@@ -516,9 +516,9 @@ Calling http://localhost:3000/perks/killer/generic will return all perks where t
 `/character_id/perks`
 
 We can also make a call based on a "character_id" (being either a "survivor_id" **or** a "killer_id"), and the three perks that belong to that specific character will be returned. For example, knowing that Meg's "character_id" (again, this is just Meg's "_id") is 64caeae5da2e1eb56296d8d9, if we make a call to http://localhost:3000/64caeae5da2e1eb56296d8d9/perks, the following perks will be returned:
-  *"Quick & Quiet"
-  *"Sprint Burst"
-  *"Adrenaline"
+  - "Quick & Quiet"
+  - "Sprint Burst"
+  - "Adrenaline"
 
 
 `/perks/query`
