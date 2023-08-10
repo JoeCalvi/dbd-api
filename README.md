@@ -705,7 +705,7 @@ You can also use a chapter_id ("_id" or "id" on a chapter object, "chapter_id" e
 
 Using the `GET` by chapter_id is the better option, but you can get the same information from either of the above query routes.
 
-http://localhost:3000/chapters/query?survivor_name=Kate-Denson and http://localhost:3000/chapters/query?survivor_name=The-Clown will both return the same exact chapter object as above.
+http://localhost:3000/chapters/query?survivor_name=Kate-Denson and http://localhost:3000/chapters/query?killer_name=The-Clown will both return the same exact chapter object as above.
 
 
 
