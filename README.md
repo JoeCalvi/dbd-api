@@ -253,6 +253,124 @@ Example:
 ```
 `/killers/:killerId`
 
+In the above example, we can see that The Doctor's killer_id ("_id" or "id", referred to as "killer_id" on all associated objects) is 64c460a03b6c0963934100d3. By calling http://localhost:3000/survivors/64c460a03b6c0963934100d3, the following killer object will be returned:
+
+```
+{
+    "_id": "64c460a03b6c0963934100d3",
+    "killer_name": "The Doctor",
+    "original_name": "Herman Carter",
+    "realm_id": "64d12e240d0691dad2bd671b",
+    "power_id": "64c2ab0829009060f7108ccd",
+    "power_attack_type": "Special Attack (Shock Therapy/Static Blast)",
+    "weapon_id": "64b861b35a1f577cae3430bd",
+    "movement_speed": "115% | 4.6 m/s",
+    "terror_radius": "32 metres",
+    "height": "Tall",
+    "overview": "The Doctor is a madness-inducing Killer, able to use his Power, Carter's Spark, to incapacitate Survivors and cause them to hallucinate and scream in terror, revealing their position. His personal Perks - Overwhelming Presence, Monitor & Abuse, and Overcharge - encourage chases, impact Survivors' ability to repair effectively and make him harder to detect when not in a Chase. His Perks are about hindering and creating problems for the Survivors. The sheer stature of The Doctor infuses fear and terror in those around him.",
+    "difficulty_rating": "Hard (These Killers use mechanics that are specific to them and require more practice to be effective)",
+    "chapter_id": "64cadfc20faca2101c26d6c8",
+    "gender": "Male",
+    "voice_actor": "Alex Lin (BHVR)",
+    "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ad/K07_charSelect_portrait.png/revision/latest?cb=20230705190852",
+    "perk_one_id": "64cd3af68290cb86311d675e",
+    "perk_two_id": "64cd3b1b8290cb86311d6761",
+    "perk_three_id": "64cd3b418290cb86311d6764",
+    "createdAt": "2023-07-29T00:43:12.814Z",
+    "updatedAt": "2023-08-07T18:13:30.597Z",
+    "__v": 0,
+    "perk_one": {
+        "_id": "64cd3af68290cb86311d675e",
+        "name": "Overwhelming Presence",
+        "associated_status_effects": [],
+        "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/d0/OverwhelmingPresence.gif/revision/latest?cb=20200926195854",
+        "description": "Just knowing you are near is enough to disturb your victims. Survivors within your Terror Radius suffer from inefficiency: When using an Item, its Depletion rate is increased by 80/90/100%.",
+        "id": "64cd3af68290cb86311d675e"
+    },
+    "perk_two": {
+        "_id": "64cd3b1b8290cb86311d6761",
+        "name": "Monitor & Abuse",
+        "associated_status_effects": [],
+        "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/a3/MonitorAndAbuse.gif/revision/latest?cb=20200501134305",
+        "description": "Meticulous in your approach, terrifying in your application. Increases the radius of your default Terror Radius by 8 metres for the entire Trial. Whenever you are not in a Chase with a Survivor, the following effects apply: Reduces your Terror Radius by 16 metres and increases your Field of View by 3/5/10°.",
+        "id": "64cd3b1b8290cb86311d6761"
+    },
+    "perk_three": {
+        "_id": "64cd3b418290cb86311d6764",
+        "name": "Overcharge",
+        "associated_status_effects": [],
+        "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/3d/Overcharge.gif/revision/latest?cb=20200501134315",
+        "description": "You are fueled by your hate for progress. Performing the Damage Generator Action on a Generator applies Overcharge: The next Survivor interacting with that Generator is faced with a difficult Skill Check. Failing that Skill Check instantly regresses the Generator by 2/3/4% of its maximum possible Progression in addition to the default Progression penalty. After Overcharge is applied to a Generator, the following effect also applies: Increases the Regression speed from 85% to 130% over the next 30 seconds.",
+        "id": "64cd3b418290cb86311d6764"
+    },
+    "weapon": {
+        "_id": "64b861b35a1f577cae3430bd",
+        "name": "The Stick",
+        "description": "An instrument of punishment when all other treatments failed. Upon hitting a Survivor, The Doctor will pat The Stick into his palm twice.",
+        "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/fc/DO_Stick01.png/revision/latest?cb=20170511153703",
+        "id": "64b861b35a1f577cae3430bd"
+    },
+    "realm": {
+        "_id": "64d12e240d0691dad2bd671b",
+        "name": "Lery's Memorial Institute",
+        "location": "Illinois, United States",
+        "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e8/RealmKeyArt_07.png/revision/latest?cb=20210920232852",
+        "id": "64d12e240d0691dad2bd671b"
+    },
+    "power": {
+        "_id": "64c2ab0829009060f7108ccd",
+        "name": "Carter's Spark",
+        "description": "Successfully striking Survivors with either of The Doctor's electro-convulsive abilities causes them to suffer from the tiered Madness Status Effect.",
+        "special_interaction": null,
+        "interaction_description": null,
+        "special_ability": "Shock Therapy; Static Blast",
+        "ability_description": "Press and hold the Power button to perform a Shock Therapy Attack, unleashing a cone-shaped, ranged shock attack on the ground in front of The Doctor. Survivors struck by Shock Therapy suffer from the following afflictions: Increases their Madness by 0.5 Tiers, and if this coincides with a Tier-up, afflicted Survivors will scream once, revealing their location to The Doctor; Interrupts any interaction they are performing at the moment of impact; Suppresses their ability to perform any interactions for the next 2.5 seconds, including vaulting Windows and dropping Pallets. Shock Therapy negates the Oblivious Status Effect, shocking Survivors suffering from it. If the Power gauge is full, press and hold the Active Ability button to perform a Static Blast, unleashing a shock attack that propagates outwards from The Doctor through the air and covers his entire Terror Radius. Survivors struck by Static Blast suffer from the following afflictions: Increases their Madness by +1 Tier, causing all afflicted Survivors to scream once, revealing their location to The Doctor; Interrupts any interaction they are performing at the moment of impact. Static Blast negates the Oblivious Status Effect, shocking Survivors suffering from it. Static Blast has a cool-down of 60 seconds.",
+        "special_object": null,
+        "object_description": null,
+        "special_affliction": "Madness",
+        "affliction_description": "Madness causes increasingly potent afflictions in the affected Survivors depending on its Tier. Once the Madness Status Effect is obtained, Survivors are unable to lose it and may only regress back to Madness I by performing the Snap Out of It interaction after reaching Madness III. Madness I: Causes Survivors to scream once during the tier-up, revealing their location to The Doctor; Causes Skill Checks to have a 33% chance to be Madness Skill Checks. Madness II: Causes Survivors to scream once during the tier-up, revealing their location to The Doctor; Causes Skill Checks to have a 66% chance to be Madness Skill Checks; Causes Survivors to experience occasional hallucinations in the form of Illusionary Doctors. Madness III: Causes Survivors to scream once during the tier-up, revealing their location to The Doctor, then intermittently every few seconds; Causes Skill Checks to have a 100% chance to be Madness Skill Checks; Causes Survivors to experience occasional hallucinations in the form of Illusionary Doctors and allows The Doctor to read the Auras of the Illusionary Doctors; Suppresses the ability of Survivors to use their Items; Suppresses the ability of Survivors to interact both with other Survivors and Props.",
+        "mobility_description": null,
+        "special_attack": null,
+        "attack_description": null,
+        "special_state": null,
+        "state_description": null,
+        "special_enemy": null,
+        "enemy_description": null,
+        "special_effect": null,
+        "effect_description": null,
+        "id": "64c2ab0829009060f7108ccd"
+    },
+    "chapter": {
+        "_id": "64cadfc20faca2101c26d6c8",
+        "name": "Spark of Madness",
+        "number": 4,
+        "release_date": "11 May 2017 (Thursday)",
+        "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/39/SparkOfMadness_main_header.jpg/revision/latest?cb=20170512175200",
+        "associated_survivors": [
+            {
+                "_id": "64caecb7da2e1eb56296d922",
+                "name": "Feng Min",
+                "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ac/S09_charSelect_portrait.png/revision/latest?cb=20230705190922",
+                "id": "64caecb7da2e1eb56296d922"
+            }
+        ],
+        "associated_maps": [
+            {
+                "_id": "64b985c6b777f1835e65d41f",
+                "name": "Treatment Theatre",
+                "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/15/IconMap_Hos_Treatment.png/revision/latest?cb=20200107170105",
+                "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/80/TreatmentTheatreOutline.png/revision/latest?cb=20230426222342",
+                "id": "64b985c6b777f1835e65d41f"
+            }
+        ],
+        "id": "64cadfc20faca2101c26d6c8"
+    },
+    "id": "64c460a03b6c0963934100d3"
+}
+```
+
+When getting a killer by ID, you can see gain access to a little bit more information about them. While we have access to their realm in `GET` all killers, here we have access to the *maps* associated with them, as well as a detailed description of their power, as well as their perks and their associated status effects.
+
 `/killers/query?killer_name=killer_name`
 
 
