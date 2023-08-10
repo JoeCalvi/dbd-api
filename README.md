@@ -369,8 +369,8 @@ In the above example, we can see that The Doctor's killer_id ("_id" or "id", ref
 }
 ```
 
-When getting a killer by ID, you can see gain access to a little bit more information about them. While we have access to their realm in `GET` all killers, here we have access to the *maps* associated with them, as well as a detailed description of their power, as well as their perks and their associated status effects.
+When getting a killer by ID, you can see that we gain access to a little bit more information about them. While we have access to their realm in `GET` all killers, here we have access to the *maps* associated with them, as well as a detailed description of their power, plus perk descriptions and their associated status effects.
 
 `/killers/query?killer_name=killer_name`
 
-
+While there aren't really any outlier names with killers (yet?), the same guidelines as the survivor_name query still apply and getting a killer by ID is always the more dependable and easier route. However, you can totally make the following query: http://localhost:3000/killers/query?killer_name=The-Doctor and get exactly the same killer object returned as above.
