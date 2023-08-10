@@ -158,7 +158,6 @@ exports.getPerkById = async function (req, res) {
     try {
         const perk_id = req.params.perkId;
         const perk = await Perk.findById(perk_id)
-            .populate('survivor', 'name portrait')
             .populate('chapter', 'name number release_date')
             .populate('associated_status_effects', 'name type description icon');
 
@@ -220,13 +219,46 @@ exports.getPerkByName = async function (req, res) {
         )
             .populate('associated_status_effects', 'name type icon')
             .populate('chapter', 'name number release_date');
+        const perk_id = perk._id;
 
         if (perk.survivor_id != null) {
-            await perk.populate('survivor', 'name portrait');
+            const survivor = await Survivor.findById(perk.survivor_id)
+            if (survivor.perk_one_id.toString() == perk_id) {
+                await perk.populate({
+                    path: 'survivor', select: 'name portrait perk_two_id perk_three_id',
+                    populate: { path: 'perk_two perk_three', select: 'name icon'}
+                });
+            } else if (survivor.perk_two_id.toString() == perk_id) {
+                await perk.populate({
+                    path: 'survivor', select: 'name portrait perk_one_id perk_three_id',
+                    populate: { path: 'perk_one perk_three', select: 'name icon' }
+                });
+            } else if (survivor.perk_three_id.toString() == perk_id) {
+                await perk.populate({
+                    path: 'survivor', select: 'name portrait perk_one_id perk_two_id',
+                    populate: { path: 'perk_one perk_two', select: 'name icon' }
+                });
+            }
         }
 
         if (perk.killer_id != null) {
-            await perk.populate('killer', 'killer_name portrait');
+            const killer = await Killer.findById(perk.killer_id)
+            if (killer.perk_one_id.toString() == perk_id) {
+                await perk.populate({
+                    path: 'killer', select: 'killer_name portrait perk_two_id perk_three_id', 
+                    populate: { path: 'perk_two perk_three', select: 'name icon' }
+                });
+            } else if (killer.perk_two_id.toString() == perk_id) {
+                await perk.populate({
+                    path: 'killer', select: 'killer_name portrait perk_one_id perk_three_id', 
+                    populate: { path: 'perk_one perk_three', select: 'name icon' }
+                });
+            } else if (killer.perk_three_id.toString() == perk_id) {
+                await perk.populate({
+                    path: 'killer', select: 'killer_name portrait perk_one_id perk_two_id', 
+                    populate: { path: 'perk_one perk_two', select: 'name icon' }
+                });
+            }
         }
 
         return res.json(perk);
