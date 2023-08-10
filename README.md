@@ -429,7 +429,10 @@ Example:
         "id": "64cc140d875261f22dea22ec"
     }
 ```
-`/perks/:perkId`
+
+There are a few pieces of data we can use on a perk object to make more specific calls if one is looking to narrow down their search. Firstly, there is the "role" enum, determining whether a perk is a "Killer" or "Survivor" perk. Secondly, there is the "generic" bool, telling us whether or not the perk belongs to a specific survivor or killer. Lastly, there are both a "killer_id" and "survivor_id" attached to each perk. If the "generic" bool is set to true, both "killer_id" and "survivor_id" will be **null**, otherwise, one *or* the other will be **null** depending on who the perk belongs to. Because the perk "Adrenaline" belongs to Meg Thomas, a survivor, you can see that the "killer_id" is **null**, but the "survivor_id" belongs to Meg.
+
+`/perks/perk_id`
 
 `/perks/survivor`
 
