@@ -545,8 +545,8 @@ In Dead By Daylight, there are several different "types" of perks, each type wor
 So calling http://localhost:3000/perks/query?type=hex, for example, will return all "Hex" perks.
 
 `/perks/query?status_effect=`
-                // ?status_effect=status_effect_name
-                // will return perks associated with this status effect
+
+We are also able to utilize perks' associated status effects to narrow down our `GET` request. If you wanted to `GET` all perks that are associated with the "Haste" status effect in some capacity, you would just to need to make the call to http://localhost:3000/perks/query?status_effect=Haste.
 
 `/perks/query?status_effect=status_effect_name&role=role`
                 // ?status_effect=status_effect_name&role=role ('killer' or 'survivor')
