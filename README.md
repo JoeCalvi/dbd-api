@@ -503,15 +503,15 @@ Calling http://localhost:3000/perks/survivor will return all perks where the "ro
 
 `/perks/survivor/generic`
 
-Calling http://localhost:3000/perks/survivor will return all perks where the "role" is set to "Survivor" and "generic" is set to **true**.
+Calling http://localhost:3000/perks/survivor/generic will return all perks where the "role" is set to "Survivor" and "generic" is set to **true**.
 
 `/perks/killer`
 
-Calling http://localhost:3000/perks/survivor will return all perks where the "role" is set to "Killer".
+Calling http://localhost:3000/perks/killer will return all perks where the "role" is set to "Killer".
 
 `/perks/killer/generic`
 
-Calling http://localhost:3000/perks/survivor will return all perks where the "role" is set to "Killer" and "generic" is set to **true**.
+Calling http://localhost:3000/perks/killer/generic will return all perks where the "role" is set to "Killer" and "generic" is set to **true**.
 
 `/:characterId/perks`
 
