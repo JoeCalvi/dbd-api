@@ -10,15 +10,25 @@
 </head>
 
 <body>
-  <header></header>
-  <main>
+  <header>
     <div class="container-fluid h-100 w-100">
-      <div class="row m-auto justify-content-center my-5">
-        <div class="col-10 h-100 d-flex flex-column justify-content-evenly align-items-center">
-          <h1>Welcome to the Dead By Daylight API!</h1>
+      <div class="row h-100 m-auto justify-content-center">
+        <div class="col-12 h-100 d-flex justify-content-center align-items-center">
+          <h1 class="text-dbd">Welcome to the Dead By Daylight API!</h1>
         </div>
       </div>
-      <div class="row m-auto justify-content-center mb-3">
+    </div>
+  </header>
+  <main>
+    <div class="container-fluid h-100 w-100">
+      <div class="row w-100 h-25 justify-content-center">
+        <div class="col-10 h-100 d-flex justify-content-center align-items-center">
+          <p class="text-dbd introduction">
+            Hello, fellow traverser of the fog! I couldn't find a reliable Dead By Daylight API and needed a project to work on, so here we are. I aimed for this API to be a robust wealth of Dead By Daylight data for other developers to utilize in their own endeavors. I will do my best to update data as it is adjusted per update, but alas, I am human and may miss some things. Some TODOs include: items, offerings, and add-ons. If you have any notes, comments, feedback, or you just want to share something you built while using this API, please feel free to reach out to me <a class="text-dbd" href="https://joecalvi.dev">here</a>. Thanks for stopping by and good luck in your next one!
+          </p>
+        </div>
+      </div>
+      <div class="row h-75 m-auto justify-content-center align-items-center mb-3">
         <div class="col-10 mb-3">
           <div class="w-100">
             <a class="text-decoration-underline text-dbd" data-bs-toggle="collapse" href="#survivor_routes" role="button" aria-expanded="false" aria-controls="survivor_routes">
@@ -54,6 +64,7 @@
               </div>
               <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
                 <h5 class="text-center">Example Survivor:</h5>
+                <p class="text-center">http://localhost:3000/survivors/64caf026da2e1eb56296d9a7</p>
                 <pre class="w-100">
                   <code>
                     {
@@ -161,6 +172,7 @@
               </div>
               <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
                 <h5 class="text-center">Example Killer:</h5>
+                <p class="text-center">http://localhost:3000/killers/64c80a2306b9522e7355842c</p>
                 <pre class="w-100">
                   <code>
                     {
@@ -429,6 +441,7 @@
               </div>
               <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
                 <h5 class="text-center">Example Perk:</h5>
+                <p class="text-center">http://localhost:3000/perks/64cc228b875261f22dea23e8</p>
                 <pre class="w-100">
                   <code>
                     {
@@ -532,6 +545,7 @@
               </div>
               <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
                 <h5 class="text-center">Example Chapter:</h5>
+                <p class="text-center">http://localhost:3000/chapters/64cae2140faca2101c26d716</p>
                 <pre class="w-100">
                   <code>
                     {
@@ -689,6 +703,7 @@
               </div>
               <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
                 <h5 class="text-center">Example Realm:</h5>
+                <p class="text-center">http://localhost:3000/realms/64d12d1a0d0691dad2bd6705</p>
                 <pre class="w-100">
                   <code>
                     {
@@ -826,6 +841,7 @@
               </div>
               <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
                 <h5 class="text-center">Example Map:</h5>
+                <p class="text-center">http://localhost:3000/maps/64b98d89b777f1835e65d4b6</p>
                 <pre class="w-100">
                   <code>
                     {
@@ -921,6 +937,7 @@
               </div>
               <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
                 <h5 class="text-center">Example Power:</h5>
+                <p class="text-center">http://localhost:3000/powers/64c2bfa929009060f7108cf9</p>
                 <pre class="w-100">
                   <code>
                     {
@@ -1036,6 +1053,7 @@
               </div>
               <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
                 <h5 class="text-center">Example Weapon:</h5>
+                <p class="text-center">http://localhost:3000/weapons/64b861b35a1f577cae3430bd</p>
                 <pre class="w-100">
                   <code>
                     {
@@ -1169,6 +1187,7 @@
               </div>
               <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
                 <h5 class="text-center">Example Status Effect:</h5>
+                <p class="text-center">http://localhost:3000/status_effects/64cbde2d14056587889cc442</p>
                 <pre class="w-100">
                   <code>
                     {
@@ -1240,4 +1259,7 @@
     hyphens: none;
   }
 
+  .introduction {
+    text-indent: 80px;
+  }
 </style>
