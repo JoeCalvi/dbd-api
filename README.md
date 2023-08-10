@@ -253,7 +253,7 @@ Example:
 ```
 `/killers/:killerId`
 
-In the above example, we can see that The Doctor's killer_id ("_id" or "id", referred to as "killer_id" on all associated objects) is 64c460a03b6c0963934100d3. By calling http://localhost:3000/survivors/64c460a03b6c0963934100d3, the following killer object will be returned:
+In the above example, we can see that The Doctor's killer_id ("_id" or "id", referred to as "killer_id" on all associated objects) is 64c460a03b6c0963934100d3. By calling http://localhost:3000/killers/64c460a03b6c0963934100d3, the following killer object will be returned:
 
 ```
 {
