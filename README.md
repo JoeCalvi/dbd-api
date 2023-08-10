@@ -549,8 +549,8 @@ So calling http://localhost:3000/perks/query?type=hex, for example, will return 
 We are also able to utilize perks' associated status effects to narrow down our `GET` request. If you wanted to `GET` all perks that are associated with the "Haste" status effect in some capacity, you would just to need to make the call to http://localhost:3000/perks/query?status_effect=Haste.
 
 `/perks/query?status_effect=status_effect_name&role=role`
-                // ?status_effect=status_effect_name&role=role ('killer' or 'survivor')
-                // will return role specific perks associated with this status effect
+
+While querying perks by an associated status effect is great, perhaps it's not specific enough. Maybe you're only looking for killer perks that cause the "Exposed" status effect. In order to do this, you can add an additional query key of "role", set either to "Survivor" or "Killer", and instead make a call to http://localhost:3000/perks/query?status_effect=Exposed&role=Killer, returning that specific set of perks.
 
 
 
