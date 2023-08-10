@@ -12,7 +12,9 @@ If you don't find the answer to your question below, or if you have any comments
 
 `/survivors`
 
-By calling http://localhost:3000/survivors, you will get ALL survivors, with slightly less detail than getting an individual survivor by their ID or name. This Looks like this:
+By calling http://localhost:3000/survivors, you will get ALL survivors.
+
+These survivor objects have slightly less detail than getting an individual survivor by their ID or name. An example of a returned survivor from this route looks like this:
 
 ```
 {
@@ -67,10 +69,8 @@ By calling http://localhost:3000/survivors, you will get ALL survivors, with sli
     }
 ```
 
-`/survivors/query`
+`/survivors/query?survivor_name=name`
 
-// ?survivor_name=first_name-last_name
-// will return specific survivor
 
 
 `/survivors/survivor_id`
