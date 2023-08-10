@@ -520,31 +520,33 @@ We can also make a call based on a "character_id" (being either a "survivor_id" 
   - "Sprint Burst"
   - "Adrenaline"
 
+### Querying Perks
 
-`/perks/query`
-            (req.query.status_effect && req.query.role)
-                // ?status_effect=status_effect_name&role=role ('killer' or 'survivor')
-                // will return role specific perks associated with this status effect
-
-            (req.query.status_effect) 
-                // ?status_effect=status_effect_name
-                // will return perks associated with this status effect
-                
-            (req.query.perk_name) 
-
-                // ?perk_name=perkName 
-                // if perk name is more than one word, separate with hyphens
-                // will return specific perk
-
-            (req.query.type) 
-
-                // ?type=perk_type
-                // supports 'hex', 'boon', 'scourge', and 'teamwork'
-                // returns all perks of that type
-
-            (req.query.character_name)
-
+`/perks/query?character_name=`
                 // ?character_name=killer_name OR ?character_name=name
                 // simple name query in most cases, but there are one-offs
                 // ex: ?character_name=ashley-williams will return nothing
                 // ?character_name=ashley-joanna-'ash'-williams returns perks
+
+`/perks/query?perk_name=`
+                // ?perk_name=perkName 
+                // if perk name is more than one word, separate with hyphens
+                // will return specific perk
+
+`/perks/query?type=`
+                // ?type=perk_type
+                // supports 'hex', 'boon', 'scourge', and 'teamwork'
+                // returns all perks of that type
+
+`/perks/query?status_effect=`
+                // ?status_effect=status_effect_name
+                // will return perks associated with this status effect
+
+`/perks/query?status_effect=status_effect_name&role=role`
+                // ?status_effect=status_effect_name&role=role ('killer' or 'survivor')
+                // will return role specific perks associated with this status effect
+
+
+
+
+
