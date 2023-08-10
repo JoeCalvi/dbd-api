@@ -912,3 +912,69 @@ We can also get that same power object by using The Pig's killer_id by making a 
 `/powers/query?killer_name=killer_name`
 
 The other option is to make a call to http://localhost:3000/powers/query?killer_name=The-Pig, returning the same "Jigsaw's Baptism" power object, but using The Pig's killer_id and the above route is better.
+
+## Weapon Routes
+
+`/weapons`
+
+Making a call to http://localhost:3000/weapons will return the weapons of all killers.
+
+Example:
+
+```
+{
+        "_id": "64b861085a1f577cae3430a4",
+        "name": "Azarov's Skull",
+        "description": "The teeth of death lie on Azarov's skull and spine. Upon hitting a Survivor, The Wraith will wipe blood from Azarov's Skull with his left thumb.",
+        "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/35/Wraith_Weapon01.png/revision/latest?cb=20220114151500",
+        "killer_id": "64c45461c4cd9ff0150eaed5",
+        "createdAt": "2023-07-19T22:17:44.924Z",
+        "updatedAt": "2023-08-07T17:15:02.746Z",
+        "__v": 0,
+        "killer": {
+            "_id": "64c45461c4cd9ff0150eaed5",
+            "killer_name": "The Wraith",
+            "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/0d/K02_charSelect_portrait.png/revision/latest?cb=20230705190257",
+            "id": "64c45461c4cd9ff0150eaed5"
+        },
+        "id": "64b861085a1f577cae3430a4"
+    }
+```
+
+`/weapons/weapon_id`
+
+As with getting a power by its power_id, getting a weapon by its weapon_id ("_id" or "id", "weapon_id" everywhere else) will return a bit more information on the killer itself. Calling http://localhost:3000/weapons/64b861085a1f577cae3430a4, for example, returns the following:
+
+```
+{
+    "_id": "64b861085a1f577cae3430a4",
+    "name": "Azarov's Skull",
+    "description": "The teeth of death lie on Azarov's skull and spine. Upon hitting a Survivor, The Wraith will wipe blood from Azarov's Skull with his left thumb.",
+    "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/35/Wraith_Weapon01.png/revision/latest?cb=20220114151500",
+    "killer_id": "64c45461c4cd9ff0150eaed5",
+    "createdAt": "2023-07-19T22:17:44.924Z",
+    "updatedAt": "2023-08-07T17:15:02.746Z",
+    "__v": 0,
+    "killer": {
+        "_id": "64c45461c4cd9ff0150eaed5",
+        "killer_name": "The Wraith",
+        "overview": "The Wraith is a stealth Killer, able to cloak and uncloak at the ringing of his Wailing Bell. His personal Perks - Predator, Bloodhound, and Shadowborn - give him extra abilities to track and locate Survivors, making him a very efficient Hunter. He focuses on tracking and hunting Survivors, making it easier to catch and kill them.",
+        "chapter_id": "64cadd872400b1dd8d1a1fb0",
+        "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/0d/K02_charSelect_portrait.png/revision/latest?cb=20230705190257",
+        "chapter": {
+            "_id": "64cadd872400b1dd8d1a1fb0",
+            "name": "Base Game",
+            "number": 0,
+            "release_date": "14 June 2016 (Tuesday)",
+            "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/b/b7/Logo_dbd.svg/revision/latest?cb=20211216202129",
+            "id": "64cadd872400b1dd8d1a1fb0"
+        },
+        "id": "64c45461c4cd9ff0150eaed5"
+    },
+    "id": "64b861085a1f577cae3430a4"
+}
+```
+
+`/weapons/query?killer_name=killer_name`
+
+http://localhost:3000/weapons/query?killer_name=The-Wraith returns the same exact weapon object as above, but using the weapon_id route is more dependable.
