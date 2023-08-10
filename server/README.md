@@ -13,8 +13,9 @@ If you don't find the answer to your question below, or if you have any comments
 `/survivors`
 
 By calling http://localhost:3000/survivors, you will get ALL survivors.
+These survivor objects have slightly less detail than getting an individual survivor by their ID or name. 
 
-These survivor objects have slightly less detail than getting an individual survivor by their ID or name. An example of a returned survivor from this route looks like this:
+Example:
 
 ```
 {
