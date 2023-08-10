@@ -251,7 +251,7 @@ Example:
         "id": "64c460a03b6c0963934100d3"
     }
 ```
-`/killers/:killerId`
+`/killers/killer_id`
 
 In the above example, we can see that The Doctor's killer_id ("_id" or "id", referred to as "killer_id" on all associated objects) is 64c460a03b6c0963934100d3. By calling http://localhost:3000/killers/64c460a03b6c0963934100d3, the following killer object will be returned:
 
