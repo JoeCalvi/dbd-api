@@ -430,9 +430,74 @@ Example:
     }
 ```
 
-There are a few pieces of data we can use on a perk object to make more specific calls if one is looking to narrow down their search. Firstly, there is the "role" enum, determining whether a perk is a "Killer" or "Survivor" perk. Secondly, there is the "generic" bool, telling us whether or not the perk belongs to a specific survivor or killer. Lastly, there are both a "killer_id" and "survivor_id" attached to each perk. If the "generic" bool is set to true, both "killer_id" and "survivor_id" will be **null**, otherwise, one *or* the other will be **null** depending on who the perk belongs to. Because the perk "Adrenaline" belongs to Meg Thomas, a survivor, you can see that the "killer_id" is **null**, but the "survivor_id" belongs to Meg.
+There are a few pieces of data we can use on a perk object to make more specific calls if one is looking to narrow down their search. Firstly, there is the "role" enum, determining whether a perk is a "Killer" or "Survivor" perk. Secondly, there is the "generic" bool, telling us whether or not the perk belongs to a specific survivor or killer. Lastly, there are both a "killer_id" and "survivor_id" attached to each perk. If the "generic" bool is set to true, both "killer_id" and "survivor_id" will be **null**, otherwise, one *or* the other will be **null** depending on who the perk belongs to. Because the perk "Adrenaline" belongs to Meg Thomas, a survivor, you can see that the "killer_id" is **null**, while the "survivor_id" belongs to Meg.
 
 `/perks/perk_id`
+
+While getting a perk by its unique perk_id ("_id" or "id", referred to as either "perk_one_id", "perk_two_id", or "perk_three_id" on associated killer or survivor objects) doesn't return a ton more information than getting all perks, it does specify what the other two perks are that belong to that character (if generic is "false", of course).
+
+For example:
+
+```
+{
+    "_id": "64cc140d875261f22dea22ec",
+    "role": "Survivor",
+    "name": "Adrenaline",
+    "generic": false,
+    "killer_id": null,
+    "survivor_id": "64caeae5da2e1eb56296d8d9",
+    "chapter_id": "64cadd872400b1dd8d1a1fb0",
+    "associated_status_effects": [
+        {
+            "_id": "64cbdfa814056587889cc44c",
+            "name": "Exhausted",
+            "type": "Debuff",
+            "description": "Survivors suffering from Exhaustion are unable to use any of the numerous Exhaustion Perks, preventing them from chaining multiple such Perks in quick succession. Exhaustion slowly recovers over time whenever the Survivor is not running. Exhaustion recovers immediately after being unhooked.",
+            "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/f2/FulliconStatusEffects_exhaustion.png/revision/latest?cb=20210212000627"
+        },
+        {
+            "_id": "64cbe0d214056587889cc454",
+            "name": "Haste",
+            "type": "Buff",
+            "description": "Players benefitting from Haste have their Movement speed increased. The strength of the effect depends on the specific Unlockable that inflicts it.",
+            "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/63/FulliconStatusEffects_haste.png/revision/latest?cb=20210212000629"
+        }
+    ],
+    "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/af/Adrenaline.gif/revision/latest?cb=20200926194941",
+    "description": "You are fueled by unexpecting energy when on the verge of escape. Once the Exit Gates are powered, instantly heal one Health State and sprint at 150% of your normal Running Movement speed for 5 seconds. Adrenaline is on hold if you are disabled at the moment it triggers and will instead activate upon being freed. If playing against The Nightmare, Adrenaline will wake you from the Dream World upon activation. Adrenaline ignores an existing Exhaustion timer but causes the Exhausted Status Effect for 60/50/40 seconds.",
+    "createdAt": "2023-08-03T20:54:37.791Z",
+    "updatedAt": "2023-08-03T20:54:37.791Z",
+    "__v": 0,
+    "survivor": {
+        "_id": "64caeae5da2e1eb56296d8d9",
+        "name": "Meg Thomas",
+        "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/77/S02_charSelect_portrait.png/revision/latest?cb=20230705190636",
+        "perk_one_id": "64cc1372875261f22dea22df",
+        "perk_two_id": "64cc13c7875261f22dea22e5",
+        "perk_one": {
+            "_id": "64cc1372875261f22dea22df",
+            "name": "Quick & Quiet",
+            "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/05/QuickAndQuiet.gif/revision/latest?cb=20200926201002",
+            "id": "64cc1372875261f22dea22df"
+        },
+        "perk_two": {
+            "_id": "64cc13c7875261f22dea22e5",
+            "name": "Sprint Burst",
+            "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/84/SprintBurst.gif/revision/latest?cb=20200926200201",
+            "id": "64cc13c7875261f22dea22e5"
+        },
+        "id": "64caeae5da2e1eb56296d8d9"
+    },
+    "chapter": {
+        "_id": "64cadd872400b1dd8d1a1fb0",
+        "name": "Base Game",
+        "number": 0,
+        "release_date": "14 June 2016 (Tuesday)",
+        "id": "64cadd872400b1dd8d1a1fb0"
+    },
+    "id": "64cc140d875261f22dea22ec"
+}
+```
 
 `/perks/survivor`
 
