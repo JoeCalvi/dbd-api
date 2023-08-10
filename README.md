@@ -708,9 +708,86 @@ Using the `GET` by chapter_id is the better option, but you can get the same inf
   - http://localhost:3000/chapters/query?survivor_name=Kate-Denson 
   - http://localhost:3000/chapters/query?killer_name=The-Clown 
 
+## Realm Routes
 
+`/realms`
 
+Making a call to http://localhost:3000/realms will return all realms.
 
+Example:
 
+```
+ {
+        "_id": "64d12fd90d0691dad2bd673f",
+        "name": "Raccoon City",
+        "description": "A former art museum turned bastion of justice, the Raccoon City Police Station was left shattered by the outbreak. Even the bravest officers were overwhelmed by the ravenous dead.",
+        "location": "Arklay County, United States",
+        "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ad/RealmKeyArt_16.png/revision/latest?cb=20210920233023",
+        "associated_killers": [
+            {
+                "_id": "64c80a2306b9522e7355842c",
+                "killer_name": "The Nemesis",
+                "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/84/K24_charSelect_portrait.png/revision/latest?cb=20230705184123",
+                "id": "64c80a2306b9522e7355842c"
+            },
+            {
+                "_id": "64c80b9b06b9522e73558479",
+                "killer_name": "The Mastermind",
+                "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/87/K29_charSelect_portrait.png/revision/latest?cb=20230705184825",
+                "id": "64c80b9b06b9522e73558479"
+            }
+        ],
+        "maps": [
+            {
+                "_id": "64b98bd7b777f1835e65d48e",
+                "name": "Raccoon City Police Station East Wing",
+                "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/68/IconMap_Ecl_Eclipselevel01.png/revision/latest?cb=20210525214446",
+                "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/cd/RaccoonCityPoliceStationEastWingOutline_LowerFloor.png/revision/latest?cb=20220811122134 (Lower Floor); https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e9/RaccoonCityPoliceStationEastWingOutline_UpperFloor.png/revision/latest?cb=20220811122147 (Upper Floor)",
+                "id": "64b98bd7b777f1835e65d48e"
+            },
+            {
+                "_id": "64b98c22b777f1835e65d492",
+                "name": "Raccoon City Police Station West Wing",
+                "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/fa/IconMap_Ecl_Orionlevel01.png/revision/latest?cb=20220810155724",
+                "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/2f/RaccoonCityPoliceStationWestWingOutline_LowerFloor.png/revision/latest?cb=20220811122205 (Lower Floor); https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/97/RaccoonCityPoliceStationWestWingOutline_UpperFloor.png/revision/latest?cb=20220811122217 (Upper Floor)",
+                "id": "64b98c22b777f1835e65d492"
+            }
+        ],
+        "associated_chapters": [
+            {
+                "_id": "64cae34c0faca2101c26d747",
+                "name": "Resident Evil™",
+                "number": 20,
+                "release_date": "15 June 2021 (Tuesday)",
+                "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/20/ResidentEvil_main_header.png/revision/latest?cb=20210527171803",
+                "id": "64cae34c0faca2101c26d747"
+            },
+            {
+                "_id": "64cae47e0faca2101c26d779",
+                "name": "Resident Evil™: PROJECT W",
+                "number": 25,
+                "release_date": "30 August 2022 (Tuesday)",
+                "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/81/ResidentEvilProjectW_main_header.png/revision/latest?cb=20220831050952",
+                "id": "64cae47e0faca2101c26d779"
+            }
+        ],
+        "createdAt": "2023-08-07T17:54:33.748Z",
+        "updatedAt": "2023-08-07T17:54:33.748Z",
+        "__v": 0,
+        "id": "64d12fd90d0691dad2bd673f"
+    }
+```
+`/realms/realm_id`
 
+The only bonus information getting a realm by its realm_id ("_id" or "id" on a realm object, "realm_id" everywhere else) will provide is an actual description of each map, instead of just its name, image, and layout. Calling http://localhost:3000/realms/64d12fd90d0691dad2bd673f will return the "Raccoon City" realm above, just with the added description of each map.
 
+`/realms/query?killer_name=killer_name`
+
+As with other name queries, getting a realm by its realm_id is a better option, but you can get the same exact result as above by using either of the following:
+
+ - http://localhost:3000/realms/query?killer_name=The-Nemesis
+ - http://localhost:3000/realms/query?killer_name=The-Mastermind
+
+ ## Map Routes
+
+ 
