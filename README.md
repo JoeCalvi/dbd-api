@@ -532,7 +532,7 @@ http://localhost:3000/perks/query?character_name=The-Wraith
 
 `/perks/query?perk_name=`
 
-While getting a perk by its ID is the recommended approach, you can also `GET` a specific perk based on its name as well. http://localhost:3000/perks/query?perk_name=We're-Gonna-Live-Forever, for example,  will return David King's perk of the same name.
+While getting a perk by its ID is the recommended approach, you can also `GET` a specific perk based on its name as well. http://localhost:3000/perks/query?perk_name=We're-Gonna-Live-Forever, for example,  will return David King's perk of the same name, also displaying David's other two perks.
 
 `/perks/query?type=`
                 // ?type=perk_type
