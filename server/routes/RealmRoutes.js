@@ -2,8 +2,7 @@ module.exports = function (app) {
     const realmsController = require('../controllers/RealmsController');
 
     app.route('/realms')
-        .get(realmsController.getAllRealms)
-        .post(realmsController.addRealm);
+        .get(realmsController.getAllRealms);
 
     app.route('/realms/query')
         .get((req, res) => {
@@ -15,7 +14,5 @@ module.exports = function (app) {
         })
 
     app.route('/realms/:realmId')
-        .get(realmsController.getRealmById)
-        .put(realmsController.updateRealm)
-        .delete(realmsController.deleteRealm);
+        .get(realmsController.getRealmById);
 };

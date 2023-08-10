@@ -2,8 +2,7 @@ module.exports = function (app) {
     const statusEffectsController = require('../controllers/StatusEffectsController');
 
     app.route('/status_effects')
-        .get(statusEffectsController.getAllStatusEffects)
-        .post(statusEffectsController.addStatusEffect);
+        .get(statusEffectsController.getAllStatusEffects);
 
     app.route('/status_effects/buffs')
         .get(statusEffectsController.getAllBuffs);
@@ -12,13 +11,10 @@ module.exports = function (app) {
         .get(statusEffectsController.getAllDebuffs);
 
     app.route('/status_effects/:statusEffectId')
-        .get(statusEffectsController.getStatusEffectById)
-        .put(statusEffectsController.updateStatusEffect)
-        .delete(statusEffectsController.deleteStatusEffect);
+        .get(statusEffectsController.getStatusEffectById);
 
     app.route('/survivor/status_effects')
         .get(statusEffectsController.getAllSurvivorStatusEffects);
-
 
     app.route('/survivor/status_effects/buffs')
         .get(statusEffectsController.getAllSurvivorBuffs);

@@ -2,8 +2,7 @@ module.exports = function (app) {
     const mapsController = require('../controllers/MapsController');
 
     app.route('/realms/:realmId/maps')
-        .get(mapsController.getAllMapsInARealm)
-        .post(mapsController.addMap);
+        .get(mapsController.getAllMapsInARealm);
 
     app.route('/maps')
         .get(mapsController.getAllMaps);
@@ -18,7 +17,5 @@ module.exports = function (app) {
         })
 
     app.route('/maps/:mapId')
-        .get(mapsController.getMapById)
-        .put(mapsController.updateMap)
-        .delete(mapsController.deleteMap);
+        .get(mapsController.getMapById);
 };

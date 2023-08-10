@@ -2,8 +2,7 @@ module.exports = function (app) {
     const survivorsController = require('../controllers/SurvivorsController');
 
     app.route('/survivors')
-        .get(survivorsController.getAllSurvivors)
-        .post(survivorsController.addSurvivor);
+        .get(survivorsController.getAllSurvivors);
 
     app.route('/survivors/query')
         .get((req, res) => {
@@ -15,7 +14,5 @@ module.exports = function (app) {
         })
 
     app.route('/survivors/:survivorId')
-        .get(survivorsController.getSurvivorById)
-        .put(survivorsController.updateSurvivor)
-        .delete(survivorsController.deleteSurvivor);
+        .get(survivorsController.getSurvivorById);
 };

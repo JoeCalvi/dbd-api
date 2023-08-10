@@ -2,8 +2,7 @@ module.exports = function (app) {
     const killersController = require('../controllers/KillersController');
 
     app.route('/killers')
-        .get(killersController.getAllKillers)
-        .post(killersController.addKiller);
+        .get(killersController.getAllKillers);
 
     app.route('/killers/query')
         .get((req, res) => {
@@ -15,7 +14,5 @@ module.exports = function (app) {
         })
 
     app.route('/killers/:killerId')
-        .get(killersController.getKillerById)
-        .put(killersController.updateKiller)
-        .delete(killersController.deleteKiller);
+        .get(killersController.getKillerById);
 };
