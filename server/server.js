@@ -35,7 +35,7 @@ app.use(cors({
 }));
 
 app.get('/', (req, res) => {
-    res.sendFile(process.cwd() + "/dist/api.bundle.js");
+    res.sendFile(process.cwd() + "/index.html");
 });
 
 const perkRoutes = require('./routes/PerksRoutes');
