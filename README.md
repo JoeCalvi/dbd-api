@@ -978,3 +978,59 @@ As with getting a power by its power_id, getting a weapon by its weapon_id ("_id
 `/weapons/query?killer_name=killer_name`
 
 http://localhost:3000/weapons/query?killer_name=The-Wraith returns the same exact weapon object as above, but using the weapon_id route is more dependable.
+
+## Status Effect Routes
+
+`/status_effects`
+
+Making a call to http://localhost:3000/status_effects returns all status effects in Dead By Daylight.
+
+Example:
+
+```
+{
+        "_id": "64cbdde214056587889cc440",
+        "name": "Blindness",
+        "type": "Debuff",
+        "applies_to": "Both",
+        "description": "Players suffering from Blindness are unable to read any Auras, including the default ones of their role and those from Perks. Some essential Auras are exempt from that general rule, usually associated with Killer Power Objects. Additionally, Aura-like highlights, that resemble Auras, but are not actually considered Auras by the game (i.e. the white highlights on Scourge Hooks or on Survivors during Nightfall), are not affected by Blindness.",
+        "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/ea/FulliconStatusEffects_blindness.png/revision/latest?cb=20210212000619",
+        "__v": 0
+    }
+```
+
+`/status_effects/status_effect_id`
+
+Getting a status effect by its status_effect_id ("_id" or "id", found in "associated_status_effects" everywhere else) returns a specific status effect with no additional details.
+
+`/status_effects/buffs`
+
+Making a call to http://localhost:3000/status_effects/buffs returns all status effects that are buffs.
+
+`/status_effects/debuffs`
+
+Making a call to http://localhost:3000/status_effects/debuffs returns all status effects that are debuffs.
+
+`/survivor/status_effects`
+
+Making a call to http://localhost:3000/survivor/status_effects returns all status effects that can be applied to survivors in game.
+
+`/survivor/status_effects/buffs`
+
+Making a call to http://localhost:3000/survivor/status_effects/buffs returns all status effects that are buffs and can be applied to survivors in game.
+
+`/survivor/status_effects/debuffs`
+
+Making a call to http://localhost:3000/survivor/status_effects/debuffs returns all status effects that are debuffs and can be applied to survivors in game.
+
+`/killer/status_effects`
+
+Making a call to http://localhost:3000/killer/status_effects returns all status effects that can be applied to killers in game.
+
+`/killer/status_effects/buffs`
+
+Making a call to http://localhost:3000/killer/status_effects/buffs returns all status effects that are buffs and can be applied to killers in game.
+
+`/killer/status_effects/debuffs`
+
+Making a call to http://localhost:3000/killer/status_effects/debuffs returns all status effects that are debuffs and can be applied to killers in game.
