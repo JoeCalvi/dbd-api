@@ -430,13 +430,11 @@ Example:
     }
 ```
 
-There are a few pieces of data we can use on a perk object to make more specific calls if one is looking to narrow down their search. Firstly, there is the "role" enum, determining whether a perk is a "Killer" or "Survivor" perk. Secondly, there is the "generic" bool, telling us whether or not the perk belongs to a specific survivor or killer. Lastly, there are both a "killer_id" and "survivor_id" attached to each perk. If the "generic" bool is set to true, both "killer_id" and "survivor_id" will be **null**, otherwise, one *or* the other will be **null** depending on who the perk belongs to. Because the perk "Adrenaline" belongs to Meg Thomas, a survivor, you can see that the "killer_id" is **null**, while the "survivor_id" belongs to Meg.
+There are a few pieces of data we can use on a perk object to make more specific calls if one is looking to narrow down their search. Firstly, there is the "role" enum, determining whether a perk is a "Killer" or "Survivor" perk. Secondly, there is the "generic" bool, telling us whether or not the perk belongs to a specific survivor or killer. Lastly, there are both a "killer_id" and "survivor_id" attached to each perk. If the "generic" bool is set to **true**, both "killer_id" and "survivor_id" will be **null**, otherwise, one *or* the other will be **null** depending on who the perk belongs to. Because the perk "Adrenaline" belongs to Meg Thomas, a survivor, you can see that the "killer_id" is **null**, while the "survivor_id" belongs to Meg.
 
 `/perks/perk_id`
 
-While getting a perk by its unique perk_id ("_id" or "id", referred to as either "perk_one_id", "perk_two_id", or "perk_three_id" on associated killer or survivor objects) doesn't return a ton more information than getting all perks, it does specify what the other two perks are that belong to that character (if generic is "false", of course).
-
-For example:
+While getting a perk by its unique perk_id ("_id" or "id", referred to as either "perk_one_id", "perk_two_id", or "perk_three_id" on associated killer or survivor objects) doesn't return a ton more information than getting all perks, it does specify what the other two perks are that belong to that character (if generic is **false**, of course). Calling http://localhost:3000/perks/64cc140d875261f22dea22ec, for example, returns the following:
 
 ```
 {
@@ -501,11 +499,19 @@ For example:
 
 `/perks/survivor`
 
+Calling http://localhost:3000/perks/survivor will return all perks where the "role" is set to "Survivor".
+
 `/perks/survivor/generic`
+
+Calling http://localhost:3000/perks/survivor will return all perks where the "role" is set to "Survivor" and "generic" is set to **true**.
 
 `/perks/killer`
 
+Calling http://localhost:3000/perks/survivor will return all perks where the "role" is set to "Killer".
+
 `/perks/killer/generic`
+
+Calling http://localhost:3000/perks/survivor will return all perks where the "role" is set to "Killer" and "generic" is set to **true**.
 
 `/:characterId/perks`
 
