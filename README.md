@@ -535,9 +535,14 @@ http://localhost:3000/perks/query?character_name=The-Wraith
 While getting a perk by its ID is the recommended approach, you can also `GET` a specific perk based on its name as well. http://localhost:3000/perks/query?perk_name=We're-Gonna-Live-Forever, for example,  will return David King's perk of the same name, also displaying David's other two perks.
 
 `/perks/query?type=`
-                // ?type=perk_type
-                // supports 'hex', 'boon', 'scourge', and 'teamwork'
-                // returns all perks of that type
+
+In Dead By Daylight, there are several different "types" of perks, each type working under its own set of circumstances in-game. With this query, you can `GET` all perks of a certain type. This query currently has four supported types:
+  - 'hex'
+  - 'boon'
+  - 'scourge'
+  - 'teamwork'
+
+So calling http://localhost:3000/perks/query?type=hex, for example, will return all "Hex" perks.
 
 `/perks/query?status_effect=`
                 // ?status_effect=status_effect_name
