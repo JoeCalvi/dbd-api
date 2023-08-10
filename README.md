@@ -531,9 +531,8 @@ http://localhost:3000/perks/query?character_name=Ashley-Joanna-'Ash'-Williams
 http://localhost:3000/perks/query?character_name=The-Wraith
 
 `/perks/query?perk_name=`
-                // ?perk_name=perkName 
-                // if perk name is more than one word, separate with hyphens
-                // will return specific perk
+
+While getting a perk by its ID is the recommended approach, you can also `GET` a specific perk based on its name as well. http://localhost:3000/perks/query?perk_name=We're-Gonna-Live-Forever, for example,  will return David King's perk of the same name.
 
 `/perks/query?type=`
                 // ?type=perk_type
