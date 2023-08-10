@@ -374,3 +374,97 @@ When getting a killer by ID, you can see that we gain access to a little bit mor
 `/killers/query?killer_name=killer_name`
 
 While there aren't really any outlier names with killers (yet?), the same guidelines as the survivor_name query still apply and getting a killer by ID is always the more dependable and easier route. However, you can totally make the following query: http://localhost:3000/killers/query?killer_name=The-Doctor and get exactly the same killer object returned as above.
+
+## Perk Routes
+
+`/perks`
+
+Calling http://localhost:3000/perks will return ALL perks in the game, agnostic to their role ("Killer" or "Survivor") or whether they're generic or unique ("Hope" vs. "Made For This").
+
+Example:
+
+```
+{
+        "_id": "64cc140d875261f22dea22ec",
+        "role": "Survivor",
+        "name": "Adrenaline",
+        "generic": false,
+        "killer_id": null,
+        "survivor_id": "64caeae5da2e1eb56296d8d9",
+        "chapter_id": "64cadd872400b1dd8d1a1fb0",
+        "associated_status_effects": [
+            {
+                "_id": "64cbdfa814056587889cc44c",
+                "name": "Exhausted",
+                "type": "Debuff",
+                "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/f2/FulliconStatusEffects_exhaustion.png/revision/latest?cb=20210212000627"
+            },
+            {
+                "_id": "64cbe0d214056587889cc454",
+                "name": "Haste",
+                "type": "Buff",
+                "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/63/FulliconStatusEffects_haste.png/revision/latest?cb=20210212000629"
+            }
+        ],
+        "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/af/Adrenaline.gif/revision/latest?cb=20200926194941",
+        "description": "You are fueled by unexpecting energy when on the verge of escape. Once the Exit Gates are powered, instantly heal one Health State and sprint at 150% of your normal Running Movement speed for 5 seconds. Adrenaline is on hold if you are disabled at the moment it triggers and will instead activate upon being freed. If playing against The Nightmare, Adrenaline will wake you from the Dream World upon activation. Adrenaline ignores an existing Exhaustion timer but causes the Exhausted Status Effect for 60/50/40 seconds.",
+        "createdAt": "2023-08-03T20:54:37.791Z",
+        "updatedAt": "2023-08-03T20:54:37.791Z",
+        "__v": 0,
+        "killer": null,
+        "survivor": {
+            "_id": "64caeae5da2e1eb56296d8d9",
+            "name": "Meg Thomas",
+            "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/77/S02_charSelect_portrait.png/revision/latest?cb=20230705190636",
+            "id": "64caeae5da2e1eb56296d8d9"
+        },
+        "chapter": {
+            "_id": "64cadd872400b1dd8d1a1fb0",
+            "name": "Base Game",
+            "number": 0,
+            "release_date": "14 June 2016 (Tuesday)",
+            "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/b/b7/Logo_dbd.svg/revision/latest?cb=20211216202129",
+            "id": "64cadd872400b1dd8d1a1fb0"
+        },
+        "id": "64cc140d875261f22dea22ec"
+    }
+```
+`/perks/:perkId`
+
+`/perks/survivor`
+
+`/perks/survivor/generic`
+
+`/perks/killer`
+
+`/perks/killer/generic`
+
+`/:characterId/perks`
+
+`/perks/query`
+            (req.query.status_effect && req.query.role)
+                // ?status_effect=status_effect_name&role=role ('killer' or 'survivor')
+                // will return role specific perks associated with this status effect
+
+            (req.query.status_effect) 
+                // ?status_effect=status_effect_name
+                // will return perks associated with this status effect
+                
+            (req.query.perk_name) 
+
+                // ?perk_name=perkName 
+                // if perk name is more than one word, separate with hyphens
+                // will return specific perk
+
+            (req.query.type) 
+
+                // ?type=perk_type
+                // supports 'hex', 'boon', 'scourge', and 'teamwork'
+                // returns all perks of that type
+
+            (req.query.character_name)
+
+                // ?character_name=killer_name OR ?character_name=name
+                // simple name query in most cases, but there are one-offs
+                // ex: ?character_name=ashley-williams will return nothing
+                // ?character_name=ashley-joanna-'ash'-williams returns perks
