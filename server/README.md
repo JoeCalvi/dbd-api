@@ -69,11 +69,9 @@ Example:
     }
 ```
 
-`/survivors/query?survivor_name=name`
+`/survivors/survivor_id`
 
-Using the above example, you can see that this survivor's name is "Feng Min". By calling http://localhost:3000/survivors/query?survivor_name=Feng-Min, this survivor object will be returned with a bit more information attached to it.
-
-Example:
+In the above example, we can see that Feng's survivor_id ("_id" or "id", referred to as "survivor_id" on all associated objects) is 64caecb7da2e1eb56296d922. By calling http://localhost:3000/survivors/64caecb7da2e1eb56296d922, the following survivor object will be returned:
 
 ```
   {
@@ -152,6 +150,15 @@ Example:
 }
 ```
 
-Notice that by getting a survivor this way, we also have access to their realm, actual perk descriptions and associated status effects (as opposed to just names, icons, and IDs).
+Notice that by getting a survivor this way, we also have access to their realm, actual perk descriptions, and each perk's associated status effects (as opposed to just names, icons, and IDs).
 
-`/survivors/survivor_id`
+`/survivors/query?survivor_name=name`
+
+Another option is to use a name query. Using Feng Min as an example once more, a name query would look like this: http://localhost:3000/survivors/query?survivor_name=Feng-Min. The returned survivor object will be exactly the same as the example given above when getting a survivor by their ID.
+
+IMPORTANT NOTE: While capitalization doesn't matter in this query, **punctuation *does***! There are a few survivors with outlier names, such as "Élodie Rakoto" or "Ashley Joanna 'Ash' Williams", so getting by ID might is almost always a better route. With that said, here's what those two examples would look like:
+
+http://localhost:3000/survivors/query?survivor_name=Élodie-Rakoto
+
+http://localhost:3000/survivors/query?survivor_name=Ashley-Joanna-'Ash'-Williams
+
