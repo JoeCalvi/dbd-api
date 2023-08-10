@@ -71,6 +71,87 @@ Example:
 
 `/survivors/query?survivor_name=name`
 
+Using the above example, you can see that this survivor's name is "Feng Min". By calling http://localhost:3000/survivors/query?survivor_name=Feng-Min, this survivor object will be returned with a bit more information attached to it.
 
+Example:
+
+```
+  {
+    "_id": "64caecb7da2e1eb56296d922",
+    "role": "Focused Competitor",
+    "name": "Feng Min",
+    "overview": "Feng Min is an objective-focused competitor who can quickly adapt her strategy to meet a vast range of challenging situations. Her personal Perks - Technician, Lithe, and Alert - help her with repairing Generators and locating the Killer. She can silently work on Generators and thus can notice the Killer long before they notice her. She will be long gone before the Killer can do anything.",
+    "chapter_id": "64cadfc20faca2101c26d6c8",
+    "gender": "Female",
+    "voice_actor": "Bianca Lavric (BHVR)",
+    "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ac/S09_charSelect_portrait.png/revision/latest?cb=20230705190922",
+    "perk_one_id": "64cc18d0875261f22dea2334",
+    "perk_two_id": "64cc1913875261f22dea233a",
+    "perk_three_id": "64cc194b875261f22dea2341",
+    "createdAt": "2023-08-02T23:54:31.741Z",
+    "updatedAt": "2023-08-04T19:37:53.690Z",
+    "__v": 0,
+    "chapter": {
+        "_id": "64cadfc20faca2101c26d6c8",
+        "realm_id": "64d12e240d0691dad2bd671b",
+        "associated_killers": [
+            {
+                "_id": "64c460a03b6c0963934100d3",
+                "killer_name": "The Doctor",
+                "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ad/K07_charSelect_portrait.png/revision/latest?cb=20230705190852",
+                "id": "64c460a03b6c0963934100d3"
+            }
+        ],
+        "realm": {
+            "_id": "64d12e240d0691dad2bd671b",
+            "name": "Lery's Memorial Institute",
+            "location": "Illinois, United States",
+            "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e8/RealmKeyArt_07.png/revision/latest?cb=20210920232852",
+            "id": "64d12e240d0691dad2bd671b"
+        },
+        "id": "64cadfc20faca2101c26d6c8"
+    },
+    "perk_one": {
+        "_id": "64cc18d0875261f22dea2334",
+        "name": "Technician",
+        "associated_status_effects": [],
+        "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/00/Technician.gif/revision/latest?cb=20200926200248",
+        "description": "You are apt at handling machinery with the greatest care and precision. When repairing a Generator, the following effects apply: Reduces the audible range of your Repair noises by 8 metres and suppresses the explosion and accompanying Loud Noise Notification when failing a Skill Check. Failing a Skill Check instantly regresses the Generator by 5/4/3% of its maximum possible Progression in addition to the default Progression penalty.",
+        "id": "64cc18d0875261f22dea2334"
+    },
+    "perk_two": {
+        "_id": "64cc1913875261f22dea233a",
+        "name": "Lithe",
+        "associated_status_effects": [
+            {
+                "_id": "64cbdfa814056587889cc44c",
+                "name": "Exhausted",
+                "type": "Debuff",
+                "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/f2/FulliconStatusEffects_exhaustion.png/revision/latest?cb=20210212000627"
+            },
+            {
+                "_id": "64cbe0d214056587889cc454",
+                "name": "Haste",
+                "type": "Buff",
+                "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/63/FulliconStatusEffects_haste.png/revision/latest?cb=20210212000629"
+            }
+        ],
+        "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/8d/Lithe.gif/revision/latest?cb=20200501133731",
+        "description": "After performing a rushed vault, break into a sprint of 150% of your normal Running Movement speed for a maximum of 3 seconds. Lithe causes the Exhausted Status Effect for 60/50/40 seconds. Lithe cannot be used when Exhausted.",
+        "id": "64cc1913875261f22dea233a"
+    },
+    "perk_three": {
+        "_id": "64cc194b875261f22dea2341",
+        "name": "Alert",
+        "associated_status_effects": [],
+        "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e7/Alert.gif/revision/latest?cb=20200501133722",
+        "description": "Your acute senses are on high alert. Whenever the Killer destroys a Pallet or a Breakable Wall, or damages a Generator, their Aura is revealed to you for 3/4/5 seconds.",
+        "id": "64cc194b875261f22dea2341"
+    },
+    "id": "64caecb7da2e1eb56296d922"
+}
+```
+
+Notice that by getting a survivor this way, we also have access to their realm, actual perk descriptions and associated status effects (as opposed to just names, icons, and IDs).
 
 `/survivors/survivor_id`
