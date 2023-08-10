@@ -28,7 +28,7 @@ module.exports = {
         extensions: ['.js'],
     },
     output: {
-        path: path.resolve(__dirname, 'distribution'),
+        path: path.resolve(__dirname, './dist'),
         filename: 'api.bundle.js',
     },
 };
