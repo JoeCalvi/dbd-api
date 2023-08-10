@@ -1,1 +1,3 @@
-test
+# introduction
+
+Hello, fellow traverser of the fog! I couldn't find a reliable, up-to-date Dead By Daylight API and needed a project to work on, so I bring this offering. My goal was for this API to be a robust wealth of Dead By Daylight data for other developers to utilize in their own endeavors. I will do my best to update data as it is adjusted per update, but alas, I am human and may miss some things. Some TODOs include: items, offerings, and add-ons. Otherwise, if you have any comments, feedback, or you just want to share something you built while using this API, please feel free to reach out to me <a class="text-dbd" href="https://joecalvi.dev">here</a>. All rights to any and all of this information belong to Behaviour Interactive, and I do not claim to be the author of any of it. Thank you for stopping by and good luck in your next one!
