@@ -848,8 +848,8 @@ As with other name queries, getting a realm by its realm_id is a better option, 
 
  `/realms/realm_id/maps`
 
- In Dead By Daylight, two maps from two different chapters can exist in one realm. For example: while "Mother's Dwelling" came out with The Huntress and "Temple of Purgation" came out with The Plague, both maps happen to exist in the "Crotus Prenn Asylum" realm. By using the realm_id of the "Crotus Prenn Asylum" realm, we can `GET` both "Mother's Dwelling" *and* "Temple of Purgation" by making a call to http://localhost:3000/realms/64d12da70d0691dad2bd670f/maps.
+ In Dead By Daylight, two maps from two different chapters can exist in one realm. For example: while "Mother's Dwelling" came out with The Huntress and "Temple of Purgation" came out with The Plague, both maps happen to exist in the "Red Forest" realm. By using the realm_id of the "Red Forest" realm, we can `GET` both "Mother's Dwelling" *and* "Temple of Purgation" by making a call to http://localhost:3000/realms/64d12e5c0d0691dad2bd671f/maps.
 
  `/maps/query?realm_name=realm_name`
 
- You can get the exact same information by making the query http://localhost:3000/maps/query?realm_name=Crotus-Prenn-Asylum, but using its realm_id and making the call above this one is suggested.
+ You can get the exact same information by making the query http://localhost:3000/maps/query?realm_name=Red-Forest, but using its realm_id and making the call above this one is suggested.
