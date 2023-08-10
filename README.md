@@ -523,10 +523,12 @@ We can also make a call based on a "character_id" (being either a "survivor_id" 
 ### Querying Perks
 
 `/perks/query?character_name=`
-                // ?character_name=killer_name OR ?character_name=name
-                // simple name query in most cases, but there are one-offs
-                // ex: ?character_name=ashley-williams will return nothing
-                // ?character_name=ashley-joanna-'ash'-williams returns perks
+
+Here, like getting perks based on a "character_id", you can get the three perks that belong to either a survivor or killer based on their "character_name" ("name" for survivor and "killer_name" for killer). The same guidelines from survivor/killer name queries apply here, and the recommended approach is definitely to get perks by a character's unique ID, but if you wish to query perks this way, here are a couple examples:
+
+http://localhost:3000/perks/query?character_name=Ashley-Joanna-'Ash'-Williams
+
+http://localhost:3000/perks/query?character_name=The-Wraith
 
 `/perks/query?perk_name=`
                 // ?perk_name=perkName 
