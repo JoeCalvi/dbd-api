@@ -56,7 +56,7 @@ exports.getPowerById = async function (req, res) {
 exports.getPowerByKillerName = async function (req, res) {
     try {
         const query = req.query;
-        const name = query.killer_name.replaceAll('-', ' ').toLowerCase();
+        const name = query.killerName.replaceAll('-', ' ').toLowerCase();
         const killers = await Killer.find();
         const killer = killers.find(k => k.killer_name.toLowerCase() == name);
         const power = await Power.findById(killer.power_id);

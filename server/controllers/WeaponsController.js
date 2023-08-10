@@ -39,7 +39,7 @@ exports.getWeaponById = async function (req, res) {
 exports.getWeaponByKillerName = async function (req, res) {
     try {
         const query = req.query;
-        const name = query.killer_name.replaceAll('-', ' ').toLowerCase();
+        const name = query.killerName.replaceAll('-', ' ').toLowerCase();
         const killers = await Killer.find()
         const killer = killers.find(k => k.killer_name.toLowerCase() == name);
         const weapon_id = killer.weapon_id

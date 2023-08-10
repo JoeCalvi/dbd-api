@@ -49,7 +49,7 @@ exports.getChapterById = async function (req, res) {
 exports.getChapterByKillerName = async function (req, res) {
     try {
         const query = req.query;
-        const name = query.killer_name.replaceAll('-', ' ').toLowerCase();
+        const name = query.killerName.replaceAll('-', ' ').toLowerCase();
         const killers = await Killer.find();
         const killer = killers.find(k => k.killer_name.toLowerCase() == name);
         const chapter_id = killer.chapter_id;
@@ -69,7 +69,7 @@ exports.getChapterByKillerName = async function (req, res) {
 exports.getChapterBySurvivorName = async function (req, res) {
     try {
         const query = req.query;
-        const name = query.survivor_name.replaceAll('-', ' ').toLowerCase();
+        const name = query.survivorName.replaceAll('-', ' ').toLowerCase();
         const survivors = await Survivor.find();
         const survivor = survivors.find(s => s.name.toLowerCase() == name);
         const chapter_id = survivor.chapter_id;

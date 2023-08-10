@@ -8,7 +8,7 @@ module.exports = function (app) {
         .get((req, res) => {
             // ?killer_name=the-killerName
             // will return specific killer
-            if (req.query.killer_name) {
+            if (req.query.killerName) {
                 return killersController.getKillerByName(req, res);
             }
         })

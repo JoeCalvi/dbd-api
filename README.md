@@ -152,15 +152,15 @@ In the above example, we can see that Feng's survivor_id ("_id" or "id", referre
 
 Notice that by getting a survivor this way, we also have access to their realm, actual perk descriptions, and each perk's associated status effects (as opposed to just names, icons, and IDs).
 
-`/survivors/query?survivor_name=name`
+`/survivors/query?survivorName=name`
 
-Another option is to use a name query. Using Feng Min as an example once more, a name query would look like this: https://deadbydaylight-api.onrender.com/survivors/query?survivor_name=Feng-Min. The returned survivor object will be exactly the same as the example given above when getting a survivor by their ID.
+Another option is to use a name query. Using Feng Min as an example once more, a name query would look like this: https://deadbydaylight-api.onrender.com/survivors/query?survivorName=Feng-Min. The returned survivor object will be exactly the same as the example given above when getting a survivor by their ID.
 
 **IMPORTANT NOTE**: While capitalization doesn't matter in this query, *punctuation* **does**! There are a few survivors with outlier names, such as "Élodie Rakoto" or "Ashley Joanna 'Ash' Williams", so getting by ID might is almost always a better route. With that said, here's what those two examples would look like:
 
-https://deadbydaylight-api.onrender.com/survivors/query?survivor_name=Élodie-Rakoto
+https://deadbydaylight-api.onrender.com/survivors/query?survivorName=Élodie-Rakoto
 
-https://deadbydaylight-api.onrender.com/survivors/query?survivor_name=Ashley-Joanna-'Ash'-Williams
+https://deadbydaylight-api.onrender.com/survivors/query?survivorName=Ashley-Joanna-'Ash'-Williams
 
 ## Killer Routes
 
@@ -371,9 +371,9 @@ In the above example, we can see that The Doctor's killer_id ("_id" or "id", ref
 
 When getting a killer by ID, you can see that we gain access to a little bit more information about them. While we have access to their realm in `GET` all killers, here we have access to the *maps* associated with them, as well as a detailed description of their power, plus perk descriptions and their associated status effects.
 
-`/killers/query?killer_name=killer_name`
+`/killers/query?killerName=killer_name`
 
-While there aren't really any outlier names with killers (yet?), the same guidelines as the survivor_name query still apply and getting a killer by ID is always the more dependable and easier route. However, you can totally make the following query: https://deadbydaylight-api.onrender.com/killers/query?killer_name=The-Doctor and get exactly the same killer object returned as above.
+While there aren't really any outlier names with killers (yet?), the same guidelines as the survivor_name query still apply and getting a killer by ID is always the more dependable and easier route. However, you can totally make the following query: https://deadbydaylight-api.onrender.com/killers/query?killerName=The-Doctor and get exactly the same killer object returned as above.
 
 ## Perk Routes
 
@@ -522,17 +522,17 @@ We can also make a call based on a "character_id" (being either a "survivor_id" 
 
 ### Querying Perks
 
-`/perks/query?character_name=`
+`/perks/query?characterName=`
 
 Here, like getting perks based on a "character_id", you can get the three perks that belong to either a survivor or killer based on their "character_name" ("name" for survivor and "killer_name" for killer). The same guidelines from survivor/killer name queries apply here, and the recommended approach is definitely to get perks by a character's unique ID, but if you wish to query perks this way, here are a couple examples:
 
-https://deadbydaylight-api.onrender.com/perks/query?character_name=Ashley-Joanna-'Ash'-Williams
+https://deadbydaylight-api.onrender.com/perks/query?characterName=Ashley-Joanna-'Ash'-Williams
 
-https://deadbydaylight-api.onrender.com/perks/query?character_name=The-Wraith
+https://deadbydaylight-api.onrender.com/perks/query?characterName=The-Wraith
 
 `/perks/query?perk_name=`
 
-While getting a perk by its ID is the recommended approach, you can also `GET` a specific perk based on its name as well. https://deadbydaylight-api.onrender.com/perks/query?perk_name=We're-Gonna-Live-Forever, for example,  will return David King's perk of the same name, also displaying David's other two perks.
+While getting a perk by its ID is the recommended approach, you can also `GET` a specific perk based on its name as well. https://deadbydaylight-api.onrender.com/perks/query?perkName=We're-Gonna-Live-Forever, for example,  will return David King's perk of the same name, also displaying David's other two perks.
 
 `/perks/query?type=`
 
@@ -544,13 +544,13 @@ In Dead By Daylight, there are several different "types" of perks, each type wor
 
 So calling https://deadbydaylight-api.onrender.com/perks/query?type=hex, for example, will return all "Hex" perks.
 
-`/perks/query?status_effect=`
+`/perks/query?statusEffect=`
 
-We are also able to utilize perks' associated status effects to narrow down our `GET` request. If you wanted to `GET` all perks that are associated with the "Haste" status effect in some capacity, you would just to need to make the call to https://deadbydaylight-api.onrender.com/perks/query?status_effect=Haste.
+We are also able to utilize perks' associated status effects to narrow down our `GET` request. If you wanted to `GET` all perks that are associated with the "Haste" status effect in some capacity, you would just to need to make the call to https://deadbydaylight-api.onrender.com/perks/query?statusEffect=Haste.
 
-`/perks/query?status_effect=status_effect_name&role=role`
+`/perks/query?statusEffect=status_effect_name&role=role`
 
-While querying perks by an associated status effect is great, perhaps it's not specific enough. Maybe you're only looking for killer perks that cause the "Exposed" status effect. In order to do this, you can add an additional query key of "role", set either to "Survivor" or "Killer", and instead make a call to https://deadbydaylight-api.onrender.com/perks/query?status_effect=Exposed&role=Killer, returning that specific set of perks.
+While querying perks by an associated status effect is great, perhaps it's not specific enough. Maybe you're only looking for killer perks that cause the "Exposed" status effect. In order to do this, you can add an additional query key of "role", set either to "Survivor" or "Killer", and instead make a call to https://deadbydaylight-api.onrender.com/perks/query?statusEffect=Exposed&role=Killer, returning that specific set of perks.
 
 ## Chapter Routes
 
@@ -701,12 +701,12 @@ You can also use a chapter_id ("_id" or "id" on a chapter object, "chapter_id" e
 }
 ```
 
-`/chapters/query?survivor_name=` **or** `/chapters/query?killer_name=`
+`/chapters/query?survivorName=` **or** `/chapters/query?killerName=`
 
 Using the `GET` by chapter_id is the better option, but you can get the same information from either of the above query routes. The following will both return the same exact chapter object as above:
 
-  - https://deadbydaylight-api.onrender.com/chapters/query?survivor_name=Kate-Denson 
-  - https://deadbydaylight-api.onrender.com/chapters/query?killer_name=The-Clown 
+  - https://deadbydaylight-api.onrender.com/chapters/query?survivorName=Kate-Denson 
+  - https://deadbydaylight-api.onrender.com/chapters/query?killerName=The-Clown 
 
 ## Realm Routes
 
@@ -781,12 +781,12 @@ Example:
 
 The only bonus information getting a realm by its realm_id ("_id" or "id" on a realm object, "realm_id" everywhere else) will provide is an actual description of each map, instead of just its name, image, and layout. Calling https://deadbydaylight-api.onrender.com/realms/64d12fd90d0691dad2bd673f will return the "Raccoon City" realm above, just with the added description of each map.
 
-`/realms/query?killer_name=killer_name`
+`/realms/query?killerName=killer_name`
 
 As with other name queries, getting a realm by its realm_id is a better option, but you can get the same exact result as above by using either of the following:
 
- - https://deadbydaylight-api.onrender.com/realms/query?killer_name=The-Nemesis
- - https://deadbydaylight-api.onrender.com/realms/query?killer_name=The-Mastermind
+ - https://deadbydaylight-api.onrender.com/realms/query?killerName=The-Nemesis
+ - https://deadbydaylight-api.onrender.com/realms/query?killerName=The-Mastermind
 
  ## Map Routes
 
@@ -850,9 +850,9 @@ As with other name queries, getting a realm by its realm_id is a better option, 
 
  In Dead By Daylight, two maps from two different chapters can exist in one realm. For example: while "Mother's Dwelling" came out with The Huntress and "Temple of Purgation" came out with The Plague, both maps happen to exist in the "Red Forest" realm. By using the realm_id of the "Red Forest" realm, we can `GET` both "Mother's Dwelling" *and* "Temple of Purgation" by making a call to https://deadbydaylight-api.onrender.com/realms/64d12e5c0d0691dad2bd671f/maps.
 
- `/maps/query?realm_name=realm_name`
+ `/maps/query?realmName=realm_name`
 
- You can get the exact same information by making the query https://deadbydaylight-api.onrender.com/maps/query?realm_name=Red-Forest, but using its realm_id and making the call above this one is suggested.
+ You can get the exact same information by making the query https://deadbydaylight-api.onrender.com/maps/query?realmName=Red-Forest, but using its realm_id and making the call above this one is suggested.
 
  ## Power Routes
 
@@ -909,9 +909,9 @@ Getting a power by its power_id ("_id" or "id", "power_id" everywhere else) will
 
 We can also get that same power object by using The Pig's killer_id by making a call to https://deadbydaylight-api.onrender.com/killers/64c4624f3b6c096393410114/power, without the killer being populated.
 
-`/powers/query?killer_name=killer_name`
+`/powers/query?killerName=killer_name`
 
-The other option is to make a call to https://deadbydaylight-api.onrender.com/powers/query?killer_name=The-Pig, returning the same "Jigsaw's Baptism" power object, but using The Pig's killer_id and the above route is better.
+The other option is to make a call to https://deadbydaylight-api.onrender.com/powers/query?killerName=The-Pig, returning the same "Jigsaw's Baptism" power object, but using The Pig's killer_id and the above route is better.
 
 ## Weapon Routes
 
@@ -975,9 +975,9 @@ As with getting a power by its power_id, getting a weapon by its weapon_id ("_id
 }
 ```
 
-`/weapons/query?killer_name=killer_name`
+`/weapons/query?killerName=killer_name`
 
-https://deadbydaylight-api.onrender.com/weapons/query?killer_name=The-Wraith returns the same exact weapon object as above, but using the weapon_id route is more dependable.
+https://deadbydaylight-api.onrender.com/weapons/query?killerName=The-Wraith returns the same exact weapon object as above, but using the weapon_id route is more dependable.
 
 ## Status Effect Routes
 

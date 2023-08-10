@@ -187,7 +187,7 @@ exports.getAllKillerDebuffs = async function (req, res) {
 exports.getPerksByStatusEffect = async function (req, res) {
     try {
         const query = req.query;
-        const status_effect_name = query.status_effect.replaceAll('-', ' ').toLowerCase();
+        const status_effect_name = query.statusEffect.replaceAll('-', ' ').toLowerCase();
         const status_effects = await StatusEffect.find({})
         const status_effect = status_effects.find(e => e.name.toLowerCase() == status_effect_name)
 
@@ -211,7 +211,7 @@ exports.getPerksByStatusEffect = async function (req, res) {
 
 exports.getRoleSpecificPerksByStatusEffect = async function (req, res) {
     try {
-        const query_one = req.query.status_effect;
+        const query_one = req.query.statusEffect;
         const status_effect_name = query_one.replaceAll('-', ' ').toLowerCase();
         const status_effects = await StatusEffect.find({});
         const status_effect = status_effects.find(e => e.name.toLowerCase() == status_effect_name);

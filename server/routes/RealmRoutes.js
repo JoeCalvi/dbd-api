@@ -8,7 +8,7 @@ module.exports = function (app) {
         .get((req, res) => {
             // ?killer_name=the-killer_name
             // will return that specific killer's realm
-            if (req.query.killer_name) {
+            if (req.query.killerName) {
                 return realmsController.getRealmByKillerName(req, res);
             }
         })

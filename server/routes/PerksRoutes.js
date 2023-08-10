@@ -7,17 +7,17 @@ module.exports = function (app) {
 
     app.route('/perks/query')
         .get((req, res) => {
-            if (req.query.status_effect && req.query.role) {
+            if (req.query.statusEffect && req.query.role) {
                 // ?status_effect=status_effect_name&role=role ('killer' or 'survivor')
                 // will return role specific perks associated with this status effect
                 return statusEffectsController.getRoleSpecificPerksByStatusEffect(req, res);
 
-            } else if (req.query.status_effect) {
+            } else if (req.query.statusEffect) {
                 // ?status_effect=status_effect_name
                 // will return perks associated with this status effect
                 return statusEffectsController.getPerksByStatusEffect(req, res);
                 
-            } else if (req.query.perk_name) {
+            } else if (req.query.perkName) {
 
                 // ?perk_name=perkName 
                 // if perk name is more than one word, separate with hyphens
@@ -31,7 +31,7 @@ module.exports = function (app) {
                 // returns all perks of that type
                 return perksController.getPerksByType(req, res);
 
-            } else if (req.query.character_name) {
+            } else if (req.query.characterName) {
 
                 // ?character_name=killer_name OR ?character_name=name
                 // simple name query in most cases, but there are one-offs

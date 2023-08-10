@@ -8,11 +8,11 @@ module.exports = function (app) {
       .get((req, res) => {
           // ?killer_name=the-killerName
           // will return that specific killer's chapter
-          if (req.query.killer_name) {
+          if (req.query.killerName) {
               return chaptersController.getChapterByKillerName(req, res);
           // ?survivor_name=firstName-lastName
           // will return that specific killer's chapter
-          } else if (req.query.survivor_name) {
+          } else if (req.query.survivorName) {
               return chaptersController.getChapterBySurvivorName(req, res);
           }
       })

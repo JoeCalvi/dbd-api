@@ -67,7 +67,7 @@ exports.getKillerById = async function (req, res) {
 exports.getKillerByName = async function (req, res) {
     try {
         const query = req.query;
-        const name = query.killer_name.replaceAll('-', ' ').toLowerCase();
+        const name = query.killerName.replaceAll('-', ' ').toLowerCase();
         const killers = await Killer.find()
             .populate({ path: 'perk_one', select: 'name associated_status_effects icon description', 
             populate: { path: 'associated_status_effects', select: 'name type icon' }})

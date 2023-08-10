@@ -52,7 +52,7 @@ exports.getSurvivorById = async function (req, res) {
 exports.getSurvivorByName = async function (req, res) {
     try {
         const query = req.query;
-        const name = query.survivor_name.replaceAll('-', ' ').toLowerCase();
+        const name = query.survivorName.replaceAll('-', ' ').toLowerCase();
         const survivor = await Survivor.findOne({ name: { $regex: new RegExp(`${name}`, 'i') } })
             .populate({ path: 'perk_one', select: 'name associated_status_effects icon description',
             populate: {path: 'associated_status_effects', select: 'name type icon' }})

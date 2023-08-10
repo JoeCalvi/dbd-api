@@ -67,7 +67,7 @@ exports.getMapById = async function (req, res) {
 exports.getMapsByRealmName = async function (req, res) {
     try {
         const query = req.query;
-        const name = query.realm_name.replaceAll('-', ' ').toLowerCase();
+        const name = query.realmName.replaceAll('-', ' ').toLowerCase();
         const realms = await Realm.find()
             .populate({ path: 'maps',
             populate: { path: 'chapter', select: 'name number release_date associated_killers associated_survivors',

@@ -8,7 +8,7 @@ module.exports = function (app) {
         .get((req, res) => {
             // ?survivor_name=first_name-last_name
             // will return specific survivor
-            if (req.query.survivor_name) {
+            if (req.query.survivorName) {
                 return survivorsController.getSurvivorByName(req, res);
             }
         })

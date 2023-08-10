@@ -210,7 +210,7 @@ exports.getPerkById = async function (req, res) {
 exports.getPerkByName = async function (req, res) {
     try {
         const query = req.query;
-        const name = query.perk_name.replaceAll("-", " ").toLowerCase();
+        const name = query.perkName.replaceAll("-", " ").toLowerCase();
         const perk = await Perk.findOne(
             // specifies that we want to match 
             // the name field in the Perk 
@@ -270,7 +270,7 @@ exports.getPerkByName = async function (req, res) {
 exports.getPerksByCharacterName = async function (req, res) {
     try {
         const query = req.query
-        const character_name = query.character_name.replaceAll("-", " ").toLowerCase();
+        const character_name = query.characterName.replaceAll("-", " ").toLowerCase();
         const character_perks = [];
         const killers = await Killer.find({})
         const survivors = await Survivor.find({})
