@@ -12,7 +12,7 @@ If you don't find the answer to your question below, or if you have any comments
 
 `/survivors`
 
-By calling http://localhost:3000/survivors, you will get ALL survivors with slightly less detail than getting a survivor by their ID or name. 
+By calling https://deadbydaylight-api.onrender.com/survivors, you will get ALL survivors with slightly less detail than getting a survivor by their ID or name. 
 
 Example:
 
@@ -71,7 +71,7 @@ Example:
 
 `/survivors/survivor_id`
 
-In the above example, we can see that Feng's survivor_id ("_id" or "id", referred to as "survivor_id" on all associated objects) is 64caecb7da2e1eb56296d922. By calling http://localhost:3000/survivors/64caecb7da2e1eb56296d922, the following survivor object will be returned:
+In the above example, we can see that Feng's survivor_id ("_id" or "id", referred to as "survivor_id" on all associated objects) is 64caecb7da2e1eb56296d922. By calling https://deadbydaylight-api.onrender.com/survivors/64caecb7da2e1eb56296d922, the following survivor object will be returned:
 
 ```
   {
@@ -154,19 +154,19 @@ Notice that by getting a survivor this way, we also have access to their realm, 
 
 `/survivors/query?survivor_name=name`
 
-Another option is to use a name query. Using Feng Min as an example once more, a name query would look like this: http://localhost:3000/survivors/query?survivor_name=Feng-Min. The returned survivor object will be exactly the same as the example given above when getting a survivor by their ID.
+Another option is to use a name query. Using Feng Min as an example once more, a name query would look like this: https://deadbydaylight-api.onrender.com/survivors/query?survivor_name=Feng-Min. The returned survivor object will be exactly the same as the example given above when getting a survivor by their ID.
 
 **IMPORTANT NOTE**: While capitalization doesn't matter in this query, *punctuation* **does**! There are a few survivors with outlier names, such as "Élodie Rakoto" or "Ashley Joanna 'Ash' Williams", so getting by ID might is almost always a better route. With that said, here's what those two examples would look like:
 
-http://localhost:3000/survivors/query?survivor_name=Élodie-Rakoto
+https://deadbydaylight-api.onrender.com/survivors/query?survivor_name=Élodie-Rakoto
 
-http://localhost:3000/survivors/query?survivor_name=Ashley-Joanna-'Ash'-Williams
+https://deadbydaylight-api.onrender.com/survivors/query?survivor_name=Ashley-Joanna-'Ash'-Williams
 
 ## Killer Routes
 
 `/killers`
 
-While the killer object looks a bit different than a survivor object, these routes operate pretty much exactly the same way. When calling http://localhost:3000/killers, all killers will be returned with the same level of detail as survivors.
+While the killer object looks a bit different than a survivor object, these routes operate pretty much exactly the same way. When calling https://deadbydaylight-api.onrender.com/killers, all killers will be returned with the same level of detail as survivors.
 
 Example:
 
@@ -253,7 +253,7 @@ Example:
 ```
 `/killers/killer_id`
 
-In the above example, we can see that The Doctor's killer_id ("_id" or "id", referred to as "killer_id" on all associated objects) is 64c460a03b6c0963934100d3. By calling http://localhost:3000/killers/64c460a03b6c0963934100d3, the following killer object will be returned:
+In the above example, we can see that The Doctor's killer_id ("_id" or "id", referred to as "killer_id" on all associated objects) is 64c460a03b6c0963934100d3. By calling https://deadbydaylight-api.onrender.com/killers/64c460a03b6c0963934100d3, the following killer object will be returned:
 
 ```
 {
@@ -373,13 +373,13 @@ When getting a killer by ID, you can see that we gain access to a little bit mor
 
 `/killers/query?killer_name=killer_name`
 
-While there aren't really any outlier names with killers (yet?), the same guidelines as the survivor_name query still apply and getting a killer by ID is always the more dependable and easier route. However, you can totally make the following query: http://localhost:3000/killers/query?killer_name=The-Doctor and get exactly the same killer object returned as above.
+While there aren't really any outlier names with killers (yet?), the same guidelines as the survivor_name query still apply and getting a killer by ID is always the more dependable and easier route. However, you can totally make the following query: https://deadbydaylight-api.onrender.com/killers/query?killer_name=The-Doctor and get exactly the same killer object returned as above.
 
 ## Perk Routes
 
 `/perks`
 
-Calling http://localhost:3000/perks will return ALL perks in the game, agnostic to their role ("Killer" or "Survivor") or whether they're generic or unique ("Hope" vs. "Made For This").
+Calling https://deadbydaylight-api.onrender.com/perks will return ALL perks in the game, agnostic to their role ("Killer" or "Survivor") or whether they're generic or unique ("Hope" vs. "Made For This").
 
 Example:
 
@@ -434,7 +434,7 @@ There are a few pieces of data we can use on a perk object to make more specific
 
 `/perks/perk_id`
 
-While getting a perk by its unique perk_id ("_id" or "id", referred to as either "perk_one_id", "perk_two_id", or "perk_three_id" on associated killer or survivor objects) doesn't return a ton more information than getting all perks, it does specify what the other two perks are that belong to that character (if generic is **false**, of course). Calling http://localhost:3000/perks/64cc140d875261f22dea22ec, for example, returns the following:
+While getting a perk by its unique perk_id ("_id" or "id", referred to as either "perk_one_id", "perk_two_id", or "perk_three_id" on associated killer or survivor objects) doesn't return a ton more information than getting all perks, it does specify what the other two perks are that belong to that character (if generic is **false**, of course). Calling https://deadbydaylight-api.onrender.com/perks/64cc140d875261f22dea22ec, for example, returns the following:
 
 ```
 {
@@ -499,23 +499,23 @@ While getting a perk by its unique perk_id ("_id" or "id", referred to as either
 
 `/perks/survivor`
 
-Calling http://localhost:3000/perks/survivor will return all perks where the "role" is set to "Survivor".
+Calling https://deadbydaylight-api.onrender.com/perks/survivor will return all perks where the "role" is set to "Survivor".
 
 `/perks/survivor/generic`
 
-Calling http://localhost:3000/perks/survivor/generic will return all perks where the "role" is set to "Survivor" and "generic" is set to **true**.
+Calling https://deadbydaylight-api.onrender.com/perks/survivor/generic will return all perks where the "role" is set to "Survivor" and "generic" is set to **true**.
 
 `/perks/killer`
 
-Calling http://localhost:3000/perks/killer will return all perks where the "role" is set to "Killer".
+Calling https://deadbydaylight-api.onrender.com/perks/killer will return all perks where the "role" is set to "Killer".
 
 `/perks/killer/generic`
 
-Calling http://localhost:3000/perks/killer/generic will return all perks where the "role" is set to "Killer" and "generic" is set to **true**.
+Calling https://deadbydaylight-api.onrender.com/perks/killer/generic will return all perks where the "role" is set to "Killer" and "generic" is set to **true**.
 
 `/character_id/perks`
 
-We can also make a call based on a "character_id" (being either a "survivor_id" **or** a "killer_id"), and the three perks that belong to that specific character will be returned. For example, knowing that Meg's "character_id" (again, this is just Meg's "_id") is 64caeae5da2e1eb56296d8d9, if we make a call to http://localhost:3000/64caeae5da2e1eb56296d8d9/perks, the following perks will be returned:
+We can also make a call based on a "character_id" (being either a "survivor_id" **or** a "killer_id"), and the three perks that belong to that specific character will be returned. For example, knowing that Meg's "character_id" (again, this is just Meg's "_id") is 64caeae5da2e1eb56296d8d9, if we make a call to https://deadbydaylight-api.onrender.com/64caeae5da2e1eb56296d8d9/perks, the following perks will be returned:
   - "Quick & Quiet"
   - "Sprint Burst"
   - "Adrenaline"
@@ -526,13 +526,13 @@ We can also make a call based on a "character_id" (being either a "survivor_id" 
 
 Here, like getting perks based on a "character_id", you can get the three perks that belong to either a survivor or killer based on their "character_name" ("name" for survivor and "killer_name" for killer). The same guidelines from survivor/killer name queries apply here, and the recommended approach is definitely to get perks by a character's unique ID, but if you wish to query perks this way, here are a couple examples:
 
-http://localhost:3000/perks/query?character_name=Ashley-Joanna-'Ash'-Williams
+https://deadbydaylight-api.onrender.com/perks/query?character_name=Ashley-Joanna-'Ash'-Williams
 
-http://localhost:3000/perks/query?character_name=The-Wraith
+https://deadbydaylight-api.onrender.com/perks/query?character_name=The-Wraith
 
 `/perks/query?perk_name=`
 
-While getting a perk by its ID is the recommended approach, you can also `GET` a specific perk based on its name as well. http://localhost:3000/perks/query?perk_name=We're-Gonna-Live-Forever, for example,  will return David King's perk of the same name, also displaying David's other two perks.
+While getting a perk by its ID is the recommended approach, you can also `GET` a specific perk based on its name as well. https://deadbydaylight-api.onrender.com/perks/query?perk_name=We're-Gonna-Live-Forever, for example,  will return David King's perk of the same name, also displaying David's other two perks.
 
 `/perks/query?type=`
 
@@ -542,21 +542,21 @@ In Dead By Daylight, there are several different "types" of perks, each type wor
   - 'scourge'
   - 'teamwork'
 
-So calling http://localhost:3000/perks/query?type=hex, for example, will return all "Hex" perks.
+So calling https://deadbydaylight-api.onrender.com/perks/query?type=hex, for example, will return all "Hex" perks.
 
 `/perks/query?status_effect=`
 
-We are also able to utilize perks' associated status effects to narrow down our `GET` request. If you wanted to `GET` all perks that are associated with the "Haste" status effect in some capacity, you would just to need to make the call to http://localhost:3000/perks/query?status_effect=Haste.
+We are also able to utilize perks' associated status effects to narrow down our `GET` request. If you wanted to `GET` all perks that are associated with the "Haste" status effect in some capacity, you would just to need to make the call to https://deadbydaylight-api.onrender.com/perks/query?status_effect=Haste.
 
 `/perks/query?status_effect=status_effect_name&role=role`
 
-While querying perks by an associated status effect is great, perhaps it's not specific enough. Maybe you're only looking for killer perks that cause the "Exposed" status effect. In order to do this, you can add an additional query key of "role", set either to "Survivor" or "Killer", and instead make a call to http://localhost:3000/perks/query?status_effect=Exposed&role=Killer, returning that specific set of perks.
+While querying perks by an associated status effect is great, perhaps it's not specific enough. Maybe you're only looking for killer perks that cause the "Exposed" status effect. In order to do this, you can add an additional query key of "role", set either to "Survivor" or "Killer", and instead make a call to https://deadbydaylight-api.onrender.com/perks/query?status_effect=Exposed&role=Killer, returning that specific set of perks.
 
 ## Chapter Routes
 
 `/chapters`
 
-Making a call to http://localhost:3000/chapters will return all chapters.
+Making a call to https://deadbydaylight-api.onrender.com/chapters will return all chapters.
 
 Example:
 
@@ -609,7 +609,7 @@ Example:
 
 `/chapters/chapter_id`
 
-You can also use a chapter_id ("_id" or "id" on a chapter object, "chapter_id" everywhere else) to `GET` that specific chapter. This grants the bonus information of the perks that are tied to both the survivor *and* killer associated with that chapter, giving us essentially all of the content that came out with any given chapter. Making a call to http://localhost:3000/chapters/64cae0c90faca2101c26d6ec (using the chapter_id from the chapter object above), for example, returns the following:
+You can also use a chapter_id ("_id" or "id" on a chapter object, "chapter_id" everywhere else) to `GET` that specific chapter. This grants the bonus information of the perks that are tied to both the survivor *and* killer associated with that chapter, giving us essentially all of the content that came out with any given chapter. Making a call to https://deadbydaylight-api.onrender.com/chapters/64cae0c90faca2101c26d6ec (using the chapter_id from the chapter object above), for example, returns the following:
 
 ```
 {
@@ -705,14 +705,14 @@ You can also use a chapter_id ("_id" or "id" on a chapter object, "chapter_id" e
 
 Using the `GET` by chapter_id is the better option, but you can get the same information from either of the above query routes. The following will both return the same exact chapter object as above:
 
-  - http://localhost:3000/chapters/query?survivor_name=Kate-Denson 
-  - http://localhost:3000/chapters/query?killer_name=The-Clown 
+  - https://deadbydaylight-api.onrender.com/chapters/query?survivor_name=Kate-Denson 
+  - https://deadbydaylight-api.onrender.com/chapters/query?killer_name=The-Clown 
 
 ## Realm Routes
 
 `/realms`
 
-Making a call to http://localhost:3000/realms will return all realms.
+Making a call to https://deadbydaylight-api.onrender.com/realms will return all realms.
 
 Example:
 
@@ -779,20 +779,20 @@ Example:
 ```
 `/realms/realm_id`
 
-The only bonus information getting a realm by its realm_id ("_id" or "id" on a realm object, "realm_id" everywhere else) will provide is an actual description of each map, instead of just its name, image, and layout. Calling http://localhost:3000/realms/64d12fd90d0691dad2bd673f will return the "Raccoon City" realm above, just with the added description of each map.
+The only bonus information getting a realm by its realm_id ("_id" or "id" on a realm object, "realm_id" everywhere else) will provide is an actual description of each map, instead of just its name, image, and layout. Calling https://deadbydaylight-api.onrender.com/realms/64d12fd90d0691dad2bd673f will return the "Raccoon City" realm above, just with the added description of each map.
 
 `/realms/query?killer_name=killer_name`
 
 As with other name queries, getting a realm by its realm_id is a better option, but you can get the same exact result as above by using either of the following:
 
- - http://localhost:3000/realms/query?killer_name=The-Nemesis
- - http://localhost:3000/realms/query?killer_name=The-Mastermind
+ - https://deadbydaylight-api.onrender.com/realms/query?killer_name=The-Nemesis
+ - https://deadbydaylight-api.onrender.com/realms/query?killer_name=The-Mastermind
 
  ## Map Routes
 
  `/maps`
 
- Making a call to http://localhost:3000/maps will return all maps from Dead By Daylight.
+ Making a call to https://deadbydaylight-api.onrender.com/maps will return all maps from Dead By Daylight.
 
  Example:
 
@@ -844,21 +844,21 @@ As with other name queries, getting a realm by its realm_id is a better option, 
 
  `/maps/map_id`
 
- Using a map's map_id ("_id" or "id", "map_id" everywhere else), we are able to `GET` one specific map. Making a call to http://localhost:3000/maps/64b98637b777f1835e65d428 will return the same exact map object as above, with no additional information.
+ Using a map's map_id ("_id" or "id", "map_id" everywhere else), we are able to `GET` one specific map. Making a call to https://deadbydaylight-api.onrender.com/maps/64b98637b777f1835e65d428 will return the same exact map object as above, with no additional information.
 
  `/realms/realm_id/maps`
 
- In Dead By Daylight, two maps from two different chapters can exist in one realm. For example: while "Mother's Dwelling" came out with The Huntress and "Temple of Purgation" came out with The Plague, both maps happen to exist in the "Red Forest" realm. By using the realm_id of the "Red Forest" realm, we can `GET` both "Mother's Dwelling" *and* "Temple of Purgation" by making a call to http://localhost:3000/realms/64d12e5c0d0691dad2bd671f/maps.
+ In Dead By Daylight, two maps from two different chapters can exist in one realm. For example: while "Mother's Dwelling" came out with The Huntress and "Temple of Purgation" came out with The Plague, both maps happen to exist in the "Red Forest" realm. By using the realm_id of the "Red Forest" realm, we can `GET` both "Mother's Dwelling" *and* "Temple of Purgation" by making a call to https://deadbydaylight-api.onrender.com/realms/64d12e5c0d0691dad2bd671f/maps.
 
  `/maps/query?realm_name=realm_name`
 
- You can get the exact same information by making the query http://localhost:3000/maps/query?realm_name=Red-Forest, but using its realm_id and making the call above this one is suggested.
+ You can get the exact same information by making the query https://deadbydaylight-api.onrender.com/maps/query?realm_name=Red-Forest, but using its realm_id and making the call above this one is suggested.
 
  ## Power Routes
 
 `/powers`
 
-Making a call to http://localhost:3000/powers will return the power of each killer.
+Making a call to https://deadbydaylight-api.onrender.com/powers will return the power of each killer.
 
 Example:
 
@@ -903,21 +903,21 @@ Not all killers' powers are that complex, so many elements of any given killer's
 
 `/powers/power_id`
 
-Getting a power by its power_id ("_id" or "id", "power_id" everywhere else) will return that specific power, just with more details on the killer attached to it. By making a call to http://localhost:3000/powers/64c2b03a29009060f7108cdd, for example, we will see the same object as above, but we also gain access to The Pig's three perks' names and icons, her weapon,  and the chapter with which she was released.
+Getting a power by its power_id ("_id" or "id", "power_id" everywhere else) will return that specific power, just with more details on the killer attached to it. By making a call to https://deadbydaylight-api.onrender.com/powers/64c2b03a29009060f7108cdd, for example, we will see the same object as above, but we also gain access to The Pig's three perks' names and icons, her weapon,  and the chapter with which she was released.
 
 `/killers/killer_id/power`
 
-We can also get that same power object by using The Pig's killer_id by making a call to http://localhost:3000/killers/64c4624f3b6c096393410114/power, without the killer being populated.
+We can also get that same power object by using The Pig's killer_id by making a call to https://deadbydaylight-api.onrender.com/killers/64c4624f3b6c096393410114/power, without the killer being populated.
 
 `/powers/query?killer_name=killer_name`
 
-The other option is to make a call to http://localhost:3000/powers/query?killer_name=The-Pig, returning the same "Jigsaw's Baptism" power object, but using The Pig's killer_id and the above route is better.
+The other option is to make a call to https://deadbydaylight-api.onrender.com/powers/query?killer_name=The-Pig, returning the same "Jigsaw's Baptism" power object, but using The Pig's killer_id and the above route is better.
 
 ## Weapon Routes
 
 `/weapons`
 
-Making a call to http://localhost:3000/weapons will return the weapons of all killers.
+Making a call to https://deadbydaylight-api.onrender.com/weapons will return the weapons of all killers.
 
 Example:
 
@@ -943,7 +943,7 @@ Example:
 
 `/weapons/weapon_id`
 
-As with getting a power by its power_id, getting a weapon by its weapon_id ("_id" or "id", "weapon_id" everywhere else) will return a bit more information on the killer itself. Calling http://localhost:3000/weapons/64b861085a1f577cae3430a4, for example, returns the following:
+As with getting a power by its power_id, getting a weapon by its weapon_id ("_id" or "id", "weapon_id" everywhere else) will return a bit more information on the killer itself. Calling https://deadbydaylight-api.onrender.com/weapons/64b861085a1f577cae3430a4, for example, returns the following:
 
 ```
 {
@@ -977,13 +977,13 @@ As with getting a power by its power_id, getting a weapon by its weapon_id ("_id
 
 `/weapons/query?killer_name=killer_name`
 
-http://localhost:3000/weapons/query?killer_name=The-Wraith returns the same exact weapon object as above, but using the weapon_id route is more dependable.
+https://deadbydaylight-api.onrender.com/weapons/query?killer_name=The-Wraith returns the same exact weapon object as above, but using the weapon_id route is more dependable.
 
 ## Status Effect Routes
 
 `/status_effects`
 
-Making a call to http://localhost:3000/status_effects returns all status effects in Dead By Daylight.
+Making a call to https://deadbydaylight-api.onrender.com/status_effects returns all status effects in Dead By Daylight.
 
 Example:
 
@@ -1005,32 +1005,32 @@ Getting a status effect by its status_effect_id ("_id" or "id", found in "associ
 
 `/status_effects/buffs`
 
-Making a call to http://localhost:3000/status_effects/buffs returns all status effects that are buffs.
+Making a call to https://deadbydaylight-api.onrender.com/status_effects/buffs returns all status effects that are buffs.
 
 `/status_effects/debuffs`
 
-Making a call to http://localhost:3000/status_effects/debuffs returns all status effects that are debuffs.
+Making a call to https://deadbydaylight-api.onrender.com/status_effects/debuffs returns all status effects that are debuffs.
 
 `/survivor/status_effects`
 
-Making a call to http://localhost:3000/survivor/status_effects returns all status effects that can be applied to survivors in game.
+Making a call to https://deadbydaylight-api.onrender.com/survivor/status_effects returns all status effects that can be applied to survivors in game.
 
 `/survivor/status_effects/buffs`
 
-Making a call to http://localhost:3000/survivor/status_effects/buffs returns all status effects that are buffs and can be applied to survivors in game.
+Making a call to https://deadbydaylight-api.onrender.com/survivor/status_effects/buffs returns all status effects that are buffs and can be applied to survivors in game.
 
 `/survivor/status_effects/debuffs`
 
-Making a call to http://localhost:3000/survivor/status_effects/debuffs returns all status effects that are debuffs and can be applied to survivors in game.
+Making a call to https://deadbydaylight-api.onrender.com/survivor/status_effects/debuffs returns all status effects that are debuffs and can be applied to survivors in game.
 
 `/killer/status_effects`
 
-Making a call to http://localhost:3000/killer/status_effects returns all status effects that can be applied to killers in game.
+Making a call to https://deadbydaylight-api.onrender.com/killer/status_effects returns all status effects that can be applied to killers in game.
 
 `/killer/status_effects/buffs`
 
-Making a call to http://localhost:3000/killer/status_effects/buffs returns all status effects that are buffs and can be applied to killers in game.
+Making a call to https://deadbydaylight-api.onrender.com/killer/status_effects/buffs returns all status effects that are buffs and can be applied to killers in game.
 
 `/killer/status_effects/debuffs`
 
-Making a call to http://localhost:3000/killer/status_effects/debuffs returns all status effects that are debuffs and can be applied to killers in game.
+Making a call to https://deadbydaylight-api.onrender.com/killer/status_effects/debuffs returns all status effects that are debuffs and can be applied to killers in game.
