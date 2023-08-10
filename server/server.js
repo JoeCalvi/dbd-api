@@ -4,7 +4,7 @@ const cors = require('cors');
 
 const express = require('express'),
     app = express(),
-    port = process.env.PORT || 10000,
+    port = process.env.PORT || '',
     mongoose = require('mongoose'),
     Perk = require('./models/Perk'),
     Survivor = require('./models/Survivor'),
@@ -35,7 +35,7 @@ app.use(cors({
 }));
 
 app.get('/', (req, res) => {
-    res.sendFile(process.cwd() + "index.html");
+    res.sendFile(process.cwd() + "/index.html");
 });
 
 const perkRoutes = require('./routes/PerksRoutes');
