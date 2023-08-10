@@ -156,7 +156,7 @@ Notice that by getting a survivor this way, we also have access to their realm, 
 
 Another option is to use a name query. Using Feng Min as an example once more, a name query would look like this: http://localhost:3000/survivors/query?survivor_name=Feng-Min. The returned survivor object will be exactly the same as the example given above when getting a survivor by their ID.
 
-IMPORTANT NOTE: While capitalization doesn't matter in this query, **punctuation *does***! There are a few survivors with outlier names, such as "Élodie Rakoto" or "Ashley Joanna 'Ash' Williams", so getting by ID might is almost always a better route. With that said, here's what those two examples would look like:
+**IMPORTANT NOTE**: While capitalization doesn't matter in this query, *punctuation* **does**! There are a few survivors with outlier names, such as "Élodie Rakoto" or "Ashley Joanna 'Ash' Williams", so getting by ID might is almost always a better route. With that said, here's what those two examples would look like:
 
 http://localhost:3000/survivors/query?survivor_name=Élodie-Rakoto
 
