@@ -907,7 +907,7 @@ Getting a power by its power_id ("_id" or "id", "power_id" everywhere else) will
 
 `/killers/killer_id/power`
 
-We can also get that same power object by using The Pig's killer_id by making a call to http://localhost:3000/killers/64c4624f3b6c096393410114/power.
+We can also get that same power object by using The Pig's killer_id by making a call to http://localhost:3000/killers/64c4624f3b6c096393410114/power, without the killer being populated.
 
 `/powers/query?killer_name=killer_name`
 
