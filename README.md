@@ -552,6 +552,16 @@ We are also able to utilize perks' associated status effects to narrow down our 
 
 While querying perks by an associated status effect is great, perhaps it's not specific enough. Maybe you're only looking for killer perks that cause the "Exposed" status effect. In order to do this, you can add an additional query key of "role", set either to "Survivor" or "Killer", and instead make a call to http://localhost:3000/perks/query?status_effect=Exposed&role=Killer, returning that specific set of perks.
 
+## Chapter Routes
+
+`/chapters`
+
+`/chapters/chapter_id`
+
+`/chapters/query?survivor_name=` **or** `/chapters/query?killer_name=`
+
+
+
 
 
 
