@@ -609,7 +609,7 @@ Example:
 
 `/chapters/chapter_id`
 
-You can also use a chapter_id ("_id" or "id" on a chapter object, "chapter_id" everywhere else) to `GET` that specific chapter. This grants the bonus information of the perks that are tied to both the survivor *and* killer associated with that chapter. Making a call to http://localhost:3000/chapters/64cae0c90faca2101c26d6ec (using the chapter_id from the example above), for example returns the following:
+You can also use a chapter_id ("_id" or "id" on a chapter object, "chapter_id" everywhere else) to `GET` that specific chapter. This grants the bonus information of the perks that are tied to both the survivor *and* killer associated with that chapter. Making a call to http://localhost:3000/chapters/64cae0c90faca2101c26d6ec (using the chapter_id from the chapter object above), for example, returns the following:
 
 ```
 {
