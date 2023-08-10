@@ -162,3 +162,97 @@ http://localhost:3000/survivors/query?survivor_name=Élodie-Rakoto
 
 http://localhost:3000/survivors/query?survivor_name=Ashley-Joanna-'Ash'-Williams
 
+## Killer Routes
+
+`/killers`
+
+While the killer object looks a bit different than a survivor object, these routes operate pretty much exactly the same way. When calling http://localhost:3000/killers, all killers will be returned with the same level of detail as survivors.
+
+Example:
+
+```
+ {
+        "_id": "64c460a03b6c0963934100d3",
+        "killer_name": "The Doctor",
+        "original_name": "Herman Carter",
+        "realm_id": "64d12e240d0691dad2bd671b",
+        "power_id": "64c2ab0829009060f7108ccd",
+        "power_attack_type": "Special Attack (Shock Therapy/Static Blast)",
+        "weapon_id": "64b861b35a1f577cae3430bd",
+        "movement_speed": "115% | 4.6 m/s",
+        "terror_radius": "32 metres",
+        "height": "Tall",
+        "overview": "The Doctor is a madness-inducing Killer, able to use his Power, Carter's Spark, to incapacitate Survivors and cause them to hallucinate and scream in terror, revealing their position. His personal Perks - Overwhelming Presence, Monitor & Abuse, and Overcharge - encourage chases, impact Survivors' ability to repair effectively and make him harder to detect when not in a Chase. His Perks are about hindering and creating problems for the Survivors. The sheer stature of The Doctor infuses fear and terror in those around him.",
+        "difficulty_rating": "Hard (These Killers use mechanics that are specific to them and require more practice to be effective)",
+        "chapter_id": "64cadfc20faca2101c26d6c8",
+        "gender": "Male",
+        "voice_actor": "Alex Lin (BHVR)",
+        "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ad/K07_charSelect_portrait.png/revision/latest?cb=20230705190852",
+        "perk_one_id": "64cd3af68290cb86311d675e",
+        "perk_two_id": "64cd3b1b8290cb86311d6761",
+        "perk_three_id": "64cd3b418290cb86311d6764",
+        "createdAt": "2023-07-29T00:43:12.814Z",
+        "updatedAt": "2023-08-07T18:13:30.597Z",
+        "__v": 0,
+        "perk_one": {
+            "_id": "64cd3af68290cb86311d675e",
+            "name": "Overwhelming Presence",
+            "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/d0/OverwhelmingPresence.gif/revision/latest?cb=20200926195854",
+            "id": "64cd3af68290cb86311d675e"
+        },
+        "perk_two": {
+            "_id": "64cd3b1b8290cb86311d6761",
+            "name": "Monitor & Abuse",
+            "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/a3/MonitorAndAbuse.gif/revision/latest?cb=20200501134305",
+            "id": "64cd3b1b8290cb86311d6761"
+        },
+        "perk_three": {
+            "_id": "64cd3b418290cb86311d6764",
+            "name": "Overcharge",
+            "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/3d/Overcharge.gif/revision/latest?cb=20200501134315",
+            "id": "64cd3b418290cb86311d6764"
+        },
+        "weapon": {
+            "_id": "64b861b35a1f577cae3430bd",
+            "name": "The Stick",
+            "description": "An instrument of punishment when all other treatments failed. Upon hitting a Survivor, The Doctor will pat The Stick into his palm twice.",
+            "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/fc/DO_Stick01.png/revision/latest?cb=20170511153703",
+            "id": "64b861b35a1f577cae3430bd"
+        },
+        "realm": {
+            "_id": "64d12e240d0691dad2bd671b",
+            "name": "Lery's Memorial Institute",
+            "location": "Illinois, United States",
+            "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e8/RealmKeyArt_07.png/revision/latest?cb=20210920232852",
+            "id": "64d12e240d0691dad2bd671b"
+        },
+        "power": {
+            "_id": "64c2ab0829009060f7108ccd",
+            "name": "Carter's Spark",
+            "description": "Successfully striking Survivors with either of The Doctor's electro-convulsive abilities causes them to suffer from the tiered Madness Status Effect.",
+            "id": "64c2ab0829009060f7108ccd"
+        },
+        "chapter": {
+            "_id": "64cadfc20faca2101c26d6c8",
+            "name": "Spark of Madness",
+            "number": 4,
+            "release_date": "11 May 2017 (Thursday)",
+            "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/39/SparkOfMadness_main_header.jpg/revision/latest?cb=20170512175200",
+            "associated_survivors": [
+                {
+                    "_id": "64caecb7da2e1eb56296d922",
+                    "name": "Feng Min",
+                    "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ac/S09_charSelect_portrait.png/revision/latest?cb=20230705190922",
+                    "id": "64caecb7da2e1eb56296d922"
+                }
+            ],
+            "id": "64cadfc20faca2101c26d6c8"
+        },
+        "id": "64c460a03b6c0963934100d3"
+    }
+```
+`/killers/:killerId`
+
+`/killers/query?killer_name=killer_name`
+
+
