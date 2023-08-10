@@ -790,4 +790,66 @@ As with other name queries, getting a realm by its realm_id is a better option, 
 
  ## Map Routes
 
- 
+ `/maps`
+
+ Making a call to http://localhost:3000/maps will return all maps from Dead By Daylight.
+
+ Example:
+
+ ```
+{
+        "_id": "64b98637b777f1835e65d428",
+        "name": "Mother's Dwelling",
+        "description": "This house is new to me. I have never stumbled upon its existence before. Nature made a good job hiding from the rest of the world. I am pondering upon who might live there. Sometimes I have seen lights stemming from its windows. Sometimes a passing shadow. The engulfment that the surrounding wilderness provides might not be unintentional. Might it be on purpose? Might this... home seek anonymity and to be unseen by the rest of the world? I am not at peace with this dwelling. I believe to be hearing screams and wailing coming from it. But my mind is unstable and my ears might not be trusted. Or can they?",
+        "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/01/IconMap_Brl_MadHouse.png/revision/latest?cb=20230311132630",
+        "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/d4/MothersDwellingOutline.png/revision/latest?cb=20230502102854",
+        "realm_id": "64d12e5c0d0691dad2bd671f",
+        "createdAt": "2023-07-20T19:08:40.035Z",
+        "updatedAt": "2023-08-07T19:28:32.048Z",
+        "__v": 0,
+        "chapter_id": "64cadfea0faca2101c26d6cf",
+        "realm": {
+            "_id": "64d12e5c0d0691dad2bd671f",
+            "name": "Red Forest",
+            "location": "Kiev Governorate, Russian Empire",
+            "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e7/RealmKeyArt_08.png/revision/latest?cb=20230402122442",
+            "id": "64d12e5c0d0691dad2bd671f"
+        },
+        "chapter": {
+            "_id": "64cadfea0faca2101c26d6cf",
+            "name": "A Lullaby for the Dark",
+            "number": 5,
+            "release_date": "27 July 2017 (Thursday)",
+            "associated_killers": [
+                {
+                    "_id": "64c461123b6c0963934100e2",
+                    "killer_name": "The Huntress",
+                    "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/1a/K08_charSelect_portrait.png/revision/latest?cb=20230705191247",
+                    "id": "64c461123b6c0963934100e2"
+                }
+            ],
+            "associated_survivors": [
+                {
+                    "_id": "64caeceada2e1eb56296d929",
+                    "name": "David King",
+                    "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/57/S10_charSelect_portrait.png/revision/latest?cb=20230705191257",
+                    "id": "64caeceada2e1eb56296d929"
+                }
+            ],
+            "id": "64cadfea0faca2101c26d6cf"
+        },
+        "id": "64b98637b777f1835e65d428"
+    }
+ ```
+
+ `/maps/map_id`
+
+ Using a map's map_id ("_id" or "id", "map_id" everywhere else), we are able to `GET` one specific map. Making a call to http://localhost:3000/maps/64b98637b777f1835e65d428 will return the same exact map object as above, with no additional information.
+
+ `/realms/realm_id/maps`
+
+ In Dead By Daylight, two maps from two different chapters can exist in one realm. For example: while "Mother's Dwelling" came out with The Huntress and "Temple of Purgation" came out with The Plague, both maps happen to exist in the "Crotus Prenn Asylum" realm. By using the realm_id of the "Crotus Prenn Asylum" realm, we can `GET` both "Mother's Dwelling" *and* "Temple of Purgation" by making a call to http://localhost:3000/realms/64d12da70d0691dad2bd670f/maps.
+
+ `/maps/query?realm_name=realm_name`
+
+ You can get the exact same information by making the query http://localhost:3000/maps/query?realm_name=Crotus-Prenn-Asylum, but using its realm_id and making the call above this one is suggested.
