@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 
 const allowedOrigins = [
     'http://localhost:3000',
-    'https://onrender.dbd-api.com'
+    'https://deadbydaylight-api.onrender.com'
 ]
 
 app.use(cors({
@@ -61,10 +61,6 @@ app.use(function (req, res) {
     res.status(404).send({ url: req.originalUrl + ' not found' })
 });
 
-app.use((req, res, next) => {
-    res.setHeader('Permissions-Policy', 'geolocation=(self "https://deadbydaylight-api.onrender.com")');
-    next();
-  });
 
 httpServer.listen(port, () => {
     console.log(`[SERVING ON PORT: ${port}]`)
