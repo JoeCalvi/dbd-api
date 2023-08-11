@@ -272,15 +272,15 @@ exports.getPerksByCharacterName = async function (req, res) {
         const query = req.query;
         const query_name = query.character_name;
         console.log("query: ", query_name);
-        const character_name = await query_name.replace(/-/g, ' ');
+        const character_name = await query_name.replace(/-/g, ' ').toLowerCase();
         console.log("adjusted name: ", character_name);
         const character_perks = [];
 
         const killers = await Killer.find()
-        const killer = killers.find(k => k.killer_name == character_name)
+        const killer = killers.find(k => k.killer_name.toLowerCase() == character_name)
         console.log("killer: ", killer)
         const survivors = await Survivor.find()
-        const survivor = survivors.find(s => s.name == character_name)
+        const survivor = survivors.find(s => s.name.toLowerCase() == character_name)
         console.log("survivor: ", survivor)
 
         if (killer) {
