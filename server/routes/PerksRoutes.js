@@ -7,6 +7,7 @@ module.exports = function (app) {
 
     app.route('/perks/query')
         .get((req, res) => {
+            console.log("Query route hit")
             if (req.query.statusEffect && req.query.role) {
                 // ?status_effect=status_effect_name&role=role ('killer' or 'survivor')
                 // will return role specific perks associated with this status effect
