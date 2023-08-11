@@ -5,7 +5,6 @@ const Killer = mongoose.model('Killers');
 const Survivor = mongoose.model('Survivors');
 const Map = mongoose.model('Maps');
 
-// TODO make it so when getting all chapters, only the correct associated maps are shown
 exports.getAllChapters = async function (req, res) {
     try {
         const chapters = await Chapter.find({})
@@ -49,9 +48,9 @@ exports.getChapterById = async function (req, res) {
 exports.getChapterByKillerName = async function (req, res) {
     try {
         const query = req.query;
-        const name = query.killerName.replaceAll('-', ' ').toLowerCase();
+        const killer_name = query.killer_name.replace(/-/g, ' ').toLowerCase();
         const killers = await Killer.find();
-        const killer = killers.find(k => k.killer_name.toLowerCase() == name);
+        const killer = killers.find(k => k.killer_name.toLowerCase() == killer_name);
         const chapter_id = killer.chapter_id;
         const chapter = await Chapter.findById(chapter_id)
             .populate({ path: 'associated_maps', select: 'name image layout realm_id', populate: { path: 'realm', select: 'name location image' }})
@@ -69,9 +68,9 @@ exports.getChapterByKillerName = async function (req, res) {
 exports.getChapterBySurvivorName = async function (req, res) {
     try {
         const query = req.query;
-        const name = query.survivorName.replaceAll('-', ' ').toLowerCase();
+        const survivor_name = query.survivor_name.replace(/-/g, ' ').toLowerCase();
         const survivors = await Survivor.find();
-        const survivor = survivors.find(s => s.name.toLowerCase() == name);
+        const survivor = survivors.find(s => s.name.toLowerCase() == survivor_name);
         const chapter_id = survivor.chapter_id;
         const chapter = await Chapter.findById(chapter_id)
             .populate({ path: 'associated_maps', select: 'name image layout realm_id', populate: { path: 'realm', select: 'name location image' }})
