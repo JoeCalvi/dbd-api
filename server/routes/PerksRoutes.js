@@ -7,7 +7,7 @@ module.exports = function (app) {
 
     app.route('/perks/query')
         .get(async (req, res) => {
-            console.log("Query route hit")
+            
             if (req.query.statusEffect && req.query.role) {
                 // ?status_effect=status_effect_name&role=role ('killer' or 'survivor')
                 // will return role specific perks associated with this status effect
@@ -33,7 +33,7 @@ module.exports = function (app) {
                 return await perksController.getPerksByType(req, res);
 
             } else if (req.query.characterName) {
-
+                console.log("Query route hit")
                 // ?character_name=killer_name OR ?character_name=name
                 // simple name query in most cases, but there are one-offs
                 // ex: ?character_name=ashley-williams will return nothing
