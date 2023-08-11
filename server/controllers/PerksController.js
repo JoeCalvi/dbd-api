@@ -274,33 +274,22 @@ exports.getPerksByCharacterName = async function (req, res) {
         console.log("query: ", query_name);
         const adjusted_name = await query_name.replace(/-/g, ' ');
         console.log("adjusted name: ", adjusted_name);
-        // const name_array = await adjusted_name.split(" ");
-        // console.log("name array: ", name_array);
-
-        // for await (const word of name_array) {
-        //     if (word.charAt(0) == "'") {
-        //         word = await word.replace(word.charAt(1), word.charAt(1).toUpperCase())
-        //     } else {
-        //         word = await word.replace(word.charAt(0), word.charAt().toUpperCase())
-        //     }
-        // }
-        // const character_name = name_array.join(" ");
-        // console.log("name: ", character_name);
         const character_perks = [];
-        const killer = await Killer.find({ killer_name: character_name })
-        console.log("killer: ", killer)
-        const survivor = await Survivor.find({ name: character_name })
+
+        // const killer = await Killer.find({ killer_name: character_name })
+        // console.log("killer: ", killer)
+        const survivor = await Survivor.findOne({ name: character_name })
         console.log("survivor: ", survivor)
 
-        if (killer) {
-            const perks = await Perk.find({ killer_id: killer._id})
-                .populate('associated_status_effects', 'name type icon')
-                .populate('chapter', 'name number release_date');
+        // if (killer) {
+        //     const perks = await Perk.find({ killer_id: killer._id})
+        //         .populate('associated_status_effects', 'name type icon')
+        //         .populate('chapter', 'name number release_date');
 
-            for await (const perk of perks) {
-                character_perks.push(perk);
-            }
-        }
+        //     for await (const perk of perks) {
+        //         character_perks.push(perk);
+        //     }
+        // }
 
         if (survivor) {
             const perks = await Perk.find({ survivor_id: survivor._id })
