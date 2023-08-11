@@ -61,6 +61,11 @@ app.use(function (req, res) {
     res.status(404).send({ url: req.originalUrl + ' not found' })
 });
 
+app.use((req, res, next) => {
+    res.setHeader('Permissions-Policy', 'geolocation=(self "https://deadbydaylight-api.onrender.com")');
+    next();
+  });
+
 httpServer.listen(port, () => {
     console.log(`[SERVING ON PORT: ${port}]`)
 })
