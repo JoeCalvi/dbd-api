@@ -52,8 +52,8 @@ exports.getSurvivorById = async function (req, res) {
 exports.getSurvivorByName = async function (req, res) {
     try {
         const query = req.query;
-        const name = query.survivorName.replaceAll('-', ' ').toLowerCase();
-        const survivor = await Survivor.findOne({ name: { $regex: new RegExp(`${name}`, 'i') } })
+        const survivor_name = query.survivor_name.replace(/-/g, ' ').toLowerCase();
+        const survivors = await Survivor.find({})
             .populate({ path: 'perk_one', select: 'name associated_status_effects icon description',
             populate: {path: 'associated_status_effects', select: 'name type icon' }})
             .populate({ path: 'perk_two', select: 'name associated_status_effects icon description',
@@ -63,10 +63,12 @@ exports.getSurvivorByName = async function (req, res) {
             .populate({ path: 'chapter', select: 'name number release_date associated_killers',
             populate: {path: 'associated_killers', select: 'killer_name portrait', model: 'Killers'}})
             .populate({ path: 'chapter', select: 'realm_id', populate: { path: 'realm', select: 'name location image' }});
+        
+            const survivor = survivors.find(s => s.name.toLowerCase() == survivor_name);
 
         return res.json(survivor);
     } catch (error) {
-        res.send(error)
+        res.send(error);
     }
 }
 
