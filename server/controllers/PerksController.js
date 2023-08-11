@@ -285,7 +285,7 @@ exports.getPerksByCharacterName = async function (req, res) {
         //     }
         // }
         // const character_name = name_array.join(" ");
-        console.log("name: ", character_name);
+        // console.log("name: ", character_name);
         const character_perks = [];
         const killer = await Killer.find({ killer_name: character_name })
         console.log("killer: ", killer)
