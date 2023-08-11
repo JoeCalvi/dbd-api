@@ -277,13 +277,13 @@ exports.getPerksByCharacterName = async function (req, res) {
         const name_array = await adjusted_name.split(" ");
         console.log("name array: ", name_array);
 
-        for await (const word of name_array) {
-            if (word.charAt(0) == "'") {
-                word = await word.replace(word.charAt(1), word.charAt(1).toUpperCase())
-            } else {
-                word = await word.replace(word.charAt(0), word.charAt().toUpperCase())
-            }
-        }
+        // for await (const word of name_array) {
+        //     if (word.charAt(0) == "'") {
+        //         word = await word.replace(word.charAt(1), word.charAt(1).toUpperCase())
+        //     } else {
+        //         word = await word.replace(word.charAt(0), word.charAt().toUpperCase())
+        //     }
+        // }
         const character_name = name_array.join(" ");
         console.log("name: ", character_name);
         const character_perks = [];
