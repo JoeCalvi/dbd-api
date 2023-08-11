@@ -270,7 +270,7 @@ exports.getPerkByName = async function (req, res) {
 exports.getPerksByCharacterName = async function (req, res) {
     try {
         const query = req.query;
-        const query_name = query.characterName;
+        const query_name = query.character_name;
         console.log("query: ", query_name);
         const character_name = await query_name.replace(/-/g, ' ');
         console.log("adjusted name: ", character_name);

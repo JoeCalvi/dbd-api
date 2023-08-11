@@ -32,7 +32,7 @@ module.exports = function (app) {
                 // returns all perks of that type
                 return await perksController.getPerksByType(req, res);
 
-            } else if (req.query.characterName) {
+            } else if (req.query.character_name) {
                 console.log("Query route hit")
                 // ?character_name=killer_name OR ?character_name=name
                 // simple name query in most cases, but there are one-offs
