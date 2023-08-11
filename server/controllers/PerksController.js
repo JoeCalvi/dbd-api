@@ -278,7 +278,8 @@ exports.getPerksByCharacterName = async function (req, res) {
 
         // const killer = await Killer.find({ killer_name: character_name })
         // console.log("killer: ", killer)
-        const survivor = await Survivor.findOne({ name: character_name })
+        const survivors = await Survivor.find()
+        const survivor = survivors.find(s => s.name == adjusted_name)
         console.log("survivor: ", survivor)
 
         // if (killer) {
