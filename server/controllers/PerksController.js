@@ -279,7 +279,7 @@ exports.getPerksByCharacterName = async function (req, res) {
                 name_array[i] = name_array[i].replace(name_array[i].charAt(0), name_array[i].charAt().toUpperCase())
             }
         }
-        const character_name = name_array.join(" ")
+        const character_name = encodeURIComponent(name_array.join(" "));
         const character_perks = [];
         const killer = await Killer.findOne({ killer_name: character_name })
         const survivor = await Survivor.findOne({ name: character_name })
