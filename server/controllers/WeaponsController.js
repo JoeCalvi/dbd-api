@@ -39,11 +39,10 @@ exports.getWeaponById = async function (req, res) {
 exports.getWeaponByKillerName = async function (req, res) {
     try {
         const query = req.query;
-        const name = query.killerName.replaceAll('-', ' ').toLowerCase();
-        const killers = await Killer.find()
-        const killer = killers.find(k => k.killer_name.toLowerCase() == name);
-        const weapon_id = killer.weapon_id
-        const weapon = await Weapon.findById(weapon_id)
+        const killer_name = query.killer_name.replace(/-/g, ' ').toLowerCase();
+        const killers = await Killer.find({});
+        const killer = killers.find(k => k.killer_name.toLowerCase() == killer_name);
+        const weapon = await Weapon.findById(killer.weapon_id)
             .populate({ path: 'killer', select: 'killer_name portrait overview chapter_id',
             populate: { path: 'chapter', select: 'name number release_date image' }});
 

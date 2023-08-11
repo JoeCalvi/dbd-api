@@ -6,9 +6,9 @@ module.exports = function (app) {
 
     app.route('/weapons/query')
         .get((req, res) => {
-            // ?killer_name=the-killerName
+            // ?killer_name=killer.killer_name
             // will return that specific killer's weapon
-            if (req.query.killerName) {
+            if (req.query.killer_name) {
                 return weaponsController.getWeaponByKillerName(req, res);
             }
         })
