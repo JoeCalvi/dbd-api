@@ -270,12 +270,21 @@ exports.getPerkByName = async function (req, res) {
 exports.getPerksByCharacterName = async function (req, res) {
     try {
         const query = req.query
-        const character_name = query.characterName.replaceAll("-", " ").toLowerCase();
+        const query_name = query.characterName.replaceAll("-", " ");
+        const name_array = query_name.split(" ");
+        for (let i = 0; i < name_array.length; i++) {
+            if (name_array[i].charAt(0) == "'") {
+                name_array[i] = name_array[i].replace(name_array[i].charAt(1), name_array[i].charAt(1).toUpperCase())
+            } else {
+                name_array[i] = name_array[i].replace(name_array[i].charAt(0), name_array[i].charAt().toUpperCase())
+            }
+        }
+        const character_name = name_array.join(" ")
         const character_perks = [];
-        const killers = await Killer.find({})
-        const survivors = await Survivor.find({})
+        const killer = await Killer.findOne({ killer_name: character_name })
+        const survivor = await Survivor.findOne({ name: character_name })
+        console.log(survivor.name);
 
-        const killer = await killers.find(k => k.killer_name.toLowerCase() == character_name)
         if (killer) {
             const perks = await Perk.find({ killer_id: killer._id})
                 .populate('associated_status_effects', 'name type icon')
@@ -286,7 +295,6 @@ exports.getPerksByCharacterName = async function (req, res) {
             });
         }
 
-        const survivor = await survivors.find(s => s.name.toLowerCase() == character_name) 
         if (survivor) {
             const perks = await Perk.find({ survivor_id: survivor._id })
                 .populate('associated_status_effects', 'name type icon')
