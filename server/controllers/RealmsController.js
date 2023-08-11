@@ -42,10 +42,10 @@ exports.getRealmById = async function (req, res) {
 exports.getRealmByKillerName = async function (req, res) {
     try {
         const query = req.query;
-        const name = query.killerName.replaceAll('-', ' ').toLowerCase();
-        const killers = await Killer.find()
-        const killer = killers.find(k => k.killer_name.toLowerCase() == name);
-        const realm_id = killer.realm_id
+        const killer_name = query.killer_name.replace(/-/g, ' ').toLowerCase();
+        const killers = await Killer.find({});
+        const killer = killers.find(k => k.killer_name.toLowerCase() == killer_name);
+        const realm_id = killer.realm_id;
         const realm = await Realm.findById(realm_id)
             .populate('associated_killers', 'killer_name portrait')
             .populate('associated_chapters', 'name number release_date image')
