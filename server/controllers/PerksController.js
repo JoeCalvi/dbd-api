@@ -272,7 +272,7 @@ exports.getPerksByCharacterName = async function (req, res) {
         const query = req.query;
         const query_name = query.characterName;
         console.log("query: ", query_name);
-        const adjusted_name = await query_name.replace("-", " ");
+        const adjusted_name = await query_name.replace(/-/g, ' ');
         console.log("adjusted name: ", adjusted_name);
         const name_array = await adjusted_name.split(" ");
         console.log("name array: ", name_array);
@@ -284,7 +284,7 @@ exports.getPerksByCharacterName = async function (req, res) {
                 word = await word.replace(word.charAt(0), word.charAt().toUpperCase())
             }
         }
-        const character_name = encodeURIComponent(name_array.join(" "));
+        const character_name = name_array.join(" ");
         console.log("name: ", character_name);
         const character_perks = [];
         const killer = await Killer.findOne({ killer_name: character_name })
