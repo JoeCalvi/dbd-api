@@ -6,31 +6,31 @@ module.exports = function (app) {
         .get(perksController.getAllPerks);
 
     app.route('/perks/query')
-        .get((req, res) => {
+        .get(async (req, res) => {
             console.log("Query route hit")
             if (req.query.statusEffect && req.query.role) {
                 // ?status_effect=status_effect_name&role=role ('killer' or 'survivor')
                 // will return role specific perks associated with this status effect
-                return statusEffectsController.getRoleSpecificPerksByStatusEffect(req, res);
+                return await statusEffectsController.getRoleSpecificPerksByStatusEffect(req, res);
 
             } else if (req.query.statusEffect) {
                 // ?status_effect=status_effect_name
                 // will return perks associated with this status effect
-                return statusEffectsController.getPerksByStatusEffect(req, res);
+                return await statusEffectsController.getPerksByStatusEffect(req, res);
                 
             } else if (req.query.perkName) {
 
                 // ?perk_name=perkName 
                 // if perk name is more than one word, separate with hyphens
                 // will return specific perk
-                return perksController.getPerkByName(req, res);
+                return await perksController.getPerkByName(req, res);
 
             } else if (req.query.type) {
 
                 // ?type=perk_type
                 // supports 'hex', 'boon', 'scourge', and 'teamwork'
                 // returns all perks of that type
-                return perksController.getPerksByType(req, res);
+                return await perksController.getPerksByType(req, res);
 
             } else if (req.query.characterName) {
 
@@ -38,7 +38,7 @@ module.exports = function (app) {
                 // simple name query in most cases, but there are one-offs
                 // ex: ?character_name=ashley-williams will return nothing
                 // ?character_name=ashley-joanna-'ash'-williams returns perks
-                return perksController.getPerksByCharacterName(req, res);
+                return await perksController.getPerksByCharacterName(req, res);
 
             }
         })
