@@ -67,8 +67,8 @@ exports.getKillerById = async function (req, res) {
 exports.getKillerByName = async function (req, res) {
     try {
         const query = req.query;
-        const name = query.killerName.replaceAll('-', ' ').toLowerCase();
-        const killers = await Killer.find()
+        const killer_name = query.killer_name.replace(/-/g, ' ').toLowerCase();
+        const killers = await Killer.find({})
             .populate({ path: 'perk_one', select: 'name associated_status_effects icon description', 
             populate: { path: 'associated_status_effects', select: 'name type icon' }})
             .populate({ path: 'perk_two', select: 'name associated_status_effects icon description', 
@@ -83,10 +83,11 @@ exports.getKillerByName = async function (req, res) {
             .populate({ path: 'chapter', select: 'name number release_date image associated_survivors associated_maps',
             populate: { path: 'associated_maps', select: 'name image layout' }});
 
-        const killer = killers.find(k => k.killer_name.toLowerCase() == name);
+        const killer = killers.find(k => k.killer_name.toLowerCase() == killer_name);
+
         return res.json(killer);
     } catch (error) {
-        res.send(error)
+        res.send(error);
     }
 };
 
