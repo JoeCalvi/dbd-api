@@ -210,15 +210,11 @@ exports.getPerkById = async function (req, res) {
 exports.getPerkByName = async function (req, res) {
     try {
         const query = req.query;
-        const name = query.perkName.replaceAll("-", " ").toLowerCase();
-        const perk = await Perk.findOne(
-            // specifies that we want to match 
-            // the name field in the Perk 
-            // collection using a regular expression
-            { name: { $regex: new RegExp(`${name}`, 'i') } }
-        )
+        const perk_name = query.perk_name.replace(/-/g, ' ').toLowerCase();
+        const perks = await Perk.find({})
             .populate('associated_status_effects', 'name type icon')
             .populate('chapter', 'name number release_date');
+        const perk = perks.find(p => p.name.toLowerCase() == perk_name)
         const perk_id = perk._id;
 
         if (perk.survivor_id != null) {
@@ -271,17 +267,14 @@ exports.getPerksByCharacterName = async function (req, res) {
     try {
         const query = req.query;
         const query_name = query.character_name;
-        console.log("query: ", query_name);
         const character_name = await query_name.replace(/-/g, ' ').toLowerCase();
-        console.log("adjusted name: ", character_name);
         const character_perks = [];
 
         const killers = await Killer.find()
         const killer = killers.find(k => k.killer_name.toLowerCase() == character_name)
-        console.log("killer: ", killer)
+
         const survivors = await Survivor.find()
         const survivor = survivors.find(s => s.name.toLowerCase() == character_name)
-        console.log("survivor: ", survivor)
 
         if (killer) {
             const perks = await Perk.find({ killer_id: killer._id})
@@ -303,7 +296,6 @@ exports.getPerksByCharacterName = async function (req, res) {
                 }
         }
 
-        console.log("perks: ", character_perks)
         return res.send(character_perks);
     } catch (error) {
         res.send(error)
