@@ -270,6 +270,7 @@ exports.getPerkByName = async function (req, res) {
 exports.getPerksByCharacterName = async function (req, res) {
     try {
         const query = req.query
+        console.log("query: ", query)
         const query_name = query.characterName.replaceAll("-", " ");
         const name_array = query_name.split(" ");
         for (let i = 0; i < name_array.length; i++) {
@@ -280,10 +281,10 @@ exports.getPerksByCharacterName = async function (req, res) {
             }
         }
         const character_name = encodeURIComponent(name_array.join(" "));
+        console.log("name: ", character_name);
         const character_perks = [];
         const killer = await Killer.findOne({ killer_name: character_name })
         const survivor = await Survivor.findOne({ name: character_name })
-        console.log(survivor.name);
 
         if (killer) {
             const perks = await Perk.find({ killer_id: killer._id})
@@ -305,6 +306,7 @@ exports.getPerksByCharacterName = async function (req, res) {
             });
         }
 
+        console.log("perks: ", character_perks)
         return res.send(character_perks);
     } catch (error) {
         res.send(error)
