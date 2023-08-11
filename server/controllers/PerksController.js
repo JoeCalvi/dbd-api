@@ -270,14 +270,14 @@ exports.getPerkByName = async function (req, res) {
 exports.getPerksByCharacterName = async function (req, res) {
     try {
         const query = req.query
-        const query_name = query.characterName.replaceAll("-", " ");
+        const query_name = await query.characterName.replaceAll("-", " ");
         console.log("query: ", query_name)
-        const name_array = query_name.split(" ");
+        const name_array = await query_name.split(" ");
         for (let i = 0; i < name_array.length; i++) {
             if (name_array[i].charAt(0) == "'") {
-                name_array[i] = name_array[i].replace(name_array[i].charAt(1), name_array[i].charAt(1).toUpperCase())
+                name_array[i] = await name_array[i].replace(name_array[i].charAt(1), name_array[i].charAt(1).toUpperCase())
             } else {
-                name_array[i] = name_array[i].replace(name_array[i].charAt(0), name_array[i].charAt().toUpperCase())
+                name_array[i] = await name_array[i].replace(name_array[i].charAt(0), name_array[i].charAt().toUpperCase())
             }
         }
         const character_name = encodeURIComponent(name_array.join(" "));
