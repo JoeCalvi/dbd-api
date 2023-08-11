@@ -11,7 +11,7 @@ module.exports = function (app) {
         .get((req, res) => {
             // ?killer_name=killer_name
             // will return that specific killer's power
-            if (req.query.killerName) {
+            if (req.query.killer_name) {
                 return powersController.getPowerByKillerName(req, res);
             }
         })
