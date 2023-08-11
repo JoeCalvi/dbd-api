@@ -11,7 +11,7 @@ module.exports = function (app) {
         .get((req, res) => {
             // ?realm_name=realm_name
             // will return that specific realm's map collection
-            if (req.query.realmName) {
+            if (req.query.realm_name) {
                 return mapsController.getMapsByRealmName(req, res);
             }
         })

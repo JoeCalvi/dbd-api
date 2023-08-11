@@ -67,20 +67,20 @@ exports.getMapById = async function (req, res) {
 exports.getMapsByRealmName = async function (req, res) {
     try {
         const query = req.query;
-        const name = query.realmName.replaceAll('-', ' ').toLowerCase();
-        const realms = await Realm.find()
+        const realm_name = query.realm_name.replace(/-/g, ' ').toLowerCase();
+        const realms = await Realm.find({})
             .populate({ path: 'maps',
             populate: { path: 'chapter', select: 'name number release_date associated_killers associated_survivors',
             populate: { path: 'associated_killers', select: 'killer_name portrait' }}})
             .populate({ path: 'maps',
             populate: { path: 'chapter', select: 'name number release_date associated_killers associated_survivors',
             populate: { path: 'associated_survivors', select: 'name portrait' }}});
-        const realm = realms.find(r => r.name.toLowerCase() == name);
-        const maps = realm.maps
+        const realm = realms.find(r => r.name.toLowerCase() == realm_name);
+        const maps = realm.maps;
 
         return res.send(maps);
     } catch (error) {
-        res.send(error)
+        res.send(error);
     }
 };
 
