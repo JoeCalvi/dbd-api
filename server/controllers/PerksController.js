@@ -269,32 +269,37 @@ exports.getPerkByName = async function (req, res) {
 
 exports.getPerksByCharacterName = async function (req, res) {
     try {
-        const query = req.query
+        const query = req.query;
         const query_name = query.characterName;
-        console.log("query: ", query_name)
+        console.log("query: ", query_name);
         const adjusted_name = await query_name.replaceAll("-", " ");
+        console.log("adjusted name: ", adjusted_name);
         const name_array = await adjusted_name.split(" ");
-        for (let i = 0; i < name_array.length; i++) {
-            if (name_array[i].charAt(0) == "'") {
-                name_array[i] = await name_array[i].replace(name_array[i].charAt(1), name_array[i].charAt(1).toUpperCase())
+        console.log("name array: ", name_array);
+
+        for await (const word of name_array) {
+            if (word.charAt(0) == "'") {
+                word = await word.replace(word.charAt(1), word.charAt(1).toUpperCase())
             } else {
-                name_array[i] = await name_array[i].replace(name_array[i].charAt(0), name_array[i].charAt().toUpperCase())
+                word = await word.replace(word.charAt(0), word.charAt().toUpperCase())
             }
         }
         const character_name = encodeURIComponent(name_array.join(" "));
         console.log("name: ", character_name);
         const character_perks = [];
         const killer = await Killer.findOne({ killer_name: character_name })
+        console.log("killer: ", killer.killer_name)
         const survivor = await Survivor.findOne({ name: character_name })
+        console.log("survivor: ", survivor.name)
 
         if (killer) {
             const perks = await Perk.find({ killer_id: killer._id})
                 .populate('associated_status_effects', 'name type icon')
                 .populate('chapter', 'name number release_date');
 
-            perks.forEach(p => {
-                character_perks.push(p);
-            });
+            for await (const perk of perks) {
+                character_perks.push(perk);
+            }
         }
 
         if (survivor) {
@@ -302,9 +307,9 @@ exports.getPerksByCharacterName = async function (req, res) {
                 .populate('associated_status_effects', 'name type icon')
                 .populate('chapter', 'name number release_date');
 
-            perks.forEach(p => {
-                character_perks.push(p);
-            });
+                for await (const perk of perks) {
+                    character_perks.push(perk);
+                }
         }
 
         console.log("perks: ", character_perks)
