@@ -4,7 +4,7 @@ const cors = require('cors');
 
 const express = require('express'),
     app = express(),
-    port = process.env.PORT || '',
+    port = process.env.PORT || '3000',
     mongoose = require('mongoose'),
     Perk = require('./models/Perk'),
     Survivor = require('./models/Survivor'),
@@ -22,7 +22,7 @@ const httpServer = createServer(app);
 mongoose.Promise = global.Promise;
 DbConnection.connect();
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const allowedOrigins = [
