@@ -272,25 +272,26 @@ exports.getPerksByCharacterName = async function (req, res) {
         const query = req.query;
         const query_name = query.characterName;
         console.log("query: ", query_name);
-        const adjusted_name = await query_name.replace(/-/g, ' ');
-        console.log("adjusted name: ", adjusted_name);
+        const character_name = await query_name.replace(/-/g, ' ');
+        console.log("adjusted name: ", character_name);
         const character_perks = [];
 
-        // const killer = await Killer.find({ killer_name: character_name })
-        // console.log("killer: ", killer)
+        const killers = await Killer.find()
+        const killer = killers.find(k => k.killer_name == character_name)
+        console.log("killer: ", killer)
         const survivors = await Survivor.find()
-        const survivor = survivors.find(s => s.name == adjusted_name)
+        const survivor = survivors.find(s => s.name == character_name)
         console.log("survivor: ", survivor)
 
-        // if (killer) {
-        //     const perks = await Perk.find({ killer_id: killer._id})
-        //         .populate('associated_status_effects', 'name type icon')
-        //         .populate('chapter', 'name number release_date');
+        if (killer) {
+            const perks = await Perk.find({ killer_id: killer._id})
+                .populate('associated_status_effects', 'name type icon')
+                .populate('chapter', 'name number release_date');
 
-        //     for await (const perk of perks) {
-        //         character_perks.push(perk);
-        //     }
-        // }
+            for await (const perk of perks) {
+                character_perks.push(perk);
+            }
+        }
 
         if (survivor) {
             const perks = await Perk.find({ survivor_id: survivor._id })
