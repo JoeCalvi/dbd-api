@@ -12,31 +12,39 @@
 <body>
   <header>
     <div class="container-fluid h-100 w-100">
-      <div class="row h-100 m-auto justify-content-center">
+      <!-- SECTION desktop -->
+      <div class="row h-100 m-auto d-none d-md-block justify-content-center">
         <div class="col-12 h-100 d-flex justify-content-center align-items-center">
           <h1 class="text-dbd">Welcome to my Dead By Daylight API!</h1>
+        </div>
+      </div>
+      <!-- SECTION mobile -->
+      <div class="row h-100 m-auto d-block d-md-none justify-content-center">
+        <div class="col-12 h-100 d-flex flex-column justify-content-center align-items-center">
+          <h3 class="text-dbd mb-1">Welcome to my</h3>
+          <h3 class="text-dbd mb-1">Dead By Daylight API!</h3>
         </div>
       </div>
     </div>
   </header>
   <main>
     <div class="container-fluid h-100 w-100">
-      <div class="row w-100 h-25 justify-content-center">
-        <div class="col-10 h-100 d-flex justify-content-center align-items-center">
+      <div class="row w-100 m-auto mt-3 justify-content-center">
+        <div class="col-md-10 d-flex justify-content-center align-items-center">
           <p class="text-dbd introduction">
             Hello, fellow traverser of the fog! I couldn't find a reliable, up-to-date Dead By Daylight API and needed a project to work on, so I bring this offering. My goal was for this API to be a robust wealth of Dead By Daylight data for other developers to utilize in their own endeavors. I will do my best to update data as it is adjusted per update, but alas, I am human and may miss some things. Some TODOs include: items, offerings, and add-ons. If you need any further explanation on how this API works, please refer to this <a class="text-dbd" href="https://github.com/JoeCalvi/dbd-api/blob/master/README.md">README</a>. Otherwise, if you have any comments, feedback, or you just want to share something you built while using this API, please feel free to reach out to me <a class="text-dbd" href="https://joecalvi.dev">here</a>. All rights to any and all of this information belong to Behaviour Interactive, and I do not claim to be the author of any of it. Thank you for stopping by and good luck in your next one!
           </p>
         </div>
       </div>
-      <div class="row h-75 m-auto justify-content-center align-items-center mb-3">
-        <div class="col-10 mb-3">
-          <div class="w-100">
-            <a class="text-decoration-underline text-dbd" data-bs-toggle="collapse" href="#survivor_routes" role="button" aria-expanded="false" aria-controls="survivor_routes">
-              <h4>Survivor Routes</h4>              
-            </a>
-            <div class="collapse" id="survivor_routes">
+      <div class="row m-auto my-3 justify-content-center align-items-center">
+        <a class="text-decoration-underline text-dbd m-auto mb-3" data-bs-toggle="collapse" href="#survivor_routes" role="button" aria-expanded="false" aria-controls="survivor_routes">
+          <h4 class="text-center">Survivor Routes</h4>              
+        </a>
+        <div class="col-12 d-flex justify-content-center mb-3">
+            <div class="collapse w-100" id="survivor_routes">
+              <!-- SECTION desktop -->
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/survivors</h5>
                 </div>
@@ -44,8 +52,19 @@
                   <p class="text-end mb-0">returns all survivors</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/survivors</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns all survivors</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/survivors/survivor_id</h5>
                 </div>
@@ -53,8 +72,19 @@
                   <p class="text-end mb-0">returns a specific survivor based on their unique id</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/survivors/survivor_id</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns a survivor based on their unique id</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/survivors/query?survivor_name=name</h5>
                 </div>
@@ -62,80 +92,27 @@
                   <p class="text-end mb-0">returns a specific survivor based on name query</p>
                 </div>
               </div>
-              <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
+              <!-- SECTION mobile -->
+              <div
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/survivors/query?survivor_name=name</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns a survivor based on name query</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div class="row w-100 d-none d-md-flex justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <h5 class="text-center">Example Survivor:</h5>
-                <a href="https://deadbydaylight-api.onrender.com/survivors/64caf026da2e1eb56296d9a7" class="text-center text-dbd">https://deadbydaylight-api.onrender.com/survivors/64caf026da2e1eb56296d9a7</a>
-                <pre class="w-100">
-                  <code>
-                    {
-                      "_id": "64caf026da2e1eb56296d9a7",
-                      "role": "Founding Member of S.T.A.R.S.",
-                      "name": "Jill Valentine",
-                      "overview": "Jill Valentine is a founding member of S.T.A.R.S who has triumphed over countless bio-organic weapons. Her personal Perks - Counterforce, Resurgence, and Blast Mine - allow her to indirectly fight back, while offering strong support to her teammates.",
-                      "chapter_id": "64cae34c0faca2101c26d747",
-                      "gender": "Female",
-                      "voice_actor": "Chaney Crabb (The Monster Factory)",
-                      "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/99/S26_charSelect_portrait.png/revision/latest?cb=20230705184445",
-                      "perk_one_id": "64cc24d2875261f22dea2425",
-                      "perk_two_id": "64cc24f2875261f22dea242b",
-                      "perk_three_id": "64cc254d875261f22dea242e",
-                      "createdAt": "2023-08-03T00:09:10.949Z",
-                      "updatedAt": "2023-08-04T19:45:42.389Z",
-                      "__v": 0,
-                      "chapter": {
-                          "_id": "64cae34c0faca2101c26d747",
-                          "name": "Resident Evil™",
-                          "number": 20,
-                          "release_date": "15 June 2021 (Tuesday)",
-                          "realm_id": "64d12fd90d0691dad2bd673f",
-                          "associated_killers": [
-                              {
-                                  "_id": "64c80a2306b9522e7355842c",
-                                  "killer_name": "The Nemesis",
-                                  "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/84/K24_charSelect_portrait.png/revision/latest?cb=20230705184123",
-                                  "id": "64c80a2306b9522e7355842c"
-                              }
-                          ],
-                          "realm": {
-                              "_id": "64d12fd90d0691dad2bd673f",
-                              "name": "Raccoon City",
-                              "location": "Arklay County, United States",
-                              "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ad/RealmKeyArt_16.png/revision/latest?cb=20210920233023",
-                              "id": "64d12fd90d0691dad2bd673f"
-                          },
-                          "id": "64cae34c0faca2101c26d747"
-                      },
-                      "perk_one": {
-                          "_id": "64cc24d2875261f22dea2425",
-                          "name": "Counterforce",
-                          "associated_status_effects": [],
-                          "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/91/Counterforce.gif/revision/latest?cb=20210525223916",
-                          "description": "You know how to withstand an enemy stronger than you, and it starts with hunting down and knocking out their support. You cleanse Totems 20% faster. Gain another, stackable 20% Cleansing Speed bonus per cleansed Totem. After cleansing a Totem, the Aura of the Totem farthest from you is revealed to you for 2/3/4 seconds.",
-                          "id": "64cc24d2875261f22dea2425"
-                      },
-                      "perk_two": {
-                          "_id": "64cc24f2875261f22dea242b",
-                          "name": "Resurgence",
-                          "associated_status_effects": [],
-                          "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/ce/Resurgence.gif/revision/latest?cb=20210525223948",
-                          "description": "You have come back from near impossible odds...and you will do it again. After being unhooked or unhooking yourself, instantly gain 40/45/50% to your Healing progress.",
-                          "id": "64cc24f2875261f22dea242b"
-                      },
-                      "perk_three": {
-                          "_id": "64cc254d875261f22dea242e",
-                          "name": "Blast Mine",
-                          "associated_status_effects": [],
-                          "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c5/BlastMine.gif/revision/latest?cb=20210525224022",
-                          "description": "When direct combat is not an option, you still find ways to strike back. After repairing Generators for a total of 50%, Blast Mine activates: After continuing to repair any Generator for another 3 seconds, you can press the Active Ability button to install a Trap, which stays active for 100/110/120 seconds. When the Killer damages the Trapped Generator, its Trap explodes, stunning them and blinding anyone nearby. Blast Mine deactivates after triggering successfully or once the timer runs out. The Auras of Trapped Generators are revealed to all Survivors in yellow.",
-                          "id": "64cc254d875261f22dea242e"
-                      },
-                      "id": "64caf026da2e1eb56296d9a7"
-                  }
-                  </code>
-                </pre>
+                <a href="https://deadbydaylight-api.onrender.com/survivors/64caf026da2e1eb56296d9a7" class="text-center text-dbd mb-3">https://deadbydaylight-api.onrender.com/survivors/64caf026da2e1eb56296d9a7</a>
+              </div>
+              <!-- SECTION mobile -->
+              <div class="row w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <h6 class="text-center">Example Survivor:</h6>
+                <a href="https://deadbydaylight-api.onrender.com/survivors/64caf026da2e1eb56296d9a7" class="text-center text-dbd mb-3">.../survivors/64caf026da2e1eb56296d9a7</a>
               </div>
             </div>
-          </div>
         </div>
         <div class="col-10 mb-3">
           <div class="row w-100">
@@ -1260,6 +1237,6 @@
   }
 
   .introduction {
-    text-indent: 80px;
+    text-indent: 40px;
   }
 </style>
