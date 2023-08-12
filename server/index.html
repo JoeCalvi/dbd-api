@@ -472,12 +472,12 @@
               </div>
             </div>
         </div>
-        <div class="col-10 mb-3">
-          <div class="row w-100">
-            <a class="text-decoration-underline text-dbd" data-bs-toggle="collapse" href="#chapter_routes" role="button" aria-expanded="false" aria-controls="chapter_routes">
-              <h4>Chapter Routes</h4>
-            </a>
-            <div class="collapse" id="chapter_routes">
+        <a class="text-decoration-underline text-dbd m-auto mb-2" data-bs-toggle="collapse" href="#chapter_routes" role="button" aria-expanded="false" aria-controls="chapter_routes">
+          <h4 class="text-center">Chapter Routes</h4>
+        </a>
+        <div class="col-12 mb-3">
+            <div class="collapse w-100" id="chapter_routes">
+              <!-- SECTION desktop -->
               <div
                 class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
@@ -487,6 +487,17 @@
                   <p class="text-end mb-0">returns all chapters</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
+              <div
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/chapters</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns all chapters</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
               <div
                 class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
@@ -496,6 +507,17 @@
                   <p class="text-end mb-0">returns a specific chapter based on its unique id</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
+              <div
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/chapters/chapter_id</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns a chapter based on its unique id</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
               <div
                 class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
@@ -505,6 +527,17 @@
                   <p class="text-end mb-0">returns a specific chapter based on its associated killer's name</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
+              <div
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/chapters/query?killer_name=killer_name</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns a chapter based on a killer's name</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
               <div
                 class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
@@ -514,130 +547,27 @@
                   <p class="text-end mb-0">returns a specific chapter based on an associated survivor's name</p>
                 </div>
               </div>
-              <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
+              <!-- SECTION mobile -->
+              <div
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/chapters/query?survivor_name=name</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns a chapter based on a survivor's name</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div class="row w-100 d-none d-md-flex justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <h5 class="text-center">Example Chapter:</h5>
-                <a href="https://deadbydaylight-api.onrender.com/chapters/64cae2140faca2101c26d716" class="text-center text-dbd">https://deadbydaylight-api.onrender.com/chapters/64cae2140faca2101c26d716</a>
-                <pre class="w-100">
-                  <code>
-                    {
-                      "_id": "64cae2140faca2101c26d716",
-                      "name": "Stranger Things",
-                      "number": 13,
-                      "release_date": "17 September 2019 (Tuesday)",
-                      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/fe/StrangerThings_main_header.png/revision/latest?cb=20190919161921",
-                      "realm_id": "64d12f650d0691dad2bd6733",
-                      "associated_killers": [
-                          {
-                              "_id": "64c80624aeb02ae955f8032a",
-                              "killer_name": "The Demogorgon",
-                              "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/6d/K17_charSelect_portrait.png/revision/latest?cb=20230705183602",
-                              "perk_one_id": "64cd440a8290cb86311d6841",
-                              "perk_two_id": "64cd44238290cb86311d6844",
-                              "perk_three_id": "64cd44548290cb86311d6847",
-                              "perk_one": {
-                                  "_id": "64cd440a8290cb86311d6841",
-                                  "name": "Surge",
-                                  "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/83/Surge.gif/revision/latest?cb=20200926200238",
-                                  "id": "64cd440a8290cb86311d6841"
-                              },
-                              "perk_two": {
-                                  "_id": "64cd44238290cb86311d6844",
-                                  "name": "Cruel Limits",
-                                  "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c4/CruelLimits.gif/revision/latest?cb=20200926195220",
-                                  "id": "64cd44238290cb86311d6844"
-                              },
-                              "perk_three": {
-                                  "_id": "64cd44548290cb86311d6847",
-                                  "name": "Mindbreaker",
-                                  "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/21/Mindbreaker.gif/revision/latest?cb=20200506084520",
-                                  "id": "64cd44548290cb86311d6847"
-                              },
-                              "id": "64c80624aeb02ae955f8032a"
-                          }
-                      ],
-                      "associated_survivors": [
-                          {
-                              "_id": "64caee9cda2e1eb56296d96d",
-                              "name": "Nancy Wheeler",
-                              "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/0e/S18_charSelect_portrait.png/revision/latest?cb=20230705184019",
-                              "perk_one_id": "64cc1f45875261f22dea23b7",
-                              "perk_two_id": "64cc1f83875261f22dea23bd",
-                              "perk_three_id": "64cc1fa9875261f22dea23c0",
-                              "perk_one": {
-                                  "_id": "64cc1f45875261f22dea23b7",
-                                  "name": "Better Together",
-                                  "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/78/BetterTogether.gif/revision/latest?cb=20200926195119",
-                                  "id": "64cc1f45875261f22dea23b7"
-                              },
-                              "perk_two": {
-                                  "_id": "64cc1f83875261f22dea23bd",
-                                  "name": "Fixated",
-                                  "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/de/Fixated.gif/revision/latest?cb=20200501133939",
-                                  "id": "64cc1f83875261f22dea23bd"
-                              },
-                              "perk_three": {
-                                  "_id": "64cc1fa9875261f22dea23c0",
-                                  "name": "Inner Strength",
-                                  "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/30/InnerStrength.gif/revision/latest?cb=20200926195639",
-                                  "id": "64cc1fa9875261f22dea23c0"
-                              },
-                              "id": "64caee9cda2e1eb56296d96d"
-                          },
-                          {
-                              "_id": "64caeec0da2e1eb56296d972",
-                              "name": "Steve Harrington",
-                              "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/75/S19_charSelect_portrait.png/revision/latest?cb=20230705183809",
-                              "perk_one_id": "64cc1fd2875261f22dea23c4",
-                              "perk_two_id": "64cc1ff0875261f22dea23ca",
-                              "perk_three_id": "64cc2012875261f22dea23cd",
-                              "perk_one": {
-                                  "_id": "64cc1fd2875261f22dea23c4",
-                                  "name": "Babysitter",
-                                  "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/7b/Babysitter.gif/revision/latest?cb=20200926195041",
-                                  "id": "64cc1fd2875261f22dea23c4"
-                              },
-                              "perk_two": {
-                                  "_id": "64cc1ff0875261f22dea23ca",
-                                  "name": "Camaraderie",
-                                  "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/16/Camaraderie.gif/revision/latest?cb=20200501133925",
-                                  "id": "64cc1ff0875261f22dea23ca"
-                              },
-                              "perk_three": {
-                                  "_id": "64cc2012875261f22dea23cd",
-                                  "name": "Second Wind",
-                                  "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/4/41/SecondWind.gif/revision/latest?cb=20200926200032",
-                                  "id": "64cc2012875261f22dea23cd"
-                              },
-                              "id": "64caeec0da2e1eb56296d972"
-                          }
-                      ],
-                      "createdAt": "2023-08-02T23:09:08.891Z",
-                      "updatedAt": "2023-08-09T18:37:38.829Z",
-                      "__v": 2,
-                      "associated_maps": [
-                          {
-                              "_id": "64b98a70b777f1835e65d473",
-                              "name": "The Underground Complex",
-                              "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ab/IconMap_Qat_Laboratory.png/revision/latest?cb=20190903165752",
-                              "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/7f/TheUndergroundComplexOutline.png/revision/latest?cb=20210422193216",
-                              "realm_id": "64d12f650d0691dad2bd6733",
-                              "realm": {
-                                  "_id": "64d12f650d0691dad2bd6733",
-                                  "name": "Hawkins National Laboratory",
-                                  "location": "Indiana, United States",
-                                  "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/b/be/RealmKeyArt_13.png/revision/latest?cb=20210920232949",
-                                  "id": "64d12f650d0691dad2bd6733"
-                              },
-                              "id": "64b98a70b777f1835e65d473"
-                          }
-                      ],
-                      "id": "64cae2140faca2101c26d716"
-                  }
-                  </code>
-                </pre>
+                <a href="https://deadbydaylight-api.onrender.com/chapters/64cae2140faca2101c26d716" class="text-center text-dbd mb-3">https://deadbydaylight-api.onrender.com/chapters/64cae2140faca2101c26d716</a>
+              </div>
+              <!-- SECTION mobile -->
+              <div class="row w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <h6 class="text-center">Example Chapter:</h6>
+                <a href="https://deadbydaylight-api.onrender.com/chapters/64cae2140faca2101c26d716" class="text-center text-dbd mb-3">.../chapters/64cae2140faca2101c26d716</a>
               </div>
             </div>
-          </div>
         </div>
         <div class="col-10 mb-3">
           <div class="row w-100">
