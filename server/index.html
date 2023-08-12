@@ -191,14 +191,14 @@
               </div>
             </div>
         </div>
-        <div class="col-10 mb-3">
-          <div class="row w-100">
-            <a class="text-decoration-underline text-dbd" data-bs-toggle="collapse" href="#perk_routes" role="button" aria-expanded="false" aria-controls="perk_routes">
-              <h4>Perk Routes</h4>
-            </a>
-            <div class="collapse" id="perk_routes">
+        <a class="text-decoration-underline text-dbd m-auto mb-2" data-bs-toggle="collapse" href="#perk_routes" role="button" aria-expanded="false" aria-controls="perk_routes">
+          <h4 class="text-center">Perk Routes</h4>
+        </a>
+        <div class="col-12 mb-3">
+            <div class="collapse w-100" id="perk_routes">
+              <!-- SECTION desktop -->
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/perks</h5>
                 </div>
@@ -206,8 +206,19 @@
                   <p class="text-end mb-0">returns all perks</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/perks</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns all perks</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/perks/perk_id</h5>
                 </div>
@@ -215,8 +226,19 @@
                   <p class="text-end mb-0">returns a specific perk based on its unique id</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/perks/perk_id</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns a perk based on its unique id</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/perks/generic</h5>
                 </div>
@@ -224,8 +246,19 @@
                   <p class="text-end mb-0">returns all generic perks</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/perks/generic</h6>
+                </div>
+                <div class="col-md-6">
+                  <p class="text-center">returns all generic perks</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/perks/survivor</h5>
                 </div>
@@ -233,8 +266,19 @@
                   <p class="text-end mb-0">returns all survivor perks</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/perks/survivor</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns all survivor perks</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/perks/survivor/generic</h5>
                 </div>
@@ -242,8 +286,19 @@
                   <p class="text-end mb-0">returns all generic survivor perks</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/perks/survivor/generic</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns all generic survivor perks</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/perks/killer</h5>
                 </div>
@@ -251,8 +306,19 @@
                   <p class="text-end mb-0">returns all killer perks</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/perks/killer</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns all killer perks</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/perks/killer/generic</h5>
                 </div>
@@ -260,8 +326,19 @@
                   <p class="text-end mb-0">returns all generic killer perks</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/perks/killer/generic</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns all generic killer perks</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/character_id/perks</h5>
                 </div>
@@ -270,8 +347,19 @@
                   <br>(survivor or killer)</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/character_id/perks</h6>
+                </div>
+                <div class="col-md-6 d-flex flex-column p-0">
+                  <p class="text-center">returns a set of perks based on character's id</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/perks/query?perk_name=perk_name</h5>
                 </div>
@@ -279,8 +367,19 @@
                   <p class="text-end mb-0">returns a specific perk based on perk name query</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/perks/query?perk_name=perk_name</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns a perk based on name query</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/perks/query?type=perk_type</h5>
                 </div>
@@ -290,8 +389,19 @@
                   (supports queries: 'hex', 'boon', 'scourge', & 'teamwork')</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/perks/query?type=perk_type</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns all perks of that type (e.g., 'hex')</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/perks/query?character_name=character_name</h5>
                 </div>
@@ -300,8 +410,19 @@
                   <br>(survivor or killer)</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/perks/query?character_name=name</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns perks based on character's name</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/perks/query?status_effect=name</h5>
                 </div>
@@ -309,8 +430,19 @@
                   <p class="text-end mb-0">returns all perks associated with specific status effect based on its name</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/perks/query?status_effect=name</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns perks associated with status effect</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/perks/query?status_effect=name&role=role</h5>
                 </div>
@@ -318,67 +450,27 @@
                   <p class="text-end mb-0">returns all perks associated with specific status effect based on its name, also specific to either 'killer' or 'survivor' role</p>
                 </div>
               </div>
-              <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
+              <!-- SECTION mobile -->
+              <div
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/perks/query?status_effect=name&role=role</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">above, but specific to 'killer' or 'survivor' role</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div class="row w-100 d-none d-md-flex justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <h5 class="text-center">Example Perk:</h5>
-                <a href="https://deadbydaylight-api.onrender.com/perks/64cc228b875261f22dea23e8" class="text-center text-dbd">https://deadbydaylight-api.onrender.com/perks/64cc228b875261f22dea23e8</a>
-                <pre class="w-100">
-                  <code>
-                    {
-                      "_id": "64cc228b875261f22dea23e8",
-                      "role": "Survivor",
-                      "name": "For the People",
-                      "generic": false,
-                      "killer_id": null,
-                      "survivor_id": "64caef25da2e1eb56296d984",
-                      "chapter_id": "64cae2650faca2101c26d724",
-                      "associated_status_effects": [
-                          {
-                              "_id": "64cbde5e14056587889cc444",
-                              "name": "Broken",
-                              "type": "Debuff",
-                              "description": "Survivors suffering from Broken are unable to be healed or heal themselves past the Injured State.",
-                              "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/91/FulliconStatusEffects_broken.png/revision/latest?cb=20210212000622"
-                          }
-                      ],
-                      "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/27/ForThePeople.gif/revision/latest?cb=20200501133846",
-                      "description": "You risk life and injury for others. While healthy and healing another Survivor without using a Med-Kit, press the Active Ability button to activate For the People: Trades 1 Health State with the other Survivor. Heals a Survivor from the Dying State to the Injured State or heals a Survivor from the Injured State to Healthy State. You become injured and suffer from the Broken Status Effect for the next 80/70/60 seconds. You become the Killer's Obsession, if not already. Reduces the Odds of becoming the initial Obsession of the Killer by 100%. The Killer can only be obsessed with one Survivor at a time.",
-                      "createdAt": "2023-08-03T21:56:27.411Z",
-                      "updatedAt": "2023-08-03T21:56:27.411Z",
-                      "__v": 0,
-                      "survivor": {
-                          "_id": "64caef25da2e1eb56296d984",
-                          "name": "Zarina Kassir",
-                          "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/3d/S21_charSelect_portrait.png/revision/latest?cb=20230705194316",
-                          "perk_one_id": "64cc2240875261f22dea23de",
-                          "perk_two_id": "64cc2263875261f22dea23e5",
-                          "perk_one": {
-                              "_id": "64cc2240875261f22dea23de",
-                              "name": "Off the Record",
-                              "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/4/4f/OffTheRecord.gif/revision/latest?cb=20200926195843",
-                              "id": "64cc2240875261f22dea23de"
-                          },
-                          "perk_two": {
-                              "_id": "64cc2263875261f22dea23e5",
-                              "name": "Red Herring",
-                              "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/d5/RedHerring.gif/revision/latest?cb=20200926200003",
-                              "id": "64cc2263875261f22dea23e5"
-                          },
-                          "id": "64caef25da2e1eb56296d984"
-                      },
-                      "chapter": {
-                          "_id": "64cae2650faca2101c26d724",
-                          "name": "Chains of Hate",
-                          "number": 15,
-                          "release_date": "10 March 2020 (Tuesday)",
-                          "id": "64cae2650faca2101c26d724"
-                      },
-                      "id": "64cc228b875261f22dea23e8"
-                  }
-                  </code>
-                </pre>
+                <a href="https://deadbydaylight-api.onrender.com/perks/64cc228b875261f22dea23e8" class="text-center text-dbd mb-3">https://deadbydaylight-api.onrender.com/perks/64cc228b875261f22dea23e8</a>
+              </div>
+              <!-- SECTION mobile -->
+              <div class="row w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <h6 class="text-center">Example Perk:</h6>
+                <a href="https://deadbydaylight-api.onrender.com/perks/64cc228b875261f22dea23e8" class="text-center text-dbd mb-3">.../perks/64cc228b875261f22dea23e8</a>
               </div>
             </div>
-          </div>
         </div>
         <div class="col-10 mb-3">
           <div class="row w-100">
@@ -387,7 +479,7 @@
             </a>
             <div class="collapse" id="chapter_routes">
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/chapters</h5>
                 </div>
@@ -396,7 +488,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/chapters/chapter_id</h5>
                 </div>
@@ -405,7 +497,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/chapters/query?killer_name=killer_name</h5>
                 </div>
@@ -414,7 +506,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/chapters/query?survivor_name=name</h5>
                 </div>
@@ -554,7 +646,7 @@
             </a>
             <div class="collapse" id="realm_routes">
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/realms</h5>
                 </div>
@@ -563,7 +655,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/realms/realm_id</h5>
                 </div>
@@ -572,7 +664,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/realms/query?killer_name=killer_name</h5>
                 </div>
@@ -683,7 +775,7 @@
             </a>
             <div class="collapse" id="map_routes">
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/maps</h5>
                 </div>
@@ -692,7 +784,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/maps/map_id</h5>
                 </div>
@@ -701,7 +793,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/realm_id/maps</h5>
                 </div>
@@ -710,7 +802,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/maps/query?realm_name=name</h5>
                 </div>
@@ -779,7 +871,7 @@
             </a>
             <div class="collapse" id="power_routes">
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/powers</h5>
                 </div>
@@ -788,7 +880,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/powers/power_id</h5>
                 </div>
@@ -797,7 +889,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/killer_id/power</h5>
                 </div>
@@ -806,7 +898,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/powers/query?killer_name=name</h5>
                 </div>
@@ -904,7 +996,7 @@
             </a>
             <div class="collapse" id="weapon_routes">
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/weapons</h5>
                 </div>
@@ -913,7 +1005,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/weapons/weapon_id</h5>
                 </div>
@@ -922,7 +1014,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/weapons/query?killer_name=killer_name</h5>
                 </div>
@@ -975,7 +1067,7 @@
             </a>
             <div class="collapse" id="status_effect_routes">
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/status_effects</h5>
                 </div>
@@ -984,7 +1076,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/status_effects/status_effect_id</h5>
                 </div>
@@ -993,7 +1085,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/status_effects/buffs</h5>
                 </div>
@@ -1002,7 +1094,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/status_effects/debuffs</h5>
                 </div>
@@ -1011,7 +1103,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/survivor/status_effects</h5>
                 </div>
@@ -1020,7 +1112,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/survivor/status_effects/buffs</h5>
                 </div>
@@ -1029,7 +1121,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/survivor/status_effects/debuffs</h5>
                 </div>
@@ -1038,7 +1130,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/killer/status_effects</h5>
                 </div>
@@ -1047,7 +1139,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/killer/status_effects/buffs</h5>
                 </div>
@@ -1056,7 +1148,7 @@
                 </div>
               </div>
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/killer/status_effects/debuffs</h5>
                 </div>
@@ -1098,7 +1190,8 @@
 <style scoped>
   header {
     height: 80px;
-    background-color: #860000;
+    background: rgb(101,1,1);
+    background: linear-gradient(0deg, rgba(101,1,1,1) 0%, rgba(67,1,1,1) 77%);
   }
 
   main {
@@ -1110,7 +1203,8 @@
 
   footer {
     height: 65px;
-    background-color: #860000;
+    background: rgb(101,1,1);
+    background: linear-gradient(0deg, rgba(101,1,1,1) 0%, rgba(67,1,1,1) 77%);
   }
 
   .text-dbd {
