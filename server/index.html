@@ -37,7 +37,7 @@
         </div>
       </div>
       <div class="row m-auto my-3 justify-content-center align-items-center">
-        <a class="text-decoration-underline text-dbd m-auto mb-3" data-bs-toggle="collapse" href="#survivor_routes" role="button" aria-expanded="false" aria-controls="survivor_routes">
+        <a class="text-decoration-underline text-dbd m-auto mb-1" data-bs-toggle="collapse" href="#survivor_routes" role="button" aria-expanded="false" aria-controls="survivor_routes">
           <h4 class="text-center">Survivor Routes</h4>              
         </a>
         <div class="col-12 d-flex justify-content-center mb-3">
@@ -114,14 +114,14 @@
               </div>
             </div>
         </div>
-        <div class="col-10 mb-3">
-          <div class="row w-100">
-            <a class="text-decoration-underline text-dbd" data-bs-toggle="collapse" href="#killer_routes" role="button" aria-expanded="false" aria-controls="killer_routes">
-              <h4>Killer Routes</h4>
-            </a>
-            <div class="collapse" id="killer_routes">
+        <a class="text-decoration-underline text-dbd m-auto mb-2" data-bs-toggle="collapse" href="#killer_routes" role="button" aria-expanded="false" aria-controls="killer_routes">
+          <h4 class="text-center">Killer Routes</h4>
+        </a>
+        <div class="col-12 d-flex justify-content-center mb-3">
+            <div class="collapse w-100" id="killer_routes">
+              <!-- SECTION desktop -->
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/killers</h5>
                 </div>
@@ -129,8 +129,19 @@
                   <p class="text-end mb-0">returns all killers</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class=" text-center mb-0">/killers</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns all killers</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/killers/killer_id</h5>
                 </div>
@@ -138,8 +149,19 @@
                   <p class="text-end mb-0">returns a specific killer based on their unique id</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
               <div
-                class="row route-block w-100 d-flex justify-content-between align-items-center border-bottom border-bottom-light mb-3">
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/killers/killer_id</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns a killer based on their unique id</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div
+                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
                   <h5 class="mb-0">/killers/query?killer_name=killer_name</h5>
                 </div>
@@ -147,147 +169,27 @@
                   <p class="text-end mb-0">returns a specific killer based on name query</p>
                 </div>
               </div>
-              <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
+              <!-- SECTION mobile -->
+              <div
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/killers/query?killer_name=killer_name</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns a killer based on name query</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div class="row w-100 d-none d-md-flex justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <h5 class="text-center">Example Killer:</h5>
-                <a href="https://deadbydaylight-api.onrender.com/killers/64c80a2306b9522e7355842c" class="text-center text-dbd">https://deadbydaylight-api.onrender.com/killers/64c80a2306b9522e7355842c</a>
-                <pre class="w-100">
-                  <code>
-                    {
-                      "_id": "64c80a2306b9522e7355842c",
-                      "killer_name": "The Nemesis",
-                      "original_name": "Nemesis T-Type",
-                      "realm_id": "64d12fd90d0691dad2bd673f",
-                      "power_id": "64c2c85c29009060f7108d11",
-                      "power_attack_type": "Special Attack (Tentacle)",
-                      "weapon_id": "64b8696d5a1f577cae34311b",
-                      "movement_speed": "115% | 4.6 m/s; 150% | 95% | 3.8 m/s (MR1/MR2 Tentacle Strike); 100% | 4 m/s (MR3 Tentacle Strike)",
-                      "terror_radius": "32 metres",
-                      "height": "Tall",
-                      "overview": "The Nemesis is an unrelenting Killer, capable of attacking at mid-range with his tentacle, while receiving support from Zombies roaming the area. His personal Perks - Lethal Pursuer, Hysteria, and Eruption - allow him to quickly ambush Survivors, while sowing confusion and fear when injuring and hooking them.",
-                      "difficulty_rating": "Hard (These Killers use mechanics that are specific to them and require more practice to be effective)",
-                      "chapter_id": "64cae34c0faca2101c26d747",
-                      "gender": "Male",
-                      "voice_actor": "Sébastien Croteau (Nemesis); Roxana B.L. (Female Zombie); David A.B. (Male Zombie) (The Monster Factory)",
-                      "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/84/K24_charSelect_portrait.png/revision/latest?cb=20230705184123",
-                      "perk_one_id": "64cd4a05f0c0af436a33ddd2",
-                      "perk_two_id": "64cd4a31f0c0af436a33ddd5",
-                      "perk_three_id": "64cd4aa5f0c0af436a33ddd8",
-                      "createdAt": "2023-07-31T19:23:15.358Z",
-                      "updatedAt": "2023-08-07T18:19:18.906Z",
-                      "__v": 0,
-                      "perk_one": {
-                          "_id": "64cd4a05f0c0af436a33ddd2",
-                          "name": "Lethal Pursuer",
-                          "associated_status_effects": [],
-                          "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/03/LethalPursuer.gif/revision/latest?cb=20210526185500",
-                          "description": "You have been designed to track down and eliminate targets. At the start of the Trial, the Auras of all Survivors are revealed to you for 7/8/9 seconds. Extends the duration of a Survivor's Aura being revealed to you by +2 seconds. Lethal Pursuer benefits from its own effect.",
-                          "id": "64cd4a05f0c0af436a33ddd2"
-                      },
-                      "perk_two": {
-                          "_id": "64cd4a31f0c0af436a33ddd5",
-                          "name": "Hysteria",
-                          "associated_status_effects": [
-                              {
-                                  "_id": "64cbe2de14056587889cc45e",
-                                  "name": "Oblivious",
-                                  "type": "Debuff",
-                                  "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/cf/FulliconStatusEffects_oblivious.png/revision/latest?cb=20210212000636"
-                              }
-                          ],
-                          "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/20/Hysteria.gif/revision/latest?cb=20210526185454",
-                          "description": "You know how to brutalise one member of a team to cause a panic. Whenever you put a healthy Survivor into the Injured State, all injured Survivors suffer from the Oblivious Status Effect for 20/25/30 seconds. Hysteria has a cool-down of 30 seconds.",
-                          "id": "64cd4a31f0c0af436a33ddd5"
-                      },
-                      "perk_three": {
-                          "_id": "64cd4aa5f0c0af436a33ddd8",
-                          "name": "Eruption",
-                          "associated_status_effects": [],
-                          "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e1/Eruption.gif/revision/latest?cb=20210526185449",
-                          "description": "The NE-a parasite provides you with the intelligence and awareness needed to set a trap. Performing the Damage Generator Action on a Generator applies Eruption: All affected Generators are highlighted to you in yellow. The next time any Survivor enters the Dying State by any means, all affected Generators explode and immediately start regressing, which removes the highlighted Aura. Instantly regresses the Generator by 10% of its maximum possible Progression. Causes all Survivors repairing the afflicted Generators to scream and reveal their Aura to you for 8/10/12 seconds. Eruption has a cooldown of 30 seconds.",
-                          "id": "64cd4aa5f0c0af436a33ddd8"
-                      },
-                      "weapon": {
-                          "_id": "64b8696d5a1f577cae34311b",
-                          "name": "Raw Fists",
-                          "description": "Powerful arms to overpower targets swiftly. Upon hitting a Survivor, The Nemesis will randomly either examine his fist, letting the Survivor's blood run down it, and clench it afterwards or he will roar instead of examining his fist.",
-                          "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/ea/K24_W01.png/revision/latest?cb=20210526123840",
-                          "id": "64b8696d5a1f577cae34311b"
-                      },
-                      "realm": {
-                          "_id": "64d12fd90d0691dad2bd673f",
-                          "name": "Raccoon City",
-                          "location": "Arklay County, United States",
-                          "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ad/RealmKeyArt_16.png/revision/latest?cb=20210920233023",
-                          "id": "64d12fd90d0691dad2bd673f"
-                      },
-                      "power": {
-                          "_id": "64c2c85c29009060f7108d11",
-                          "name": "T-Virus",
-                          "description": "Your Power expands as your Mutation Rate grows. Filling the Power gauge with Contamination points from attacking Survivors or Zombies with his Power increases The Nemesis' Mutation Rate. Mutation Rate 1: No special benefits. Mutation Rate 2: Tentacle Strike can destroy Breakable Walls and Pallets. Mutation Rate 3: Increases the reach of the Tentacle Strike from 5 metres to 6 metres. Increases the Movement speed of The Nemesis while charging a Tentacle Strike from 3.8 m/s to 4.0 m/s.",
-                          "special_interaction": "Vaccine",
-                          "interaction_description": "Survivors can be cured from Contamination by using a Vaccine on either themselves or on other Survivors. A limited number of Vaccines can be found inside Supply Cases, 4 of which are placed randomly in the environment. Each Vaccine may only be used 1 time. All Supply Cases still containing their Vaccine are highlighted to Contaminated Survivors in white. Using the Vaccine briefly reveals the Survivor's location through Killer Instinct.",
-                          "special_ability": null,
-                          "ability_description": null,
-                          "special_object": null,
-                          "object_description": null,
-                          "special_affliction": "Contamination",
-                          "affliction_description": "Survivors afflicted with Contamination are susceptible to damage from both The Nemesis' Tentacle Strike, as well as attacks from his Zombies. Contaminated Survivors will also occasionally cough.",
-                          "mobility_description": null,
-                          "special_attack": "Tentacle Strike",
-                          "attack_description": "Press and hold the Power button to charge an attack, then tap the Attack button to unleash a Tentacle Strike. Hitting a Survivor with a Tentacle Strike afflicts them with Contamination and adds 3 Contamination points to the Power gauge. Hitting a Survivor already afflicted with Contamination with a Tentacle Strike will damage them, but add just 1 Contamination point to the Power gauge. Hitting a Survivor with a Tentacle Strike, regardless of their Contamination status, suffer very briefly from the Hindered Status Effect.",
-                          "special_state": null,
-                          "state_description": null,
-                          "special_enemy": "Zombies",
-                          "enemy_description": "T-Virus causes 2 Zombies to spawn in and roam about the Trial Grounds. The Zombies can attack Survivors when they come too close, but abide by the same conditions as a Tentacle Strike. The Nemesis can wilfully destroy a Zombie to add 1 Contamination point to his Power gauge. Destroying them using a Basic Attack yields no such reward. This can be used to manually cause the Zombies to respawn in a different location in the Trial Grounds. Survivors have limited options to interact with Zombies: Blinding them to lose line-of-sight using Flashlights, Firecrackers, or Flash Grenades. Destroying them to force a respawn using Pallets or Head On. The Zombies respawn after 12 seconds if they were destroyed by The Nemesis and after 45 seconds if they were destroyed by Survivors.",
-                          "special_effect": null,
-                          "effect_description": null,
-                          "id": "64c2c85c29009060f7108d11"
-                      },
-                      "chapter": {
-                          "_id": "64cae34c0faca2101c26d747",
-                          "name": "Resident Evil™",
-                          "number": 20,
-                          "release_date": "15 June 2021 (Tuesday)",
-                          "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/20/ResidentEvil_main_header.png/revision/latest?cb=20210527171803",
-                          "associated_survivors": [
-                              {
-                                  "_id": "64caf026da2e1eb56296d9a7",
-                                  "name": "Jill Valentine",
-                                  "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/99/S26_charSelect_portrait.png/revision/latest?cb=20230705184445",
-                                  "id": "64caf026da2e1eb56296d9a7"
-                              },
-                              {
-                                  "_id": "64caf046da2e1eb56296d9ae",
-                                  "name": "Leon Scott Kennedy",
-                                  "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/5d/S27_charSelect_portrait.png/revision/latest?cb=20230705184450",
-                                  "id": "64caf046da2e1eb56296d9ae"
-                              }
-                          ],
-                          "associated_maps": [
-                              {
-                                  "_id": "64b98bd7b777f1835e65d48e",
-                                  "name": "Raccoon City Police Station East Wing",
-                                  "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/68/IconMap_Ecl_Eclipselevel01.png/revision/latest?cb=20210525214446",
-                                  "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/cd/RaccoonCityPoliceStationEastWingOutline_LowerFloor.png/revision/latest?cb=20220811122134 (Lower Floor); https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e9/RaccoonCityPoliceStationEastWingOutline_UpperFloor.png/revision/latest?cb=20220811122147 (Upper Floor)",
-                                  "id": "64b98bd7b777f1835e65d48e"
-                              },
-                              {
-                                  "_id": "64b98c22b777f1835e65d492",
-                                  "name": "Raccoon City Police Station West Wing",
-                                  "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/fa/IconMap_Ecl_Orionlevel01.png/revision/latest?cb=20220810155724",
-                                  "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/2f/RaccoonCityPoliceStationWestWingOutline_LowerFloor.png/revision/latest?cb=20220811122205 (Lower Floor); https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/97/RaccoonCityPoliceStationWestWingOutline_UpperFloor.png/revision/latest?cb=20220811122217 (Upper Floor)",
-                                  "id": "64b98c22b777f1835e65d492"
-                              }
-                          ],
-                          "id": "64cae34c0faca2101c26d747"
-                      },
-                      "id": "64c80a2306b9522e7355842c"
-                  }
-                  </code>
-                </pre>
+                <a href="https://deadbydaylight-api.onrender.com/killers/64c80a2306b9522e7355842c" class="text-center text-dbd mb-3">https://deadbydaylight-api.onrender.com/killers/64c80a2306b9522e7355842c</a>
+              </div>
+              <!-- SECTION mobile -->
+              <div class="row w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <h6 class="text-center">Example Killer:</h6>
+                <a href="https://deadbydaylight-api.onrender.com/killers/64c80a2306b9522e7355842c" class="text-center text-dbd mb-3">.../killers/64c80a2306b9522e7355842c</a>
               </div>
             </div>
-          </div>
         </div>
         <div class="col-10 mb-3">
           <div class="row w-100">
