@@ -840,78 +840,84 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-10 mb-3">
-          <div class="row w-100">
-            <a class="text-decoration-underline text-dbd m-auto mb-2" data-bs-toggle="collapse" href="#weapon_routes" role="button" aria-expanded="false" aria-controls="weapon_routes">
-              <h4>Weapon Routes</h4>
-            </a>
-            <div class="collapse" id="weapon_routes">
-              <div
-                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
-                <div class="col-md-6 p-0">
-                  <h5 class="mb-0">/weapons</h5>
+          <a class="text-decoration-underline text-dbd m-auto mb-2" data-bs-toggle="collapse" href="#weapon_routes" role="button" aria-expanded="false" aria-controls="weapon_routes">
+            <h4 class="text-center">Weapon Routes</h4>
+          </a>
+          <div class="col-12 mb-3">
+              <div class="collapse w-100" id="weapon_routes">
+                <!-- SECTION desktop -->
+                <div
+                  class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h5 class="mb-0">/weapons</h5>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-end mb-0">returns all killers' weapons</p>
+                  </div>
                 </div>
-                <div class="col-md-6 p-0">
-                  <p class="text-end mb-0">returns all killers' weapons</p>
+                <!-- SECTION mobile -->
+                <div
+                  class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h6 class="text-center mb-0">/weapons</h6>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-center">returns all killers' weapons</p>
+                  </div>
                 </div>
-              </div>
-              <div
-                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
-                <div class="col-md-6 p-0">
-                  <h5 class="mb-0">/weapons/weapon_id</h5>
+                <!-- SECTION desktop -->
+                <div
+                  class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h5 class="mb-0">/weapons/weapon_id</h5>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-end mb-0">returns a specific weapon based on its unique id</p>
+                  </div>
                 </div>
-                <div class="col-md-6 p-0">
-                  <p class="text-end mb-0">returns a specific weapon based on its unique id</p>
+                <!-- SECTION mobile -->
+                <div
+                  class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h6 class="text-center mb-0">/weapons/weapon_id</h6>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-center">returns a weapon based on its unique id</p>
+                  </div>
                 </div>
-              </div>
-              <div
-                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
-                <div class="col-md-6 p-0">
-                  <h5 class="mb-0">/weapons/query?killer_name=killer_name</h5>
+                <!-- SECTION desktop -->
+                <div
+                  class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h5 class="mb-0">/weapons/query?killer_name=killer_name</h5>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-end mb-0">returns a specific weapon based on its associated killer's name</p>
+                  </div>
                 </div>
-                <div class="col-md-6 p-0">
-                  <p class="text-end mb-0">returns a specific weapon based on its associated killer's name</p>
+                <!-- SECTION mobile -->
+                <div
+                  class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h6 class="text-center mb-0">/weapons/query?killer_name=killer_name</h6>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-center">returns a weapon based on its killer's name</p>
+                  </div>
                 </div>
-              </div>
-              <div class="row w-100 d-none d-md-flex justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
-                <h5 class="text-center">Example Weapon:</h5>
-                <a href="https://deadbydaylight-api.onrender.com/weapons/64b861b35a1f577cae3430bd" class="text-center text-dbd">https://deadbydaylight-api.onrender.com/weapons/64b861b35a1f577cae3430bd</a>
-                <pre class="w-100">
-                  <code>
-                    {
-                      "_id": "64b861b35a1f577cae3430bd",
-                      "name": "The Stick",
-                      "description": "An instrument of punishment when all other treatments failed. Upon hitting a Survivor, The Doctor will pat The Stick into his palm twice.",
-                      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/fc/DO_Stick01.png/revision/latest?cb=20170511153703",
-                      "killer_id": "64c460a03b6c0963934100d3",
-                      "createdAt": "2023-07-19T22:20:35.526Z",
-                      "updatedAt": "2023-08-07T17:16:25.506Z",
-                      "__v": 0,
-                      "killer": {
-                          "_id": "64c460a03b6c0963934100d3",
-                          "killer_name": "The Doctor",
-                          "overview": "The Doctor is a madness-inducing Killer, able to use his Power, Carter's Spark, to incapacitate Survivors and cause them to hallucinate and scream in terror, revealing their position. His personal Perks - Overwhelming Presence, Monitor & Abuse, and Overcharge - encourage chases, impact Survivors' ability to repair effectively and make him harder to detect when not in a Chase. His Perks are about hindering and creating problems for the Survivors. The sheer stature of The Doctor infuses fear and terror in those around him.",
-                          "chapter_id": "64cadfc20faca2101c26d6c8",
-                          "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ad/K07_charSelect_portrait.png/revision/latest?cb=20230705190852",
-                          "chapter": {
-                              "_id": "64cadfc20faca2101c26d6c8",
-                              "name": "Spark of Madness",
-                              "number": 4,
-                              "release_date": "11 May 2017 (Thursday)",
-                              "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/39/SparkOfMadness_main_header.jpg/revision/latest?cb=20170512175200",
-                              "id": "64cadfc20faca2101c26d6c8"
-                          },
-                          "id": "64c460a03b6c0963934100d3"
-                      },
-                      "id": "64b861b35a1f577cae3430bd"
-                  }
-                  </code>
-                </pre>
-              </div>
+                <!-- SECTION desktop -->
+                <div class="row w-100 d-none d-md-flex justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <h5 class="text-center">Example Weapon:</h5>
+                  <a href="https://deadbydaylight-api.onrender.com/weapons/64b861b35a1f577cae3430bd" class="text-center text-dbd mb-3">https://deadbydaylight-api.onrender.com/weapons/64b861b35a1f577cae3430bd</a>
+                </div>
+                <!-- SECTION mobile -->
+                <div class="row w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <h6 class="text-center">Example Weapon:</h6>
+                  <a href="https://deadbydaylight-api.onrender.com/weapons/64b861b35a1f577cae3430bd" class="text-center text-dbd mb-3">.../weapons/64b861b35a1f577cae3430bd</a>
+                </div>
             </div>
           </div>
-        </div>
+      </div>
         <div class="col-10 mb-3">
           <div class="row w-100">
             <a class="text-decoration-underline text-dbd m-auto mb-2" data-bs-toggle="collapse" href="#status_effect_routes" role="button" aria-expanded="false" aria-controls="status_effect_routes">
