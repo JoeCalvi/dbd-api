@@ -917,121 +917,222 @@
                 </div>
             </div>
           </div>
-      </div>
-        <div class="col-10 mb-3">
-          <div class="row w-100">
-            <a class="text-decoration-underline text-dbd m-auto mb-2" data-bs-toggle="collapse" href="#status_effect_routes" role="button" aria-expanded="false" aria-controls="status_effect_routes">
-              <h4>Status Effect Routes</h4>
-            </a>
-            <div class="collapse" id="status_effect_routes">
-              <div
-                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
-                <div class="col-md-6 p-0">
-                  <h5 class="mb-0">/status_effects</h5>
+          <a class="text-decoration-underline text-dbd m-auto mb-2" data-bs-toggle="collapse" href="#status_effect_routes" role="button" aria-expanded="false" aria-controls="status_effect_routes">
+            <h4 class="text-center">Status Effect Routes</h4>
+          </a>
+          <div class="col-12 mb-3">
+              <div class="collapse w-100" id="status_effect_routes">
+                <!-- SECTION desktop -->
+                <div
+                  class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h5 class="mb-0">/status_effects</h5>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-end mb-0">returns all status effects</p>
+                  </div>
                 </div>
-                <div class="col-md-6 p-0">
-                  <p class="text-end mb-0">returns all status effects</p>
+                <!-- SECTION mobile -->
+                <div
+                  class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h6 class="text-center mb-0">/status_effects</h6>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-center">returns all status effects</p>
+                  </div>
+                </div>
+                <!-- SECTION desktop -->
+                <div
+                  class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h5 class="mb-0">/status_effects/status_effect_id</h5>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-end mb-0">returns a specific status effect based on its unique id</p>
+                  </div>
+                </div>
+                <!-- SECTION mobile -->
+                <div
+                  class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h6 class="text-center mb-0">/status_effects/status_effect_id</h6>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-center">returns a status effect based on its id</p>
+                  </div>
+                </div>
+                <!-- SECTION desktop -->
+                <div
+                  class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h5 class="mb-0">/status_effects/buffs</h5>
+                  </div>
+                  <div class="col-md-6">
+                    <p class="text-end mb-0">returns all status effects that are buffs</p>
+                  </div>
+                </div>
+                <!-- SECTION mobile -->
+                <div
+                  class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h6 class="text-center mb-0">/status_effects/buffs</h6>
+                  </div>
+                  <div class="col-md-6">
+                    <p class="text-center">returns all status effects that are buffs</p>
+                  </div>
+                </div>
+                <!-- SECTION desktop -->
+                <div
+                  class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h5 class="mb-0">/status_effects/debuffs</h5>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-end mb-0">returns all status effects that are debuffs</p>
+                  </div>
+                </div>
+                <!-- SECTION mobile -->
+                <div
+                  class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h6 class="text-center mb-0">/status_effects/debuffs</h6>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-center">returns all status effects that are debuffs</p>
+                  </div>
+                </div>
+                <!-- SECTION desktop -->
+                <div
+                  class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h5 class="mb-0">/survivor/status_effects</h5>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-end mb-0">returns all status effects that can apply to survivors</p>
+                  </div>
+                </div>
+                <!-- SECTION mobile -->
+                <div
+                  class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h6 class="text-center mb-0">/survivor/status_effects</h6>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-center">returns all that can apply to survivors</p>
+                  </div>
+                </div>
+                <!-- SECTION desktop -->
+                <div
+                  class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h5 class="mb-0">/survivor/status_effects/buffs</h5>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-end mb-0">returns all status effect buffs that can apply to survivors</p>
+                  </div>
+                </div>
+                <!-- SECTION mobile -->
+                <div
+                  class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h6 class="text-center mb-0">/survivor/status_effects/buffs</h6>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-center">returns buffs that can apply to survivors</p>
+                  </div>
+                </div>
+                <!-- SECTION desktop -->
+                <div
+                  class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h5 class="mb-0">/survivor/status_effects/debuffs</h5>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-end mb-0">returns all status effect debuffs that can apply to survivors</p>
+                  </div>
+                </div>
+                <!-- SECTION mobile -->
+                <div
+                  class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h6 class="text-center mb-0">/survivor/status_effects/debuffs</h6>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-center">returns debuffs that can apply to survivors</p>
+                  </div>
+                </div>
+                <!-- SECTION desktop -->
+                <div
+                  class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h5 class="mb-0">/killer/status_effects</h5>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-end mb-0">returns all status effects that can apply to killers</p>
+                  </div>
+                </div>
+                <!-- SECTION mobile -->
+                <div
+                  class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h6 class="text-center mb-0">/killer/status_effects</h6>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-center">returns all that can apply to killers</p>
+                  </div>
+                </div>
+                <!-- SECTION desktop -->
+                <div
+                  class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h5 class="mb-0">/killer/status_effects/buffs</h5>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-end mb-0">returns all status effect buffs that can apply to killers</p>
+                  </div>
+                </div>
+                <!-- SECTION mobile -->
+                <div
+                  class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h6 class="text-center mb-0">/killer/status_effects/buffs</h6>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-center">returns buffs that can apply to killers</p>
+                  </div>
+                </div>
+                <!-- SECTION desktop -->
+                <div
+                  class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h5 class="mb-0">/killer/status_effects/debuffs</h5>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-end mb-0">returns all status effect debuffs that can apply to killers</p>
+                  </div>
+                </div>
+                <!-- SECTION mobile -->
+                <div
+                  class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <div class="col-md-6 p-0">
+                    <h6 class="text-center mb-0">/killer/status_effects/debuffs</h6>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <p class="text-center">returns debuffs that can apply to killers</p>
+                  </div>
+                </div>
+                <!-- SECTION desktop -->
+                <div class="row w-100 d-none d-md-flex justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <h5 class="text-center">Example Status Effect:</h5>
+                  <a href="https://deadbydaylight-api.onrender.com/status_effects/64cbde2d14056587889cc442" class="text-center text-dbd mb-3">https://deadbydaylight-api.onrender.com/status_effects/64cbde2d14056587889cc442</a>
+                </div>
+                <!-- SECTION mobile -->
+                <div class="row w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                  <h6 class="text-center">Example Status Effect:</h6>
+                  <a href="https://deadbydaylight-api.onrender.com/status_effects/64cbde2d14056587889cc442" class="text-center text-dbd mb-3 p-0">.../status_effects/64cbde2d14056587889cc442</a>
                 </div>
               </div>
-              <div
-                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
-                <div class="col-md-6 p-0">
-                  <h5 class="mb-0">/status_effects/status_effect_id</h5>
-                </div>
-                <div class="col-md-6 p-0">
-                  <p class="text-end mb-0">returns a specific status effect based on its unique id</p>
-                </div>
-              </div>
-              <div
-                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
-                <div class="col-md-6 p-0">
-                  <h5 class="mb-0">/status_effects/buffs</h5>
-                </div>
-                <div class="col-md-6">
-                  <p class="text-end mb-0">returns all status effects that are buffs</p>
-                </div>
-              </div>
-              <div
-                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
-                <div class="col-md-6 p-0">
-                  <h5 class="mb-0">/status_effects/debuffs</h5>
-                </div>
-                <div class="col-md-6 p-0">
-                  <p class="text-end mb-0">returns all status effects that are debuffs</p>
-                </div>
-              </div>
-              <div
-                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
-                <div class="col-md-6 p-0">
-                  <h5 class="mb-0">/survivor/status_effects</h5>
-                </div>
-                <div class="col-md-6 p-0">
-                  <p class="text-end mb-0">returns all status effects that can apply to survivors</p>
-                </div>
-              </div>
-              <div
-                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
-                <div class="col-md-6 p-0">
-                  <h5 class="mb-0">/survivor/status_effects/buffs</h5>
-                </div>
-                <div class="col-md-6 p-0">
-                  <p class="text-end mb-0">returns all status effect buffs that can apply to survivors</p>
-                </div>
-              </div>
-              <div
-                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
-                <div class="col-md-6 p-0">
-                  <h5 class="mb-0">/survivor/status_effects/debuffs</h5>
-                </div>
-                <div class="col-md-6 p-0">
-                  <p class="text-end mb-0">returns all status effect debuffs that can apply to survivors</p>
-                </div>
-              </div>
-              <div
-                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
-                <div class="col-md-6 p-0">
-                  <h5 class="mb-0">/killer/status_effects</h5>
-                </div>
-                <div class="col-md-6 p-0">
-                  <p class="text-end mb-0">returns all status effects that can apply to killers</p>
-                </div>
-              </div>
-              <div
-                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
-                <div class="col-md-6 p-0">
-                  <h5 class="mb-0">/killer/status_effects/buffs</h5>
-                </div>
-                <div class="col-md-6 p-0">
-                  <p class="text-end mb-0">returns all status effect buffs that can apply to killers</p>
-                </div>
-              </div>
-              <div
-                class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
-                <div class="col-md-6 p-0">
-                  <h5 class="mb-0">/killer/status_effects/debuffs</h5>
-                </div>
-                <div class="col-md-6 p-0">
-                  <p class="text-end mb-0">returns all status effect debuffs that can apply to killers</p>
-                </div>
-              </div>
-              <div class="row w-100 d-none d-md-flex justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
-                <h5 class="text-center">Example Status Effect:</h5>
-                <a href="https://deadbydaylight-api.onrender.com/status_effects/64cbde2d14056587889cc442" class="text-center text-dbd">https://deadbydaylight-api.onrender.com/status_effects/64cbde2d14056587889cc442</a>
-                <pre class="w-100">
-                  <code>
-                    {
-                      "_id": "64cbde2d14056587889cc442",
-                      "name": "Bloodlust",
-                      "type": "Buff",
-                      "applies_to": "Killer",
-                      "description": "Killers benefitting from Bloodlust increasingly gain more Movement speed in prolonged Chases. Bloodlust is a tiered Status Effect.",
-                      "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/b/ba/FulliconStatusEffects_bloodlust.png/revision/latest?cb=20210212000621",
-                      "__v": 0
-                  }
-                  </code>
-                </pre>
-              </div>
-            </div>
           </div>
         </div>
       </div>
