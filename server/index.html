@@ -743,12 +743,12 @@
               </div>
             </div>
         </div>
-        <div class="col-10 mb-3">
-          <div class="row w-100">
-            <a class="text-decoration-underline text-dbd m-auto mb-2" data-bs-toggle="collapse" href="#power_routes" role="button" aria-expanded="false" aria-controls="power_routes">
-              <h4>Power Routes</h4>
-            </a>
-            <div class="collapse" id="power_routes">
+        <a class="text-decoration-underline text-dbd m-auto mb-2" data-bs-toggle="collapse" href="#power_routes" role="button" aria-expanded="false" aria-controls="power_routes">
+          <h4 class="text-center">Power Routes</h4>
+        </a>
+        <div class="col-12 mb-3">
+            <div class="collapse w-100" id="power_routes">
+              <!-- SECTION desktop -->
               <div
                 class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
@@ -758,6 +758,17 @@
                   <p class="text-end mb-0">returns all killer powers</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
+              <div
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/powers</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns all killer powers</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
               <div
                 class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
@@ -767,6 +778,17 @@
                   <p class="text-end mb-0">returns a specific power based on its unique id</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
+              <div
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/powers/power_id</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns a specific power based on its id</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
               <div
                 class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
@@ -776,6 +798,17 @@
                   <p class="text-end mb-0">returns a specific killer's power based on their unique id</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
+              <div
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/killer_id/power</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns a killer's power based on a killer_id</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
               <div
                 class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
@@ -785,85 +818,25 @@
                   <p class="text-end mb-0">returns a specific killer's power based on their name</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
+              <div
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/powers/query?killer_name=killer_name</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-cener">returns a killer's power based on their name</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
               <div class="row w-100 d-none d-md-flex justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <h5 class="text-center">Example Power:</h5>
-                <a href="https://deadbydaylight-api.onrender.com/powers/64c2bfa929009060f7108cf9" class="text-center text-dbd">https://deadbydaylight-api.onrender.com/powers/64c2bfa929009060f7108cf9</a>
-                <pre class="w-100">
-                  <code>
-                    {
-                      "_id": "64c2bfa929009060f7108cf9",
-                      "name": "Yamaoka's Wrath",
-                      "description": "Absorption Mode: Absorb Blood Orbs left by your injured foes. Press and hold the Power button to absorb Blood Orbs in the environment and fill your Power gauge. When your Power gauge is full, press and hold the Active Ability button to initiate Blood Fury. Blood Fury: While Blood Fury is active, The Oni becomes lethal and gains access to additional abilities: Demon Dash and Demon Strike.",
-                      "special_interaction": null,
-                      "interaction_description": null,
-                      "special_ability": "Demon Dash",
-                      "ability_description": "Press and hold the Power button while Blood Fury is active, to perform a Demon Dash. This ability allows The Oni to cover large distances rapidly.",
-                      "special_object": null,
-                      "object_description": null,
-                      "special_affliction": null,
-                      "affliction_description": null,
-                      "special_mobility": null,
-                      "mobility_description": null,
-                      "special_attack": "Demon Strike",
-                      "attack_description": "Press and hold the Attack button while Blood Fury is active, to perform a Demon Strike in the direction you are facing. Demon Strike has an extended Lunge range and successful hits immediately put healthy Survivors into the Dying State.",
-                      "special_state": null,
-                      "state_description": null,
-                      "special_enemy": null,
-                      "enemy_description": null,
-                      "special_effect": null,
-                      "effect_description": null,
-                      "killer_id": "64c8085006b9522e735583c9",
-                      "createdAt": "2023-07-27T19:04:09.622Z",
-                      "updatedAt": "2023-07-31T19:43:24.413Z",
-                      "__v": 0,
-                      "killer": {
-                          "_id": "64c8085006b9522e735583c9",
-                          "killer_name": "The Oni",
-                          "weapon_id": "64b8673a5a1f577cae3430fd",
-                          "chapter_id": "64cae23b0faca2101c26d71d",
-                          "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c5/K18_charSelect_portrait.png/revision/latest?cb=20230705192610",
-                          "perk_one_id": "64cd44c58290cb86311d6857",
-                          "perk_two_id": "64cd44fd8290cb86311d685a",
-                          "perk_three_id": "64cd45298290cb86311d685d",
-                          "perk_one": {
-                              "_id": "64cd44c58290cb86311d6857",
-                              "name": "Zanshin Tactics",
-                              "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/dc/ZanshinTactics.gif/revision/latest?cb=20200926200432",
-                              "id": "64cd44c58290cb86311d6857"
-                          },
-                          "perk_two": {
-                              "_id": "64cd44fd8290cb86311d685a",
-                              "name": "Blood Echo",
-                              "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/ec/BloodEcho.gif/revision/latest?cb=20200501134539",
-                              "id": "64cd44fd8290cb86311d685a"
-                          },
-                          "perk_three": {
-                              "_id": "64cd45298290cb86311d685d",
-                              "name": "Nemesis",
-                              "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/1b/Nemesis.gif/revision/latest?cb=20200926195833",
-                              "id": "64cd45298290cb86311d685d"
-                          },
-                          "weapon": {
-                              "_id": "64b8673a5a1f577cae3430fd",
-                              "name": "The Yamaoka Blade",
-                              "description": "A long blade that was passed down from one generation to the next. Upon hitting a healthy Survivor, The Oni will hold out his left hand to absorb their blood. Upon hitting an injured Survivor or hitting when the Power gauge is fully charged, The Oni will flip his katana to remove blood from the blade.",
-                              "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/a7/SK_W01.png/revision/latest?cb=20191125143147",
-                              "id": "64b8673a5a1f577cae3430fd"
-                          },
-                          "chapter": {
-                              "_id": "64cae23b0faca2101c26d71d",
-                              "name": "Cursed Legacy",
-                              "number": 14,
-                              "release_date": "03 December 2019 (Tuesday)",
-                              "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ae/CursedLegacy_main_header.png/revision/latest?cb=20191129231200",
-                              "id": "64cae23b0faca2101c26d71d"
-                          },
-                          "id": "64c8085006b9522e735583c9"
-                      },
-                      "id": "64c2bfa929009060f7108cf9"
-                  }
-                  </code>
-                </pre>
+                <a href="https://deadbydaylight-api.onrender.com/powers/64c2bfa929009060f7108cf9" class="text-center text-dbd mb-3">https://deadbydaylight-api.onrender.com/powers/64c2bfa929009060f7108cf9</a>
+              </div>
+              <!-- SECTION mobile -->
+              <div class="row w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <h6 class="text-center">Example Power:</h6>
+                <a href="https://deadbydaylight-api.onrender.com/powers/64c2bfa929009060f7108cf9" class="text-center text-dbd mb-3">.../powers/64c2bfa929009060f7108cf9</a>
               </div>
             </div>
           </div>
