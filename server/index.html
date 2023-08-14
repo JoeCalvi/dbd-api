@@ -574,6 +574,7 @@
         </a>
         <div class="col-12 mb-3">
             <div class="collapse w-100" id="realm_routes">
+              <!-- SECTION desktop -->
               <div
                 class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
@@ -583,6 +584,17 @@
                   <p class="text-end mb-0">returns all realms</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
+              <div
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/realms</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns all realms</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
               <div
                 class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
@@ -592,6 +604,17 @@
                   <p class="text-end mb-0">returns a specific realm based on its unique id</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
+              <div
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/realms/realm_id</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns a realm based on its unique id</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
               <div
                 class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
@@ -601,18 +624,34 @@
                   <p class="text-end mb-0">returns a specific realm based on its associated killer's name</p>
                 </div>
               </div>
-              <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
+              <!-- SECTION mobile -->
+              <div
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/realms/query?killer_name=killer_name</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns a realm based on a killer's name</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div class="row w-100 d-none d-md-flex justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <h5 class="text-center">Example Realm:</h5>
-                <a href="https://deadbydaylight-api.onrender.com/realms/64d12d1a0d0691dad2bd6705" class="text-center text-dbd">https://deadbydaylight-api.onrender.com/realms/64d12d1a0d0691dad2bd6705</a>
+                <a href="https://deadbydaylight-api.onrender.com/realms/64d12d1a0d0691dad2bd6705" class="text-center text-dbd mb-3">https://deadbydaylight-api.onrender.com/realms/64d12d1a0d0691dad2bd6705</a>
+              </div>
+              <!-- SECTION mobile -->
+              <div class="row w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <h6 class="text-center">Example Realm:</h6>
+                <a href="https://deadbydaylight-api.onrender.com/realms/64d12d1a0d0691dad2bd6705" class="text-center text-dbd mb-3">.../realms/64d12d1a0d0691dad2bd6705</a>
               </div>
             </div>
         </div>
-        <div class="col-10 mb-3">
-          <div class="row w-100">
-            <a class="text-decoration-underline text-dbd m-auto mb-2" data-bs-toggle="collapse" href="#map_routes" role="button" aria-expanded="false" aria-controls="map_routes">
-              <h4>Map Routes</h4>
-            </a>
-            <div class="collapse" id="map_routes">
+        <a class="text-decoration-underline text-dbd m-auto mb-2" data-bs-toggle="collapse" href="#map_routes" role="button" aria-expanded="false" aria-controls="map_routes">
+          <h4 class="text-center">Map Routes</h4>
+        </a>
+        <div class="col-12 mb-3">
+            <div class="collapse w-100" id="map_routes">
+              <!-- SECTION desktop -->
               <div
                 class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
@@ -622,6 +661,17 @@
                   <p class="text-end mb-0">returns all maps</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
+              <div
+                class="row route-block w-100 d-flex d-md-none justify-content-cener align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/maps</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns all maps</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
               <div
                 class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
@@ -631,6 +681,17 @@
                   <p class="text-end mb-0">returns a specific map based on its unique id</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
+              <div
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/maps/map_id</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns a map based on its unique id</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
               <div
                 class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
@@ -640,6 +701,17 @@
                   <p class="text-end mb-0">returns maps in a specific realm based on unique realm id</p>
                 </div>
               </div>
+              <!-- SECTION mobile -->
+              <div
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/realm_id/maps</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns maps in a realm based on realm_id</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
               <div
                 class="row route-block w-100 d-none d-md-flex justify-content-between align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <div class="col-md-6 p-0">
@@ -649,59 +721,27 @@
                   <p class="text-end mb-0">returns maps in specific realm based on realm's name</p>
                 </div>
               </div>
-              <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
+              <!-- SECTION mobile -->
+              <div
+                class="row route-block w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <div class="col-md-6 p-0">
+                  <h6 class="text-center mb-0">/maps/query?realm_name=name</h6>
+                </div>
+                <div class="col-md-6 p-0">
+                  <p class="text-center">returns maps in realm based on realm's name</p>
+                </div>
+              </div>
+              <!-- SECTION desktop -->
+              <div class="row w-100 d-none d-md-flex justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <h5 class="text-center">Example Map:</h5>
-                <a href="https://deadbydaylight-api.onrender.com/maps/64b98d89b777f1835e65d4b6" class="text-center text-dbd">https://deadbydaylight-api.onrender.com/maps/64b98d89b777f1835e65d4b6</a>
-                <pre class="w-100">
-                  <code>
-                    {
-                      "_id": "64b98d89b777f1835e65d4b6",
-                      "name": "Toba Landing",
-                      "description": "After years hurtling through the inky blackness of deep space, a solitary colony ship descended to the surface of Dvarka. Selected for its breathable air, its valuable minerals, and its beautiful lakes and forests, Dvarka looked to be the perfect planet for a new start for humanity. But exploration of the surface revealed a dark secret: an advanced civilization, completely wiped out by some unknown event. The ship lies surrounded by strange rock formations on the alien soil of Dvarka, the light of its sun choked out by giant, twisting trees. And in the darkness, a new threat emerges: an Earth invention, twisted by alien technology, unflagging in its mission to end human life on Dvarka and beyond.",
-                      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/4/40/IconMap_Uba_Umbralevel01.png/revision/latest?cb=20230523155439",
-                      "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/b/b9/TobaLandingOutline.png/revision/latest?cb=20230526213710",
-                      "realm_id": "64d1307f0d0691dad2bd674f",
-                      "createdAt": "2023-07-20T19:39:53.637Z",
-                      "updatedAt": "2023-08-07T19:33:43.613Z",
-                      "__v": 0,
-                      "chapter_id": "64cae5000faca2101c26d78e",
-                      "realm": {
-                          "_id": "64d1307f0d0691dad2bd674f",
-                          "name": "Dvarka Deepwood",
-                          "location": "Dvarka Planet",
-                          "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c2/RealmKeyArt_20.png/revision/latest?cb=20230620134819",
-                          "id": "64d1307f0d0691dad2bd674f"
-                      },
-                      "chapter": {
-                          "_id": "64cae5000faca2101c26d78e",
-                          "name": "End Transmission",
-                          "number": 28,
-                          "release_date": "13 June 2023 (Tuesday)",
-                          "associated_killers": [
-                              {
-                                  "_id": "64c80c6906b9522e735584af",
-                                  "killer_name": "The Singularity",
-                                  "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/5d/K32_charSelect_portrait.png/revision/latest?cb=20230705193241",
-                                  "id": "64c80c6906b9522e735584af"
-                              }
-                          ],
-                          "associated_survivors": [
-                              {
-                                  "_id": "64caf249da2e1eb56296da04",
-                                  "name": "Gabriel Soma",
-                                  "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/b/b3/S37_charSelect_portrait.png/revision/latest?cb=20230705194559",
-                                  "id": "64caf249da2e1eb56296da04"
-                              }
-                          ],
-                          "id": "64cae5000faca2101c26d78e"
-                      },
-                      "id": "64b98d89b777f1835e65d4b6"
-                  }
-                  </code>
-                </pre>
+                <a href="https://deadbydaylight-api.onrender.com/maps/64b98d89b777f1835e65d4b6" class="text-center text-dbd mb-3">https://deadbydaylight-api.onrender.com/maps/64b98d89b777f1835e65d4b6</a>
+              </div>
+              <!-- SECTION mobile -->
+              <div class="row w-100 d-flex d-md-none justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
+                <h6 class="text-center">Example Map:</h6>
+                <a href="https://deadbydaylight-api.onrender.com/maps/64b98d89b777f1835e65d4b6" class="text-center text-dbd mb-3">.../maps/64b98d89b777f1835e65d4b6</a>
               </div>
             </div>
-          </div>
         </div>
         <div class="col-10 mb-3">
           <div class="row w-100">
@@ -745,7 +785,7 @@
                   <p class="text-end mb-0">returns a specific killer's power based on their name</p>
                 </div>
               </div>
-              <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
+              <div class="row w-100 d-none d-md-flex justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <h5 class="text-center">Example Power:</h5>
                 <a href="https://deadbydaylight-api.onrender.com/powers/64c2bfa929009060f7108cf9" class="text-center text-dbd">https://deadbydaylight-api.onrender.com/powers/64c2bfa929009060f7108cf9</a>
                 <pre class="w-100">
@@ -861,7 +901,7 @@
                   <p class="text-end mb-0">returns a specific weapon based on its associated killer's name</p>
                 </div>
               </div>
-              <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
+              <div class="row w-100 d-none d-md-flex justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <h5 class="text-center">Example Weapon:</h5>
                 <a href="https://deadbydaylight-api.onrender.com/weapons/64b861b35a1f577cae3430bd" class="text-center text-dbd">https://deadbydaylight-api.onrender.com/weapons/64b861b35a1f577cae3430bd</a>
                 <pre class="w-100">
@@ -995,7 +1035,7 @@
                   <p class="text-end mb-0">returns all status effect debuffs that can apply to killers</p>
                 </div>
               </div>
-              <div class="row w-100 d-flex justify-content-center align-items-center border-bottom border-bottom-light mb-3">
+              <div class="row w-100 d-none d-md-flex justify-content-center align-items-center border-bottom border-bottom-light m-auto mb-3">
                 <h5 class="text-center">Example Status Effect:</h5>
                 <a href="https://deadbydaylight-api.onrender.com/status_effects/64cbde2d14056587889cc442" class="text-center text-dbd">https://deadbydaylight-api.onrender.com/status_effects/64cbde2d14056587889cc442</a>
                 <pre class="w-100">
