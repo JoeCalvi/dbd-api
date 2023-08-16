@@ -25,10 +25,7 @@ DbConnection.connect();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const allowedOrigins = [
-    'http://localhost:3000',
-    'https://deadbydaylight-api.onrender.com'
-]
+const allowedOrigins = [];
 
 app.use(cors({
     origin: allowedOrigins
