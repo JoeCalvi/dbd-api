@@ -25,10 +25,11 @@ DbConnection.connect();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const allowedOrigins = [];
+const allowedOrigins = ['*'];
 
 app.use(cors({
-    origin: allowedOrigins
+    origin: allowedOrigins,
+    methods: 'GET'
 }));
 
 app.get('/', (req, res) => {
