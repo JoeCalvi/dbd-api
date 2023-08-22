@@ -996,14 +996,14 @@ Example:
 
 ```
 {
-        "_id": "64cbdde214056587889cc440",
-        "name": "Blindness",
-        "type": "Debuff",
-        "applies_to": "Both",
-        "description": "Players suffering from Blindness are unable to read any Auras, including the default ones of their role and those from Perks. Some essential Auras are exempt from that general rule, usually associated with Killer Power Objects. Additionally, Aura-like highlights, that resemble Auras, but are not actually considered Auras by the game (i.e. the white highlights on Scourge Hooks or on Survivors during Nightfall), are not affected by Blindness.",
-        "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/ea/FulliconStatusEffects_blindness.png/revision/latest?cb=20210212000619",
-        "__v": 0
-    }
+    "_id": "64cbdde214056587889cc440",
+    "name": "Blindness",
+    "type": "Debuff",
+    "applies_to": "Both",
+    "description": "Players suffering from Blindness are unable to read any Auras, including the default ones of their role and those from Perks. Some essential Auras are exempt from that general rule, usually associated with Killer Power Objects. Additionally, Aura-like highlights, that resemble Auras, but are not actually considered Auras by the game (i.e. the white highlights on Scourge Hooks or on Survivors during Nightfall), are not affected by Blindness.",
+    "icon": "https://drive.google.com/file/d/1JOnIjcbW96zaUL63x0LDHBVFquboI4oB/view?usp=drive_link",
+    "__v": 0
+}
 ```
 
 `/status_effects/status_effect_id`
