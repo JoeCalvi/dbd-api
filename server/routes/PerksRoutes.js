@@ -43,6 +43,9 @@ module.exports = function (app) {
             }
         })
 
+    app.route('/perks/generic')
+        .get(perksController.getAllGenericPerks);
+    
     app.route('/perks/survivor')
         .get(perksController.getAllSurvivorPerks);
 

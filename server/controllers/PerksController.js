@@ -79,18 +79,18 @@ exports.addPerk = async function (req, res) {
 
 exports.getAllGenericPerks = async function (req, res) {
     try {
-        const genericPerks = [];
+        const generic_perks = [];
         const perks = await Perk.find({})
             .populate('associated_status_effects', 'name type icon')
             .populate('chapter', 'name number release_date');
 
-        perks.forEach(p => {
-            if (p.generic == true) {
-                genericPerks.push(p);
+        for await (const perk of perks) {
+            if (perk.generic == true) {
+                generic_perks.push(perk);
             }
-        });
+        }
 
-        return res.send(genericPerks);
+        return res.send(generic_perks);
     } catch (error) {
         res.send(error);
     }
