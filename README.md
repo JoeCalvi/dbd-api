@@ -724,65 +724,65 @@ Making a call to https://deadbydaylight-api.onrender.com/realms will return all 
 Example:
 
 ```
- {
-        "_id": "64d12fd90d0691dad2bd673f",
-        "name": "Raccoon City",
-        "description": "A former art museum turned bastion of justice, the Raccoon City Police Station was left shattered by the outbreak. Even the bravest officers were overwhelmed by the ravenous dead.",
-        "location": "Arklay County, United States",
-        "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ad/RealmKeyArt_16.png/revision/latest?cb=20210920233023",
-        "associated_killers": [
-            {
-                "_id": "64c80a2306b9522e7355842c",
-                "killer_name": "The Nemesis",
-                "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/84/K24_charSelect_portrait.png/revision/latest?cb=20230705184123",
-                "id": "64c80a2306b9522e7355842c"
-            },
-            {
-                "_id": "64c80b9b06b9522e73558479",
-                "killer_name": "The Mastermind",
-                "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/87/K29_charSelect_portrait.png/revision/latest?cb=20230705184825",
-                "id": "64c80b9b06b9522e73558479"
-            }
-        ],
-        "maps": [
-            {
-                "_id": "64b98bd7b777f1835e65d48e",
-                "name": "Raccoon City Police Station East Wing",
-                "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/68/IconMap_Ecl_Eclipselevel01.png/revision/latest?cb=20210525214446",
-                "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/cd/RaccoonCityPoliceStationEastWingOutline_LowerFloor.png/revision/latest?cb=20220811122134 (Lower Floor); https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e9/RaccoonCityPoliceStationEastWingOutline_UpperFloor.png/revision/latest?cb=20220811122147 (Upper Floor)",
-                "id": "64b98bd7b777f1835e65d48e"
-            },
-            {
-                "_id": "64b98c22b777f1835e65d492",
-                "name": "Raccoon City Police Station West Wing",
-                "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/fa/IconMap_Ecl_Orionlevel01.png/revision/latest?cb=20220810155724",
-                "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/2f/RaccoonCityPoliceStationWestWingOutline_LowerFloor.png/revision/latest?cb=20220811122205 (Lower Floor); https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/97/RaccoonCityPoliceStationWestWingOutline_UpperFloor.png/revision/latest?cb=20220811122217 (Upper Floor)",
-                "id": "64b98c22b777f1835e65d492"
-            }
-        ],
-        "associated_chapters": [
-            {
-                "_id": "64cae34c0faca2101c26d747",
-                "name": "Resident Evil™",
-                "number": 20,
-                "release_date": "15 June 2021 (Tuesday)",
-                "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/20/ResidentEvil_main_header.png/revision/latest?cb=20210527171803",
-                "id": "64cae34c0faca2101c26d747"
-            },
-            {
-                "_id": "64cae47e0faca2101c26d779",
-                "name": "Resident Evil™: PROJECT W",
-                "number": 25,
-                "release_date": "30 August 2022 (Tuesday)",
-                "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/81/ResidentEvilProjectW_main_header.png/revision/latest?cb=20220831050952",
-                "id": "64cae47e0faca2101c26d779"
-            }
-        ],
-        "createdAt": "2023-08-07T17:54:33.748Z",
-        "updatedAt": "2023-08-07T17:54:33.748Z",
-        "__v": 0,
-        "id": "64d12fd90d0691dad2bd673f"
-    }
+{
+    "_id": "64d12fd90d0691dad2bd673f",
+    "name": "Raccoon City",
+    "description": "A former art museum turned bastion of justice, the Raccoon City Police Station was left shattered by the outbreak. Even the bravest officers were overwhelmed by the ravenous dead.",
+    "location": "Arklay County, United States",
+    "image": "https://drive.google.com/file/d/1g-EthBI8BooKWPQExktjx1gs-4LIOpuM/view?usp=drive_link",
+    "associated_killers": [
+        {
+            "_id": "64c80a2306b9522e7355842c",
+            "killer_name": "The Nemesis",
+            "portrait": "https://drive.google.com/file/d/1A-DqRST0JQIMBF50tkGIokYm5DhPRr50/view?usp=drive_link",
+            "id": "64c80a2306b9522e7355842c"
+        },
+        {
+            "_id": "64c80b9b06b9522e73558479",
+            "killer_name": "The Mastermind",
+            "portrait": "https://drive.google.com/file/d/1K0GCRj5Q-btyUjpGpsjCIOd4Fh8-ZACg/view?usp=drive_link",
+            "id": "64c80b9b06b9522e73558479"
+        }
+    ],
+    "maps": [
+        {
+            "_id": "64b98bd7b777f1835e65d48e",
+            "name": "Raccoon City Police Station East Wing",
+            "image": "https://drive.google.com/file/d/1zhve7YM3GMgRtqSKzv3FLzD8HwR6Zeyh/view?usp=drive_link",
+            "layout": "https://drive.google.com/file/d/1_YBHPLzxD72UMBEUWIvDUaKz98d6aAx5/view?usp=drive_link (Upper Floor); https://drive.google.com/file/d/1pxZxs-G0Ak1Air1JFxIhJqc5oJInbSMw/view?usp=drive_link (Lower Floor)",
+            "id": "64b98bd7b777f1835e65d48e"
+        },
+        {
+            "_id": "64b98c22b777f1835e65d492",
+            "name": "Raccoon City Police Station West Wing",
+            "image": "https://drive.google.com/file/d/1voudcW6PVZwwU1iB8mhgKXWb9mvEF_Tw/view?usp=drive_link",
+            "layout": "https://drive.google.com/file/d/1CCpqMb8Ddm0Yz2w29LVnVhO40hkDX9i8/view?usp=drive_link (Upper Floor); https://drive.google.com/file/d/1BxolwXbsol3f3vppf1iRStIja6UD0xHb/view?usp=drive_link (Lower Floor)",
+            "id": "64b98c22b777f1835e65d492"
+        }
+    ],
+    "associated_chapters": [
+        {
+            "_id": "64cae34c0faca2101c26d747",
+            "name": "Resident Evil™",
+            "number": 20,
+            "release_date": "15 June 2021 (Tuesday)",
+            "image": "https://drive.google.com/file/d/1xiw2uIQlWMTkqatqo6yTHEhloqmOmEt5/view?usp=drive_link",
+            "id": "64cae34c0faca2101c26d747"
+        },
+        {
+            "_id": "64cae47e0faca2101c26d779",
+            "name": "Resident Evil™: PROJECT W",
+            "number": 25,
+            "release_date": "30 August 2022 (Tuesday)",
+            "image": "https://drive.google.com/file/d/1DEasA0VVv7sDGIkPDy2V4rMYztiNJ4PC/view?usp=drive_link",
+            "id": "64cae47e0faca2101c26d779"
+        }
+    ],
+    "createdAt": "2023-08-07T17:54:33.748Z",
+    "updatedAt": "2023-08-15T17:55:35.226Z",
+    "__v": 0,
+    "id": "64d12fd90d0691dad2bd673f"
+}
 ```
 `/realms/realm_id`
 
