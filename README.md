@@ -871,39 +871,39 @@ Example:
 
 ```
 {
-        "_id": "64c2b03a29009060f7108cdd",
-        "name": "Jigsaw's Baptism",
-        "description": "The Pig starts the Trial with 4 Reverse Bear Traps in her inventory, which cannot be replenished. The Trial also spawns 5 Jigsaw Boxes placed in random locations throughout the Trial Grounds.",
-        "special_interaction": "Jigsaw Boxes",
-        "interaction_description": "Trapped Survivors see the Auras of all unsearched Jigsaw Boxes in the environment at all times. Trapped Survivors must search a random number of those Jigsaw Boxes (ranging from 1-4) in order to find the key to unlock their Reverse Bear Trap and remove it from their head. If the Search of a Jigsaw Box does not yield the key, its Aura will be removed and Billy, the Jigsaw Puppet sitting atop it, will cackle at the Survivor.",
-        "special_ability": "Reverse Bear Traps",
-        "ability_description": "Inactive Reverse Bear Traps: Press the Active Ability button while standing over a downed Survivor to attach an Inactive Reverse Bear Trap to their head. Trapped Survivors may escape the Trial through the Exit Gates, but only if the Reverse Bear Trap is still inactive. Active Reverse Bear Traps: Completing a Generator will activate all currently inactive Reverse Bear Traps. Active Reverse Bear Traps are armed and on a Death Timer of 150 seconds, which is displayed on the Survivor's Status Icon. Once the Death Timer elapses, the Reverse Bear Trap snaps open and kills the Trapped Survivor, counting as a Sacrifice. The Death Timer is paused whenever the Survivor is downed, hooked, or being actively chased by The Pig. Trapped Survivors may not escape the Trial through the Exit Gates if the Reverse Bear Trap is active. Approaching the Point of No Return, which is located at the mid-way point inside the Exit Gates, causes the Reverse Bear Trap to beep rapidly, warning the Survivor of their impending doom. Passing the trigger point immediately trips the Reverse Bear Trap and kills the Survivor. Trapped Survivors may still escape the Trial through the Hatch, even if the Reverse Bear Trap is active.",
-        "special_object": null,
-        "object_description": null,
-        "special_affliction": null,
-        "affliction_description": null,
-        "special_mobility": "Crouching",
-        "mobility_description": "Press the Active Ability button to crouch or un-crouch. While crouched, The Pig is granted the Undetectable Status Effect at the cost of moving at a slower speed (3.6 m/s).",
-        "special_attack": "Ambush Dash",
-        "attack_description": "Press and hold the Attack button while crouched to charge an Ambush Dash attack. The Ambush Dash causes The Pig to perform a Lunge Attack with increased duration (2 seconds) and increased Movement speed (6.9 m/s).",
-        "special_state": null,
-        "state_description": null,
-        "special_enemy": null,
-        "enemy_description": null,
-        "special_effect": null,
-        "effect_description": null,
-        "killer_id": "64c4624f3b6c096393410114",
-        "createdAt": "2023-07-27T17:58:18.616Z",
-        "updatedAt": "2023-07-31T19:40:49.966Z",
-        "__v": 0,
-        "killer": {
-            "_id": "64c4624f3b6c096393410114",
-            "killer_name": "The Pig",
-            "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c7/K11_charSelect_portrait.png/revision/latest?cb=20230705191844",
-            "id": "64c4624f3b6c096393410114"
-        },
-        "id": "64c2b03a29009060f7108cdd"
-    }
+    "_id": "64c2b03a29009060f7108cdd",
+    "name": "Jigsaw's Baptism",
+    "description": "The Pig starts the Trial with 4 Reverse Bear Traps in her inventory, which cannot be replenished. The Trial also spawns 5 Jigsaw Boxes placed in random locations throughout the Trial Grounds.",
+    "special_interaction": "Jigsaw Boxes",
+    "interaction_description": "Trapped Survivors see the Auras of all unsearched Jigsaw Boxes in the environment at all times. Trapped Survivors must search a random number of those Jigsaw Boxes (ranging from 1-4) in order to find the key to unlock their Reverse Bear Trap and remove it from their head. If the Search of a Jigsaw Box does not yield the key, its Aura will be removed and Billy, the Jigsaw Puppet sitting atop it, will cackle at the Survivor.",
+    "special_ability": "Reverse Bear Traps",
+    "ability_description": "Inactive Reverse Bear Traps: Press the Active Ability button while standing over a downed Survivor to attach an Inactive Reverse Bear Trap to their head. Trapped Survivors may escape the Trial through the Exit Gates, but only if the Reverse Bear Trap is still inactive. Active Reverse Bear Traps: Completing a Generator will activate all currently inactive Reverse Bear Traps. Active Reverse Bear Traps are armed and on a Death Timer of 150 seconds, which is displayed on the Survivor's Status Icon. Once the Death Timer elapses, the Reverse Bear Trap snaps open and kills the Trapped Survivor, counting as a Sacrifice. The Death Timer is paused whenever the Survivor is downed, hooked, or being actively chased by The Pig. Trapped Survivors may not escape the Trial through the Exit Gates if the Reverse Bear Trap is active. Approaching the Point of No Return, which is located at the mid-way point inside the Exit Gates, causes the Reverse Bear Trap to beep rapidly, warning the Survivor of their impending doom. Passing the trigger point immediately trips the Reverse Bear Trap and kills the Survivor. Trapped Survivors may still escape the Trial through the Hatch, even if the Reverse Bear Trap is active.",
+    "special_object": null,
+    "object_description": null,
+    "special_affliction": null,
+    "affliction_description": null,
+    "special_mobility": "Crouching",
+    "mobility_description": "Press the Active Ability button to crouch or un-crouch. While crouched, The Pig is granted the Undetectable Status Effect at the cost of moving at a slower speed (3.6 m/s).",
+    "special_attack": "Ambush Dash",
+    "attack_description": "Press and hold the Attack button while crouched to charge an Ambush Dash attack. The Ambush Dash causes The Pig to perform a Lunge Attack with increased duration (2 seconds) and increased Movement speed (6.9 m/s).",
+    "special_state": null,
+    "state_description": null,
+    "special_enemy": null,
+    "enemy_description": null,
+    "special_effect": null,
+    "effect_description": null,
+    "killer_id": "64c4624f3b6c096393410114",
+    "createdAt": "2023-07-27T17:58:18.616Z",
+    "updatedAt": "2023-07-31T19:40:49.966Z",
+    "__v": 0,
+    "killer": {
+        "_id": "64c4624f3b6c096393410114",
+        "killer_name": "The Pig",
+        "portrait": "https://drive.google.com/file/d/1N_FSJQPH-c2b4UmiZ55FQOfm8Ev6PcdA/view?usp=drive_link",
+        "id": "64c4624f3b6c096393410114"
+    },
+    "id": "64c2b03a29009060f7108cdd"
+}
 ```
 
 Not all killers' powers are that complex, so many elements of any given killer's power may be **null**.
