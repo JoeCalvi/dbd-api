@@ -805,48 +805,48 @@ As with other name queries, getting a realm by its realm_id is a better option, 
 
  ```
 {
-        "_id": "64b98637b777f1835e65d428",
-        "name": "Mother's Dwelling",
-        "description": "This house is new to me. I have never stumbled upon its existence before. Nature made a good job hiding from the rest of the world. I am pondering upon who might live there. Sometimes I have seen lights stemming from its windows. Sometimes a passing shadow. The engulfment that the surrounding wilderness provides might not be unintentional. Might it be on purpose? Might this... home seek anonymity and to be unseen by the rest of the world? I am not at peace with this dwelling. I believe to be hearing screams and wailing coming from it. But my mind is unstable and my ears might not be trusted. Or can they?",
-        "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/01/IconMap_Brl_MadHouse.png/revision/latest?cb=20230311132630",
-        "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/d4/MothersDwellingOutline.png/revision/latest?cb=20230502102854",
-        "realm_id": "64d12e5c0d0691dad2bd671f",
-        "createdAt": "2023-07-20T19:08:40.035Z",
-        "updatedAt": "2023-08-07T19:28:32.048Z",
-        "__v": 0,
-        "chapter_id": "64cadfea0faca2101c26d6cf",
-        "realm": {
-            "_id": "64d12e5c0d0691dad2bd671f",
-            "name": "Red Forest",
-            "location": "Kiev Governorate, Russian Empire",
-            "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e7/RealmKeyArt_08.png/revision/latest?cb=20230402122442",
-            "id": "64d12e5c0d0691dad2bd671f"
-        },
-        "chapter": {
-            "_id": "64cadfea0faca2101c26d6cf",
-            "name": "A Lullaby for the Dark",
-            "number": 5,
-            "release_date": "27 July 2017 (Thursday)",
-            "associated_killers": [
-                {
-                    "_id": "64c461123b6c0963934100e2",
-                    "killer_name": "The Huntress",
-                    "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/1a/K08_charSelect_portrait.png/revision/latest?cb=20230705191247",
-                    "id": "64c461123b6c0963934100e2"
-                }
-            ],
-            "associated_survivors": [
-                {
-                    "_id": "64caeceada2e1eb56296d929",
-                    "name": "David King",
-                    "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/57/S10_charSelect_portrait.png/revision/latest?cb=20230705191257",
-                    "id": "64caeceada2e1eb56296d929"
-                }
-            ],
-            "id": "64cadfea0faca2101c26d6cf"
-        },
-        "id": "64b98637b777f1835e65d428"
-    }
+    "_id": "64b98637b777f1835e65d428",
+    "name": "Mother's Dwelling",
+    "description": "This house is new to me. I have never stumbled upon its existence before. Nature made a good job hiding from the rest of the world. I am pondering upon who might live there. Sometimes I have seen lights stemming from its windows. Sometimes a passing shadow. The engulfment that the surrounding wilderness provides might not be unintentional. Might it be on purpose? Might this... home seek anonymity and to be unseen by the rest of the world? I am not at peace with this dwelling. I believe to be hearing screams and wailing coming from it. But my mind is unstable and my ears might not be trusted. Or can they?",
+    "image": "https://drive.google.com/file/d/13XHQ8w4vFp_SrS30NUaLdPpcT9TqwKF4/view?usp=drive_link",
+    "layout": "https://drive.google.com/file/d/1j9MiHEyv6PdH4IVxAzj3dF6uCdPN45hv/view?usp=drive_link",
+    "realm_id": "64d12e5c0d0691dad2bd671f",
+    "createdAt": "2023-07-20T19:08:40.035Z",
+    "updatedAt": "2023-08-15T18:14:11.995Z",
+    "__v": 0,
+    "chapter_id": "64cadfea0faca2101c26d6cf",
+    "realm": {
+        "_id": "64d12e5c0d0691dad2bd671f",
+        "name": "Red Forest",
+        "location": "Kiev Governorate, Russian Empire",
+        "image": "https://drive.google.com/file/d/1JpnHfU1uRk2H5pSi0kndQaZrimwoygUz/view?usp=drive_link",
+        "id": "64d12e5c0d0691dad2bd671f"
+    },
+    "chapter": {
+        "_id": "64cadfea0faca2101c26d6cf",
+        "name": "A Lullaby for the Dark",
+        "number": 5,
+        "release_date": "27 July 2017 (Thursday)",
+        "associated_killers": [
+            {
+                "_id": "64c461123b6c0963934100e2",
+                "killer_name": "The Huntress",
+                "portrait": "https://drive.google.com/file/d/1GdQmlHnn_r8AE8BHl7Sfr73XRzRPel3F/view?usp=drive_link",
+                "id": "64c461123b6c0963934100e2"
+            }
+        ],
+        "associated_survivors": [
+            {
+                "_id": "64caeceada2e1eb56296d929",
+                "name": "David King",
+                "portrait": "https://drive.google.com/file/d/1Rj3vxmanScscZivQV3fZkx9pKUId0xex/view?usp=drive_link",
+                "id": "64caeceada2e1eb56296d929"
+            }
+        ],
+        "id": "64cadfea0faca2101c26d6cf"
+    },
+    "id": "64b98637b777f1835e65d428"
+}
  ```
 
  `/maps/map_id`
