@@ -118,7 +118,7 @@ exports.getAllSurvivorPerks = async function (req, res) {
             perks_per_page: perks_per_page,
             total_perks: total_perks,
             perks: survivor_perks
-        })
+        });
     } catch (error) {
         res.send(error);
     }
@@ -139,19 +139,27 @@ exports.getAllGenericSurvivorPerks = async function (req, res) {
 
 exports.getAllKillerPerks = async function (req, res) {
     try {
-        const killerPerks = [];
-        const perks = await Perk.find()
+        const page = parseInt(req.query.page) || 1;
+        const perks_per_page = 30;
+        const skip = (page - 1) * perks_per_page;
+
+        const killer_perks = await Perk.find({ role: "Killer" })
             .populate('associated_status_effects', 'name type icon')
             .populate('chapter', 'name number release_date')
-            .populate('killer', 'killer_name portrait');
+            .populate('killer', 'killer_name portrait')
+            .skip(skip)
+            .limit(perks_per_page);
 
-        perks.forEach(p => {
-            if (p.role == "Killer") {
-                killerPerks.push(p);
-            }
+        const total_perks = await Perk.countDocuments({ role: "Killer" });
+        const total_pages = Math.ceil(total_perks / perks_per_page);
+
+        return res.json({
+            current_page: page,
+            total_pages: total_pages,
+            perks_per_page: perks_per_page,
+            total_perks: total_perks,
+            perks: killer_perks
         });
-
-        return res.send(killerPerks);
     } catch (error) {
         res.send(error)
     }
