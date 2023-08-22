@@ -382,7 +382,7 @@ While there aren't really any outlier names with killers (yet?), the same guidel
 
 ## Perk Routes
 
-**IMPORTANT NOTE**: The `/perks`, `/perks/survivor`, and `/perks/killer` routes all return paginated results. The `/perks` route, for example, is split up into **10** pages with a max of **27** perks per page, so to retrieve *ALL* perks, you'd use `/perks?page=1` through `/perks?page=10`.
+**IMPORTANT NOTE**: The `/perks`, `/perks/survivor`, and `/perks/killer` routes all return paginated results. The `/perks` route, for example, is split up into **10** pages with a max of **30** perks per page, so to retrieve *ALL* perks, you'd use `/perks?page=1` through `/perks?page=10`.
 
 `/perks`
 

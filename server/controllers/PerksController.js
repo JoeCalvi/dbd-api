@@ -8,7 +8,7 @@ exports.getAllPerks = async function (req, res) {
         // Get the requested page number from the query parameter, default to page 1
         const page = parseInt(req.query.page) || 1;
         // Define the number of perks to display per page
-        const perks_per_page = 27;
+        const perks_per_page = 30;
         // Calculate the number of perks to skip based on the requested page number
         const skip = (page - 1) * perks_per_page;
         // Retrieve perks from the database, applying skip and limit
