@@ -458,37 +458,37 @@ While getting a perk by its unique perk_id ("_id" or "id", referred to as either
             "name": "Exhausted",
             "type": "Debuff",
             "description": "Survivors suffering from Exhaustion are unable to use any of the numerous Exhaustion Perks, preventing them from chaining multiple such Perks in quick succession. Exhaustion slowly recovers over time whenever the Survivor is not running. Exhaustion recovers immediately after being unhooked.",
-            "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/f2/FulliconStatusEffects_exhaustion.png/revision/latest?cb=20210212000627"
+            "icon": "https://drive.google.com/file/d/1m7slxod0dsDmVU5AWHE8CmV1fcGr87EE/view?usp=drive_link"
         },
         {
             "_id": "64cbe0d214056587889cc454",
             "name": "Haste",
             "type": "Buff",
             "description": "Players benefitting from Haste have their Movement speed increased. The strength of the effect depends on the specific Unlockable that inflicts it.",
-            "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/63/FulliconStatusEffects_haste.png/revision/latest?cb=20210212000629"
+            "icon": "https://drive.google.com/file/d/17yxRh6Bks_FVxkmsneOVC0j_6XxCo_lv/view?usp=drive_link"
         }
     ],
-    "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/af/Adrenaline.gif/revision/latest?cb=20200926194941",
+    "icon": "https://drive.google.com/file/d/1iQr2Ox-C9wju6KT6saILpNq9Bne71xO_/view?usp=drive_link",
     "description": "You are fueled by unexpecting energy when on the verge of escape. Once the Exit Gates are powered, instantly heal one Health State and sprint at 150% of your normal Running Movement speed for 5 seconds. Adrenaline is on hold if you are disabled at the moment it triggers and will instead activate upon being freed. If playing against The Nightmare, Adrenaline will wake you from the Dream World upon activation. Adrenaline ignores an existing Exhaustion timer but causes the Exhausted Status Effect for 60/50/40 seconds.",
     "createdAt": "2023-08-03T20:54:37.791Z",
-    "updatedAt": "2023-08-03T20:54:37.791Z",
+    "updatedAt": "2023-08-15T20:02:07.791Z",
     "__v": 0,
     "survivor": {
         "_id": "64caeae5da2e1eb56296d8d9",
         "name": "Meg Thomas",
-        "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/77/S02_charSelect_portrait.png/revision/latest?cb=20230705190636",
+        "portrait": "https://drive.google.com/file/d/1p6mpg65FVimUQ1PSZAco4P6HttwWsnHk/view?usp=drive_link",
         "perk_one_id": "64cc1372875261f22dea22df",
         "perk_two_id": "64cc13c7875261f22dea22e5",
         "perk_one": {
             "_id": "64cc1372875261f22dea22df",
             "name": "Quick & Quiet",
-            "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/05/QuickAndQuiet.gif/revision/latest?cb=20200926201002",
+            "icon": "https://drive.google.com/file/d/11bNrpMnHTJ2r3MaAJodzRolIL7FFa7VB/view?usp=drive_link",
             "id": "64cc1372875261f22dea22df"
         },
         "perk_two": {
             "_id": "64cc13c7875261f22dea22e5",
             "name": "Sprint Burst",
-            "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/84/SprintBurst.gif/revision/latest?cb=20200926200201",
+            "icon": "https://drive.google.com/file/d/1vSRfVLiUJiKFjxi34pEj8h4pLeWn4uTW/view?usp=drive_link",
             "id": "64cc13c7875261f22dea22e5"
         },
         "id": "64caeae5da2e1eb56296d8d9"
