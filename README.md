@@ -76,7 +76,7 @@ Example:
 In the above example, we can see that Feng's survivor_id ("_id" or "id", referred to as "survivor_id" on all associated objects) is 64caecb7da2e1eb56296d922. By calling https://deadbydaylight-api.onrender.com/survivors/64caecb7da2e1eb56296d922, the following survivor object will be returned:
 
 ```
-  {
+{
     "_id": "64caecb7da2e1eb56296d922",
     "role": "Focused Competitor",
     "name": "Feng Min",
@@ -84,21 +84,24 @@ In the above example, we can see that Feng's survivor_id ("_id" or "id", referre
     "chapter_id": "64cadfc20faca2101c26d6c8",
     "gender": "Female",
     "voice_actor": "Bianca Lavric (BHVR)",
-    "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ac/S09_charSelect_portrait.png/revision/latest?cb=20230705190922",
+    "portrait": "https://drive.google.com/file/d/1CsN8G8SwiXmq9KLitnOFJEffkF04TB-z/view?usp=drive_link",
     "perk_one_id": "64cc18d0875261f22dea2334",
     "perk_two_id": "64cc1913875261f22dea233a",
     "perk_three_id": "64cc194b875261f22dea2341",
     "createdAt": "2023-08-02T23:54:31.741Z",
-    "updatedAt": "2023-08-04T19:37:53.690Z",
+    "updatedAt": "2023-08-14T21:20:19.451Z",
     "__v": 0,
     "chapter": {
         "_id": "64cadfc20faca2101c26d6c8",
+        "name": "Spark of Madness",
+        "number": 4,
+        "release_date": "11 May 2017 (Thursday)",
         "realm_id": "64d12e240d0691dad2bd671b",
         "associated_killers": [
             {
                 "_id": "64c460a03b6c0963934100d3",
                 "killer_name": "The Doctor",
-                "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ad/K07_charSelect_portrait.png/revision/latest?cb=20230705190852",
+                "portrait": "https://drive.google.com/file/d/1sRcvVC2MBcMkAkaUdS03kmd1QAUG3Rux/view?usp=drive_link",
                 "id": "64c460a03b6c0963934100d3"
             }
         ],
@@ -106,7 +109,7 @@ In the above example, we can see that Feng's survivor_id ("_id" or "id", referre
             "_id": "64d12e240d0691dad2bd671b",
             "name": "Lery's Memorial Institute",
             "location": "Illinois, United States",
-            "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e8/RealmKeyArt_07.png/revision/latest?cb=20210920232852",
+            "image": "https://drive.google.com/file/d/1MXuteMaiqsV2zlph7cQaeT_8_nEm0Xi5/view?usp=drive_link",
             "id": "64d12e240d0691dad2bd671b"
         },
         "id": "64cadfc20faca2101c26d6c8"
@@ -115,7 +118,7 @@ In the above example, we can see that Feng's survivor_id ("_id" or "id", referre
         "_id": "64cc18d0875261f22dea2334",
         "name": "Technician",
         "associated_status_effects": [],
-        "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/00/Technician.gif/revision/latest?cb=20200926200248",
+        "icon": "https://drive.google.com/file/d/15VrAqsSsv21mBblgA55OF4zUkr9Jt3WF/view?usp=drive_link",
         "description": "You are apt at handling machinery with the greatest care and precision. When repairing a Generator, the following effects apply: Reduces the audible range of your Repair noises by 8 metres and suppresses the explosion and accompanying Loud Noise Notification when failing a Skill Check. Failing a Skill Check instantly regresses the Generator by 5/4/3% of its maximum possible Progression in addition to the default Progression penalty.",
         "id": "64cc18d0875261f22dea2334"
     },
@@ -127,16 +130,16 @@ In the above example, we can see that Feng's survivor_id ("_id" or "id", referre
                 "_id": "64cbdfa814056587889cc44c",
                 "name": "Exhausted",
                 "type": "Debuff",
-                "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/f2/FulliconStatusEffects_exhaustion.png/revision/latest?cb=20210212000627"
+                "icon": "https://drive.google.com/file/d/1m7slxod0dsDmVU5AWHE8CmV1fcGr87EE/view?usp=drive_link"
             },
             {
                 "_id": "64cbe0d214056587889cc454",
                 "name": "Haste",
                 "type": "Buff",
-                "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/63/FulliconStatusEffects_haste.png/revision/latest?cb=20210212000629"
+                "icon": "https://drive.google.com/file/d/17yxRh6Bks_FVxkmsneOVC0j_6XxCo_lv/view?usp=drive_link"
             }
         ],
-        "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/8d/Lithe.gif/revision/latest?cb=20200501133731",
+        "icon": "https://drive.google.com/file/d/15a1BG5PN29vS361Bxz5fF0wilPIIst7U/view?usp=drive_link",
         "description": "After performing a rushed vault, break into a sprint of 150% of your normal Running Movement speed for a maximum of 3 seconds. Lithe causes the Exhausted Status Effect for 60/50/40 seconds. Lithe cannot be used when Exhausted.",
         "id": "64cc1913875261f22dea233a"
     },
@@ -144,7 +147,7 @@ In the above example, we can see that Feng's survivor_id ("_id" or "id", referre
         "_id": "64cc194b875261f22dea2341",
         "name": "Alert",
         "associated_status_effects": [],
-        "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e7/Alert.gif/revision/latest?cb=20200501133722",
+        "icon": "https://drive.google.com/file/d/1K80NjJq_fwLkvY8KFR-ltfO7aoKCi6o9/view?usp=drive_link",
         "description": "Your acute senses are on high alert. Whenever the Killer destroys a Pallet or a Breakable Wall, or damages a Generator, their Aura is revealed to you for 3/4/5 seconds.",
         "id": "64cc194b875261f22dea2341"
     },
