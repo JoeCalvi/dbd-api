@@ -23,7 +23,7 @@ exports.getAllPerks = async function (req, res) {
         // Count the total number of perks in the collection
         const total_perks = await Perk.countDocuments();
         // Calculate the total number of pages based on total perks and perks per page
-        const total_pages = Math.ceil(total_perks / perks_per_page)
+        const total_pages = Math.ceil(total_perks / perks_per_page);
 
         return res.json({
             current_page: page,
@@ -98,19 +98,27 @@ exports.getAllGenericPerks = async function (req, res) {
 
 exports.getAllSurvivorPerks = async function (req, res) {
     try {
-        const survivorPerks = [];
-        const perks = await Perk.find({})
+        const page = parseInt(req.query.page) || 1;
+        const perks_per_page = 30;
+        const skip = (page - 1) * perks_per_page;
+
+        const survivor_perks = await Perk.find({ role: "Survivor" })
             .populate('associated_status_effects', 'name type icon')
             .populate('survivor', 'name portrait')
-            .populate('chapter', 'name number release_date');
+            .populate('chapter', 'name number release_date')
+            .skip(skip)
+            .limit(perks_per_page);
+        
+        const total_perks = await Perk.countDocuments({ role: "Survivor" });
+        const total_pages = Math.ceil(total_perks / perks_per_page);
 
-        perks.forEach(p => {
-            if (p.role == 'Survivor') {
-                survivorPerks.push(p);
-            }
-        });
-
-        return res.send(survivorPerks);
+        return res.json({
+            current_page: page,
+            total_pages: total_pages,
+            perks_per_page: perks_per_page,
+            total_perks: total_perks,
+            perks: survivor_perks
+        })
     } catch (error) {
         res.send(error);
     }
