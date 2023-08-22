@@ -277,18 +277,18 @@ In the above example, we can see that The Doctor's killer_id ("_id" or "id", ref
     "chapter_id": "64cadfc20faca2101c26d6c8",
     "gender": "Male",
     "voice_actor": "Alex Lin (BHVR)",
-    "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ad/K07_charSelect_portrait.png/revision/latest?cb=20230705190852",
+    "portrait": "https://drive.google.com/file/d/1sRcvVC2MBcMkAkaUdS03kmd1QAUG3Rux/view?usp=drive_link",
     "perk_one_id": "64cd3af68290cb86311d675e",
     "perk_two_id": "64cd3b1b8290cb86311d6761",
     "perk_three_id": "64cd3b418290cb86311d6764",
     "createdAt": "2023-07-29T00:43:12.814Z",
-    "updatedAt": "2023-08-07T18:13:30.597Z",
+    "updatedAt": "2023-08-14T21:01:40.206Z",
     "__v": 0,
     "perk_one": {
         "_id": "64cd3af68290cb86311d675e",
         "name": "Overwhelming Presence",
         "associated_status_effects": [],
-        "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/d0/OverwhelmingPresence.gif/revision/latest?cb=20200926195854",
+        "icon": "https://drive.google.com/file/d/1CmMSsCPQMHFvme0FF-RDsCOTaWPsohiu/view?usp=drive_link",
         "description": "Just knowing you are near is enough to disturb your victims. Survivors within your Terror Radius suffer from inefficiency: When using an Item, its Depletion rate is increased by 80/90/100%.",
         "id": "64cd3af68290cb86311d675e"
     },
@@ -296,7 +296,7 @@ In the above example, we can see that The Doctor's killer_id ("_id" or "id", ref
         "_id": "64cd3b1b8290cb86311d6761",
         "name": "Monitor & Abuse",
         "associated_status_effects": [],
-        "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/a3/MonitorAndAbuse.gif/revision/latest?cb=20200501134305",
+        "icon": "https://drive.google.com/file/d/1Gcawd5DxRbo6mSnhZZBrqR5xfC2syOsf/view?usp=drive_link",
         "description": "Meticulous in your approach, terrifying in your application. Increases the radius of your default Terror Radius by 8 metres for the entire Trial. Whenever you are not in a Chase with a Survivor, the following effects apply: Reduces your Terror Radius by 16 metres and increases your Field of View by 3/5/10°.",
         "id": "64cd3b1b8290cb86311d6761"
     },
@@ -304,7 +304,7 @@ In the above example, we can see that The Doctor's killer_id ("_id" or "id", ref
         "_id": "64cd3b418290cb86311d6764",
         "name": "Overcharge",
         "associated_status_effects": [],
-        "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/3d/Overcharge.gif/revision/latest?cb=20200501134315",
+        "icon": "https://drive.google.com/file/d/1eyLYUPug1HNtvXmWlHGQUh-i00fVBhxx/view?usp=drive_link",
         "description": "You are fueled by your hate for progress. Performing the Damage Generator Action on a Generator applies Overcharge: The next Survivor interacting with that Generator is faced with a difficult Skill Check. Failing that Skill Check instantly regresses the Generator by 2/3/4% of its maximum possible Progression in addition to the default Progression penalty. After Overcharge is applied to a Generator, the following effect also applies: Increases the Regression speed from 85% to 130% over the next 30 seconds.",
         "id": "64cd3b418290cb86311d6764"
     },
@@ -312,14 +312,14 @@ In the above example, we can see that The Doctor's killer_id ("_id" or "id", ref
         "_id": "64b861b35a1f577cae3430bd",
         "name": "The Stick",
         "description": "An instrument of punishment when all other treatments failed. Upon hitting a Survivor, The Doctor will pat The Stick into his palm twice.",
-        "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/fc/DO_Stick01.png/revision/latest?cb=20170511153703",
+        "image": "https://drive.google.com/file/d/1-ePzUgwAzroevxCFIk3fTGiJAGgfwNkn/view?usp=drive_link",
         "id": "64b861b35a1f577cae3430bd"
     },
     "realm": {
         "_id": "64d12e240d0691dad2bd671b",
         "name": "Lery's Memorial Institute",
         "location": "Illinois, United States",
-        "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e8/RealmKeyArt_07.png/revision/latest?cb=20210920232852",
+        "image": "https://drive.google.com/file/d/1MXuteMaiqsV2zlph7cQaeT_8_nEm0Xi5/view?usp=drive_link",
         "id": "64d12e240d0691dad2bd671b"
     },
     "power": {
@@ -350,12 +350,12 @@ In the above example, we can see that The Doctor's killer_id ("_id" or "id", ref
         "name": "Spark of Madness",
         "number": 4,
         "release_date": "11 May 2017 (Thursday)",
-        "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/39/SparkOfMadness_main_header.jpg/revision/latest?cb=20170512175200",
+        "image": "https://drive.google.com/file/d/1qd26AKIz5Ehv7opSeXPCtie__lcq9OYD/view?usp=drive_link",
         "associated_survivors": [
             {
                 "_id": "64caecb7da2e1eb56296d922",
                 "name": "Feng Min",
-                "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ac/S09_charSelect_portrait.png/revision/latest?cb=20230705190922",
+                "portrait": "https://drive.google.com/file/d/1CsN8G8SwiXmq9KLitnOFJEffkF04TB-z/view?usp=drive_link",
                 "id": "64caecb7da2e1eb56296d922"
             }
         ],
@@ -363,8 +363,8 @@ In the above example, we can see that The Doctor's killer_id ("_id" or "id", ref
             {
                 "_id": "64b985c6b777f1835e65d41f",
                 "name": "Treatment Theatre",
-                "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/15/IconMap_Hos_Treatment.png/revision/latest?cb=20200107170105",
-                "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/80/TreatmentTheatreOutline.png/revision/latest?cb=20230426222342",
+                "image": "https://drive.google.com/file/d/1wCT03GXiXTq2afxn1KpUrQ_6fB8HqjmQ/view?usp=drive_link",
+                "layout": "https://drive.google.com/file/d/13gP_9qb42ow3wmjYlhMGf3TWj_he4PpM/view?usp=drive_link",
                 "id": "64b985c6b777f1835e65d41f"
             }
         ],
