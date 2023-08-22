@@ -167,18 +167,11 @@ exports.getAllKillerPerks = async function (req, res) {
 
 exports.getAllGenericKillerPerks = async function (req, res) {
     try {
-        const generic_killer_perks = [];
-        const perks = await Perk.find({})
+        const perks = await Perk.find({ generic: true, role: "Killer" })
             .populate('associated_status_effects', 'name type icon')
             .populate('chapter', 'name number release_date');
 
-        perks.forEach(p => {
-            if (p.role == 'Killer' && p.generic == true) {
-                generic_killer_perks.push(p);
-            }
-        });
-
-        return res.send(generic_killer_perks);
+        return res.send(perks);
     } catch (error) {
         res.send(error)
     }
