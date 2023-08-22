@@ -569,49 +569,49 @@ Example:
 
 ```
 {
-        "_id": "64cae0c90faca2101c26d6ec",
-        "name": "Curtain Call",
-        "number": 8,
-        "release_date": "12 June 2018 (Tuesday)",
-        "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/23/CurtainCall_main_header.png/revision/latest?cb=20180703002851",
-        "realm_id": "64d12da70d0691dad2bd670f",
-        "associated_killers": [
-            {
-                "_id": "64c462e53b6c09639341012b",
-                "killer_name": "The Clown",
-                "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e1/K12_charSelect_portrait.png/revision/latest?cb=20230705192149",
-                "id": "64c462e53b6c09639341012b"
-            }
-        ],
-        "associated_survivors": [
-            {
-                "_id": "64caeda4da2e1eb56296d942",
-                "name": "Kate Denson",
-                "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/19/S13_charSelect_portrait.png/revision/latest?cb=20230705192155",
-                "id": "64caeda4da2e1eb56296d942"
-            }
-        ],
-        "createdAt": "2023-08-02T23:03:37.858Z",
-        "updatedAt": "2023-08-09T18:36:12.427Z",
-        "__v": 1,
-        "associated_maps": [
-            {
-                "_id": "64b98402b777f1835e65d400",
-                "name": "Father Campbell's Chapel",
-                "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/87/IconMap_Asy_Chapel.png/revision/latest?cb=20210209230825",
-                "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/72/FatherCampbellsChapelOutline.png/revision/latest?cb=20220613133812",
-                "realm_id": "64d12da70d0691dad2bd670f",
-                "realm": {
-                    "_id": "64d12da70d0691dad2bd670f",
-                    "name": "Crotus Prenn Asylum",
-                    "location": "United States",
-                    "id": "64d12da70d0691dad2bd670f"
-                },
-                "id": "64b98402b777f1835e65d400"
-            }
-        ],
-        "id": "64cae0c90faca2101c26d6ec"
-    }
+    "_id": "64cae0c90faca2101c26d6ec",
+    "name": "Curtain Call",
+    "number": 8,
+    "release_date": "12 June 2018 (Tuesday)",
+    "image": "https://drive.google.com/file/d/10TmcLX5NEvFq8vvckmA31dCtRHRHCikJ/view?usp=drive_link",
+    "realm_id": "64d12da70d0691dad2bd670f",
+    "associated_killers": [
+        {
+            "_id": "64c462e53b6c09639341012b",
+            "killer_name": "The Clown",
+            "portrait": "https://drive.google.com/file/d/1wU5GmkzdwIrHC0vv3JpSV9G0IHR9uPiH/view?usp=drive_link",
+            "id": "64c462e53b6c09639341012b"
+        }
+    ],
+    "associated_survivors": [
+        {
+            "_id": "64caeda4da2e1eb56296d942",
+            "name": "Kate Denson",
+            "portrait": "https://drive.google.com/file/d/1GzH3Ss54nZEPYaB71776drgvQKi6J_9C/view?usp=drive_link",
+            "id": "64caeda4da2e1eb56296d942"
+        }
+    ],
+    "createdAt": "2023-08-02T23:03:37.858Z",
+    "updatedAt": "2023-08-14T22:11:06.574Z",
+    "__v": 1,
+    "associated_maps": [
+        {
+            "_id": "64b98402b777f1835e65d400",
+            "name": "Father Campbell's Chapel",
+            "image": "https://drive.google.com/file/d/17ymNOFmfoh3PXdgbF8QAMULToOBKyMKL/view?usp=drive_link",
+            "layout": "https://drive.google.com/file/d/1Av0ZG1bxATRoeMRjm7V8iVxRto23VNjW/view?usp=drive_link",
+            "realm_id": "64d12da70d0691dad2bd670f",
+            "realm": {
+                "_id": "64d12da70d0691dad2bd670f",
+                "name": "Crotus Prenn Asylum",
+                "location": "United States",
+                "id": "64d12da70d0691dad2bd670f"
+            },
+            "id": "64b98402b777f1835e65d400"
+        }
+    ],
+    "id": "64cae0c90faca2101c26d6ec"
+}
 ```
 
 `/chapters/chapter_id`
