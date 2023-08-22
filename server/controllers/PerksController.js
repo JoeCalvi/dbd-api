@@ -5,13 +5,33 @@ const Survivor = mongoose.model('Survivors');
 
 exports.getAllPerks = async function (req, res) {
     try {
+        // Get the requested page number from the query parameter, default to page 1
+        const page = parseInt(req.query.page) || 1;
+        // Define the number of perks to display per page
+        const perks_per_page = 27;
+        // Calculate the number of perks to skip based on the requested page number
+        const skip = (page - 1) * perks_per_page;
+        // Retrieve perks from the database, applying skip and limit
         const perks = await Perk.find()
             .populate('killer', 'killer_name portrait')
             .populate('survivor', 'name portrait')
             .populate('chapter', 'name number release_date image')
-            .populate('associated_status_effects', 'name type icon');
+            .populate('associated_status_effects', 'name type icon')
+            .skip(skip)
+            .limit(perks_per_page);
 
-        return res.json(perks);
+        // Count the total number of perks in the collection
+        const total_perks = await Perk.countDocuments();
+        // Calculate the total number of pages based on total perks and perks per page
+        const total_pages = Math.ceil(total_perks / perks_per_page)
+
+        return res.json({
+            current_page: page,
+            total_pages: total_pages,
+            perks_per_page: perks_per_page,
+            total_perks: total_perks,
+            perks: perks
+        });
     } catch (error) {
         res.send(error);
     }
