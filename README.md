@@ -930,22 +930,22 @@ Example:
 
 ```
 {
-        "_id": "64b861085a1f577cae3430a4",
-        "name": "Azarov's Skull",
-        "description": "The teeth of death lie on Azarov's skull and spine. Upon hitting a Survivor, The Wraith will wipe blood from Azarov's Skull with his left thumb.",
-        "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/35/Wraith_Weapon01.png/revision/latest?cb=20220114151500",
-        "killer_id": "64c45461c4cd9ff0150eaed5",
-        "createdAt": "2023-07-19T22:17:44.924Z",
-        "updatedAt": "2023-08-07T17:15:02.746Z",
-        "__v": 0,
-        "killer": {
-            "_id": "64c45461c4cd9ff0150eaed5",
-            "killer_name": "The Wraith",
-            "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/0d/K02_charSelect_portrait.png/revision/latest?cb=20230705190257",
-            "id": "64c45461c4cd9ff0150eaed5"
-        },
-        "id": "64b861085a1f577cae3430a4"
-    }
+    "_id": "64b861085a1f577cae3430a4",
+    "name": "Azarov's Skull",
+    "description": "The teeth of death lie on Azarov's skull and spine. Upon hitting a Survivor, The Wraith will wipe blood from Azarov's Skull with his left thumb.",
+    "image": "https://drive.google.com/file/d/1czEP5aYCexMfMowncziMhNaYY3fl3-Fe/view?usp=drive_link",
+    "killer_id": "64c45461c4cd9ff0150eaed5",
+    "createdAt": "2023-07-19T22:17:44.924Z",
+    "updatedAt": "2023-08-14T21:50:08.248Z",
+    "__v": 0,
+    "killer": {
+        "_id": "64c45461c4cd9ff0150eaed5",
+        "killer_name": "The Wraith",
+        "portrait": "https://drive.google.com/file/d/1Mre66RSm1hhJOKSAPIJXr3UekNa13cKp/view?usp=drive_link",
+        "id": "64c45461c4cd9ff0150eaed5"
+    },
+    "id": "64b861085a1f577cae3430a4"
+}
 ```
 
 `/weapons/weapon_id`
@@ -957,23 +957,23 @@ As with getting a power by its power_id, getting a weapon by its weapon_id ("_id
     "_id": "64b861085a1f577cae3430a4",
     "name": "Azarov's Skull",
     "description": "The teeth of death lie on Azarov's skull and spine. Upon hitting a Survivor, The Wraith will wipe blood from Azarov's Skull with his left thumb.",
-    "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/35/Wraith_Weapon01.png/revision/latest?cb=20220114151500",
+    "image": "https://drive.google.com/file/d/1czEP5aYCexMfMowncziMhNaYY3fl3-Fe/view?usp=drive_link",
     "killer_id": "64c45461c4cd9ff0150eaed5",
     "createdAt": "2023-07-19T22:17:44.924Z",
-    "updatedAt": "2023-08-07T17:15:02.746Z",
+    "updatedAt": "2023-08-14T21:50:08.248Z",
     "__v": 0,
     "killer": {
         "_id": "64c45461c4cd9ff0150eaed5",
         "killer_name": "The Wraith",
         "overview": "The Wraith is a stealth Killer, able to cloak and uncloak at the ringing of his Wailing Bell. His personal Perks - Predator, Bloodhound, and Shadowborn - give him extra abilities to track and locate Survivors, making him a very efficient Hunter. He focuses on tracking and hunting Survivors, making it easier to catch and kill them.",
         "chapter_id": "64cadd872400b1dd8d1a1fb0",
-        "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/0d/K02_charSelect_portrait.png/revision/latest?cb=20230705190257",
+        "portrait": "https://drive.google.com/file/d/1Mre66RSm1hhJOKSAPIJXr3UekNa13cKp/view?usp=drive_link",
         "chapter": {
             "_id": "64cadd872400b1dd8d1a1fb0",
             "name": "Base Game",
             "number": 0,
             "release_date": "14 June 2016 (Tuesday)",
-            "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/b/b7/Logo_dbd.svg/revision/latest?cb=20211216202129",
+            "image": "https://drive.google.com/file/d/1Yuej_tpAxB27I57zCsdeN3Pndpz2cl8g/view?usp=drive_link",
             "id": "64cadd872400b1dd8d1a1fb0"
         },
         "id": "64c45461c4cd9ff0150eaed5"
