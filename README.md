@@ -20,54 +20,54 @@ Example:
 
 ```
 {
-"_id": "64caecb7da2e1eb56296d922",
-"role": "Focused Competitor",
-"name": "Feng Min",
-"overview": "Feng Min is an objective-focused competitor who can quickly adapt her strategy to meet a vast range of challenging situations. Her personal Perks - Technician, Lithe, and Alert - help her with repairing Generators and locating the Killer. She can silently work on Generators and thus can notice the Killer long before they notice her. She will be long gone before the Killer can do anything.",
-"chapter_id": "64cadfc20faca2101c26d6c8",
-"gender": "Female",
-"voice_actor": "Bianca Lavric (BHVR)",
-"portrait": "https://drive.google.com/file/d/1CsN8G8SwiXmq9KLitnOFJEffkF04TB-z/view?usp=drive_link",
-"perk_one_id": "64cc18d0875261f22dea2334",
-"perk_two_id": "64cc1913875261f22dea233a",
-"perk_three_id": "64cc194b875261f22dea2341",
-"createdAt": "2023-08-02T23:54:31.741Z",
-"updatedAt": "2023-08-14T21:20:19.451Z",
-"__v": 0,
-"chapter": {
-"_id": "64cadfc20faca2101c26d6c8",
-"name": "Spark of Madness",
-"number": 4,
-"release_date": "11 May 2017 (Thursday)",
-"associated_killers": [
-{
-"_id": "64c460a03b6c0963934100d3",
-"killer_name": "The Doctor",
-"portrait": "https://drive.google.com/file/d/1sRcvVC2MBcMkAkaUdS03kmd1QAUG3Rux/view?usp=drive_link",
-"id": "64c460a03b6c0963934100d3"
-}
-],
-"id": "64cadfc20faca2101c26d6c8"
-},
-"perk_one": {
-"_id": "64cc18d0875261f22dea2334",
-"name": "Technician",
-"icon": "https://drive.google.com/file/d/15VrAqsSsv21mBblgA55OF4zUkr9Jt3WF/view?usp=drive_link",
-"id": "64cc18d0875261f22dea2334"
-},
-"perk_two": {
-"_id": "64cc1913875261f22dea233a",
-"name": "Lithe",
-"icon": "https://drive.google.com/file/d/15a1BG5PN29vS361Bxz5fF0wilPIIst7U/view?usp=drive_link",
-"id": "64cc1913875261f22dea233a"
-},
-"perk_three": {
-"_id": "64cc194b875261f22dea2341",
-"name": "Alert",
-"icon": "https://drive.google.com/file/d/1K80NjJq_fwLkvY8KFR-ltfO7aoKCi6o9/view?usp=drive_link",
-"id": "64cc194b875261f22dea2341"
-},
-"id": "64caecb7da2e1eb56296d922"
+    "_id": "64caecb7da2e1eb56296d922",
+    "role": "Focused Competitor",
+    "name": "Feng Min",
+    "overview": "Feng Min is an objective-focused competitor who can quickly adapt her strategy to meet a vast range of challenging situations. Her personal Perks - Technician, Lithe, and Alert - help her with repairing Generators and locating the Killer. She can silently work on Generators and thus can notice the Killer long before they notice her. She will be long gone before the Killer can do anything.",
+    "chapter_id": "64cadfc20faca2101c26d6c8",
+    "gender": "Female",
+    "voice_actor": "Bianca Lavric (BHVR)",
+    "portrait": "https://drive.google.com/file/d/1CsN8G8SwiXmq9KLitnOFJEffkF04TB-z/view?usp=drive_link",
+    "perk_one_id": "64cc18d0875261f22dea2334",
+    "perk_two_id": "64cc1913875261f22dea233a",
+    "perk_three_id": "64cc194b875261f22dea2341",
+    "createdAt": "2023-08-02T23:54:31.741Z",
+    "updatedAt": "2023-08-14T21:20:19.451Z",
+    "__v": 0,
+    "chapter": {
+        "_id": "64cadfc20faca2101c26d6c8",
+        "name": "Spark of Madness",
+        "number": 4,
+        "release_date": "11 May 2017 (Thursday)",
+        "associated_killers": [
+            {
+                "_id": "64c460a03b6c0963934100d3",
+                "killer_name": "The Doctor",
+                "portrait": "https://drive.google.com/file/d/1sRcvVC2MBcMkAkaUdS03kmd1QAUG3Rux/view?usp=drive_link",
+                "id": "64c460a03b6c0963934100d3"
+                }
+        ],
+        "id": "64cadfc20faca2101c26d6c8"
+    },
+    "perk_one": {
+        "_id": "64cc18d0875261f22dea2334",
+        "name": "Technician",
+        "icon": "https://drive.google.com/file/d/15VrAqsSsv21mBblgA55OF4zUkr9Jt3WF/view?usp=drive_link",
+        "id": "64cc18d0875261f22dea2334"
+    },
+    "perk_two": {
+        "_id": "64cc1913875261f22dea233a",
+        "name": "Lithe",
+        "icon": "https://drive.google.com/file/d/15a1BG5PN29vS361Bxz5fF0wilPIIst7U/view?usp=drive_link",
+        "id": "64cc1913875261f22dea233a"
+    },
+    "perk_three": {
+        "_id": "64cc194b875261f22dea2341",
+        "name": "Alert",
+        "icon": "https://drive.google.com/file/d/1K80NjJq_fwLkvY8KFR-ltfO7aoKCi6o9/view?usp=drive_link",
+        "id": "64cc194b875261f22dea2341"
+    },
+    "id": "64caecb7da2e1eb56296d922"
 }
 ```
 
