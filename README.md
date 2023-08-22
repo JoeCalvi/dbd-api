@@ -624,81 +624,81 @@ You can also use a chapter_id ("_id" or "id" on a chapter object, "chapter_id" e
     "name": "Curtain Call",
     "number": 8,
     "release_date": "12 June 2018 (Tuesday)",
-    "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/23/CurtainCall_main_header.png/revision/latest?cb=20180703002851",
+    "image": "https://drive.google.com/file/d/10TmcLX5NEvFq8vvckmA31dCtRHRHCikJ/view?usp=drive_link",
     "realm_id": "64d12da70d0691dad2bd670f",
     "associated_killers": [
         {
-            "_id": "64c462e53b6c09639341012b",
-            "killer_name": "The Clown",
-            "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e1/K12_charSelect_portrait.png/revision/latest?cb=20230705192149",
-            "perk_one_id": "64cd41008290cb86311d67d4",
-            "perk_two_id": "64cd41218290cb86311d67d7",
-            "perk_three_id": "64cd413e8290cb86311d67da",
-            "perk_one": {
-                "_id": "64cd41008290cb86311d67d4",
-                "name": "Bamboozle",
-                "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c3/Bamboozle.gif/revision/latest?cb=20200926195101",
-                "id": "64cd41008290cb86311d67d4"
-            },
-            "perk_two": {
-                "_id": "64cd41218290cb86311d67d7",
-                "name": "Coulrophobia",
-                "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/a6/Coulrophobia.gif/revision/latest?cb=20200501134717",
-                "id": "64cd41218290cb86311d67d7"
-            },
-            "perk_three": {
-                "_id": "64cd413e8290cb86311d67da",
-                "name": "Pop Goes the Weasel",
-                "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/69/PopGoesTheWeasel.gif/revision/latest?cb=20200926195919",
-                "id": "64cd413e8290cb86311d67da"
-            },
-            "id": "64c462e53b6c09639341012b"
+        "_id": "64c462e53b6c09639341012b",
+        "killer_name": "The Clown",
+        "portrait": "https://drive.google.com/file/d/1wU5GmkzdwIrHC0vv3JpSV9G0IHR9uPiH/view?usp=drive_link",
+        "perk_one_id": "64cd41008290cb86311d67d4",
+        "perk_two_id": "64cd41218290cb86311d67d7",
+        "perk_three_id": "64cd413e8290cb86311d67da",
+        "perk_one": {
+            "_id": "64cd41008290cb86311d67d4",
+            "name": "Bamboozle",
+            "icon": "https://drive.google.com/file/d/117KpU9ook-ZcC9_ETAh3iKYAWytFC9LG/view?usp=drive_link",
+            "id": "64cd41008290cb86311d67d4"
+        },
+        "perk_two": {
+            "_id": "64cd41218290cb86311d67d7",
+            "name": "Coulrophobia",
+            "icon": "https://drive.google.com/file/d/15gQiRJsNZfLyA2-mzuHVgg8CYsWKtZm7/view?usp=drive_link",
+            "id": "64cd41218290cb86311d67d7"
+        },
+        "perk_three": {
+            "_id": "64cd413e8290cb86311d67da",
+            "name": "Pop Goes the Weasel",
+            "icon": "https://drive.google.com/file/d/18gaUVVN4CzrDGrWv-CSjFpfQyIGKVywZ/view?usp=drive_link",
+            "id": "64cd413e8290cb86311d67da"
+        },
+        "id": "64c462e53b6c09639341012b"
         }
     ],
     "associated_survivors": [
         {
-            "_id": "64caeda4da2e1eb56296d942",
-            "name": "Kate Denson",
-            "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/19/S13_charSelect_portrait.png/revision/latest?cb=20230705192155",
-            "perk_one_id": "64cc1c4e875261f22dea2379",
-            "perk_two_id": "64cc1c6f875261f22dea237f",
-            "perk_three_id": "64cc1c8c875261f22dea2382",
-            "perk_one": {
-                "_id": "64cc1c4e875261f22dea2379",
-                "name": "Dance With Me",
-                "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e6/DanceWithMe.gif/revision/latest?cb=20200926195228",
-                "id": "64cc1c4e875261f22dea2379"
-            },
-            "perk_two": {
-                "_id": "64cc1c6f875261f22dea237f",
-                "name": "Windows of Opportunity",
-                "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/6c/WindowsOfOpportunity.gif/revision/latest?cb=20200926200422",
-                "id": "64cc1c6f875261f22dea237f"
-            },
-            "perk_three": {
-                "_id": "64cc1c8c875261f22dea2382",
-                "name": "Boil Over",
-                "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/7e/BoilOver.gif/revision/latest?cb=20200501134102",
-                "id": "64cc1c8c875261f22dea2382"
-            },
-            "id": "64caeda4da2e1eb56296d942"
+        "_id": "64caeda4da2e1eb56296d942",
+        "name": "Kate Denson",
+        "portrait": "https://drive.google.com/file/d/1GzH3Ss54nZEPYaB71776drgvQKi6J_9C/view?usp=drive_link",
+        "perk_one_id": "64cc1c4e875261f22dea2379",
+        "perk_two_id": "64cc1c6f875261f22dea237f",
+        "perk_three_id": "64cc1c8c875261f22dea2382",
+        "perk_one": {
+            "_id": "64cc1c4e875261f22dea2379",
+            "name": "Dance With Me",
+            "icon": "https://drive.google.com/file/d/1zzGzctOKnl0W9nyvqE06s-XxNVD7JYRN/view?usp=drive_link",
+            "id": "64cc1c4e875261f22dea2379"
+        },
+        "perk_two": {
+            "_id": "64cc1c6f875261f22dea237f",
+            "name": "Windows of Opportunity",
+            "icon": "https://drive.google.com/file/d/1JzvNCWinGWyL_028N2Oj1_xSgAX-pI12/view?usp=drive_link",
+            "id": "64cc1c6f875261f22dea237f"
+        },
+        "perk_three": {
+            "_id": "64cc1c8c875261f22dea2382",
+            "name": "Boil Over",
+            "icon": "https://drive.google.com/file/d/1l7QCF6L487P7-1cqMFJgbl8buXkCPIvx/view?usp=drive_link",
+            "id": "64cc1c8c875261f22dea2382"
+        },
+        "id": "64caeda4da2e1eb56296d942"
         }
     ],
     "createdAt": "2023-08-02T23:03:37.858Z",
-    "updatedAt": "2023-08-09T18:36:12.427Z",
+    "updatedAt": "2023-08-14T22:11:06.574Z",
     "__v": 1,
     "associated_maps": [
         {
             "_id": "64b98402b777f1835e65d400",
             "name": "Father Campbell's Chapel",
-            "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/87/IconMap_Asy_Chapel.png/revision/latest?cb=20210209230825",
-            "layout": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/72/FatherCampbellsChapelOutline.png/revision/latest?cb=20220613133812",
+            "image": "https://drive.google.com/file/d/17ymNOFmfoh3PXdgbF8QAMULToOBKyMKL/view?usp=drive_link",
+            "layout": "https://drive.google.com/file/d/1Av0ZG1bxATRoeMRjm7V8iVxRto23VNjW/view?usp=drive_link",
             "realm_id": "64d12da70d0691dad2bd670f",
             "realm": {
                 "_id": "64d12da70d0691dad2bd670f",
                 "name": "Crotus Prenn Asylum",
                 "location": "United States",
-                "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/90/RealmKeyArt_04.png/revision/latest?cb=20210920230910",
+                "image": "https://drive.google.com/file/d/1UMLGG9lfYjxZadMcTKdOTb9yT6Rf9O-2/view?usp=drive_link",
                 "id": "64d12da70d0691dad2bd670f"
             },
             "id": "64b98402b777f1835e65d400"
