@@ -127,17 +127,11 @@ exports.getAllSurvivorPerks = async function (req, res) {
 exports.getAllGenericSurvivorPerks = async function (req, res) {
     try {
         const generic_survivor_perks = [];
-        const perks = await Perk.find({})
+        const perks = await Perk.find({ generic: true, role: "Survivor"})
             .populate('associated_status_effects', 'name type icon')
             .populate('chapter', 'name number release_date');
 
-        perks.forEach(p => {
-            if (p.role == 'Survivor' && p.generic == true) {
-                generic_survivor_perks.push(p)
-            }
-        })
-
-        return res.send(generic_survivor_perks);
+        return res.json(perks);
     } catch (error) {
         res.send(error)
     }
