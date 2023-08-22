@@ -382,6 +382,8 @@ While there aren't really any outlier names with killers (yet?), the same guidel
 
 ## Perk Routes
 
+**IMPORTANT NOTE**: The `/perks`, `/perks/survivor`, and `/perks/killer` routes all return paginated results. The `/perks` route, for example, is split up into **10** pages with a max of **27** perks per page, so to retrieve *ALL* perks, you'd use `/perks?page=1` through `/perks?page=10`.
+
 `/perks`
 
 Calling https://deadbydaylight-api.onrender.com/perks will return ALL perks in the game, agnostic to their role ("Killer" or "Survivor") or whether they're generic or unique ("Hope" vs. "Made For This").
@@ -390,49 +392,49 @@ Example:
 
 ```
 {
-        "_id": "64cc140d875261f22dea22ec",
-        "role": "Survivor",
-        "name": "Adrenaline",
-        "generic": false,
-        "killer_id": null,
-        "survivor_id": "64caeae5da2e1eb56296d8d9",
-        "chapter_id": "64cadd872400b1dd8d1a1fb0",
-        "associated_status_effects": [
-            {
-                "_id": "64cbdfa814056587889cc44c",
-                "name": "Exhausted",
-                "type": "Debuff",
-                "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/f2/FulliconStatusEffects_exhaustion.png/revision/latest?cb=20210212000627"
-            },
-            {
-                "_id": "64cbe0d214056587889cc454",
-                "name": "Haste",
-                "type": "Buff",
-                "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/63/FulliconStatusEffects_haste.png/revision/latest?cb=20210212000629"
-            }
-        ],
-        "icon": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/af/Adrenaline.gif/revision/latest?cb=20200926194941",
-        "description": "You are fueled by unexpecting energy when on the verge of escape. Once the Exit Gates are powered, instantly heal one Health State and sprint at 150% of your normal Running Movement speed for 5 seconds. Adrenaline is on hold if you are disabled at the moment it triggers and will instead activate upon being freed. If playing against The Nightmare, Adrenaline will wake you from the Dream World upon activation. Adrenaline ignores an existing Exhaustion timer but causes the Exhausted Status Effect for 60/50/40 seconds.",
-        "createdAt": "2023-08-03T20:54:37.791Z",
-        "updatedAt": "2023-08-03T20:54:37.791Z",
-        "__v": 0,
-        "killer": null,
-        "survivor": {
-            "_id": "64caeae5da2e1eb56296d8d9",
-            "name": "Meg Thomas",
-            "portrait": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/77/S02_charSelect_portrait.png/revision/latest?cb=20230705190636",
-            "id": "64caeae5da2e1eb56296d8d9"
+    "_id": "64cc140d875261f22dea22ec",
+    "role": "Survivor",
+    "name": "Adrenaline",
+    "generic": false,
+    "killer_id": null,
+    "survivor_id": "64caeae5da2e1eb56296d8d9",
+    "chapter_id": "64cadd872400b1dd8d1a1fb0",
+    "associated_status_effects": [
+        {
+            "_id": "64cbdfa814056587889cc44c",
+            "name": "Exhausted",
+            "type": "Debuff",
+            "icon": "https://drive.google.com/file/d/1m7slxod0dsDmVU5AWHE8CmV1fcGr87EE/view?usp=drive_link"
         },
-        "chapter": {
-            "_id": "64cadd872400b1dd8d1a1fb0",
-            "name": "Base Game",
-            "number": 0,
-            "release_date": "14 June 2016 (Tuesday)",
-            "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/b/b7/Logo_dbd.svg/revision/latest?cb=20211216202129",
-            "id": "64cadd872400b1dd8d1a1fb0"
-        },
-        "id": "64cc140d875261f22dea22ec"
-    }
+        {
+            "_id": "64cbe0d214056587889cc454",
+            "name": "Haste",
+            "type": "Buff",
+            "icon": "https://drive.google.com/file/d/17yxRh6Bks_FVxkmsneOVC0j_6XxCo_lv/view?usp=drive_link"
+        }
+    ],
+    "icon": "https://drive.google.com/file/d/1iQr2Ox-C9wju6KT6saILpNq9Bne71xO_/view?usp=drive_link",
+    "description": "You are fueled by unexpecting energy when on the verge of escape. Once the Exit Gates are powered, instantly heal one Health State and sprint at 150% of your normal Running Movement speed for 5 seconds. Adrenaline is on hold if you are disabled at the moment it triggers and will instead activate upon being freed. If playing against The Nightmare, Adrenaline will wake you from the Dream World upon activation. Adrenaline ignores an existing Exhaustion timer but causes the Exhausted Status Effect for 60/50/40 seconds.",
+    "createdAt": "2023-08-03T20:54:37.791Z",
+    "updatedAt": "2023-08-15T20:02:07.791Z",
+    "__v": 0,
+    "killer": null,
+    "survivor": {
+        "_id": "64caeae5da2e1eb56296d8d9",
+        "name": "Meg Thomas",
+        "portrait": "https://drive.google.com/file/d/1p6mpg65FVimUQ1PSZAco4P6HttwWsnHk/view?usp=drive_link",
+        "id": "64caeae5da2e1eb56296d8d9"
+    },
+    "chapter": {
+        "_id": "64cadd872400b1dd8d1a1fb0",
+        "name": "Base Game",
+        "number": 0,
+        "release_date": "14 June 2016 (Tuesday)",
+        "image": "https://drive.google.com/file/d/1Yuej_tpAxB27I57zCsdeN3Pndpz2cl8g/view?usp=drive_link",
+        "id": "64cadd872400b1dd8d1a1fb0"
+    },
+    "id": "64cc140d875261f22dea22ec"
+}
 ```
 
 There are a few pieces of data we can use on a perk object to make more specific calls if one is looking to narrow down their search. Firstly, there is the "role" enum, determining whether a perk is a "Killer" or "Survivor" perk. Secondly, there is the "generic" bool, telling us whether or not the perk belongs to a specific survivor or killer. Lastly, there are both a "killer_id" and "survivor_id" attached to each perk. If the "generic" bool is set to **true**, both "killer_id" and "survivor_id" will be **null**, otherwise, one *or* the other will be **null** depending on who the perk belongs to. Because the perk "Adrenaline" belongs to Meg Thomas, a survivor, you can see that the "killer_id" is **null**, while the "survivor_id" belongs to Meg.
