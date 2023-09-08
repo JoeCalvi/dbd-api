@@ -2,7 +2,8 @@ module.exports = function (app) {
   const chaptersController = require('../controllers/ChaptersController')
 
   app.route('/chapters')
-      .get(chaptersController.getAllChapters);
+      .get(chaptersController.getAllChapters)
+    //   .post(chaptersController.addChapter);
 
   app.route('/chapters/query')
       .get((req, res) => {
@@ -18,5 +19,6 @@ module.exports = function (app) {
       })
 
   app.route('/chapters/:chapterId')
-      .get(chaptersController.getChapterById);
+      .get(chaptersController.getChapterById)
+    //   .put(chaptersController.updateChapter);
 };

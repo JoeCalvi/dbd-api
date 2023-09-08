@@ -3,7 +3,8 @@ module.exports = function (app) {
     const statusEffectsController = require('../controllers/StatusEffectsController');
 
     app.route('/perks')
-        .get(perksController.getAllPerks);
+        .get(perksController.getAllPerks)
+        // .post(perksController.addPerk);
 
     app.route('/perks/query')
         .get(async (req, res) => {
@@ -62,5 +63,6 @@ module.exports = function (app) {
         .get(perksController.getPerksByCharacterId);
 
     app.route('/perks/:perkId')
-        .get(perksController.getPerkById);
+        .get(perksController.getPerkById)
+        // .put(perksController.updatePerk);
 };

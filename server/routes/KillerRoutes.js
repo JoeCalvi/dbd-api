@@ -2,7 +2,8 @@ module.exports = function (app) {
     const killersController = require('../controllers/KillersController');
 
     app.route('/killers')
-        .get(killersController.getAllKillers);
+        .get(killersController.getAllKillers)
+        // .post(killersController.addKiller);
 
     app.route('/killers/query')
         .get((req, res) => {
@@ -14,5 +15,6 @@ module.exports = function (app) {
         })
 
     app.route('/killers/:killerId')
-        .get(killersController.getKillerById);
+        .get(killersController.getKillerById)
+        // .put(killersController.addKiller);
 };

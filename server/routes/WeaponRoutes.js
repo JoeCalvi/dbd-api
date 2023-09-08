@@ -2,7 +2,8 @@ module.exports = function (app) {
     const weaponsController = require('../controllers/WeaponsController');
 
     app.route('/weapons')
-        .get(weaponsController.getAllWeapons);
+        .get(weaponsController.getAllWeapons)
+        // .post(weaponsController.addWeapon);
 
     app.route('/weapons/query')
         .get((req, res) => {
@@ -14,5 +15,7 @@ module.exports = function (app) {
         })
 
     app.route('/weapons/:weaponId')
-        .get(weaponsController.getWeaponById);
+        .get(weaponsController.getWeaponById)
+        // .put(weaponsController.updateWeapon);
+        
 };

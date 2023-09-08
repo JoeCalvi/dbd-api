@@ -2,7 +2,8 @@ module.exports = function (app) {
     const powersController = require('../controllers/PowersController');
 
     app.route('/killers/:killerId/power')
-        .get(powersController.getPowerByKillerId);
+        .get(powersController.getPowerByKillerId)
+        // .post(powersController.addPower);
 
     app.route('/powers')
         .get(powersController.getAllPowers);
@@ -17,5 +18,6 @@ module.exports = function (app) {
         })
 
     app.route('/powers/:powerId')
-        .get(powersController.getPowerById);
+        .get(powersController.getPowerById)
+        // .put(powersController.updatePower);
 };
